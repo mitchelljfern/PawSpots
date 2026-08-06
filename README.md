@@ -1,0 +1,2 @@
+# PawSpots
+Dog Friendly Places

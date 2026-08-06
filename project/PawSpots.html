@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PawSpots — Dog-friendly places near you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<style>
+:root{
+  --green:oklch(0.52 0.11 150); --green-dark:oklch(0.40 0.09 150); --green-soft:oklch(0.95 0.02 150);
+  --amber:oklch(0.75 0.14 75); --amber-soft:oklch(0.95 0.04 80); --amber-text:oklch(0.55 0.12 70);
+  --ink:oklch(0.25 0.02 150); --ink-2:oklch(0.48 0.02 150); --ink-3:oklch(0.62 0.015 150);
+  --bg:oklch(0.985 0.005 140); --card:#fff; --line:oklch(0.91 0.01 145);
+  --radius:14px; --shadow:0 2px 10px rgba(20,40,25,.10), 0 1px 2px rgba(20,40,25,.06);
+  --font-display:"Bricolage Grotesque", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font:400 15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);overflow:hidden}
+a{color:var(--green);text-decoration:none}
+a:hover{color:var(--green-dark);text-decoration:underline}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0}
+h1,h2,h3{font-family:var(--font-display);margin:0}
+svg{flex:none;vertical-align:-2px}
+.rate,.gdot,.stars{display:inline-flex;align-items:center;gap:3px}
+#app{display:grid;height:100dvh;grid-template-rows:auto auto 1fr;position:relative}
+/* ---------- top bar ---------- */
+.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--line);z-index:1002;position:relative}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--green-dark)}
+.logo .mark{width:30px;height:30px;border-radius:9px;background:var(--green);display:grid;place-items:center}
+.searchwrap{flex:1;position:relative;max-width:520px}
+.searchbox{display:flex;align-items:center;gap:8px;background:var(--bg);border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;transition:border-color .15s}
+.searchbox:focus-within{border-color:var(--green)}
+.searchbox input{border:none;background:none;outline:none;font:inherit;width:100%;color:var(--ink)}
+.searchbox input::placeholder{color:var(--ink-3)}
+.suggest{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;display:none;z-index:1005}
+.suggest.open{display:block}
+.suggest button{display:flex;gap:10px;align-items:center;width:100%;text-align:left;padding:10px 14px;font-size:14px}
+.suggest button:hover{background:var(--green-soft)}
+.suggest .zip{color:var(--ink-3);font-size:12.5px;margin-left:auto}
+/* ---------- chips row ---------- */
+.chipsrow{display:flex;gap:8px;align-items:center;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none;z-index:1001;position:relative}
+.chipsrow::-webkit-scrollbar{display:none}
+.chip{flex:none;display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);font-size:13.5px;font-weight:500;color:var(--ink-2);transition:all .15s;white-space:nowrap}
+.chip:hover{border-color:var(--green)}
+.chip.on{background:var(--green);border-color:var(--green);color:#fff}
+.chip.filterbtn{border-color:var(--ink);color:var(--ink);font-weight:600}
+.chip.filterbtn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+.chip .count{background:var(--amber);color:var(--ink);border-radius:999px;font-size:11px;font-weight:700;padding:1px 6px}
+/* ---------- main ---------- */
+.main{position:relative;overflow:hidden}
+#map{position:absolute;inset:0;z-index:1}
+.leaflet-container{font:inherit}
+/* pins */
+.pin{filter:drop-shadow(0 2px 3px rgba(0,0,0,.3));transition:transform .12s}
+.pin:hover{transform:scale(1.12)}
+.pin.sel{transform:scale(1.18)}
+/* ---------- sheet / sidebar ---------- */
+.sheet{position:absolute;left:0;right:0;bottom:0;z-index:900;background:var(--card);border-radius:18px 18px 0 0;box-shadow:0 -4px 24px rgba(20,40,25,.18);transform:translateY(calc(100% - 56px));transition:transform .3s cubic-bezier(.3,.9,.3,1);display:flex;flex-direction:column;max-height:78%}
+.sheet.open{transform:translateY(0)}
+.sheet-head{padding:8px 18px 10px;flex:none;cursor:pointer}
+.grabber{width:38px;height:4px;border-radius:2px;background:var(--line);margin:0 auto 8px}
+.sheet-title{display:flex;align-items:baseline;gap:8px;white-space:nowrap;overflow:hidden}
+.sheet-title h2{font-size:16px;font-weight:700;flex:none}
+.sheet-title span{color:var(--ink-3);font-size:13px;overflow:hidden;text-overflow:ellipsis}
+.sheet-body{overflow-y:auto;padding:0 14px 20px;overscroll-behavior:contain}
+/* featured strip */
+.feat-h{display:flex;align-items:center;gap:7px;margin:8px 2px 10px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:var(--amber-text)}
+.list-h{display:flex;align-items:center;gap:7px;margin:18px 2px 10px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:var(--ink-2)}
+/* ---------- cards ---------- */
+.cards{display:flex;flex-direction:column;gap:10px}
+.card{display:flex;gap:12px;padding:10px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);cursor:pointer;transition:border-color .15s, box-shadow .15s;text-align:left;width:100%}
+.card:hover{border-color:var(--green);box-shadow:var(--shadow)}
+.card.featured{border-color:oklch(0.85 0.08 80);background:linear-gradient(0deg,var(--amber-soft),var(--card) 55%)}
+.thumb{width:86px;height:86px;flex:none;border-radius:10px;overflow:hidden;position:relative}
+.ph{width:100%;height:100%;display:grid;place-items:center;background:repeating-linear-gradient(45deg,oklch(0.93 0.015 150),oklch(0.93 0.015 150) 8px,oklch(0.955 0.01 150) 8px,oklch(0.955 0.01 150) 16px);color:var(--ink-3);font:500 9.5px ui-monospace,Menlo,monospace;text-align:center;padding:4px}
+.card-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.card-top{display:flex;align-items:center;gap:6px}
+.card-name{font-weight:650;font-size:14.5px;letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pawbadge{flex:none;width:18px;height:18px;border-radius:50%;background:var(--amber);display:grid;place-items:center}
+.meta{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-2);flex-wrap:wrap}
+.rate{font-weight:600;color:var(--ink)}
+.gdot{font-size:11px;color:var(--ink-3)}
+.badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:2px}
+.fb{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px}
+.fb.full{background:var(--green-soft);color:var(--green-dark)}
+.fb.patio{background:var(--amber-soft);color:var(--amber-text)}
+.amset{display:flex;gap:4px}
+.am{width:20px;height:20px;border-radius:6px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-2)}
+/* ---------- preview card (mobile map tap) ---------- */
+.preview{position:absolute;left:12px;right:12px;bottom:68px;z-index:950;transform:translateY(140%);transition:transform .25s cubic-bezier(.3,.9,.3,1)}
+.preview.show{transform:none}
+.preview .card{box-shadow:0 6px 24px rgba(20,40,25,.22)}
+/* ---------- filter panel ---------- */
+.scrim{position:fixed;inset:0;background:rgba(15,30,20,.4);z-index:1100;opacity:0;pointer-events:none;transition:opacity .2s}
+.scrim.show{opacity:1;pointer-events:auto}
+.fpanel{position:fixed;left:0;right:0;bottom:0;z-index:1101;background:var(--card);border-radius:18px 18px 0 0;transform:translateY(105%);transition:transform .28s cubic-bezier(.3,.9,.3,1);max-height:85dvh;display:flex;flex-direction:column}
+.fpanel.show{transform:none}
+.fpanel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 10px;flex:none}
+.fpanel-head h2{font-size:18px}
+.fpanel-body{overflow-y:auto;padding:0 18px}
+.fgroup{padding:14px 0;border-top:1px solid var(--line)}
+.fgroup h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:10px}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{padding:8px 14px;border-radius:10px;border:1.5px solid var(--line);font-size:13.5px;font-weight:500;color:var(--ink-2);transition:all .12s}
+.opt.on{background:var(--green);border-color:var(--green);color:#fff}
+.opt.amber-on{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.fpanel-foot{display:flex;gap:10px;padding:14px 18px calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line);flex:none}
+.btn{border-radius:12px;padding:12px 18px;font-weight:650;font-size:14.5px;transition:all .15s;white-space:nowrap}
+.btn.ghost{color:var(--ink-2)}
+.btn.ghost:hover{color:var(--ink)}
+.btn.primary{background:var(--green);color:#fff;flex:1;text-align:center}
+.btn.primary:hover{background:var(--green-dark)}
+/* ---------- detail ---------- */
+.detail{position:fixed;inset:0;z-index:1200;background:var(--card);transform:translateY(100%);transition:transform .3s cubic-bezier(.3,.9,.3,1);overflow-y:auto;overscroll-behavior:contain}
+.detail.show{transform:none}
+.d-hero{position:relative;height:210px;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
+.d-hero .ph:first-child{grid-row:1/3}
+.d-close{position:absolute;top:14px;left:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:var(--shadow);display:grid;place-items:center;z-index:2}
+.d-body{padding:18px;max-width:720px;margin:0 auto}
+.d-title{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.d-title h2{font-size:23px;letter-spacing:-.02em}
+.featpill{display:inline-flex;align-items:center;gap:6px;background:var(--amber);color:var(--ink);font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px}
+.d-meta{display:flex;align-items:center;gap:8px;margin-top:6px;color:var(--ink-2);font-size:14px;flex-wrap:wrap}
+.d-banner{display:flex;gap:11px;align-items:flex-start;margin:16px 0;padding:13px 14px;border-radius:12px;font-size:14px}
+.d-banner.full{background:var(--green-soft);color:var(--green-dark)}
+.d-banner.patio{background:var(--amber-soft);color:var(--amber-text)}
+.d-banner b{display:block;font-size:14.5px}
+.d-banner .ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;background:#fff}
+.d-sec{margin:20px 0}
+.d-sec h3{font-size:16px;margin-bottom:10px}
+.amgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.amitem{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:13.5px;font-weight:500}
+.amitem .am{width:26px;height:26px;background:var(--green-soft);border:none;color:var(--green-dark)}
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
+.photos .ph{height:96px;border-radius:10px}
+.srcnote{font-size:12px;color:var(--ink-3);margin-top:8px}
+.review{padding:13px 0;border-top:1px solid var(--line)}
+.review:first-of-type{border-top:none}
+.r-head{display:flex;align-items:center;gap:9px;margin-bottom:5px}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--green-soft);color:var(--green-dark);display:grid;place-items:center;font-weight:700;font-size:13px}
+.r-name{font-weight:600;font-size:13.5px}
+.r-sub{font-size:12px;color:var(--ink-3);display:flex;align-items:center;gap:5px}
+.gbadge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--ink-3);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+.stars{gap:1px}
+.review p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2)}
+.d-actions{display:flex;gap:10px;margin:18px 0 8px}
+.d-actions .btn{flex:1;text-align:center;border:1.5px solid var(--line)}
+.d-actions .btn.primary{border-color:var(--green)}
+/* ---------- empty ---------- */
+.empty{text-align:center;padding:40px 20px;color:var(--ink-3)}
+.empty b{display:block;color:var(--ink-2);font-size:15px;margin-bottom:4px}
+/* ---------- desktop ---------- */
+.deskonly{display:none}
+@media(min-width:1024px){
+  #app{grid-template-rows:auto 1fr;grid-template-columns:440px 1fr}
+  .topbar{grid-column:1/3;padding:12px 20px}
+  .chipsrow{display:none}
+  .main{grid-column:2}
+  .sheet{position:static;grid-column:1;grid-row:2;transform:none !important;max-height:none;border-radius:0;border-right:1px solid var(--line);box-shadow:none}
+  .sheet-head{cursor:default;padding-top:14px}
+  .grabber{display:none}
+  .deskonly{display:flex}
+  .desk-chips{gap:8px;align-items:center;flex-wrap:wrap;padding:0 4px 12px}
+  .preview{display:none}
+  .fpanel{left:auto;right:auto;bottom:auto;top:118px;width:440px;margin-left:20px;border-radius:16px;box-shadow:0 12px 40px rgba(20,40,25,.25);max-height:calc(100dvh - 160px)}
+  .fpanel:not(.show){display:none}
+  .detail{left:50%;top:50%;bottom:auto;right:auto;width:min(760px,92vw);max-height:88dvh;transform:translate(-50%,-50%) scale(.97);opacity:0;pointer-events:none;border-radius:20px;box-shadow:0 24px 80px rgba(15,30,20,.4);transition:opacity .2s, transform .2s}
+  .detail.show{transform:translate(-50%,-50%) scale(1);opacity:1;pointer-events:auto}
+  .d-hero{height:250px;border-radius:20px 20px 0 0;overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="logo"><span class="mark" id="logomark"></span><span>PawSpots</span></div>
+    <div class="searchwrap">
+      <div class="searchbox">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" placeholder="City or ZIP — try “Irvine” or 92646" autocomplete="off">
+      </div>
+      <div class="suggest" id="suggest"></div>
+    </div>
+    <button class="chip filterbtn deskonly" id="filterbtn-d" style="align-items:center">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+      Filters <span class="count" id="fcount-d" style="display:none"></span>
+    </button>
+  </header>
+
+  <div class="chipsrow" id="chipsrow">
+    <button class="chip filterbtn" id="filterbtn-m">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+      Filters <span class="count" id="fcount-m" style="display:none"></span>
+    </button>
+  </div>
+
+  <div class="main">
+    <div id="map"></div>
+    <div class="preview" id="preview"></div>
+  </div>
+
+  <aside class="sheet" id="sheet">
+    <div class="sheet-head" id="sheethead">
+      <div class="grabber"></div>
+      <div class="sheet-title"><h2 id="listtitle">Dog-friendly places</h2><span id="listcount"></span></div>
+    </div>
+    <div class="sheet-body">
+      <div class="deskonly desk-chips" id="deskchips"></div>
+      <div id="featwrap"></div>
+      <div class="list-h" id="allhead">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        All places nearby
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </aside>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="fpanel" id="fpanel">
+    <div class="fpanel-head"><h2>Filters</h2>
+      <button id="fclose" style="color:var(--ink-3)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="fpanel-body">
+      <div class="fgroup" style="border-top:none"><h3>Dog friendliness</h3><div class="opts" id="f-friendly"></div></div>
+      <div class="fgroup"><h3>Amenities</h3><div class="opts" id="f-amen"></div></div>
+      <div class="fgroup"><h3>Minimum rating</h3><div class="opts" id="f-rating"></div></div>
+      <div class="fgroup"><h3>Distance</h3><div class="opts" id="f-dist"></div><div class="srcnote" id="distnote"></div></div>
+    </div>
+    <div class="fpanel-foot">
+      <button class="btn ghost" id="fclear">Clear all</button>
+      <button class="btn primary" id="fapply">Show places</button>
+    </div>
+  </div>
+
+  <div class="detail" id="detail"></div>
+</div>
+
+<script>
+/* ============ brand assets ============ */
+const PAW = (c='#fff',s=14)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="${c}"><ellipse cx="12" cy="15.8" rx="5.1" ry="4.3"/><circle cx="5.9" cy="10.8" r="2.1"/><circle cx="9.9" cy="7.6" r="2.25"/><circle cx="14.1" cy="7.6" r="2.25"/><circle cx="18.1" cy="10.8" r="2.1"/></svg>`;
+document.getElementById('logomark').innerHTML = PAW('#fff',18);
+const STAR = (f=1,s=13)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="${f?'oklch(0.75 0.14 75)':'none'}" stroke="oklch(0.75 0.14 75)" stroke-width="2"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>`;
+const G = `<svg width="11" height="11" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.3c0-.8-.1-1.5-.2-2.3H12v4.5h6a5.1 5.1 0 0 1-2.2 3.4v2.8h3.6c2.1-1.9 3.2-4.8 3.2-8.4z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.6H2.1v2.9A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14a6.6 6.6 0 0 1 0-4.2V6.9H2.1a11 11 0 0 0 0 9.9L5.8 14z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 6.9L5.8 9.8c.9-2.7 3.3-4.4 6.2-4.4z"/></svg>`;
+const ICONS = {
+  water:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>',
+  menu:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 3v18M5 8h9a3 3 0 0 0 0-6H5M19 3v8a2 2 0 0 1-2 2h0V3M17 13v8"/></svg>',
+  treats:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 8.5 15.5 15.5M6 10a2.5 2.5 0 1 1-2-4 2.5 2.5 0 1 1 4-2l8 8a2.5 2.5 0 1 1 2 4 2.5 2.5 0 1 1-4 2z"/></svg>',
+  offleash:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><circle cx="12" cy="12" r="2.5"/></svg>',
+  shade:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 6a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8zM12 14v5a2 2 0 0 0 4 0"/></svg>',
+  beds:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M6 10V7h12v3"/></svg>'
+};
+const TICON = (t,c='currentColor',s=14)=>({
+ restaurant:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round"><path d="M7 2v8M4 2v5a3 3 0 0 0 6 0V2M7 13v9M17 2c-2 1.5-3 4-3 7v4h3.5M17.5 2v20"/></svg>`,
+ bar:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h11v16a1.5 1.5 0 0 1-1.5 1.5H7.5A1.5 1.5 0 0 1 6 20V4zM6 9h-.5A2.5 2.5 0 0 0 3 11.5v3A2.5 2.5 0 0 0 5.5 17H6M17 4c0-1-1-2-2.5-2S12 3 12 4"/></svg>`,
+ coffee:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round"><path d="M4 9h12v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M7 5.5c.8-.8.8-1.7 0-2.5M11 5.5c.8-.8.8-1.7 0-2.5"/></svg>`,
+ hotel:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round"><path d="M3 19v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 19h18M3 19v2M21 19v2M7 10V7h4v3"/><circle cx="7" cy="13.5" r="0.5" fill="${c}"/></svg>`,
+ store:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l1.5-4h13L20 8M4 8v12h16V8M4 8h16M9 20v-6h6v6"/></svg>`
+}[t]);
+const AMEN = {water:'Water bowls', menu:'Dog menu', treats:'Free treats', offleash:'Off-leash area', shade:'Shaded patio', beds:'Dog beds'};
+const TYPES = {restaurant:'Restaurant', bar:'Bar', coffee:'Coffee', hotel:'Hotel', store:'Store'};
+
+/* ============ sample data — Orange County ============ */
+const PLACES = [
+ {id:1,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Irvine',addr:'13290 Jamboree Rd, Irvine, CA',lat:33.6910,lng:-117.7846,rating:4.6,reviews:2814,friendly:'patio',amen:['menu','water','treats','shade'],featured:true,
+  blurb:'The gold standard: a full dog menu (grilled chicken bowls!), water service, and a huge shaded patio.'},
+ {id:2,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Huntington Beach',addr:'7681 Edinger Ave, Huntington Beach, CA',lat:33.7302,lng:-117.9884,rating:4.5,reviews:3122,friendly:'patio',amen:['menu','water','treats','shade'],featured:true,
+  blurb:'Same famous dog menu, steps from Bella Terra. Patio fills up on weekends.'},
+ {id:3,name:'The Fetch Yard',type:'bar',city:'Costa Mesa',addr:'1720 Placentia Ave, Costa Mesa, CA',lat:33.6538,lng:-117.9298,rating:4.8,reviews:964,friendly:'full',amen:['offleash','water','treats'],featured:true,
+  blurb:'Beer garden with a fenced off-leash yard. Dogs roam while you sip.'},
+ {id:4,name:'Salty Paw Coffee',type:'coffee',city:'Laguna Beach',addr:'610 S Coast Hwy, Laguna Beach, CA',lat:33.5395,lng:-117.7826,rating:4.7,reviews:521,friendly:'full',amen:['water','treats'],featured:false,
+  blurb:'Dogs welcome at the counter and the ocean-view deck. Free “puppuccinos.”'},
+ {id:5,name:'Driftline Kitchen',type:'restaurant',city:'Newport Beach',addr:'2901 Newport Blvd, Newport Beach, CA',lat:33.6076,lng:-117.9284,rating:4.4,reviews:1187,friendly:'patio',amen:['water','shade'],featured:false,
+  blurb:'Harborside seafood spot; dogs on the patio only.'},
+ {id:6,name:'Wag & Whisker Supply',type:'store',city:'Newport Beach',addr:'1000 Bristol St N, Newport Beach, CA',lat:33.6564,lng:-117.8766,rating:4.9,reviews:342,friendly:'full',amen:['treats','water'],featured:false,
+  blurb:'Boutique pet goods; dogs shop alongside you, treat jar at the register.'},
+ {id:7,name:'Ranch Hand Brewing Co.',type:'bar',city:'Anaheim',addr:'336 S Anaheim Blvd, Anaheim, CA',lat:33.8320,lng:-117.9110,rating:4.6,reviews:876,friendly:'full',amen:['water','treats','menu'],featured:true,
+  blurb:'Taproom with a “barks & brats” dog plate and Sunday pup meetups.'},
+ {id:8,name:'Casa Marbella Hotel',type:'hotel',city:'Dana Point',addr:'25135 Park Lantern, Dana Point, CA',lat:33.4661,lng:-117.7031,rating:4.7,reviews:1543,friendly:'full',amen:['beds','water','treats'],featured:false,
+  blurb:'Dog beds and bowls in-room; welcome treat bag at check-in.'},
+ {id:9,name:'Harborline Taproom',type:'bar',city:'Huntington Beach',addr:'221 Main St, Huntington Beach, CA',lat:33.6595,lng:-118.0010,rating:4.3,reviews:689,friendly:'patio',amen:['water','shade'],featured:false,
+  blurb:'Main Street patio a block from Dog Beach. Patio only.'},
+ {id:10,name:'Old Towne Biscuit Co.',type:'coffee',city:'Orange',addr:'122 N Glassell St, Orange, CA',lat:33.7885,lng:-117.8524,rating:4.5,reviews:433,friendly:'patio',amen:['water','treats','shade'],featured:false,
+  blurb:'Plaza-side patio; house-baked dog biscuits on weekends.'},
+ {id:11,name:'The Green Bowl Café',type:'restaurant',city:'Tustin',addr:'2437 Park Ave, Tustin, CA',lat:33.6995,lng:-117.8410,rating:4.2,reviews:378,friendly:'patio',amen:['water'],featured:false,
+  blurb:'Casual bowls and smoothies; shaded patio seating with dogs.'},
+ {id:12,name:'Seacliff Suites',type:'hotel',city:'Huntington Beach',addr:'21112 Pacific Coast Hwy, Huntington Beach, CA',lat:33.6528,lng:-117.9945,rating:4.4,reviews:987,friendly:'full',amen:['beds','water'],featured:false,
+  blurb:'Pet-friendly rooms across from the beach; no size limit.'},
+ {id:13,name:'Canyon Outfitters',type:'store',city:'Laguna Beach',addr:'384 Forest Ave, Laguna Beach, CA',lat:33.5432,lng:-117.7838,rating:4.6,reviews:214,friendly:'full',amen:['water','treats'],featured:false,
+  blurb:'Gear shop for trail dogs and their humans; leashed dogs welcome inside.'},
+ {id:14,name:'Marrow & Bone Butcher',type:'store',city:'Santa Ana',addr:'305 E 4th St, Santa Ana, CA',lat:33.7492,lng:-117.8641,rating:4.8,reviews:167,friendly:'full',amen:['treats'],featured:false,
+  blurb:'Butcher shop that saves marrow bones for four-legged regulars.'},
+ {id:15,name:'Peppertree Patio',type:'restaurant',city:'San Clemente',addr:'111 Avenida Del Mar, San Clemente, CA',lat:33.4266,lng:-117.6135,rating:4.3,reviews:542,friendly:'patio',amen:['water','shade'],featured:false,
+  blurb:'Under the peppertrees on Del Mar; dogs on the patio only.'},
+ {id:16,name:'Brea Trailhead Coffee',type:'coffee',city:'Brea',addr:'240 S Brea Blvd, Brea, CA',lat:33.9130,lng:-117.8930,rating:4.4,reviews:298,friendly:'full',amen:['water','treats'],featured:false,
+  blurb:'Pre-hike espresso; dogs welcome inside and on the sidewalk tables.'}
+];
+const REVIEWS = {
+ 1:[{n:'Marisa T.',r:5,t:'2 weeks ago',x:'They brought my golden a bowl of grilled chicken and rice before my food even arrived. He thinks this is HIS restaurant now.'},{n:'Devon K.',r:5,t:'1 month ago',x:'Dog menu is real and it’s great. Patio is huge and shaded, staff brings water without asking.'},{n:'Priya S.',r:4,t:'2 months ago',x:'Busy on weekends but they handle dogs so well. Ask for the misters in summer.'}],
+ 3:[{n:'Jon B.',r:5,t:'3 weeks ago',x:'Fenced yard means my heeler runs while I have a hazy IPA. Nothing else like it in OC.'},{n:'Alexis R.',r:5,t:'1 month ago',x:'Staff hands out treats like candy. Water stations everywhere.'}],
+ 7:[{n:'Sam W.',r:5,t:'1 week ago',x:'Ordered the “barks & brats” plate for my corgi. He approved. Sunday meetups are a blast.'},{n:'Erin L.',r:4,t:'6 weeks ago',x:'Dogs allowed inside the taproom, which is rare. Gets loud but pups seem happy.'}],
+ default:[{n:'Casey M.',r:5,t:'3 weeks ago',x:'Super welcoming with our two pups — water bowl out within minutes.'},{n:'Jordan P.',r:4,t:'2 months ago',x:'Easy with a dog. Staff was friendly, plenty of shade.'}]
+};
+const AREAS = [
+ {q:'Irvine',zip:'92618',lat:33.6846,lng:-117.8265,z:12},{q:'Costa Mesa',zip:'92626',lat:33.6638,lng:-117.9047,z:13},
+ {q:'Huntington Beach',zip:'92646',lat:33.6595,lng:-117.9988,z:12},{q:'Newport Beach',zip:'92660',lat:33.6189,lng:-117.9298,z:13},
+ {q:'Laguna Beach',zip:'92651',lat:33.5427,lng:-117.7854,z:13},{q:'Anaheim',zip:'92805',lat:33.8366,lng:-117.9143,z:12},
+ {q:'Santa Ana',zip:'92701',lat:33.7455,lng:-117.8677,z:13},{q:'Orange',zip:'92866',lat:33.7879,lng:-117.8531,z:13},
+ {q:'Tustin',zip:'92780',lat:33.7458,lng:-117.8262,z:13},{q:'Dana Point',zip:'92629',lat:33.4672,lng:-117.6981,z:13},
+ {q:'San Clemente',zip:'92672',lat:33.4270,lng:-117.6120,z:13},{q:'Brea',zip:'92821',lat:33.9165,lng:-117.8895,z:13}
+];
+
+/* ============ state ============ */
+const state = {
+  types:new Set(), friendly:'any', amen:new Set(), minRating:0, maxDist:0,
+  center:{lat:33.665,lng:-117.85}, centerLabel:null, selected:null
+};
+const draft = {friendly:'any', amen:new Set(), minRating:0, maxDist:0};
+
+/* ============ map ============ */
+const map = L.map('map',{zoomControl:false}).setView([state.center.lat,state.center.lng],11);
+L.control.zoom({position:'bottomright'}).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'}).addTo(map);
+let markers = {};
+function pinHtml(p, sel){
+  const feat = p.featured;
+  const bg = feat ? 'oklch(0.75 0.14 75)' : (p.friendly==='full' ? 'oklch(0.52 0.11 150)' : '#fff');
+  const fg = feat ? 'oklch(0.30 0.05 75)' : (p.friendly==='full' ? '#fff' : 'oklch(0.52 0.11 150)');
+  const size = feat ? 40 : 32;
+  const border = p.friendly==='patio' && !feat ? 'border:2.5px solid oklch(0.52 0.11 150);' : '';
+  const glyph = feat ? PAW(fg,20) : TICON(p.type,fg,15);
+  return `<div class="pin ${sel?'sel':''}" style="width:${size}px;height:${size}px;border-radius:50% 50% 50% 4px;transform-origin:bottom left;background:${bg};${border}display:grid;place-items:center;rotate:0deg">${glyph}</div>`;
+}
+function renderMarkers(list){
+  Object.values(markers).forEach(m=>m.remove()); markers={};
+  list.forEach(p=>{
+    const size = p.featured?40:32;
+    const m = L.marker([p.lat,p.lng],{icon:L.divIcon({className:'', html:pinHtml(p, state.selected===p.id), iconSize:[size,size], iconAnchor:[size/2,size]}), zIndexOffset:p.featured?500:0});
+    m.on('click',()=>selectPlace(p.id));
+    m.addTo(map); markers[p.id]=m;
+  });
+}
+
+/* ============ helpers ============ */
+const dist = p => {
+  const R=3959, dLat=(p.lat-state.center.lat)*Math.PI/180, dLng=(p.lng-state.center.lng)*Math.PI/180;
+  const a=Math.sin(dLat/2)**2+Math.cos(state.center.lat*Math.PI/180)*Math.cos(p.lat*Math.PI/180)*Math.sin(dLng/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+};
+const fmtDist = d => d<10 ? d.toFixed(1)+' mi' : Math.round(d)+' mi';
+function filtered(){
+  return PLACES.filter(p=>
+    (!state.types.size || state.types.has(p.type)) &&
+    (state.friendly==='any' || p.friendly===state.friendly) &&
+    [...state.amen].every(a=>p.amen.includes(a)) &&
+    p.rating>=state.minRating &&
+    (!state.maxDist || dist(p)<=state.maxDist)
+  ).sort((a,b)=>dist(a)-dist(b));
+}
+const friendlyBadge = p => p.friendly==='full'
+  ? `<span class="fb full"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Inside + outside</span>`
+  : `<span class="fb patio"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v3M12 6a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8zM12 14v7"/></svg>Patio only</span>`;
+
+/* ============ cards / list ============ */
+function cardHtml(p){
+  return `<button class="card ${p.featured?'featured':''}" data-id="${p.id}">
+    <div class="thumb"><div class="ph">photo<br>${p.name.split(' ')[0].toLowerCase()}</div></div>
+    <div class="card-body">
+      <div class="card-top"><span class="card-name">${p.name}</span>${p.featured?`<span class="pawbadge" title="Featured: most dog-friendly">${PAW('oklch(0.30 0.05 75)',11)}</span>`:''}</div>
+      <div class="meta"><span class="rate">${STAR(1,12)}${p.rating}</span><span class="gdot">(${p.reviews.toLocaleString()}) ${G}</span><span>·</span><span class="rate" style="font-weight:500;color:var(--ink-2)">${TICON(p.type,'currentColor',12)}${TYPES[p.type]}</span><span>·</span><span>${fmtDist(dist(p))}</span></div>
+      <div class="badges">${friendlyBadge(p)}<span class="amset">${p.amen.map(a=>`<span class="am" title="${AMEN[a]}">${ICONS[a]}</span>`).join('')}</span></div>
+    </div>
+  </button>`;
+}
+function renderList(){
+  const list = filtered();
+  const feats = list.filter(p=>p.featured);
+  document.getElementById('featwrap').innerHTML = feats.length ? `
+    <div class="feat-h">${PAW('oklch(0.65 0.13 70)',15)}Most dog-friendly — the amber paw list</div>
+    <div class="cards">${feats.map(cardHtml).join('')}</div>` : '';
+  const rest = list.filter(p=>!p.featured);
+  document.getElementById('allhead').style.display = feats.length && rest.length ? 'flex' : (rest.length?'flex':'none');
+  document.getElementById('cards').innerHTML = rest.length ? rest.map(cardHtml).join('') :
+    (list.length?'':'<div class="empty"><b>No places match</b>Try widening your filters or searching a different area.</div>');
+  document.getElementById('listcount').textContent = `${list.length} place${list.length===1?'':'s'}${state.centerLabel?` near ${state.centerLabel}`:' in Orange County'}`;
+  renderMarkers(list);
+  document.querySelectorAll('.card[data-id]').forEach(el=>el.addEventListener('click',()=>openDetail(+el.dataset.id)));
+}
+
+/* ============ selection / preview ============ */
+function selectPlace(id){
+  state.selected = id;
+  const p = PLACES.find(x=>x.id===id);
+  Object.entries(markers).forEach(([pid,m])=>{
+    const pp = PLACES.find(x=>x.id===+pid);
+    m.setIcon(L.divIcon({className:'',html:pinHtml(pp,+pid===id),iconSize:[pp.featured?40:32,pp.featured?40:32],iconAnchor:[(pp.featured?40:32)/2,pp.featured?40:32]}));
+  });
+  const pv = document.getElementById('preview');
+  pv.innerHTML = cardHtml(p);
+  pv.classList.add('show');
+  pv.querySelector('.card').addEventListener('click',()=>openDetail(id));
+  if(window.innerWidth>=1024) openDetail(id);
+}
+map.on('click',()=>{document.getElementById('preview').classList.remove('show'); state.selected=null;});
+
+/* ============ detail ============ */
+function openDetail(id){
+  const p = PLACES.find(x=>x.id===id);
+  const revs = REVIEWS[id] || REVIEWS.default;
+  const d = document.getElementById('detail');
+  d.innerHTML = `
+    <div class="d-hero">
+      <button class="d-close" id="dclose"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <div class="ph">photo — exterior</div><div class="ph">photo — patio</div><div class="ph">user photo — pup visit</div>
+    </div>
+    <div class="d-body">
+      <div class="d-title"><h2>${p.name}</h2>${p.featured?`<span class="featpill">${PAW('oklch(0.30 0.05 75)',12)}Featured</span>`:''}</div>
+      <div class="d-meta"><span class="rate">${STAR(1,14)}<b>${p.rating}</b></span><span class="gdot">${p.reviews.toLocaleString()} Google reviews</span><span>·</span><span class="rate" style="font-weight:500;color:var(--ink-2)">${TICON(p.type,'currentColor',14)}${TYPES[p.type]}</span><span>·</span><span>${p.city} — ${fmtDist(dist(p))}</span></div>
+      <div class="d-banner ${p.friendly}">
+        <span class="ic">${p.friendly==='full'
+          ?'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.1 150)" stroke-width="2.6" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg>'
+          :'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.55 0.12 70)" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 6a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8zM12 14v7"/></svg>'}</span>
+        <div>${p.friendly==='full'
+          ?'<b>Fully dog-friendly</b>Dogs are welcome inside and outside.'
+          :'<b>Patio only</b>Dogs are welcome on the outdoor patio, but not inside.'}</div>
+      </div>
+      <p style="margin:0;color:var(--ink-2)">${p.blurb}</p>
+      <div class="d-sec"><h3>Dog amenities</h3><div class="amgrid">${p.amen.map(a=>`<div class="amitem"><span class="am">${ICONS[a]}</span>${AMEN[a]}</div>`).join('')}</div></div>
+      <div class="d-sec"><h3>Photos</h3>
+        <div class="photos"><div class="ph">user photo</div><div class="ph">user photo</div><div class="ph">google photo</div><div class="ph">google photo</div></div>
+        <div class="srcnote">User uploads + photos via Google Maps</div>
+      </div>
+      <div class="d-sec"><h3>Reviews</h3>
+        ${revs.map(r=>`<div class="review">
+          <div class="r-head"><span class="avatar">${r.n[0]}</span><div><div class="r-name">${r.n}</div><div class="r-sub"><span class="stars">${STAR(1,10).repeat(r.r)}</span>${r.t} · <span class="gbadge">${G}via Google</span></div></div></div>
+          <p>${r.x}</p></div>`).join('')}
+      </div>
+      <div class="d-actions">
+        <button class="btn primary" style="background:var(--green);color:#fff">Directions</button>
+        <button class="btn">Website</button>
+        <button class="btn">Add photo</button>
+      </div>
+      <div class="srcnote" style="text-align:center;padding-bottom:10px">${p.addr}</div>
+    </div>`;
+  d.classList.add('show');
+  d.scrollTop = 0;
+  document.getElementById('dclose').addEventListener('click',()=>d.classList.remove('show'));
+}
+document.getElementById('detail').addEventListener('click',e=>{ if(window.innerWidth>=1024 && e.target.id==='detail') e.target.classList.remove('show'); });
+
+/* ============ chips (type filters) ============ */
+function chipSet(containerId){
+  const c = document.getElementById(containerId);
+  const mk = (t,label)=>{
+    const b=document.createElement('button');
+    b.className='chip'+(t===null ? (state.types.size?'':' on') : (state.types.has(t)?' on':''));
+    b.innerHTML = t===null ? label : TICON(t,'currentColor',13)+label;
+    b.addEventListener('click',()=>{
+      if(t===null) state.types.clear();
+      else state.types.has(t)?state.types.delete(t):state.types.add(t);
+      syncChips(); renderList();
+    });
+    c.appendChild(b);
+  };
+  mk(null,'All');
+  Object.entries(TYPES).forEach(([t,l])=>mk(t,l+'s'));
+}
+function syncChips(){
+  ['chipsrow','deskchips'].forEach(cid=>{
+    const chips=[...document.getElementById(cid).querySelectorAll('.chip:not(.filterbtn)')];
+    chips.forEach((b,i)=>{
+      const t = i===0?null:Object.keys(TYPES)[i-1];
+      b.classList.toggle('on', t===null ? !state.types.size : state.types.has(t));
+    });
+  });
+  const n = (state.friendly!=='any') + state.amen.size + (state.minRating>0) + (state.maxDist>0);
+  ['fcount-m','fcount-d'].forEach(id=>{const el=document.getElementById(id); el.style.display=n?'':'none'; el.textContent=n;});
+  document.getElementById('filterbtn-m').classList.toggle('active',n>0);
+  document.getElementById('filterbtn-d').classList.toggle('active',n>0);
+}
+chipSet('chipsrow'); chipSet('deskchips');
+// move mobile filter button first
+const cr=document.getElementById('chipsrow'); cr.prepend(document.getElementById('filterbtn-m'));
+
+/* ============ filter panel ============ */
+function optRow(containerId, options, get, set, multi){
+  const c=document.getElementById(containerId); c.innerHTML='';
+  options.forEach(([val,label])=>{
+    const b=document.createElement('button'); b.className='opt'; b.textContent=label;
+    const sync=()=>b.classList.toggle('on', multi ? get().has(val) : get()===val);
+    b.addEventListener('click',()=>{ set(val); [...c.children].forEach(x=>x.dispatchEvent(new Event('sync'))); });
+    b.addEventListener('sync',sync); sync();
+    c.appendChild(b);
+  });
+}
+function renderFilterPanel(){
+  optRow('f-friendly',[['any','Any'],['full','Inside + outside'],['patio','Patio OK']],()=>draft.friendly,v=>draft.friendly=v,false);
+  optRow('f-amen',Object.entries(AMEN),()=>draft.amen,v=>draft.amen.has(v)?draft.amen.delete(v):draft.amen.add(v),true);
+  optRow('f-rating',[[0,'Any'],[4,'4.0+'],[4.5,'4.5+']],()=>draft.minRating,v=>draft.minRating=v,false);
+  optRow('f-dist',[[0,'Any'],[5,'5 mi'],[10,'10 mi'],[20,'20 mi']],()=>draft.maxDist,v=>draft.maxDist=v,false);
+  document.getElementById('distnote').textContent = state.centerLabel ? `Measured from ${state.centerLabel}` : 'Measured from the center of Orange County — search an area to refine';
+}
+function openFilters(){
+  draft.friendly=state.friendly; draft.amen=new Set(state.amen); draft.minRating=state.minRating; draft.maxDist=state.maxDist;
+  renderFilterPanel();
+  document.getElementById('fpanel').classList.add('show');
+  document.getElementById('scrim').classList.add('show');
+}
+function closeFilters(){document.getElementById('fpanel').classList.remove('show');document.getElementById('scrim').classList.remove('show');}
+document.getElementById('filterbtn-m').addEventListener('click',openFilters);
+document.getElementById('filterbtn-d').addEventListener('click',openFilters);
+document.getElementById('fclose').addEventListener('click',closeFilters);
+document.getElementById('scrim').addEventListener('click',closeFilters);
+document.getElementById('fclear').addEventListener('click',()=>{draft.friendly='any';draft.amen.clear();draft.minRating=0;draft.maxDist=0;renderFilterPanel();});
+document.getElementById('fapply').addEventListener('click',()=>{
+  state.friendly=draft.friendly; state.amen=new Set(draft.amen); state.minRating=draft.minRating; state.maxDist=draft.maxDist;
+  closeFilters(); syncChips(); renderList();
+});
+
+/* ============ search ============ */
+const searchEl=document.getElementById('search'), suggestEl=document.getElementById('suggest');
+function goArea(a){
+  state.center={lat:a.lat,lng:a.lng}; state.centerLabel=a.q;
+  searchEl.value=`${a.q}, CA`;
+  suggestEl.classList.remove('open');
+  map.flyTo([a.lat,a.lng],a.z,{duration:.8});
+  renderList();
+}
+searchEl.addEventListener('input',()=>{
+  const q=searchEl.value.trim().toLowerCase();
+  if(q.length<2){suggestEl.classList.remove('open');return;}
+  const hits=AREAS.filter(a=>a.q.toLowerCase().includes(q)||a.zip.startsWith(q)).slice(0,6);
+  suggestEl.innerHTML=hits.length?hits.map((a,i)=>`<button data-i="${AREAS.indexOf(a)}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="oklch(0.52 0.11 150)" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>${a.q}, CA<span class="zip">${a.zip}</span></button>`).join(''):`<button disabled style="color:var(--ink-3)">No matches — try an OC city or ZIP</button>`;
+  suggestEl.classList.add('open');
+  suggestEl.querySelectorAll('button[data-i]').forEach(b=>b.addEventListener('click',()=>goArea(AREAS[+b.dataset.i])));
+});
+searchEl.addEventListener('keydown',e=>{
+  if(e.key==='Enter'){
+    const q=searchEl.value.trim().toLowerCase();
+    const hit=AREAS.find(a=>a.q.toLowerCase().includes(q)||a.zip.startsWith(q));
+    if(hit) goArea(hit);
+  }
+});
+document.addEventListener('click',e=>{ if(!e.target.closest('.searchwrap')) suggestEl.classList.remove('open'); });
+
+/* ============ sheet toggle (mobile) ============ */
+const sheet=document.getElementById('sheet');
+document.getElementById('sheethead').addEventListener('click',()=>{ if(window.innerWidth<1024) sheet.classList.toggle('open'); });
+
+/* ============ init ============ */
+renderList();
+window.addEventListener('resize',()=>map.invalidateSize());
+</script>
+</body>
+</html>

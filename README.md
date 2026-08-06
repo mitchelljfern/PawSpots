@@ -6,7 +6,9 @@ Built mobile-first: a full-screen map with a slide-up list sheet on phones, and 
 
 ## Running it
 
-Open `PawSpots.html` in a browser. There is no build step and no dependencies to install.
+Live at **https://mitchelljfern.github.io/PawSpots/**, served from `main` by GitHub Pages.
+
+Locally, open `index.html` in a browser. There is no build step and no dependencies to install.
 
 It loads three things from CDNs at runtime, so the first load needs a network connection:
 
@@ -27,7 +29,7 @@ If the Leaflet CDN is unreachable, the map pane says so and the list view keeps 
 
 ## Sample data
 
-Everything is currently sample data, defined at the top of the script in `PawSpots.html`:
+Everything is currently sample data, defined at the top of the script in `index.html`:
 
 - `PLACES` — 16 Orange County businesses (including both Lazy Dog locations as featured examples)
 - `AREAS` — cities and ZIP codes the search resolves against

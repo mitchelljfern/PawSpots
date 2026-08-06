@@ -1,25 +1,46 @@
-# CODING AGENTS: READ THIS FIRST
+# PawSpots
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+A dashboard for finding dog-friendly places — restaurants, bars, coffee shops, hotels and stores — with clear indicators for whether dogs are welcome **inside and outside** or **on the patio only**.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+Built mobile-first: a full-screen map with a slide-up list sheet on phones, and a split list/map layout on desktop (≥1024px).
 
-## What you should do — IMPORTANT
+## Running it
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+Open `PawSpots.html` in a browser. There is no build step and no dependencies to install.
 
-**Read `project/PawSpots.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+It loads three things from CDNs at runtime, so the first load needs a network connection:
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+- [Leaflet](https://leafletjs.com/) 1.9.4 for the map (subresource-integrity pinned)
+- OpenStreetMap raster tiles
+- Bricolage Grotesque from Google Fonts
 
-## About the design files
+If the Leaflet CDN is unreachable, the map pane says so and the list view keeps working.
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+## What's in it
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+- **Map** — pannable Leaflet map of Orange County. Pins are colour- and icon-coded: green fill for fully dog-friendly, white with a green outline for patio-only, and a larger amber paw for featured places. Each business type has its own glyph (fork & knife, beer mug, coffee cup, hotel bed, storefront) on pins, filter chips, list cards and the detail view.
+- **Search** — autosuggest over Orange County cities and ZIP codes. Selecting an area flies the map there and recalculates every distance. Keyboard-navigable (arrow keys, Enter, Escape).
+- **Filters** — business type chips plus a panel for friendliness level, amenities (dog menu, water bowls, treats, off-leash area, shaded patio, dog beds), minimum rating and distance. The active-filter count shows on the Filters button.
+- **Most dog-friendly** — the amber-paw list of featured places, pinned above the main results.
+- **Detail view** — amenities grid, photo gallery, reviews, and a banner spelling out the dog policy.
+- **Accessibility** — labelled map pins, ARIA states on every control, focus trapping in modals, Escape-to-dismiss, and `prefers-reduced-motion` support.
 
-## Bundle contents
+## Sample data
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Dog-friendly places dashboard` project files (HTML prototypes, assets, components)
+Everything is currently sample data, defined at the top of the script in `PawSpots.html`:
+
+- `PLACES` — 16 Orange County businesses (including both Lazy Dog locations as featured examples)
+- `AREAS` — cities and ZIP codes the search resolves against
+- `REVIEWS` — mocked reviews, presented as "via Google"
+
+Photos are striped placeholders. Reviews and photos are **not** wired to the Google Places API — that needs an API key and a server-side proxy, since a key can't be safely embedded in a static page. The data structures are shaped so a real source can drop in behind them.
+
+## Design source
+
+`design/` holds the Claude Design handoff this was built from:
+
+- `design/prototype/PawSpots.html` — the original prototype
+- `design/chats/` — the design conversation that produced it
+- `design/HANDOFF.md` — the handoff bundle's own README
+
+The implementation is pixel-identical to the prototype across the mobile map, mobile sheet, mobile filters, desktop split view and desktop filters. The single intentional visual change is in the detail hero: the prototype's `.d-hero .ph:first-child` rule never matched, because the close button is the first child, which left an empty cell in the grid. That span is now anchored to the photo itself.

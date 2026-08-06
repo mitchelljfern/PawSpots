@@ -26,6 +26,8 @@ If the Leaflet CDN is unreachable, the map pane says so and the list view keeps 
 - **Most dog-friendly** — the amber-paw list of featured places, pinned above the main results. It shows the five nearest, with a "Show all" toggle for the rest; the map always shows every featured pin.
 - **Amenity icons** — each amenity has its own colour and icon: water bowls blue, dog menu green, shade red, treats orange, off-leash teal, dog beds violet, fencing indigo, small-dog area pink, self-serve wash cyan, raw food amber. Each `.am-*` class sets three custom properties (`--am-fg`, `--am-bg`, `--am-br`) and every surface reads them, so a new amenity needs one CSS rule and one icon.
 - **Detail view** — amenities grid, photo gallery, pet fee and limits for hotels, and a banner spelling out the dog policy. The wording follows the place type: patio-only for restaurants, off-leash for parks, dogs-welcome-inside for shops.
+- **Photos** — 10 places have a real photo, shown as the card thumbnail and the detail hero. Every photo carries its author and licence in the page, because most are CC BY or CC BY-SA and may only be published with the author credited. The striped placeholders remain everywhere else.
+- **Link previews** — favicon, Apple touch icon and a 1200x630 social card, so links unfurl properly in iMessage, Slack, Facebook and X.
 - **Accessibility** — labelled map pins, ARIA states on every control, focus trapping in modals, Escape-to-dismiss, and `prefers-reduced-motion` support.
 
 ## Data
@@ -53,7 +55,32 @@ The importer holds every mapping decision from CSV column to app field, so the r
 - **Featured** — the amber paw list — means a real dog menu, or a dog park with the full kit: fenced, separate small-dog area, shade and water.
 - **Notes are filtered.** Fragments where the spreadsheet talks about itself ("Rating shown is the Irvine location", "Listed on Google as…") are dropped; caveats a visitor would want ("verify before visiting", "seasonal") are kept.
 
-Photos are striped placeholders. Photos and reviews are **not** wired to the Google Places API — that needs an API key and a server-side proxy, since a key can't be safely embedded in a static page. The data structures are shaped so a real source can drop in behind them.
+### Photos
+
+Ten places have a photo. Sources, credits and licences live in `tools/photos.json`, keyed by a slug whose `place` must match a Name in the CSVs exactly — the importer fails loudly if it doesn't, so a renamed place can't silently lose its picture.
+
+**The credits are load-bearing.** Most of these images are CC BY or CC BY-SA, which permit publication only with the author credited, so the credit travels with the photo into the page and renders under every hero. Don't strip it. `photos/ATTRIBUTIONS.txt` keeps the original notice as delivered.
+
+To add or replace photos: drop the files in a directory, add entries to `tools/photos.json`, then
+
+```
+python3 tools/build-photos.py <source-dir>   # writes photos/<slug>.jpg + <slug>-thumb.jpg
+python3 tools/import-places.py               # links them into index.html
+```
+
+`build-photos.py` exists because the originals average ~350 KB, which is silly for an 86px card thumbnail. It writes a 240x240 crop for cards and a version bounded to 1200x800 for the hero: 132 KB of thumbnails on first paint, with the heroes loaded only when a detail opens.
+
+### Icons and the social card
+
+`favicon.svg` is the source of truth for the icon. `og.png` is rendered from `tools/og-image.html`. Both rasterise via
+
+```
+node tools/build-assets.mjs        # writes og.png, apple-touch-icon.png, favicon-32.png
+```
+
+The `og:image` URL in `index.html` is absolute and points at `pawspots.netlify.app`. It has to be — a relative URL yields no preview at all. If the site moves, update the `og:*`, `twitter:*` and canonical tags together.
+
+Photos beyond those ten are striped placeholders.
 
 ## Design source
 

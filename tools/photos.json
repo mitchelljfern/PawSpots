@@ -1,0 +1,85 @@
+{
+  "_comment": "Photo credits, keyed by slug. `place` must match a Name in data/*.csv exactly — tools/import-places.py matches on it and will fail loudly if it doesn't. Licence and author are not optional metadata: the CC BY and CC BY-SA images may only be published with the author credited, so the app renders `author`, `license` and `source` under every photo. Public-domain images need no credit but are shown the same way.",
+
+  "hotel-del-coronado": {
+    "file": "hotel-del-coronado.jpg",
+    "place": "Hotel del Coronado",
+    "alt": "The Hotel del Coronado photographed around 1900",
+    "author": "William Henry Jackson",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hotel_Del_c1900b.jpg"
+  },
+  "coronado-dog-beach": {
+    "file": "coronado-dog-beach.jpg",
+    "place": "Coronado Dog Beach",
+    "alt": "A Saint Bernard on the sand at Coronado dog beach",
+    "author": "Jamie Lantzy",
+    "license": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_bernard_at_coronado_beach.jpg"
+  },
+  "loews-coronado-bay-resort": {
+    "file": "loews-coronado-bay-resort.jpg",
+    "place": "Loews Coronado Bay Resort",
+    "alt": "Loews Coronado Bay Resort seen from the water",
+    "author": "C.W. Kim",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Loews2.jpg"
+  },
+  "montage-laguna-beach": {
+    "file": "montage-laguna-beach.jpg",
+    "place": "Montage Laguna Beach",
+    "alt": "The pool at Montage Laguna Beach overlooking the ocean",
+    "author": "Seasonscreep",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Montage_Laguna_Beach_pool_2026.jpg"
+  },
+  "la-quinta-resort": {
+    "file": "la-quinta-resort.jpg",
+    "place": "La Quinta Resort & Club",
+    "alt": "The front entrance of the La Quinta Resort and Club",
+    "author": "Coolcaesar",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Quinta_Resort_and_Club_Front_Entrance.jpg"
+  },
+  "arroyo-burro-beach": {
+    "file": "arroyo-burro-beach.jpg",
+    "place": "Arroyo Burro (Hendry's) Beach",
+    "alt": "Arroyo Burro Beach photographed around 1900, with a horse and buggy on the sand",
+    "author": "Unknown",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ArroyoBurroBeach_Buggy_c1900.jpg"
+  },
+  "huntington-dog-beach": {
+    "file": "huntington-dog-beach.jpg",
+    "place": "Huntington Dog Beach",
+    "alt": "Huntington Dog Beach looking north towards Bolsa Chica",
+    "author": "Dicklyon",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Huntington_Dog_Beach_and_Bolsa_Chica.jpg"
+  },
+  "rosies-dog-beach": {
+    "file": "rosies-dog-beach.jpg",
+    "place": "Rosie's Dog Beach",
+    "alt": "A bulldog on the sand at Rosie's Dog Beach in Long Beach",
+    "author": "Justin Rudd",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_bulldog_at_Rosie%27s_Dog_Beach.jpg"
+  },
+  "convict-lake-resort": {
+    "file": "convict-lake-resort.jpg",
+    "place": "Convict Lake Resort",
+    "alt": "Convict Lake in winter, surrounded by snow and mountains",
+    "author": "Lion Exchange",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Convict_Lake_in_the_Winter.jpg",
+    "note": "Shows the lake at the resort, not the cabins."
+  },
+  "kimpton-shorebreak": {
+    "file": "kimpton-shorebreak.jpg",
+    "place": "Kimpton Shorebreak",
+    "alt": "A dog on the patio at the Shorebreak Hotel in Huntington Beach",
+    "author": "Taro the Shiba Inu (Flickr)",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Taro_the_Shiba_Inu_at_Shorebreaks_Patio_Pet-a-Potty.jpg"
+  }
+}

@@ -20,6 +20,13 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 COORDS = json.loads((ROOT / "tools/coordinates.json").read_text())
 
+# Photo credits, keyed by slug. The CC BY / CC BY-SA licences on several of these
+# only permit publication with the author credited, so the credit travels with
+# the photo into the page rather than living in a file nobody renders.
+PHOTOS = {k: v for k, v in json.loads((ROOT / "tools/photos.json").read_text()).items()
+          if not k.startswith("_")}
+BY_PLACE = {v["place"]: dict(v, slug=k) for k, v in PHOTOS.items()}
+
 # Venues the CSV files as "Restaurant" that are really breweries, taprooms or
 # bars. Only affects which icon shows on the pin and which chip filters them in.
 BARS = {
@@ -194,6 +201,9 @@ def parks_and_stores():
 
 
 def render(places):
+    unmatched = set(BY_PLACE) - {p["key"] for p in places}
+    if unmatched:
+        raise SystemExit(f"Photos reference unknown places: {sorted(unmatched)}")
     out = []
     for i, p in enumerate(places, start=1):
         if p["key"] not in COORDS:
@@ -211,6 +221,12 @@ def render(places):
                    f"featured:{js(p['featured'])}"]
         if p["fee"]:
             fields.append(f"fee:{js(p['fee'])}")
+        photo = BY_PLACE.get(p["key"])
+        if photo:
+            fields.append(f"photo:{js(photo['slug'])}")
+            fields.append(f"alt:{js(photo['alt'])}")
+            credit = {"a": photo["author"], "l": photo["license"], "u": photo["source"]}
+            fields.append(f"credit:{js(credit)}")
         out.append(" {" + ",".join(fields) + ",\n  blurb:" + js(p["blurb"]) + "}")
     return "const PLACES = [\n" + ",\n".join(out) + "\n];"
 
@@ -230,6 +246,7 @@ def main():
     for p in places:
         by_type[p["type"]] = by_type.get(p["type"], 0) + 1
     print(f"{len(places)} places -> index.html")
+    print(f"  with photos: {sum(1 for p in places if p['key'] in BY_PLACE)}")
     print(f"  rated: {rated}   featured: {sum(1 for p in places if p['featured'])}")
     print("  " + "  ".join(f"{k}: {v}" for k, v in sorted(by_type.items())))
 

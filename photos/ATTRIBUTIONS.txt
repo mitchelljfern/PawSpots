@@ -1,0 +1,54 @@
+Images sourced from Wikimedia Commons under free licenses (verified Aug 2026).
+Public domain images need no credit. CC BY / CC BY-SA images require crediting
+the author (as below) if you publish them, and CC BY-SA requires derivatives
+to carry the same license.
+
+hotel-del-coronado.jpg
+  Historic photo of the Hotel del Coronado, c. 1900
+  Author: William Henry Jackson | License: Public domain
+  https://commons.wikimedia.org/wiki/File:Hotel_Del_c1900b.jpg
+
+coronado-dog-beach.jpg
+  Saint Bernard at Coronado dog beach
+  Author: Jamie Lantzy | License: CC BY 2.5
+  https://commons.wikimedia.org/wiki/File:Saint_bernard_at_coronado_beach.jpg
+
+loews-coronado-bay-resort.jpg
+  Loews Coronado Bay Resort
+  Author: C.W. Kim | License: CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:Loews2.jpg
+
+montage-laguna-beach.jpg
+  Montage Laguna Beach pool, 2026
+  Author: Seasonscreep | License: CC BY 4.0
+  https://commons.wikimedia.org/wiki/File:Montage_Laguna_Beach_pool_2026.jpg
+
+la-quinta-resort.jpg
+  La Quinta Resort and Club front entrance
+  Author: Coolcaesar | License: CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:La_Quinta_Resort_and_Club_Front_Entrance.jpg
+
+arroyo-burro-beach.jpg
+  Historic photo of Arroyo Burro Beach, c. 1900
+  Author: Unknown | License: Public domain
+  https://commons.wikimedia.org/wiki/File:ArroyoBurroBeach_Buggy_c1900.jpg
+
+huntington-dog-beach.jpg
+  Huntington Dog Beach and Bolsa Chica
+  Author: Dicklyon | License: CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:Huntington_Dog_Beach_and_Bolsa_Chica.jpg
+
+rosies-dog-beach.jpg
+  A bulldog at Rosie's Dog Beach, Long Beach
+  Author: Justin Rudd | License: CC BY-SA 3.0
+  https://commons.wikimedia.org/wiki/File:A_bulldog_at_Rosie%27s_Dog_Beach.jpg
+
+convict-lake-resort.jpg
+  Convict Lake in winter (the lake at the resort, not the cabins)
+  Author: Lion Exchange | License: CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:Convict_Lake_in_the_Winter.jpg
+
+kimpton-shorebreak.jpg
+  Dog on the Shorebreak Hotel patio, Huntington Beach
+  Author: Taro the Shiba Inu (Flickr) | License: CC BY 2.0
+  https://commons.wikimedia.org/wiki/File:Taro_the_Shiba_Inu_at_Shorebreaks_Patio_Pet-a-Potty.jpg

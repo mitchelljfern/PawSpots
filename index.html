@@ -4,9 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PawSpots — Dog-friendly places near you</title>
-<meta name="description" content="PawSpots — find dog-friendly restaurants, bars, coffee shops, hotels and stores near you, with clear inside/patio-only indicators and dog amenities.">
+<meta name="description" content="Find dog-friendly restaurants, bars, hotels, dog parks and pet shops across California — with clear inside or patio-only indicators, dog amenities and ratings.">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#2f6b47">
+<meta name="theme-color" content="#317a45">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://pawspots.netlify.app/">
+
+<!-- Link previews: iMessage, Slack, Facebook and X all read these. og:image must
+     be an absolute URL — a relative one silently yields no preview. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PawSpots">
+<meta property="og:url" content="https://pawspots.netlify.app/">
+<meta property="og:title" content="PawSpots — Dog-friendly places across California">
+<meta property="og:description" content="Restaurants, bars, hotels, dog parks and pet shops that welcome dogs — with clear inside or patio-only indicators, dog amenities and ratings.">
+<meta property="og:image" content="https://pawspots.netlify.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PawSpots — dog-friendly places across California">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PawSpots — Dog-friendly places across California">
+<meta name="twitter:description" content="Restaurants, bars, hotels, dog parks and pet shops that welcome dogs — with clear inside or patio-only indicators, dog amenities and ratings.">
+<meta name="twitter:image" content="https://pawspots.netlify.app/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
@@ -90,7 +111,8 @@ svg{flex:none;vertical-align:-2px}
 .card{display:flex;gap:12px;padding:10px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);cursor:pointer;transition:border-color .15s, box-shadow .15s;text-align:left;width:100%}
 .card:hover{border-color:var(--green);box-shadow:var(--shadow)}
 .card.featured{border-color:oklch(0.85 0.08 80);background:linear-gradient(0deg,var(--amber-soft),var(--card) 55%)}
-.thumb{width:86px;height:86px;flex:none;border-radius:10px;overflow:hidden;position:relative}
+.thumb{width:86px;height:86px;flex:none;border-radius:10px;overflow:hidden;position:relative;background:var(--bg)}
+.thumb img,.d-hero img{width:100%;height:100%;object-fit:cover;display:block}
 .ph{width:100%;height:100%;display:grid;place-items:center;background:repeating-linear-gradient(45deg,oklch(0.93 0.015 150),oklch(0.93 0.015 150) 8px,oklch(0.955 0.01 150) 8px,oklch(0.955 0.01 150) 16px);color:var(--ink-3);font:500 9.5px ui-monospace,Menlo,monospace;text-align:center;padding:4px}
 .card-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
 .card-top{display:flex;align-items:center;gap:6px}
@@ -149,6 +171,11 @@ svg{flex:none;vertical-align:-2px}
 .detail.show{transform:none;visibility:visible;transition:transform .3s var(--ease), visibility 0s}
 .d-hero{position:relative;height:210px;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
 .d-hero .ph.tall{grid-row:1/3}
+/* One real photo fills the hero; the striped placeholder grid is the fallback. */
+.d-hero.one{grid-template-columns:1fr;grid-template-rows:1fr;gap:0}
+.d-credit{max-width:720px;margin:0 auto;padding:8px 18px 0;font-size:11.5px;color:var(--ink-3)}
+.d-credit a{color:var(--ink-3);text-decoration:underline;text-underline-offset:2px}
+.d-credit a:hover{color:var(--green-dark)}
 .d-close{position:absolute;top:14px;left:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:var(--shadow);display:grid;place-items:center;z-index:2}
 .d-body{padding:18px;max-width:720px;margin:0 auto}
 .d-title{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
@@ -167,7 +194,8 @@ svg{flex:none;vertical-align:-2px}
 .amitem{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:13.5px;font-weight:500}
 .amitem .am{width:26px;height:26px;border:none}
 .photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
-.photos .ph{height:96px;border-radius:10px}
+.photos .ph,.photos img{height:96px;border-radius:10px}
+.photos img{width:100%;object-fit:cover;display:block}
 .srcnote{font-size:12px;color:var(--ink-3);margin-top:8px}
 .review{padding:13px 0;border-top:1px solid var(--line)}
 .review:first-of-type{border-top:none}
@@ -393,9 +421,9 @@ const PLACES = [
   blurb:"Inside + outside, dogs patio only."},
  {id:32,name:"Copper Top BBQ",type:"restaurant",city:"Big Pine",addr:"442 N Main St, Big Pine, CA 93513",lat:37.168,lng:-118.29,rating:4.7,reviews:2524,friendly:"patio",amen:["water"],featured:false,
   blurb:"All outdoor operation, 6 pet-friendly tables. Classic 395 pit stop."},
- {id:33,name:"Montage Laguna Beach",type:"hotel",city:"Laguna Beach",addr:"30801 Coast Hwy, Laguna Beach, CA 92651",lat:33.5065,lng:-117.752,rating:4.7,reviews:5983,friendly:"full",amen:["water", "menu", "treats", "shade"],featured:true,fee:"Fee applies",
+ {id:33,name:"Montage Laguna Beach",type:"hotel",city:"Laguna Beach",addr:"30801 Coast Hwy, Laguna Beach, CA 92651",lat:33.5065,lng:-117.752,rating:4.7,reviews:5983,friendly:"full",amen:["water", "menu", "treats", "shade"],featured:true,fee:"Fee applies",photo:"montage-laguna-beach",alt:"The pool at Montage Laguna Beach overlooking the ocean",credit:{"a": "Seasonscreep", "l": "CC BY 4.0", "u": "https://commons.wikimedia.org/wiki/File:Montage_Laguna_Beach_pool_2026.jpg"},
   blurb:"Dog menu: Furry Friend Menu (beef tenderloin or seared salmon with quinoa). Rooms + outdoor areas. Salmon plate safe for beef allergy."},
- {id:34,name:"Kimpton Shorebreak",type:"hotel",city:"Huntington Beach",addr:"500 Pacific Coast Hwy, Huntington Beach, CA 92648",lat:33.6573,lng:-117.9993,rating:4.6,reviews:1859,friendly:"full",amen:["water", "menu", "treats"],featured:true,fee:"No fee, no size/number limits",
+ {id:34,name:"Kimpton Shorebreak",type:"hotel",city:"Huntington Beach",addr:"500 Pacific Coast Hwy, Huntington Beach, CA 92648",lat:33.6573,lng:-117.9993,rating:4.6,reviews:1859,friendly:"full",amen:["water", "menu", "treats"],featured:true,fee:"No fee, no size/number limits",photo:"kimpton-shorebreak",alt:"A dog on the patio at the Shorebreak Hotel in Huntington Beach",credit:{"a": "Taro the Shiba Inu (Flickr)", "l": "CC BY 2.0", "u": "https://commons.wikimedia.org/wiki/File:Taro_the_Shiba_Inu_at_Shorebreaks_Patio_Pet-a-Potty.jpg"},
   blurb:"Dog menu: via Zimzala. Rooms, lobby, Zimzala patio."},
  {id:35,name:"Kimpton Everly",type:"hotel",city:"Los Angeles",addr:"1800 Argyle Ave, Los Angeles, CA 90028",lat:34.102,lng:-118.326,rating:4.3,reviews:1372,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"No fee, no limits",
   blurb:"Rooms, lobby, wine hour."},
@@ -405,13 +433,13 @@ const PLACES = [
   blurb:"Rooms + rooftop dog-friendly zones. Many rooms with balconies/patios."},
  {id:38,name:"1 Hotel West Hollywood",type:"hotel",city:"West Hollywood",addr:"8490 Sunset Blvd, West Hollywood, CA 90069",lat:34.0955,lng:-118.376,rating:4.3,reviews:1297,friendly:"full",amen:["water", "treats"],featured:false,fee:"Fee applies",
   blurb:"Rooms + select areas. WeHo dog parks have cool K9 turf."},
- {id:39,name:"Hotel del Coronado",type:"hotel",city:"Coronado",addr:"1500 Orange Ave, Coronado, CA 92118",lat:32.6805,lng:-117.1785,rating:4.5,reviews:20943,friendly:"full",amen:["water", "treats", "shade"],featured:false,fee:"Fee applies",
+ {id:39,name:"Hotel del Coronado",type:"hotel",city:"Coronado",addr:"1500 Orange Ave, Coronado, CA 92118",lat:32.6805,lng:-117.1785,rating:4.5,reviews:20943,friendly:"full",amen:["water", "treats", "shade"],featured:false,fee:"Fee applies",photo:"hotel-del-coronado",alt:"The Hotel del Coronado photographed around 1900",credit:{"a": "William Henry Jackson", "l": "Public domain", "u": "https://commons.wikimedia.org/wiki/File:Hotel_Del_c1900b.jpg"},
   blurb:"Rooms + grounds (K9 Concierge)."},
- {id:40,name:"Loews Coronado Bay Resort",type:"hotel",city:"Coronado",addr:"4000 Coronado Bay Rd, Coronado, CA 92118",lat:32.627,lng:-117.133,rating:4.4,reviews:5478,friendly:"full",amen:["water", "menu", "treats", "shade", "beds"],featured:true,fee:"Fee applies",
+ {id:40,name:"Loews Coronado Bay Resort",type:"hotel",city:"Coronado",addr:"4000 Coronado Bay Rd, Coronado, CA 92118",lat:32.627,lng:-117.133,rating:4.4,reviews:5478,friendly:"full",amen:["water", "menu", "treats", "shade", "beds"],featured:true,fee:"Fee applies",photo:"loews-coronado-bay-resort",alt:"Loews Coronado Bay Resort seen from the water",credit:{"a": "C.W. Kim", "l": "CC BY-SA 4.0", "u": "https://commons.wikimedia.org/wiki/File:Loews2.jpg"},
   blurb:"Dog menu: pet room-service items. Rooms + grounds (Loews Loves Pets)."},
  {id:41,name:"Crown City Inn & Bistro",type:"hotel",city:"Coronado",addr:"520 Orange Ave, Coronado, CA 92118",lat:32.693,lng:-117.178,rating:4.7,reviews:373,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"Modest fee",
   blurb:"Rooms + bistro patio. Dog-friendly bistro patio on site."},
- {id:42,name:"La Quinta Resort & Club",type:"hotel",city:"La Quinta",addr:"49-499 Eisenhower Dr, La Quinta, CA 92253",lat:33.674,lng:-116.308,rating:4.5,reviews:3758,friendly:"full",amen:["water", "treats", "shade", "beds"],featured:false,fee:"Fee applies",
+ {id:42,name:"La Quinta Resort & Club",type:"hotel",city:"La Quinta",addr:"49-499 Eisenhower Dr, La Quinta, CA 92253",lat:33.674,lng:-116.308,rating:4.5,reviews:3758,friendly:"full",amen:["water", "treats", "shade", "beds"],featured:false,fee:"Fee applies",photo:"la-quinta-resort",alt:"The front entrance of the La Quinta Resort and Club",credit:{"a": "Coolcaesar", "l": "CC BY-SA 4.0", "u": "https://commons.wikimedia.org/wiki/File:La_Quinta_Resort_and_Club_Front_Entrance.jpg"},
   blurb:"Rooms + 18 hectares of lawns and paths. Many rooms open onto patios."},
  {id:43,name:"Hotel Santa Barbara",type:"hotel",city:"Santa Barbara",addr:"533 State St, Santa Barbara, CA 93101",lat:34.418,lng:-119.698,rating:4.2,reviews:526,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"No fee, any size",
   blurb:"Rooms + walkable downtown."},
@@ -425,7 +453,7 @@ const PLACES = [
   blurb:"Designated rooms. 7-min walk to restaurants."},
  {id:48,name:"Edelweiss Lodge",type:"hotel",city:"Mammoth Lakes",addr:"1872 Old Mammoth Rd, Mammoth Lakes, CA 93546",lat:37.633,lng:-118.964,rating:4.2,reviews:153,friendly:"full",amen:["shade"],featured:false,fee:"$20/night per dog, any size, 2 max",
   blurb:"Designated rooms. Crate required if unattended."},
- {id:49,name:"Convict Lake Resort",type:"hotel",city:"Mammoth Lakes",addr:"2000 Convict Lake Rd, Mammoth Lakes, CA 93546",lat:37.5905,lng:-118.8575,rating:4.7,reviews:964,friendly:"full",amen:["shade"],featured:false,fee:"$12/night per pet, any size, 2 max",
+ {id:49,name:"Convict Lake Resort",type:"hotel",city:"Mammoth Lakes",addr:"2000 Convict Lake Rd, Mammoth Lakes, CA 93546",lat:37.5905,lng:-118.8575,rating:4.7,reviews:964,friendly:"full",amen:["shade"],featured:false,fee:"$12/night per pet, any size, 2 max",photo:"convict-lake-resort",alt:"Convict Lake in winter, surrounded by snow and mountains",credit:{"a": "Lion Exchange", "l": "CC BY-SA 4.0", "u": "https://commons.wikimedia.org/wiki/File:Convict_Lake_in_the_Winter.jpg"},
   blurb:"Cabins. Best value + on-site dog-friendly restaurant patio."},
  {id:50,name:"Ventura Grand Inn",type:"hotel",city:"Mammoth Lakes",addr:"3626 Main St, Mammoth Lakes, CA 93546",lat:37.646,lng:-118.968,rating:3.3,reviews:174,friendly:"full",amen:[],featured:false,fee:"$30/night per pet, any size, 2 max",
   blurb:"Rooms. Recent reviews cite cleanliness issues."},
@@ -445,7 +473,7 @@ const PLACES = [
   blurb:"Surface: Grass. Bring your own water. Closed Wednesdays."},
  {id:58,name:"Best Friend Dog Park",type:"park",city:"Huntington Beach",addr:"Edwards St, Huntington Beach, CA 92647",lat:33.706,lng:-118.014,rating:4.5,reviews:710,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
   blurb:"Surface: Wood chips. Plenty of seating for owners."},
- {id:59,name:"Huntington Dog Beach",type:"park",city:"Huntington Beach",addr:"20211 Huntington Bch Bike Trl (PCH between Seapoint & 21st), Huntington Beach, CA 92648",lat:33.665,lng:-118.009,rating:4.8,reviews:7036,friendly:"full",amen:["offleash"],featured:false,
+ {id:59,name:"Huntington Dog Beach",type:"park",city:"Huntington Beach",addr:"20211 Huntington Bch Bike Trl (PCH between Seapoint & 21st), Huntington Beach, CA 92648",lat:33.665,lng:-118.009,rating:4.8,reviews:7036,friendly:"full",amen:["offleash"],featured:false,photo:"huntington-dog-beach",alt:"Huntington Dog Beach looking north towards Bolsa Chica",credit:{"a": "Dicklyon", "l": "CC BY-SA 4.0", "u": "https://commons.wikimedia.org/wiki/File:Huntington_Dog_Beach_and_Bolsa_Chica.jpg"},
   blurb:"Surface: Sand. Bring your own water. Off-leash beach. Pairs with Park Bench Cafe or Sandy's afterward."},
  {id:60,name:"Laguna Beach Dog Park",type:"park",city:"Laguna Beach",addr:"20672 Laguna Canyon Rd, Laguna Beach, CA 92651",lat:33.579,lng:-117.766,rating:4.7,reviews:490,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
   blurb:"Surface: Decomposed granite with grass patches. First dog park in OC (1992), ~2 acres, sunrise to sunset, free parking."},
@@ -459,11 +487,11 @@ const PLACES = [
   blurb:"Surface: Packed dirt and grass. Bring your own water. Biggest off-leash space in the county, recall-reliable dogs only, $5-7 vehicle fee."},
  {id:65,name:"Recreation Park Dog Park",type:"park",city:"Long Beach",addr:"5201 E 7th St, Long Beach, CA 90804",lat:33.774,lng:-118.142,rating:4.5,reviews:825,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
   blurb:"Surface: Grass. 2 acres, may close Monday mornings for maintenance."},
- {id:66,name:"Rosie's Dog Beach",type:"park",city:"Long Beach",addr:"5000 E Ocean Blvd, Long Beach, CA 90803",lat:33.759,lng:-118.14,rating:4.7,reviews:8466,friendly:"full",amen:["offleash"],featured:false,
+ {id:66,name:"Rosie's Dog Beach",type:"park",city:"Long Beach",addr:"5000 E Ocean Blvd, Long Beach, CA 90803",lat:33.759,lng:-118.14,rating:4.7,reviews:8466,friendly:"full",amen:["offleash"],featured:false,photo:"rosies-dog-beach",alt:"A bulldog on the sand at Rosie's Dog Beach in Long Beach",credit:{"a": "Justin Rudd", "l": "CC BY-SA 3.0", "u": "https://commons.wikimedia.org/wiki/File:A_bulldog_at_Rosie%27s_Dog_Beach.jpg"},
   blurb:"Surface: Sand. Bring your own water. LA County's main off-leash beach."},
- {id:67,name:"Coronado Dog Beach",type:"park",city:"Coronado",addr:"Ocean Blvd (north end of Coronado Beach), Coronado, CA 92118",lat:32.694,lng:-117.186,rating:4.7,reviews:13610,friendly:"full",amen:["offleash"],featured:false,
+ {id:67,name:"Coronado Dog Beach",type:"park",city:"Coronado",addr:"Ocean Blvd (north end of Coronado Beach), Coronado, CA 92118",lat:32.694,lng:-117.186,rating:4.7,reviews:13610,friendly:"full",amen:["offleash"],featured:false,photo:"coronado-dog-beach",alt:"A Saint Bernard on the sand at Coronado dog beach",credit:{"a": "Jamie Lantzy", "l": "CC BY 2.5", "u": "https://commons.wikimedia.org/wiki/File:Saint_bernard_at_coronado_beach.jpg"},
   blurb:"Surface: Sand. Bring your own water. Pairs with Crown City Inn or Hotel del Coronado stays."},
- {id:68,name:"Arroyo Burro (Hendry's) Beach",type:"park",city:"Santa Barbara",addr:"2981 Cliff Dr, Santa Barbara, CA 93109",lat:34.403,lng:-119.742,rating:4.7,reviews:3420,friendly:"full",amen:["offleash"],featured:false,
+ {id:68,name:"Arroyo Burro (Hendry's) Beach",type:"park",city:"Santa Barbara",addr:"2981 Cliff Dr, Santa Barbara, CA 93109",lat:34.403,lng:-119.742,rating:4.7,reviews:3420,friendly:"full",amen:["offleash"],featured:false,photo:"arroyo-burro-beach",alt:"Arroyo Burro Beach photographed around 1900, with a horse and buggy on the sand",credit:{"a": "Unknown", "l": "Public domain", "u": "https://commons.wikimedia.org/wiki/File:ArroyoBurroBeach_Buggy_c1900.jpg"},
   blurb:"Surface: Sand. Bring your own water. Off-leash east of the slough mouth. Boathouse restaurant adjacent. Self-serve dog wash in the parking lot."},
  {id:69,name:"Mammoth Lakes Community Dog Park",type:"park",city:"Mammoth Lakes",addr:"190 College Pkwy, Mammoth Lakes, CA 93546",lat:37.644,lng:-118.962,friendly:"full",amen:["offleash", "water", "fenced", "smalldog"],featured:false,
   blurb:"Surface: Custom dog turf (465 sq m). Opened Nov 2024, ~1 acre, 4 benches, parking for ~40 cars."},
@@ -614,7 +642,9 @@ const friendlyBadge = p => { const f = friendlyInfo(p); return `<span class="fb 
 /* ============ cards / list ============ */
 function cardHtml(p){
   return `<button class="card ${p.featured?'featured':''}" data-id="${p.id}">
-    <div class="thumb"><div class="ph">photo<br>${esc(p.name.split(' ')[0].toLowerCase())}</div></div>
+    <div class="thumb">${p.photo
+      ? `<img src="photos/${p.photo}-thumb.jpg" alt="" width="240" height="240" loading="lazy" decoding="async">`
+      : `<div class="ph">photo<br>${esc(p.name.split(' ')[0].toLowerCase())}</div>`}</div>
     <div class="card-body">
       <div class="card-top"><span class="card-name">${esc(p.name)}</span>${p.featured?`<span class="pawbadge" title="Featured: most dog-friendly" role="img" aria-label="Featured: most dog-friendly">${PAW('oklch(0.30 0.05 75)',11)}</span>`:''}</div>
       <div class="meta">${p.rating != null
@@ -688,10 +718,13 @@ function detailHtml(p){
   // Every place is a real business now, so there are no reviews to show until a
   // reviews source is connected. Nothing here invents them.
   return `
-    <div class="d-hero">
+    <div class="d-hero${p.photo?' one':''}">
       <button class="d-close" id="dclose" aria-label="Close place details"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-      <div class="ph tall">photo — exterior</div><div class="ph">photo — patio</div><div class="ph">user photo — pup visit</div>
+      ${p.photo
+        ? `<img src="photos/${p.photo}.jpg" alt="${esc(p.alt)}" decoding="async">`
+        : `<div class="ph tall">photo — exterior</div><div class="ph">photo — patio</div><div class="ph">user photo — pup visit</div>`}
     </div>
+    ${p.credit ? `<div class="d-credit">Photo: ${esc(p.credit.a)} · ${esc(p.credit.l)} · <a href="${esc(p.credit.u)}" target="_blank" rel="noopener">Wikimedia Commons</a></div>` : ''}
     <div class="d-body">
       <div class="d-title"><h2>${esc(p.name)}</h2>${p.featured?`<span class="featpill">${PAW('oklch(0.30 0.05 75)',12)}Featured</span>`:''}</div>
       <div class="d-meta">${p.rating != null
@@ -705,8 +738,8 @@ function detailHtml(p){
       ${p.fee ? `<div class="d-sec"><h3>Pet fee &amp; limits</h3><div class="amitem" style="display:inline-flex"><span class="am am-beds">${ICONS.beds}</span>${esc(p.fee)}</div></div>` : ''}
       ${p.amen.length ? `<div class="d-sec"><h3>Dog amenities</h3><div class="amgrid">${p.amen.map(a=>`<div class="amitem"><span class="am am-${a}">${ICONS[a]}</span>${AMEN[a]}</div>`).join('')}</div></div>` : ''}
       <div class="d-sec"><h3>Photos</h3>
-        <div class="photos"><div class="ph">user photo</div><div class="ph">user photo</div><div class="ph">google photo</div><div class="ph">google photo</div></div>
-        <div class="srcnote">User uploads + photos via Google Maps</div>
+        <div class="photos">${p.photo ? `<img src="photos/${p.photo}-thumb.jpg" alt="${esc(p.alt)}" loading="lazy" decoding="async">` : ''}<div class="ph">user photo</div><div class="ph">user photo</div><div class="ph">google photo</div></div>
+        <div class="srcnote">${p.credit ? 'Photo via Wikimedia Commons. ' : ''}User uploads and Google Maps photos will appear here too.</div>
       </div>
       <div class="d-sec"><h3>Reviews</h3>
         <div class="empty" style="padding:20px 12px"><b>No reviews yet</b>Reviews will appear here once a reviews source is connected.</div>

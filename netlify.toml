@@ -1,0 +1,11 @@
+[build]
+  # Static page — nothing to compile. Publish the repo root, which is where
+  # index.html lives.
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

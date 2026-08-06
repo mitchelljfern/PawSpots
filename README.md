@@ -27,15 +27,22 @@ If the Leaflet CDN is unreachable, the map pane says so and the list view keeps 
 - **Detail view** — amenities grid, photo gallery, reviews, and a banner spelling out the dog policy.
 - **Accessibility** — labelled map pins, ARIA states on every control, focus trapping in modals, Escape-to-dismiss, and `prefers-reduced-motion` support.
 
-## Sample data
+## Data
 
-Everything is currently sample data, defined at the top of the script in `index.html`:
+All data lives at the top of the script in `index.html`. There are 70 places, from two sources:
 
-- `PLACES` — 16 Orange County businesses (including both Lazy Dog locations as featured examples)
-- `AREAS` — cities and ZIP codes the search resolves against
-- `REVIEWS` — mocked reviews, presented as "via Google"
+- **54 real California places**, imported from `data/dogfriendly-california.csv` — restaurants, bars and hotels across Southern California and the Eastern Sierra (Mammoth, Bishop, Lone Pine).
+- **16 invented demo places** in Orange County, from the original design prototype. These are the ones carrying ratings and reviews.
 
-Photos are striped placeholders. Reviews and photos are **not** wired to the Google Places API — that needs an API key and a server-side proxy, since a key can't be safely embedded in a static page. The data structures are shaped so a real source can drop in behind them.
+`AREAS` holds the cities and ZIP codes the search resolves against; `REVIEWS` holds the mocked reviews.
+
+Three things to know before trusting this data:
+
+- **The real places have no ratings and no reviews.** The CSV has none, and attaching invented numbers to real businesses would be fabricating records. They display "Not rated yet" until a reviews source is connected. The mocked "via Google" reviews only ever appear on the invented demo places.
+- **Coordinates are approximate.** No geocoder was available during the import, so well-known venues sit close to their real position and the rest sit at the centre of the town named in the CSV. Run a geocoding pass before anyone navigates by this. No street addresses were invented — `addr` is the CSV's Location text verbatim.
+- **Friendliness was inferred.** California restricts dogs to outdoor areas in food-service venues, so restaurants and bars are marked patio-only unless the CSV says otherwise (Distant Brewing in Mammoth allows dogs indoors). Hotels are marked fully dog-friendly, since dogs are allowed in the rooms. A place is featured — the amber paw list — when it has a real dog menu.
+
+Photos are striped placeholders. Photos and reviews are **not** wired to the Google Places API — that needs an API key and a server-side proxy, since a key can't be safely embedded in a static page. The data structures are shaped so a real source can drop in behind them.
 
 ## Design source
 

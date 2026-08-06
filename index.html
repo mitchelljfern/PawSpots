@@ -83,6 +83,8 @@ svg{flex:none;vertical-align:-2px}
 /* featured strip */
 .feat-h{display:flex;align-items:center;gap:7px;margin:8px 2px 10px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:var(--amber-text)}
 .list-h{display:flex;align-items:center;gap:7px;margin:18px 2px 10px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:var(--ink-2)}
+.feat-more{display:block;margin:9px 2px 0;font-size:13px;font-weight:600;color:var(--amber-text);text-decoration:underline;text-underline-offset:2px}
+.feat-more:hover{color:var(--ink)}
 /* ---------- cards ---------- */
 .cards{display:flex;flex-direction:column;gap:10px}
 .card{display:flex;gap:12px;padding:10px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);cursor:pointer;transition:border-color .15s, box-shadow .15s;text-align:left;width:100%}
@@ -301,38 +303,14 @@ const TYPES = {restaurant:'Restaurant', bar:'Bar', coffee:'Coffee', hotel:'Hotel
 
 /* ============ sample data — Orange County ============ */
 const PLACES = [
- {id:1,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Irvine',addr:'13290 Jamboree Rd, Irvine, CA',lat:33.6910,lng:-117.7846,rating:4.6,reviews:2814,friendly:'patio',amen:['menu','water','treats','shade'],featured:true,
-  blurb:'The gold standard: a full dog menu (grilled chicken bowls!), water service, and a huge shaded patio.'},
- {id:2,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Huntington Beach',addr:'7681 Edinger Ave, Huntington Beach, CA',lat:33.7302,lng:-117.9884,rating:4.5,reviews:3122,friendly:'patio',amen:['menu','water','treats','shade'],featured:true,
-  blurb:'Same famous dog menu, steps from Bella Terra. Patio fills up on weekends.'},
- {id:3,name:'The Fetch Yard',type:'bar',city:'Costa Mesa',addr:'1720 Placentia Ave, Costa Mesa, CA',lat:33.6538,lng:-117.9298,rating:4.8,reviews:964,friendly:'full',amen:['offleash','water','treats'],featured:true,
-  blurb:'Beer garden with a fenced off-leash yard. Dogs roam while you sip.'},
- {id:4,name:'Salty Paw Coffee',type:'coffee',city:'Laguna Beach',addr:'610 S Coast Hwy, Laguna Beach, CA',lat:33.5395,lng:-117.7826,rating:4.7,reviews:521,friendly:'full',amen:['water','treats'],featured:false,
-  blurb:'Dogs welcome at the counter and the ocean-view deck. Free “puppuccinos.”'},
- {id:5,name:'Driftline Kitchen',type:'restaurant',city:'Newport Beach',addr:'2901 Newport Blvd, Newport Beach, CA',lat:33.6076,lng:-117.9284,rating:4.4,reviews:1187,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'Harborside seafood spot; dogs on the patio only.'},
- {id:6,name:'Wag & Whisker Supply',type:'store',city:'Newport Beach',addr:'1000 Bristol St N, Newport Beach, CA',lat:33.6564,lng:-117.8766,rating:4.9,reviews:342,friendly:'full',amen:['treats','water'],featured:false,
-  blurb:'Boutique pet goods; dogs shop alongside you, treat jar at the register.'},
- {id:7,name:'Ranch Hand Brewing Co.',type:'bar',city:'Anaheim',addr:'336 S Anaheim Blvd, Anaheim, CA',lat:33.8320,lng:-117.9110,rating:4.6,reviews:876,friendly:'full',amen:['water','treats','menu'],featured:true,
-  blurb:'Taproom with a “barks & brats” dog plate and Sunday pup meetups.'},
- {id:8,name:'Casa Marbella Hotel',type:'hotel',city:'Dana Point',addr:'25135 Park Lantern, Dana Point, CA',lat:33.4661,lng:-117.7031,rating:4.7,reviews:1543,friendly:'full',amen:['beds','water','treats'],featured:false,
-  blurb:'Dog beds and bowls in-room; welcome treat bag at check-in.'},
- {id:9,name:'Harborline Taproom',type:'bar',city:'Huntington Beach',addr:'221 Main St, Huntington Beach, CA',lat:33.6595,lng:-118.0010,rating:4.3,reviews:689,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'Main Street patio a block from Dog Beach. Patio only.'},
- {id:10,name:'Old Towne Biscuit Co.',type:'coffee',city:'Orange',addr:'122 N Glassell St, Orange, CA',lat:33.7885,lng:-117.8524,rating:4.5,reviews:433,friendly:'patio',amen:['water','treats','shade'],featured:false,
-  blurb:'Plaza-side patio; house-baked dog biscuits on weekends.'},
- {id:11,name:'The Green Bowl Café',type:'restaurant',city:'Tustin',addr:'2437 Park Ave, Tustin, CA',lat:33.6995,lng:-117.8410,rating:4.2,reviews:378,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Casual bowls and smoothies; shaded patio seating with dogs.'},
- {id:12,name:'Seacliff Suites',type:'hotel',city:'Huntington Beach',addr:'21112 Pacific Coast Hwy, Huntington Beach, CA',lat:33.6528,lng:-117.9945,rating:4.4,reviews:987,friendly:'full',amen:['beds','water'],featured:false,
-  blurb:'Pet-friendly rooms across from the beach; no size limit.'},
- {id:13,name:'Canyon Outfitters',type:'store',city:'Laguna Beach',addr:'384 Forest Ave, Laguna Beach, CA',lat:33.5432,lng:-117.7838,rating:4.6,reviews:214,friendly:'full',amen:['water','treats'],featured:false,
-  blurb:'Gear shop for trail dogs and their humans; leashed dogs welcome inside.'},
- {id:14,name:'Marrow & Bone Butcher',type:'store',city:'Santa Ana',addr:'305 E 4th St, Santa Ana, CA',lat:33.7492,lng:-117.8641,rating:4.8,reviews:167,friendly:'full',amen:['treats'],featured:false,
-  blurb:'Butcher shop that saves marrow bones for four-legged regulars.'},
- {id:15,name:'Peppertree Patio',type:'restaurant',city:'San Clemente',addr:'111 Avenida Del Mar, San Clemente, CA',lat:33.4266,lng:-117.6135,rating:4.3,reviews:542,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'Under the peppertrees on Del Mar; dogs on the patio only.'},
- {id:16,name:'Brea Trailhead Coffee',type:'coffee',city:'Brea',addr:'240 S Brea Blvd, Brea, CA',lat:33.9130,lng:-117.8930,rating:4.4,reviews:298,friendly:'full',amen:['water','treats'],featured:false,
-  blurb:'Pre-hike espresso; dogs welcome inside and on the sidewalk tables.'},
+/* Lazy Dog is kept from the original prototype because it is a real business and
+   appears in the CSV. Its invented rating and reviews are gone; amenities and
+   blurb now come from the CSV row. The other 14 prototype places were fictional
+   and have been removed. */
+ {id:1,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Irvine',addr:'Irvine',lat:33.6910,lng:-117.7846,friendly:'patio',amen:['menu','water'],featured:true,
+  blurb:'A full dog menu — grilled burger patty or chicken breast with brown rice — on a heated patio. The chicken option is safe for a beef allergy. Also in Costa Mesa, Torrance, Downey and San Diego.'},
+ {id:2,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Huntington Beach',addr:'Huntington Beach',lat:33.7302,lng:-117.9884,friendly:'patio',amen:['menu','water'],featured:true,
+  blurb:'The same dog menu of grilled burger patty or chicken breast with brown rice, on a heated patio. Fills up on weekends.'},
 
 /* ---- Real California places, imported from dogfriendlycaliforniacombined.csv ----
    These are real businesses, so they carry no rating and no reviews: the CSV has
@@ -464,12 +442,6 @@ const PLACES = [
  {id:70,name:'Best Western Bishop Lodge',type:'hotel',city:'Bishop',addr:'Bishop',lat:37.3755,lng:-118.3948,friendly:'full',amen:['water'],featured:false,fee:'$35/night',
   blurb:'Dog-specific amenities supplied. A crate is required if the dog is left alone.'}
 ];
-const REVIEWS = {
- 1:[{n:'Marisa T.',r:5,t:'2 weeks ago',x:'They brought my golden a bowl of grilled chicken and rice before my food even arrived. He thinks this is HIS restaurant now.'},{n:'Devon K.',r:5,t:'1 month ago',x:'Dog menu is real and it’s great. Patio is huge and shaded, staff brings water without asking.'},{n:'Priya S.',r:4,t:'2 months ago',x:'Busy on weekends but they handle dogs so well. Ask for the misters in summer.'}],
- 3:[{n:'Jon B.',r:5,t:'3 weeks ago',x:'Fenced yard means my heeler runs while I have a hazy IPA. Nothing else like it in OC.'},{n:'Alexis R.',r:5,t:'1 month ago',x:'Staff hands out treats like candy. Water stations everywhere.'}],
- 7:[{n:'Sam W.',r:5,t:'1 week ago',x:'Ordered the “barks & brats” plate for my corgi. He approved. Sunday meetups are a blast.'},{n:'Erin L.',r:4,t:'6 weeks ago',x:'Dogs allowed inside the taproom, which is rare. Gets loud but pups seem happy.'}],
- default:[{n:'Casey M.',r:5,t:'3 weeks ago',x:'Super welcoming with our two pups — water bowl out within minutes.'},{n:'Jordan P.',r:4,t:'2 months ago',x:'Easy with a dog. Staff was friendly, plenty of shade.'}]
-};
 const AREAS = [
  {q:'Irvine',zip:'92618',lat:33.6846,lng:-117.8265,z:12},{q:'Costa Mesa',zip:'92626',lat:33.6638,lng:-117.9047,z:13},
  {q:'Huntington Beach',zip:'92646',lat:33.6595,lng:-117.9988,z:12},{q:'Newport Beach',zip:'92660',lat:33.6189,lng:-117.9298,z:13},
@@ -493,8 +465,10 @@ const AREAS = [
 const byId = new Map(PLACES.map(p=>[p.id,p]));
 
 /* ============ state ============ */
+// How many featured places the list shows before "Show all".
+const FEAT_CAP = 5;
 const state = {
-  types:new Set(), friendly:'any', amen:new Set(), minRating:0, maxDist:0,
+  types:new Set(), friendly:'any', amen:new Set(), minRating:0, maxDist:0, allFeat:false,
   // Default view spans the whole dataset — SoCal up through the Eastern Sierra.
   center:{lat:35.20,lng:-117.90}, centerLabel:null, selected:null
 };
@@ -594,9 +568,12 @@ function renderList(){
   const feats = list.filter(p=>p.featured);
   const rest = list.filter(p=>!p.featured);
 
+  // The map still shows every featured pin; only the list is capped.
+  const featShown = state.allFeat ? feats : feats.slice(0,FEAT_CAP);
   $('featwrap').innerHTML = feats.length ? `
     <div class="feat-h">${PAW('oklch(0.65 0.13 70)',15)}Most dog-friendly — the amber paw list</div>
-    <div class="cards">${feats.map(cardHtml).join('')}</div>` : '';
+    <div class="cards">${featShown.map(cardHtml).join('')}</div>
+    ${feats.length>FEAT_CAP ? `<button class="feat-more" id="featmore" aria-expanded="${state.allFeat}">${state.allFeat?'Show fewer':`Show all ${feats.length}`}</button>` : ''}` : '';
   $('allhead').style.display = rest.length ? 'flex' : 'none';
   $('cards').innerHTML = rest.length ? rest.map(cardHtml).join('') :
     (list.length?'':'<div class="empty"><b>No places match</b>Try widening your filters or searching a different area.</div>');
@@ -613,6 +590,7 @@ function renderList(){
 }
 /* One delegated handler covers featured, main list and the mobile preview card. */
 function onCardClick(e){
+  if(e.target.closest('#featmore')){ state.allFeat = !state.allFeat; renderList(); return; }
   const card = e.target.closest('.card[data-id]');
   if(card) openDetail(+card.dataset.id);
 }
@@ -646,9 +624,8 @@ map.on('click',clearSelection);
 /* ============ detail ============ */
 let lastFocus = null;
 function detailHtml(p){
-  // Mock reviews belong to the invented demo places only. Real businesses show
-  // an empty state rather than reviews nobody wrote.
-  const revs = p.rating != null ? (REVIEWS[p.id] || REVIEWS.default) : null;
+  // Every place is a real business now, so there are no reviews to show until a
+  // reviews source is connected. Nothing here invents them.
   return `
     <div class="d-hero">
       <button class="d-close" id="dclose" aria-label="Close place details"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
@@ -675,9 +652,7 @@ function detailHtml(p){
         <div class="srcnote">User uploads + photos via Google Maps</div>
       </div>
       <div class="d-sec"><h3>Reviews</h3>
-        ${!revs ? `<div class="empty" style="padding:20px 12px"><b>No reviews yet</b>This place came from the California dog-friendly dataset. Reviews will appear once a reviews source is connected.</div>` : revs.map(r=>`<div class="review">
-          <div class="r-head"><span class="avatar" aria-hidden="true">${esc(r.n[0])}</span><div><div class="r-name">${esc(r.n)}</div><div class="r-sub"><span class="stars" aria-label="${r.r} out of 5">${STAR(1,10).repeat(r.r)}</span>${esc(r.t)} · <span class="gbadge">${G}via Google</span></div></div></div>
-          <p>${esc(r.x)}</p></div>`).join('')}
+        <div class="empty" style="padding:20px 12px"><b>No reviews yet</b>Reviews will appear here once a reviews source is connected.</div>
       </div>
       <div class="d-actions">
         <button class="btn primary" style="background:var(--green);color:#fff">Directions</button>
@@ -725,7 +700,9 @@ function chipSet(containerId){
     c.appendChild(b);
   };
   mk(null,'All');
-  Object.entries(TYPES).forEach(([t,l])=>mk(t,l+'s'));
+  // Only offer a type that something in the data actually is — otherwise the
+  // chip is a guaranteed empty result. Reappears on its own when data arrives.
+  Object.entries(TYPES).filter(([t])=>PLACES.some(p=>p.type===t)).forEach(([t,l])=>mk(t,l+'s'));
 }
 function syncChips(){
   document.querySelectorAll('.chip[data-type]').forEach(b=>{
@@ -768,8 +745,11 @@ function optRow(containerId, options, get, set, multi){
 }
 function renderFilterPanel(){
   optRow('f-friendly',[['any','Any'],['full','Inside + outside'],['patio','Patio OK']],()=>draft.friendly,v=>draft.friendly=v,false);
-  optRow('f-amen',Object.entries(AMEN),()=>draft.amen,v=>draft.amen.has(v)?draft.amen.delete(v):draft.amen.add(v),true);
+  optRow('f-amen',Object.entries(AMEN).filter(([a])=>PLACES.some(p=>p.amen.includes(a))),()=>draft.amen,v=>draft.amen.has(v)?draft.amen.delete(v):draft.amen.add(v),true);
   optRow('f-rating',[[0,'Any'],[4,'4.0+'],[4.5,'4.5+']],()=>draft.minRating,v=>draft.minRating=v,false);
+  // Nothing is rated until a reviews source is connected, so hide the whole
+  // group rather than offering filters that can only return nothing.
+  $('f-rating').closest('.fgroup').style.display = PLACES.some(p=>p.rating!=null) ? '' : 'none';
   optRow('f-dist',[[0,'Any'],[5,'5 mi'],[10,'10 mi'],[25,'25 mi'],[50,'50 mi'],[100,'100 mi']],()=>draft.maxDist,v=>draft.maxDist=v,false);
   $('distnote').textContent = state.centerLabel ? `Measured from ${state.centerLabel}` : 'Measured from the middle of the map — search an area to refine';
 }

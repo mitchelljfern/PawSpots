@@ -105,7 +105,20 @@ svg{flex:none;vertical-align:-2px}
 .fb.full{background:var(--green-soft);color:var(--green-dark)}
 .fb.patio{background:var(--amber-soft);color:var(--amber-text)}
 .amset{display:flex;gap:4px}
-.am{width:20px;height:20px;border-radius:6px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-2)}
+/* Amenity chips are colour-coded per amenity. Each .am-* sets the trio of
+   custom properties; everything else reads them, so the list, the detail grid
+   and any future surface stay in step. */
+.am{width:20px;height:20px;border-radius:6px;background:var(--am-bg,var(--bg));border:1px solid var(--am-br,var(--line));display:grid;place-items:center;color:var(--am-fg,var(--ink-2))}
+.am-water   {--am-fg:oklch(0.52 0.14 245);--am-bg:oklch(0.955 0.03 245);--am-br:oklch(0.89 0.05 245)}
+.am-menu    {--am-fg:oklch(0.47 0.12 150);--am-bg:oklch(0.955 0.03 150);--am-br:oklch(0.88 0.05 150)}
+.am-shade   {--am-fg:oklch(0.55 0.15 25); --am-bg:oklch(0.955 0.03 25); --am-br:oklch(0.89 0.05 25)}
+.am-treats  {--am-fg:oklch(0.58 0.15 65); --am-bg:oklch(0.955 0.04 70); --am-br:oklch(0.89 0.06 70)}
+.am-offleash{--am-fg:oklch(0.52 0.11 195);--am-bg:oklch(0.955 0.03 195);--am-br:oklch(0.88 0.05 195)}
+.am-beds    {--am-fg:oklch(0.52 0.13 300);--am-bg:oklch(0.955 0.03 300);--am-br:oklch(0.89 0.04 300)}
+.am-fenced  {--am-fg:oklch(0.50 0.09 265);--am-bg:oklch(0.955 0.025 265);--am-br:oklch(0.89 0.04 265)}
+.am-smalldog{--am-fg:oklch(0.56 0.14 350);--am-bg:oklch(0.955 0.03 350);--am-br:oklch(0.89 0.05 350)}
+.am-wash    {--am-fg:oklch(0.53 0.11 215);--am-bg:oklch(0.955 0.03 215);--am-br:oklch(0.88 0.05 215)}
+.am-raw     {--am-fg:oklch(0.52 0.12 45); --am-bg:oklch(0.95 0.035 45); --am-br:oklch(0.88 0.055 45)}
 /* ---------- preview card (mobile map tap) ---------- */
 .preview{position:absolute;left:12px;right:12px;bottom:68px;z-index:950;transform:translateY(140%);transition:transform .25s var(--ease), visibility 0s .25s;visibility:hidden}
 .preview.show{transform:none;visibility:visible;transition:transform .25s var(--ease), visibility 0s}
@@ -147,11 +160,12 @@ svg{flex:none;vertical-align:-2px}
 .d-banner.patio{background:var(--amber-soft);color:var(--amber-text)}
 .d-banner b{display:block;font-size:14.5px}
 .d-banner .ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;background:#fff}
+.d-banner .ic svg{width:17px;height:17px}
 .d-sec{margin:20px 0}
 .d-sec h3{font-size:16px;margin-bottom:10px}
 .amgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .amitem{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:13.5px;font-weight:500}
-.amitem .am{width:26px;height:26px;background:var(--green-soft);border:none;color:var(--green-dark)}
+.amitem .am{width:26px;height:26px;border:none}
 .photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
 .photos .ph{height:96px;border-radius:10px}
 .srcnote{font-size:12px;color:var(--ink-3);margin-top:8px}
@@ -285,163 +299,196 @@ const STAR = (f=1,s=13)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fi
 const G = `<svg width="11" height="11" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.6 12.3c0-.8-.1-1.5-.2-2.3H12v4.5h6a5.1 5.1 0 0 1-2.2 3.4v2.8h3.6c2.1-1.9 3.2-4.8 3.2-8.4z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.6H2.1v2.9A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14a6.6 6.6 0 0 1 0-4.2V6.9H2.1a11 11 0 0 0 0 9.9L5.8 14z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 6.9L5.8 9.8c.9-2.7 3.3-4.4 6.2-4.4z"/></svg>`;
 const ICONS = {
   water:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>',
-  menu:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 3v18M5 8h9a3 3 0 0 0 0-6H5M19 3v8a2 2 0 0 1-2 2h0V3M17 13v8"/></svg>',
+  // A menu card, rather than the old fork-and-knife-ish glyph.
+  menu:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="2.5" width="15" height="19" rx="2.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>',
   treats:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 8.5 15.5 15.5M6 10a2.5 2.5 0 1 1-2-4 2.5 2.5 0 1 1 4-2l8 8a2.5 2.5 0 1 1 2 4 2.5 2.5 0 1 1-4 2z"/></svg>',
   offleash:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><circle cx="12" cy="12" r="2.5"/></svg>',
-  shade:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v3M12 6a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8zM12 14v5a2 2 0 0 0 4 0"/></svg>',
-  beds:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M6 10V7h12v3"/></svg>'
+  // A patio parasol — dome, scalloped skirt and pole — reads better than the old umbrella.
+  shade:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12v9M3 11a9 9 0 0 1 18 0"/><path d="M3 11c1.5 0 2.2 1.4 3.7 1.4S9.4 11 10.9 11s2.2 1.4 3.7 1.4S16.8 11 18.3 11s2 1.4 2.7 1.4"/></svg>',
+  beds:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M6 10V7h12v3"/></svg>',
+  fenced:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V9l2-2.5L9 9v12M15 21V9l2-2.5L19 9v12M2.5 12h19M2.5 16.5h19"/></svg>',
+  // A fenced area split down the middle — small dogs one side, large the other.
+  smalldog:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M12 5v14" stroke-dasharray="2.6 2.4"/></svg>',
+  wash:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5v6M6 12a6 6 0 0 1 12 0z"/><path d="M9 16v1.5M12 17.5V19M15 16v1.5"/></svg>',
+  // A full food bowl, rather than the cut-of-meat shape that read as an eye.
+  raw:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5h19a9.5 8 0 0 1-19 0z"/><path d="M6 11.5c.8-2.8 3-4.5 6-4.5s5.2 1.7 6 4.5"/></svg>'
 };
 const TICON = (t,c='currentColor',s=14)=>({
  restaurant:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M7 2v8M4 2v5a3 3 0 0 0 6 0V2M7 13v9M17 2c-2 1.5-3 4-3 7v4h3.5M17.5 2v20"/></svg>`,
  bar:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h11v16a1.5 1.5 0 0 1-1.5 1.5H7.5A1.5 1.5 0 0 1 6 20V4zM6 9h-.5A2.5 2.5 0 0 0 3 11.5v3A2.5 2.5 0 0 0 5.5 17H6M17 4c0-1-1-2-2.5-2S12 3 12 4"/></svg>`,
  coffee:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M4 9h12v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M7 5.5c.8-.8.8-1.7 0-2.5M11 5.5c.8-.8.8-1.7 0-2.5"/></svg>`,
  hotel:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M3 19v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 19h18M3 19v2M21 19v2M7 10V7h4v3"/><circle cx="7" cy="13.5" r="0.5" fill="${c}"/></svg>`,
- store:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8l1.5-4h13L20 8M4 8v12h16V8M4 8h16M9 20v-6h6v6"/></svg>`
+ store:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8l1.5-4h13L20 8M4 8v12h16V8M4 8h16M9 20v-6h6v6"/></svg>`,
+ // A fire hydrant for dog parks — unmistakable at pin size.
+ park:`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 21h11M9 21v-8h6v8M9 13V9.5a3 3 0 0 1 6 0V13M6.5 14.5h2.5M15 14.5h2.5M10 6.5h4"/></svg>`
 }[t]);
-const AMEN = {water:'Water bowls', menu:'Dog menu', treats:'Free treats', offleash:'Off-leash area', shade:'Shaded patio', beds:'Dog beds'};
-const TYPES = {restaurant:'Restaurant', bar:'Bar', coffee:'Coffee', hotel:'Hotel', store:'Store'};
+const AMEN = {water:'Water bowls', menu:'Dog menu', treats:'Free treats', offleash:'Off-leash area', shade:'Shade', beds:'Dog beds',
+              fenced:'Fully fenced', smalldog:'Small-dog area', wash:'Self-serve wash', raw:'Raw & fresh food'};
+const TYPES = {restaurant:'Restaurant', bar:'Bar', coffee:'Coffee', hotel:'Hotel', store:'Pet store', park:'Dog park'};
 
 /* ============ sample data — Orange County ============ */
+/* PLACES:START */
 const PLACES = [
-/* Lazy Dog is kept from the original prototype because it is a real business and
-   appears in the CSV. Its invented rating and reviews are gone; amenities and
-   blurb now come from the CSV row. The other 14 prototype places were fictional
-   and have been removed. */
- {id:1,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Irvine',addr:'Irvine',lat:33.6910,lng:-117.7846,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'A full dog menu — grilled burger patty or chicken breast with brown rice — on a heated patio. The chicken option is safe for a beef allergy. Also in Costa Mesa, Torrance, Downey and San Diego.'},
- {id:2,name:'Lazy Dog Restaurant & Bar',type:'restaurant',city:'Huntington Beach',addr:'Huntington Beach',lat:33.7302,lng:-117.9884,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'The same dog menu of grilled burger patty or chicken breast with brown rice, on a heated patio. Fills up on weekends.'},
-
-/* ---- Real California places, imported from dogfriendlycaliforniacombined.csv ----
-   These are real businesses, so they carry no rating and no reviews: the CSV has
-   none, and inventing them would put made-up numbers against real names. They show
-   as "Not rated yet" until a reviews source is wired up.
-
-   `lat`/`lng` are approximate — there was no geocoder available, so well-known
-   venues sit close to their real position and the rest sit at the centre of the
-   town in the CSV's Location column. Run a geocoding pass before this is used for
-   navigation. `addr` is the CSV's Location text verbatim; no street addresses were
-   invented.
-
-   Dogs are restricted to outdoor areas in California food-service venues, so
-   restaurants and bars are 'patio' unless the CSV explicitly says otherwise
-   (Distant Brewing). Hotels are 'full' — dogs are allowed in rooms.
-   `featured` (the amber paw list) = the place has a real dog menu. */
-
- {id:17,name:'The Attic',type:'restaurant',city:'Long Beach',addr:'Long Beach',lat:33.7710,lng:-118.1442,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'Southern food in a 19th-century house, with a large dog-friendly patio and a dog menu.'},
- {id:18,name:'Park Bench Cafe',type:'restaurant',city:'Huntington Beach',addr:'Huntington Beach (Central Park)',lat:33.7008,lng:-118.0075,friendly:'patio',amen:['menu','water','shade'],featured:true,
-  blurb:'A dedicated doggie dining area in HB Central Park with a full canine menu — Rover Easy, Hot Diggity Dog, Peanut Butter Bone. Tree-shaded, and next to HB Dog Beach.'},
- {id:19,name:'Zimzala',type:'restaurant',city:'Huntington Beach',addr:'Huntington Beach (Kimpton Shorebreak)',lat:33.6570,lng:-117.9990,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'Beef, chicken or fish plates for dogs on the patio. Pairs with a stay at the Kimpton Shorebreak.'},
- {id:20,name:"Sandy's Beach Shack",type:'restaurant',city:'Huntington Beach',addr:'Huntington Beach Pier',lat:33.6555,lng:-118.0000,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'Beachfront patio at the pier. Grilled chicken or ground beef with kibble, and $1 per dog order goes to HB Dog Beach.'},
- {id:21,name:"Slater's 50/50",type:'restaurant',city:'Huntington Beach',addr:'Huntington Beach + other locations',lat:33.6625,lng:-117.9880,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'Dog menu of beef, turkey and 50/50 patties, bacon and chicken strips — turkey and chicken are safe for a beef allergy.'},
- {id:22,name:'Bruxie',type:'restaurant',city:'Orange',addr:'Multiple OC locations',lat:33.7900,lng:-117.8530,friendly:'patio',amen:['water','treats'],featured:false,
-  blurb:'Waffle sandwiches, all outdoor seating, and a treat container by the counter.'},
- {id:23,name:'Old Vine Kitchen & Bar',type:'restaurant',city:'Costa Mesa',addr:'The CAMP, Costa Mesa',lat:33.6890,lng:-117.8880,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'Expansive patio at The CAMP, shaded by trees and canopy structures.'},
- {id:24,name:'The Cliff Restaurant',type:'restaurant',city:'Laguna Beach',addr:'Laguna Beach',lat:33.5425,lng:-117.7880,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'A dedicated dog patio with ocean views and a puppy menu. Worth timing for sunset.'},
- {id:25,name:'Bad to the Bone BBQ',type:'restaurant',city:'San Juan Capistrano',addr:'San Juan Capistrano',lat:33.5100,lng:-117.6620,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Spacious patio in San Juan Capistrano — horses have turned up too.'},
- {id:26,name:"Lucille's Smokehouse BBQ",type:'restaurant',city:'Orange',addr:'Orange + other locations',lat:33.7830,lng:-117.8880,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Heated patio, dogs welcome outside.'},
- {id:27,name:'Bluewater Grill',type:'restaurant',city:'Temecula',addr:'Temecula (also Newport Beach)',lat:33.4870,lng:-117.1520,friendly:'patio',amen:['menu','water','treats'],featured:true,
-  blurb:"House-made Bark Treats and a Meat 'Roaff on the dog menu, plus complimentary dog bones."},
- {id:28,name:'Stone Brewing World Bistro & Gardens',type:'bar',city:'San Diego',addr:'Liberty Station, San Diego',lat:32.7405,lng:-117.2110,friendly:'patio',amen:['menu','water','shade'],featured:true,
-  blurb:'A huge garden area at Liberty Station with a dog menu and plenty of shade.'},
- {id:29,name:"Sally's Fish House & Bar",type:'restaurant',city:'San Diego',addr:'San Diego waterfront',lat:32.7065,lng:-117.1690,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'Boardwalk spot with a patio and grassy area. Pupcakes, chicken and rice, crab cookies and bones.'},
- {id:30,name:'The Patio on Lamont',type:'restaurant',city:'San Diego',addr:'Pacific Beach, San Diego',lat:32.7995,lng:-117.2330,friendly:'patio',amen:['menu','water','shade'],featured:true,
-  blurb:'Chicken and rice bowls plus frozen treats, on a shaded Pacific Beach patio.'},
- {id:31,name:'Shorehouse Kitchen',type:'restaurant',city:'La Jolla',addr:'La Jolla',lat:32.8535,lng:-117.2545,friendly:'patio',amen:['menu','water','shade'],featured:true,
-  blurb:'Grass-fed beef, roasted turkey and bacon bits for dogs, with complimentary purified water. Turkey is safe for a beef allergy.'},
- {id:32,name:'The Crack Shack',type:'restaurant',city:'San Diego',addr:'San Diego (multiple)',lat:32.7295,lng:-117.1700,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Open-air layout with dogs welcome in the yard. Plain chicken on request.'},
- {id:33,name:"Jake's",type:'restaurant',city:'Palm Springs',addr:'Palm Springs',lat:33.8330,lng:-116.5460,friendly:'patio',amen:['water','treats','shade'],featured:false,
-  blurb:'Named after the owners’ Westie. Misters, umbrellas and hedges keep the patio bearable in summer.'},
-
- {id:34,name:'Liberty Sports Bar & Grill',type:'bar',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6410,lng:-118.9700,friendly:'patio',amen:['menu','water'],featured:true,
-  blurb:'Grilled chicken and hamburger patties for dogs — the only true dog menu in the Eastern Sierra.'},
- {id:35,name:'Distant Brewing',type:'bar',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6450,lng:-118.9660,friendly:'full',amen:['water','shade'],featured:false,
-  blurb:'A rare indoor-dog spot — leashed dogs are allowed inside. Umbrellas and heaters outside; food comes from the neighbouring kitchens.'},
- {id:36,name:'Mammoth Brewing Co.',type:'bar',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6490,lng:-118.9765,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Spacious lodge-style grounds with room for dogs outside.'},
- {id:37,name:'Side Door Cafe',type:'restaurant',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6510,lng:-118.9800,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'Enclosed pet-friendly patio in the Village.'},
- {id:38,name:'Lakanuki',type:'bar',city:'Mammoth Lakes',addr:'Mammoth Lakes (The Village)',lat:37.6512,lng:-118.9798,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Big tiki patio in the Village at Mammoth.'},
- {id:39,name:"Roberto's Cafe",type:'restaurant',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6440,lng:-118.9700,friendly:'patio',amen:['water'],featured:false,
-  blurb:'The largest patio in Mammoth — a flower-lined deck in summer.'},
- {id:40,name:'The Warming Hut',type:'restaurant',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6430,lng:-118.9700,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Breakfast spot with dogs welcome on the patio.'},
- {id:41,name:'Base Camp Cafe',type:'restaurant',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6470,lng:-118.9730,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Long-standing Mammoth breakfast stop; dogs on the patio.'},
- {id:42,name:'Convict Lake Resort Restaurant',type:'restaurant',city:'Convict Lake',addr:'Convict Lake',lat:37.5900,lng:-118.8570,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Ten minutes south of Mammoth, with a leashed lake loop trail at the door.'},
- {id:43,name:'T-Bar Social Club',type:'bar',city:'June Lake',addr:'June Lake',lat:37.7800,lng:-119.0790,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'Covered Tiki Terrace in summer. Seasonal — check before you drive out.'},
-
- {id:44,name:'Mountain Rambler Brewery',type:'bar',city:'Bishop',addr:'Bishop',lat:37.3620,lng:-118.3960,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'The classic post-climb stop, with 8–10 picnic tables set up for dogs under awnings.'},
- {id:45,name:'Holy Smoke Texas Style BBQ',type:'restaurant',city:'Bishop',addr:'Bishop',lat:37.3700,lng:-118.3950,friendly:'patio',amen:['water','shade'],featured:false,
-  blurb:'Shaded patio on Main Street in Bishop.'},
- {id:46,name:'Whiskey Creek',type:'restaurant',city:'Bishop',addr:'Bishop',lat:37.3670,lng:-118.3950,friendly:'patio',amen:['water'],featured:false,
-  blurb:'Dogs on the patio in downtown Bishop.'},
- {id:47,name:'Copper Top BBQ',type:'restaurant',city:'Big Pine',addr:'Big Pine',lat:37.1660,lng:-118.2900,friendly:'patio',amen:['water'],featured:false,
-  blurb:'The classic 395 pit stop — an all-outdoor operation with 6 pet-friendly tables.'},
-
- {id:48,name:'Montage Laguna Beach',type:'hotel',city:'Laguna Beach',addr:'Laguna Beach',lat:33.5065,lng:-117.7520,friendly:'full',amen:['menu','water','treats','shade','beds'],featured:true,fee:'Fee applies',
-  blurb:'A Furry Friend Menu of beef tenderloin or seared salmon with quinoa, organic treats and toys, and bluff-top lawns. The salmon plate is safe for a beef allergy.'},
- {id:49,name:'Kimpton Shorebreak',type:'hotel',city:'Huntington Beach',addr:'Huntington Beach',lat:33.6573,lng:-117.9993,friendly:'full',amen:['menu','water','treats'],featured:true,fee:'No fee, no size or number limits',
-  blurb:'Dogs in rooms, the lobby and the Zimzala patio, where the dog menu lives. HB Dog Beach is about a mile away.'},
- {id:50,name:'Kimpton Everly',type:'hotel',city:'Hollywood',addr:'Hollywood',lat:34.1015,lng:-118.3260,friendly:'full',amen:['water','treats','beds'],featured:false,fee:'No fee, no limits',
-  blurb:'Bed, mat and courtesy bags on arrival, plus dogs at the evening wine hour. Runyon Canyon is close.'},
- {id:51,name:'Kimpton Hotel Palomar',type:'hotel',city:'Los Angeles',addr:'Los Angeles',lat:34.0570,lng:-118.4430,friendly:'full',amen:['water','treats','beds'],featured:false,fee:'No fee, no limits',
-  blurb:'Beds and bowls at check-in, dogs welcome in rooms and the lobby.'},
- {id:52,name:'Thompson Hollywood',type:'hotel',city:'Hollywood',addr:'Hollywood',lat:34.0975,lng:-118.3300,friendly:'full',amen:['water','treats'],featured:false,fee:'Fee applies',
-  blurb:'Rooftop dog-friendly zones, and many rooms have balconies or patios.'},
- {id:53,name:'1 Hotel West Hollywood',type:'hotel',city:'West Hollywood',addr:'West Hollywood',lat:34.0955,lng:-118.3760,friendly:'full',amen:['water','treats'],featured:false,fee:'Fee applies',
-  blurb:'Dogs in rooms and select areas. The WeHo dog parks nearby have cool K9 turf.'},
- {id:54,name:'Hotel del Coronado',type:'hotel',city:'Coronado',addr:'Coronado',lat:32.6805,lng:-117.1785,friendly:'full',amen:['water','treats','shade'],featured:false,fee:'Fee applies',
-  blurb:'A K9 Concierge, mats and cleanup stations across the grounds. Coronado Dog Beach is a walk away.'},
- {id:55,name:'Loews Coronado Bay Resort',type:'hotel',city:'Coronado',addr:'Coronado',lat:32.6270,lng:-117.1330,friendly:'full',amen:['menu','water','treats','shade','beds'],featured:true,fee:'Fee applies',
-  blurb:'Loews Loves Pets — pet room-service items, bedding, and bayside grounds to walk.'},
- {id:56,name:'Crown City Inn & Bistro',type:'hotel',city:'Coronado',addr:'Coronado',lat:32.6930,lng:-117.1780,friendly:'full',amen:['water','treats','beds'],featured:false,fee:'Modest fee',
-  blurb:'A dog package with beds and bowls, a dog-friendly bistro patio on site, and a short walk to Coronado Dog Beach.'},
- {id:57,name:'La Quinta Resort & Club',type:'hotel',city:'La Quinta',addr:'La Quinta (Coachella Valley)',lat:33.6740,lng:-116.3080,friendly:'full',amen:['water','treats','shade','beds'],featured:false,fee:'Fee applies',
-  blurb:'Eighteen hectares of lawns and paths, mature trees over the courtyards, a PupJoy welcome box, and plenty of rooms opening onto patios.'},
- {id:58,name:'Hotel Santa Barbara',type:'hotel',city:'Santa Barbara',addr:'Santa Barbara',lat:34.4180,lng:-119.6980,friendly:'full',amen:['water','treats','beds'],featured:false,fee:'No fee, any size',
-  blurb:'Bowls and beds on request, locally made treats, and a walkable downtown. Arroyo Burro off-leash beach is a short drive.'},
- {id:59,name:'Arrowhead Pine Rose Cabins',type:'hotel',city:'Twin Peaks',addr:'Twin Peaks / Lake Arrowhead',lat:34.2410,lng:-117.2320,friendly:'full',amen:['water','shade'],featured:false,fee:'$35/night + $300 refundable deposit',
-  blurb:'Cabins on four wooded hectares, with an off-leash dog park and trails nearby.'},
-
- {id:60,name:'The Westin Monache Resort',type:'hotel',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6505,lng:-118.9790,friendly:'full',amen:['water','treats','beds'],featured:false,fee:'$50/night capped at $150/stay — 2 pets up to 18 kg (40 lb)',
-  blurb:'Heavenly dog bed, bowls, mat and an amenity kit, with trailheads close by. The weight cap may rule out larger dogs.'},
- {id:61,name:'Tamarack Lodge',type:'hotel',city:'Mammoth Lakes',addr:'Twin Lakes, Mammoth',lat:37.6210,lng:-119.0090,friendly:'full',amen:['shade'],featured:false,fee:'$30/night per pet + $200 deposit — 2 pets up to 45 kg (100 lb)',
-  blurb:'Cabins only, not the main lodge. Close to the trails, in the trees.'},
- {id:62,name:'Mammoth Creek Inn Hotel & Spa',type:'hotel',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6390,lng:-118.9690,friendly:'full',amen:[],featured:false,fee:'$35/day per dog, 2 max',
-  blurb:'Designated pet rooms, seven minutes on foot from the restaurants.'},
- {id:63,name:'Edelweiss Lodge',type:'hotel',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6330,lng:-118.9640,friendly:'full',amen:['shade'],featured:false,fee:'$20/night per dog, any size, 2 max',
-  blurb:'Wooded setting, designated rooms. A crate is required if the dog is left unattended.'},
- {id:64,name:'Convict Lake Resort',type:'hotel',city:'Convict Lake',addr:'Convict Lake',lat:37.5905,lng:-118.8575,friendly:'full',amen:['shade'],featured:false,fee:'$12/night per pet, any size, 2 max',
-  blurb:'Best value of the Eastern Sierra cabins, with a leashed lakeside trail and a dog-friendly restaurant patio on site.'},
- {id:65,name:'Ventura Grand Inn',type:'hotel',city:'Mammoth Lakes',addr:'Mammoth Lakes',lat:37.6465,lng:-118.9690,friendly:'full',amen:[],featured:false,fee:'$30/night per pet, any size, 2 max',
-  blurb:'Straightforward pet-friendly rooms in Mammoth.'},
-
- {id:66,name:'Dow Villa Motel',type:'hotel',city:'Lone Pine',addr:'Lone Pine',lat:36.6035,lng:-118.0640,friendly:'full',amen:[],featured:false,fee:'Call for fee — 2 pets max',
-  blurb:'Certain motel rooms only, not the historic Dow Hotel. Call ahead to reserve a pet room. Zoey’s Dog Park is in town.'},
- {id:67,name:'Best Western Frontier Motel',type:'hotel',city:'Lone Pine',addr:'Lone Pine',lat:36.5940,lng:-118.0630,friendly:'full',amen:[],featured:false,fee:'No fee, any size',
-  blurb:'No pet fee and no size limit, right on the 395.'},
- {id:68,name:'Quality Inn Lone Pine',type:'hotel',city:'Lone Pine',addr:'Lone Pine',lat:36.5850,lng:-118.0600,friendly:'full',amen:[],featured:false,fee:'$20/night per pet — 2 pets up to 25 kg (55 lb)',
-  blurb:'Six ground-floor designated rooms, with grassy relief areas on the property.'},
- {id:69,name:'Vagabond Inn',type:'hotel',city:'Bishop',addr:'Bishop',lat:37.3760,lng:-118.3950,friendly:'full',amen:[],featured:false,fee:'$15/night per pet, 2 max',
-  blurb:'Simple pet-friendly rooms; the Bishop City Park dog park is nearby.'},
- {id:70,name:'Best Western Bishop Lodge',type:'hotel',city:'Bishop',addr:'Bishop',lat:37.3755,lng:-118.3948,friendly:'full',amen:['water'],featured:false,fee:'$35/night',
-  blurb:'Dog-specific amenities supplied. A crate is required if the dog is left alone.'}
+ {id:1,name:"Lazy Dog Restaurant & Bar",type:"restaurant",city:"Irvine",addr:"13290 Jamboree Rd, Irvine, CA 92602",lat:33.736,lng:-117.81,rating:4.4,reviews:2816,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu: grilled burger patty or chicken breast with brown rice. Inside + outside, dogs patio only (heated). Chicken option safe for beef allergy."},
+ {id:2,name:"The Attic",type:"restaurant",city:"Long Beach",addr:"3441 E Broadway, Long Beach, CA 90803",lat:33.77,lng:-118.1445,rating:4.5,reviews:3536,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu. Inside + outside, large patio. Southern food in a 19th-century house."},
+ {id:3,name:"Park Bench Cafe",type:"restaurant",city:"Huntington Beach",addr:"17732 Goldenwest St, Huntington Beach, CA 92647",lat:33.7015,lng:-118.006,rating:4.6,reviews:1226,friendly:"patio",amen:["water", "menu", "shade"],featured:true,
+  blurb:"Dog menu: full canine menu (Rover Easy, Hot Diggity Dog, Peanut Butter Bone). Outdoor-focused, dedicated doggie dining area. Best full dog-date spot in OC."},
+ {id:4,name:"Zimzala",type:"restaurant",city:"Huntington Beach",addr:"500 Pacific Coast Hwy, Huntington Beach, CA 92648",lat:33.657,lng:-117.999,rating:4.3,reviews:18,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu: beef, chicken, or fish plates. Inside + outside, dogs patio only. Pairs with Kimpton Shorebreak stay."},
+ {id:5,name:"Sandy's Beach Shack",type:"restaurant",city:"Huntington Beach",addr:"315 Pacific Coast Hwy, Huntington Beach, CA 92648",lat:33.6555,lng:-118.0,rating:4.5,reviews:2323,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu: grilled chicken or ground beef with kibble. Inside + outside, beachfront patio. $1 per dog order donated to HB Dog Beach."},
+ {id:6,name:"Slater's 50/50",type:"restaurant",city:"Huntington Beach",addr:"17071 Beach Blvd, Huntington Beach, CA 92647",lat:33.716,lng:-117.9885,rating:4.2,reviews:1588,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu: beef/turkey/50-50 patties, bacon, chicken strips. Inside + outside, dogs patio only. Turkey/chicken options safe for beef allergy."},
+ {id:7,name:"Bruxie",type:"restaurant",city:"Orange",addr:"292 N Glassell St, Orange, CA 92866",lat:33.79,lng:-117.853,rating:4.6,reviews:2286,friendly:"patio",amen:["water", "treats"],featured:false,
+  blurb:"All outdoor seating. Waffle sandwiches."},
+ {id:8,name:"Old Vine Kitchen & Bar",type:"restaurant",city:"Costa Mesa",addr:"2937 Bristol St A103, Costa Mesa, CA 92626",lat:33.689,lng:-117.888,rating:4.4,reviews:328,friendly:"patio",amen:["water", "shade"],featured:false,
+  blurb:"Inside + outside, expansive patio. Closest standout to home base."},
+ {id:9,name:"The Cliff Restaurant",type:"restaurant",city:"Laguna Beach",addr:"577 S Coast Hwy, Laguna Beach, CA 92651",lat:33.541,lng:-117.786,rating:4.4,reviews:4515,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu: puppy menu. Inside + outside, dedicated dog patio with ocean views. Sunset views."},
+ {id:10,name:"Bad to the Bone BBQ",type:"restaurant",city:"San Juan Capistrano",addr:"31738 Rancho Viejo Rd, San Juan Capistrano, CA 92675",lat:33.506,lng:-117.658,rating:4.4,reviews:1322,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, spacious patio. Horses have shown up too."},
+ {id:11,name:"Lucille's Smokehouse BBQ",type:"restaurant",city:"Orange",addr:"4050 W Chapman Ave, Orange, CA 92868",lat:33.788,lng:-117.894,rating:4.2,reviews:2583,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, heated patio."},
+ {id:12,name:"Bluewater Grill",type:"restaurant",city:"Temecula",addr:"26700 Ynez Ct, Temecula, CA 92591",lat:33.488,lng:-117.149,rating:4.4,reviews:2565,friendly:"patio",amen:["water", "menu", "treats"],featured:true,
+  blurb:"Dog menu: House Made Bark Treats and Meat 'Roaff. Inside + outside, dogs patio only."},
+ {id:13,name:"Stone Brewing World Bistro & Gardens",type:"bar",city:"San Diego",addr:"2816 Historic Decatur Rd Unit 116, San Diego, CA 92106",lat:32.7405,lng:-117.211,rating:4.4,reviews:2446,friendly:"patio",amen:["water", "menu", "shade"],featured:true,
+  blurb:"Dog menu. Inside + outside, huge garden area."},
+ {id:14,name:"Sally's Fish House & Bar",type:"restaurant",city:"San Diego",addr:"1 Market Pl, San Diego, CA 92101",lat:32.706,lng:-117.169,rating:4.3,reviews:1664,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu: pupcakes, chicken and rice, crab cookies, bones. Inside + outside, patio plus grassy area. Boardwalk location."},
+ {id:15,name:"The Patio on Lamont",type:"restaurant",city:"San Diego",addr:"4445 Lamont St, San Diego, CA 92109",lat:32.7995,lng:-117.233,rating:4.4,reviews:526,friendly:"patio",amen:["water", "menu", "shade"],featured:true,
+  blurb:"Dog menu: chicken and rice bowls plus frozen treats. Inside + outside, dogs patio only."},
+ {id:16,name:"Shorehouse Kitchen",type:"restaurant",city:"La Jolla",addr:"2236 Avenida De La Playa, La Jolla, CA 92037",lat:32.8535,lng:-117.2545,rating:4.5,reviews:1819,friendly:"patio",amen:["water", "menu", "shade"],featured:true,
+  blurb:"Dog menu: grass-fed beef, roasted turkey, bacon bits. Inside + outside, dogs patio only. Turkey option safe for beef allergy."},
+ {id:17,name:"The Crack Shack",type:"restaurant",city:"San Diego",addr:"2266 Kettner Blvd, San Diego, CA 92101",lat:32.7295,lng:-117.17,rating:4.5,reviews:6403,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Open-air layout, dogs welcome in yard."},
+ {id:18,name:"Jake's",type:"restaurant",city:"Palm Springs",addr:"664 N Palm Canyon Dr, Palm Springs, CA 92262",lat:33.833,lng:-116.546,rating:4.4,reviews:758,friendly:"patio",amen:["water", "treats", "shade"],featured:false,
+  blurb:"Inside + outside, dogs patio only. Named after the owners' Westie."},
+ {id:19,name:"Liberty Sports Bar & Grill",type:"bar",city:"Mammoth Lakes",addr:"3399 Main St, Mammoth Lakes, CA 93546",lat:37.648,lng:-118.972,rating:4.2,reviews:623,friendly:"patio",amen:["water", "menu"],featured:true,
+  blurb:"Dog menu: grilled chicken and hamburger patties. Inside + outside, dogs patio only. Only true dog menu in the Eastern Sierra."},
+ {id:20,name:"Distant Brewing",type:"bar",city:"Mammoth Lakes",addr:"568 Old Mammoth Rd, Mammoth Lakes, CA 93546",lat:37.642,lng:-118.969,rating:4.6,reviews:374,friendly:"full",amen:["water", "shade"],featured:false,
+  blurb:"Inside + outside - dogs allowed INDOORS on leash. Rare indoor-dog spot."},
+ {id:21,name:"Mammoth Brewing Co.",type:"bar",city:"Mammoth Lakes",addr:"18 Lake Mary Rd, Mammoth Lakes, CA 93546",lat:37.649,lng:-118.9765,rating:4.2,reviews:1186,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, spacious lodge-style grounds."},
+ {id:22,name:"Side Door Cafe",type:"restaurant",city:"Mammoth Lakes",addr:"100 Canyon Blvd #229, Mammoth Lakes, CA 93546",lat:37.651,lng:-118.98,rating:4,reviews:203,friendly:"patio",amen:["water", "shade"],featured:false,
+  blurb:"Inside + outside, enclosed pet-friendly patio."},
+ {id:23,name:"Lakanuki",type:"bar",city:"Mammoth Lakes",addr:"6201 Minaret Rd, Mammoth Lakes, CA 93546",lat:37.6512,lng:-118.9798,rating:3.8,reviews:548,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, big tiki patio."},
+ {id:24,name:"Roberto's Cafe",type:"restaurant",city:"Mammoth Lakes",addr:"271 Old Mammoth Rd, Mammoth Lakes, CA 93546",lat:37.644,lng:-118.97,rating:4.3,reviews:1788,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, largest patio in Mammoth. Flower-lined deck in summer."},
+ {id:25,name:"The Warming Hut",type:"restaurant",city:"Mammoth Lakes",addr:"343 Old Mammoth Rd, Mammoth Lakes, CA 93546",lat:37.643,lng:-118.97,rating:4.4,reviews:864,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, dogs patio only."},
+ {id:26,name:"Base Camp Cafe",type:"restaurant",city:"Mammoth Lakes",addr:"3325 Main St, Mammoth Lakes, CA 93546",lat:37.647,lng:-118.973,rating:3.9,reviews:85,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, dogs patio only."},
+ {id:27,name:"Convict Lake Resort Restaurant",type:"restaurant",city:"Mammoth Lakes",addr:"2000 Convict Lake Rd, Mammoth Lakes, CA 93546",lat:37.59,lng:-118.857,rating:4.7,reviews:273,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, dogs patio only. 10 min south of Mammoth."},
+ {id:28,name:"T-Bar Social Club",type:"bar",city:"June Lake",addr:"2588 CA-158, June Lake, CA 93529",lat:37.78,lng:-119.079,rating:4.7,reviews:119,friendly:"patio",amen:["water", "shade"],featured:false,
+  blurb:"Inside + outside, covered Tiki Terrace in summer. Seasonal - check before visiting."},
+ {id:29,name:"Mountain Rambler Brewery",type:"bar",city:"Bishop",addr:"186 S Main St, Bishop, CA 93514",lat:37.362,lng:-118.396,rating:4.5,reviews:681,friendly:"patio",amen:["water", "shade"],featured:false,
+  blurb:"Inside + outside, 8-10 picnic tables set up for dogs. Classic post-climb stop."},
+ {id:30,name:"Holy Smoke Texas Style BBQ",type:"restaurant",city:"Bishop",addr:"772 N Main St, Bishop, CA 93514",lat:37.37,lng:-118.395,rating:4.4,reviews:1917,friendly:"patio",amen:["water", "shade"],featured:false,
+  blurb:"Inside + outside, dogs on shaded patio."},
+ {id:31,name:"Whiskey Creek",type:"restaurant",city:"Bishop",addr:"524 N Main St, Bishop, CA 93514",lat:37.367,lng:-118.395,rating:4.3,reviews:1134,friendly:"patio",amen:["water"],featured:false,
+  blurb:"Inside + outside, dogs patio only."},
+ {id:32,name:"Copper Top BBQ",type:"restaurant",city:"Big Pine",addr:"442 N Main St, Big Pine, CA 93513",lat:37.168,lng:-118.29,rating:4.7,reviews:2524,friendly:"patio",amen:["water"],featured:false,
+  blurb:"All outdoor operation, 6 pet-friendly tables. Classic 395 pit stop."},
+ {id:33,name:"Montage Laguna Beach",type:"hotel",city:"Laguna Beach",addr:"30801 Coast Hwy, Laguna Beach, CA 92651",lat:33.5065,lng:-117.752,rating:4.7,reviews:5983,friendly:"full",amen:["water", "menu", "treats", "shade"],featured:true,fee:"Fee applies",
+  blurb:"Dog menu: Furry Friend Menu (beef tenderloin or seared salmon with quinoa). Rooms + outdoor areas. Salmon plate safe for beef allergy."},
+ {id:34,name:"Kimpton Shorebreak",type:"hotel",city:"Huntington Beach",addr:"500 Pacific Coast Hwy, Huntington Beach, CA 92648",lat:33.6573,lng:-117.9993,rating:4.6,reviews:1859,friendly:"full",amen:["water", "menu", "treats"],featured:true,fee:"No fee, no size/number limits",
+  blurb:"Dog menu: via Zimzala. Rooms, lobby, Zimzala patio."},
+ {id:35,name:"Kimpton Everly",type:"hotel",city:"Los Angeles",addr:"1800 Argyle Ave, Los Angeles, CA 90028",lat:34.102,lng:-118.326,rating:4.3,reviews:1372,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"No fee, no limits",
+  blurb:"Rooms, lobby, wine hour."},
+ {id:36,name:"Kimpton Hotel Palomar",type:"hotel",city:"Los Angeles",addr:"10740 Wilshire Blvd, Los Angeles, CA 90024",lat:34.057,lng:-118.443,rating:4.2,reviews:1550,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"No fee, no limits",
+  blurb:"Rooms, lobby."},
+ {id:37,name:"Thompson Hollywood",type:"hotel",city:"Los Angeles",addr:"1541 Wilcox Ave, Los Angeles, CA 90028",lat:34.0975,lng:-118.33,rating:3.8,reviews:415,friendly:"full",amen:["water", "treats"],featured:false,fee:"Fee applies",
+  blurb:"Rooms + rooftop dog-friendly zones. Many rooms with balconies/patios."},
+ {id:38,name:"1 Hotel West Hollywood",type:"hotel",city:"West Hollywood",addr:"8490 Sunset Blvd, West Hollywood, CA 90069",lat:34.0955,lng:-118.376,rating:4.3,reviews:1297,friendly:"full",amen:["water", "treats"],featured:false,fee:"Fee applies",
+  blurb:"Rooms + select areas. WeHo dog parks have cool K9 turf."},
+ {id:39,name:"Hotel del Coronado",type:"hotel",city:"Coronado",addr:"1500 Orange Ave, Coronado, CA 92118",lat:32.6805,lng:-117.1785,rating:4.5,reviews:20943,friendly:"full",amen:["water", "treats", "shade"],featured:false,fee:"Fee applies",
+  blurb:"Rooms + grounds (K9 Concierge)."},
+ {id:40,name:"Loews Coronado Bay Resort",type:"hotel",city:"Coronado",addr:"4000 Coronado Bay Rd, Coronado, CA 92118",lat:32.627,lng:-117.133,rating:4.4,reviews:5478,friendly:"full",amen:["water", "menu", "treats", "shade", "beds"],featured:true,fee:"Fee applies",
+  blurb:"Dog menu: pet room-service items. Rooms + grounds (Loews Loves Pets)."},
+ {id:41,name:"Crown City Inn & Bistro",type:"hotel",city:"Coronado",addr:"520 Orange Ave, Coronado, CA 92118",lat:32.693,lng:-117.178,rating:4.7,reviews:373,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"Modest fee",
+  blurb:"Rooms + bistro patio. Dog-friendly bistro patio on site."},
+ {id:42,name:"La Quinta Resort & Club",type:"hotel",city:"La Quinta",addr:"49-499 Eisenhower Dr, La Quinta, CA 92253",lat:33.674,lng:-116.308,rating:4.5,reviews:3758,friendly:"full",amen:["water", "treats", "shade", "beds"],featured:false,fee:"Fee applies",
+  blurb:"Rooms + 18 hectares of lawns and paths. Many rooms open onto patios."},
+ {id:43,name:"Hotel Santa Barbara",type:"hotel",city:"Santa Barbara",addr:"533 State St, Santa Barbara, CA 93101",lat:34.418,lng:-119.698,rating:4.2,reviews:526,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"No fee, any size",
+  blurb:"Rooms + walkable downtown."},
+ {id:44,name:"Arrowhead Pine Rose Cabins",type:"hotel",city:"Twin Peaks",addr:"25994 CA-189, Twin Peaks, CA 92391",lat:34.241,lng:-117.232,rating:4.6,reviews:585,friendly:"full",amen:["water", "shade"],featured:false,fee:"$35/night + $300 refundable deposit",
+  blurb:"Cabins + 4 wooded hectares."},
+ {id:45,name:"The Westin Monache Resort",type:"hotel",city:"Mammoth Lakes",addr:"50 Hillside Dr, Mammoth Lakes, CA 93546",lat:37.6505,lng:-118.979,rating:4.4,reviews:1096,friendly:"full",amen:["water", "treats", "beds"],featured:false,fee:"$50/night capped at $150/stay, 2 pets up to 18 kg (40 lb)",
+  blurb:"Designated rooms. Weight cap may rule out larger dogs."},
+ {id:46,name:"Tamarack Lodge",type:"hotel",city:"Mammoth Lakes",addr:"163 Twin Lakes Rd, Mammoth Lakes, CA 93546",lat:37.621,lng:-119.009,rating:4.6,reviews:981,friendly:"full",amen:["shade"],featured:false,fee:"$30/night per pet + $200 deposit, 2 pets up to 45 kg (100 lb)",
+  blurb:"Cabins only (not main lodge). Close to trails."},
+ {id:47,name:"Mammoth Creek Inn Hotel & Spa",type:"hotel",city:"Mammoth Lakes",addr:"663 Old Mammoth Rd, Mammoth Lakes, CA 93546",lat:37.639,lng:-118.969,rating:4.4,reviews:212,friendly:"full",amen:[],featured:false,fee:"$35/day per dog, 2 max",
+  blurb:"Designated rooms. 7-min walk to restaurants."},
+ {id:48,name:"Edelweiss Lodge",type:"hotel",city:"Mammoth Lakes",addr:"1872 Old Mammoth Rd, Mammoth Lakes, CA 93546",lat:37.633,lng:-118.964,rating:4.2,reviews:153,friendly:"full",amen:["shade"],featured:false,fee:"$20/night per dog, any size, 2 max",
+  blurb:"Designated rooms. Crate required if unattended."},
+ {id:49,name:"Convict Lake Resort",type:"hotel",city:"Mammoth Lakes",addr:"2000 Convict Lake Rd, Mammoth Lakes, CA 93546",lat:37.5905,lng:-118.8575,rating:4.7,reviews:964,friendly:"full",amen:["shade"],featured:false,fee:"$12/night per pet, any size, 2 max",
+  blurb:"Cabins. Best value + on-site dog-friendly restaurant patio."},
+ {id:50,name:"Ventura Grand Inn",type:"hotel",city:"Mammoth Lakes",addr:"3626 Main St, Mammoth Lakes, CA 93546",lat:37.646,lng:-118.968,rating:3.3,reviews:174,friendly:"full",amen:[],featured:false,fee:"$30/night per pet, any size, 2 max",
+  blurb:"Rooms. Recent reviews cite cleanliness issues."},
+ {id:51,name:"Dow Villa Motel",type:"hotel",city:"Lone Pine",addr:"310 S Main St, Lone Pine, CA 93545",lat:36.6035,lng:-118.064,rating:4.4,reviews:967,friendly:"full",amen:[],featured:false,fee:"Call for fee, 2 pets max",
+  blurb:"Certain motel rooms only (not Historic Dow Hotel). Call ahead to reserve pet room."},
+ {id:52,name:"Best Western Frontier Motel",type:"hotel",city:"Lone Pine",addr:"1008 S Main St, Lone Pine, CA 93545",lat:36.594,lng:-118.063,rating:4.4,reviews:1666,friendly:"full",amen:[],featured:false,fee:"No fee, any size",
+  blurb:"Rooms."},
+ {id:53,name:"Quality Inn Lone Pine",type:"hotel",city:"Lone Pine",addr:"1920 S Main St, Lone Pine, CA 93545",lat:36.585,lng:-118.06,rating:4.1,reviews:695,friendly:"full",amen:[],featured:false,fee:"$20/night per pet, 2 pets up to 25 kg (55 lb)",
+  blurb:"6 ground-floor designated rooms. Grassy relief areas on property."},
+ {id:54,name:"Vagabond Inn",type:"hotel",city:"Bishop",addr:"1030 N Main St, Bishop, CA 93514",lat:37.376,lng:-118.395,rating:3.9,reviews:809,friendly:"full",amen:[],featured:false,fee:"$15/night per pet, 2 max",
+  blurb:"Rooms."},
+ {id:55,name:"Best Western Bishop Lodge",type:"hotel",city:"Bishop",addr:"1025 N Main St, Bishop, CA 93514",lat:37.3755,lng:-118.3948,rating:3.8,reviews:765,friendly:"full",amen:["water"],featured:false,fee:"$35/night",
+  blurb:"Rooms (crate required if left alone)."},
+ {id:56,name:"Costa Mesa Bark Park",type:"park",city:"Costa Mesa",addr:"890 Arlington Dr, Costa Mesa, CA 92626",lat:33.6693,lng:-117.9089,rating:4.5,reviews:718,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
+  blurb:"Surface: Grass/dirt. 2 acres, closed Wednesdays for maintenance, 7am-9pm."},
+ {id:57,name:"Bellis Park Dog Area",type:"park",city:"Buena Park",addr:"7171 8th St, Buena Park, CA 90621",lat:33.864,lng:-117.995,rating:4.3,reviews:743,friendly:"full",amen:["offleash", "fenced"],featured:false,
+  blurb:"Surface: Grass. Bring your own water. Closed Wednesdays."},
+ {id:58,name:"Best Friend Dog Park",type:"park",city:"Huntington Beach",addr:"Edwards St, Huntington Beach, CA 92647",lat:33.706,lng:-118.014,rating:4.5,reviews:710,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
+  blurb:"Surface: Wood chips. Plenty of seating for owners."},
+ {id:59,name:"Huntington Dog Beach",type:"park",city:"Huntington Beach",addr:"20211 Huntington Bch Bike Trl (PCH between Seapoint & 21st), Huntington Beach, CA 92648",lat:33.665,lng:-118.009,rating:4.8,reviews:7036,friendly:"full",amen:["offleash"],featured:false,
+  blurb:"Surface: Sand. Bring your own water. Off-leash beach. Pairs with Park Bench Cafe or Sandy's afterward."},
+ {id:60,name:"Laguna Beach Dog Park",type:"park",city:"Laguna Beach",addr:"20672 Laguna Canyon Rd, Laguna Beach, CA 92651",lat:33.579,lng:-117.766,rating:4.7,reviews:490,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
+  blurb:"Surface: Decomposed granite with grass patches. First dog park in OC (1992), ~2 acres, sunrise to sunset, free parking."},
+ {id:61,name:"Pooch Park",type:"park",city:"Laguna Niguel",addr:"31575 Golden Lantern, Laguna Niguel, CA 92677",lat:33.509,lng:-117.7,rating:4.3,reviews:155,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
+  blurb:"Surface: Turf. ~2 acres, wash station near exit, gold standard for suburban OC parks."},
+ {id:62,name:"Orange Dog Park",type:"park",city:"Orange",addr:"190 S Yorba St, Orange, CA 92869",lat:33.787,lng:-117.833,rating:4.6,reviews:899,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
+  blurb:"Surface: Natural turf and dirt. Dog exercise equipment on site."},
+ {id:63,name:"Irvine Central Bark",type:"park",city:"Irvine",addr:"6405 Oak Canyon, Irvine, CA 92618",lat:33.682,lng:-117.742,rating:4.5,reviews:1003,friendly:"full",amen:["offleash", "water", "fenced", "smalldog"],featured:false,
+  blurb:"Surface: Grass. ~3 acres of open field, opened 2000."},
+ {id:64,name:"Yorba Regional Park Off-Leash Area",type:"park",city:"Anaheim",addr:"7600 E La Palma Ave, Anaheim, CA 92807",lat:33.863,lng:-117.783,rating:4.7,reviews:4175,friendly:"full",amen:["offleash"],featured:false,
+  blurb:"Surface: Packed dirt and grass. Bring your own water. Biggest off-leash space in the county, recall-reliable dogs only, $5-7 vehicle fee."},
+ {id:65,name:"Recreation Park Dog Park",type:"park",city:"Long Beach",addr:"5201 E 7th St, Long Beach, CA 90804",lat:33.774,lng:-118.142,rating:4.5,reviews:825,friendly:"full",amen:["offleash", "water", "shade", "fenced", "smalldog"],featured:true,
+  blurb:"Surface: Grass. 2 acres, may close Monday mornings for maintenance."},
+ {id:66,name:"Rosie's Dog Beach",type:"park",city:"Long Beach",addr:"5000 E Ocean Blvd, Long Beach, CA 90803",lat:33.759,lng:-118.14,rating:4.7,reviews:8466,friendly:"full",amen:["offleash"],featured:false,
+  blurb:"Surface: Sand. Bring your own water. LA County's main off-leash beach."},
+ {id:67,name:"Coronado Dog Beach",type:"park",city:"Coronado",addr:"Ocean Blvd (north end of Coronado Beach), Coronado, CA 92118",lat:32.694,lng:-117.186,rating:4.7,reviews:13610,friendly:"full",amen:["offleash"],featured:false,
+  blurb:"Surface: Sand. Bring your own water. Pairs with Crown City Inn or Hotel del Coronado stays."},
+ {id:68,name:"Arroyo Burro (Hendry's) Beach",type:"park",city:"Santa Barbara",addr:"2981 Cliff Dr, Santa Barbara, CA 93109",lat:34.403,lng:-119.742,rating:4.7,reviews:3420,friendly:"full",amen:["offleash"],featured:false,
+  blurb:"Surface: Sand. Bring your own water. Off-leash east of the slough mouth. Boathouse restaurant adjacent. Self-serve dog wash in the parking lot."},
+ {id:69,name:"Mammoth Lakes Community Dog Park",type:"park",city:"Mammoth Lakes",addr:"190 College Pkwy, Mammoth Lakes, CA 93546",lat:37.644,lng:-118.962,friendly:"full",amen:["offleash", "water", "fenced", "smalldog"],featured:false,
+  blurb:"Surface: Custom dog turf (465 sq m). Opened Nov 2024, ~1 acre, 4 benches, parking for ~40 cars."},
+ {id:70,name:"Bishop City Park Dog Park",type:"park",city:"Bishop",addr:"Bishop City Park (off N Main St), Bishop, CA 93514",lat:37.369,lng:-118.4,rating:4.6,reviews:189,friendly:"full",amen:["offleash", "water", "shade", "fenced"],featured:false,
+  blurb:"Surface: Grass. Central location in a very walkable dog town."},
+ {id:71,name:"Zoey's Dog Park",type:"park",city:"Lone Pine",addr:"430 N Main St, Lone Pine, CA 93545",lat:36.61,lng:-118.063,rating:4.5,reviews:75,friendly:"full",amen:["offleash", "fenced", "smalldog"],featured:false,
+  blurb:"Surface: Grass. Bring your own water. Best leg-stretch stop on the 395 through Lone Pine."},
+ {id:72,name:"Healthy Spot",type:"store",city:"Costa Mesa",addr:"1880 Newport Blvd, Costa Mesa, CA 92627",lat:33.639,lng:-117.9195,rating:4.6,reviews:121,friendly:"full",amen:["raw"],featured:false,
+  blurb:"Strong raw selection with staff guidance plus samples and in-store treats. Closest premium raw stockist to home base."},
+ {id:73,name:"Animalia",type:"store",city:"Huntington Beach",addr:"16389 Bolsa Chica St, Huntington Beach, CA 92649",lat:33.729,lng:-118.043,rating:4.5,reviews:190,friendly:"full",amen:["raw"],featured:false,
+  blurb:"Specializes in raw and refrigerated fresh food plus local baker treats. Leashed pets welcome inside, special orders accepted. Also has self-serve wash tubs per recent reviews."},
+ {id:74,name:"Pet Evolution",type:"store",city:"Aliso Viejo",addr:"26541 Aliso Creek Rd A, Aliso Viejo, CA 92656",lat:33.576,lng:-117.725,rating:4.9,reviews:190,friendly:"full",amen:["wash", "raw"],featured:false,
+  blurb:"Family self-serve wash with supplies included. Carries OC Raw and premium lines. Walk-ins welcome for the wash."},
+ {id:75,name:"Kriser's Natural Pet",type:"store",city:"Irvine",addr:"5365 Alton Pkwy, Irvine, CA 92604",lat:33.674,lng:-117.79,rating:4.5,reviews:145,friendly:"full",amen:["wash", "raw"],featured:false,
+  blurb:"Bookable online. Natural and raw brands (Stella & Chewy's etc.). Grooming also available."},
+ {id:76,name:"Top Dog Barkery",type:"store",city:"Huntington Beach",addr:"180 5th St #110, Huntington Beach, CA 92648",lat:33.66,lng:-117.999,rating:4.2,reviews:153,friendly:"full",amen:["raw"],featured:false,
+  blurb:"On-site bakery with made-to-order cakes and pastries. Good birthday-cake stop. Also offers 30-min self-wash per recent reviews."},
+ {id:77,name:"Woofpak Pet Kitchen",type:"store",city:"San Diego",addr:"4545 La Jolla Village Dr E-4, San Diego, CA 92122",lat:32.871,lng:-117.211,friendly:"full",amen:["raw"],featured:false,
+  blurb:"Farm-to-bowl fresh meals and treats. A restaurant just for dogs with milk on tap. Location moved to San Diego (was OC), verify before visiting."},
+ {id:78,name:"Mammoth Pet Shop",type:"store",city:"Mammoth Lakes",addr:"26 Old Mammoth Rd L-2, Mammoth Lakes, CA 93546",lat:37.647,lng:-118.969,rating:4.6,reviews:63,friendly:"full",amen:["wash"],featured:false,
+  blurb:"Self-serve wash station. Leashed pets welcome to browse."},
+ {id:79,name:"Tailwaggers",type:"store",city:"Bishop",addr:"1351 Rocking W Dr, Bishop, CA 93514",lat:37.354,lng:-118.39,rating:4.8,reviews:40,friendly:"full",amen:["wash", "raw"],featured:false,
+  blurb:"Fully equipped bathing center. Quality foods and healthy treats. Largest pet store in the Eastern Sierra. Note the Mammoth location has been reported closed, verify before visiting that one."}
 ];
+/* PLACES:END */
 const AREAS = [
  {q:'Irvine',zip:'92618',lat:33.6846,lng:-117.8265,z:12},{q:'Costa Mesa',zip:'92626',lat:33.6638,lng:-117.9047,z:13},
  {q:'Huntington Beach',zip:'92646',lat:33.6595,lng:-117.9988,z:12},{q:'Newport Beach',zip:'92660',lat:33.6189,lng:-117.9298,z:13},
@@ -457,6 +504,8 @@ const AREAS = [
  {q:'Temecula',zip:'92590',lat:33.4936,lng:-117.1484,z:12},{q:'Palm Springs',zip:'92262',lat:33.8303,lng:-116.5453,z:12},
  {q:'La Quinta',zip:'92253',lat:33.6634,lng:-116.3100,z:12},{q:'Santa Barbara',zip:'93101',lat:34.4208,lng:-119.6982,z:12},
  {q:'Lake Arrowhead',zip:'92352',lat:34.2483,lng:-117.1889,z:12},
+ {q:'Buena Park',zip:'90621',lat:33.8675,lng:-117.9981,z:12},{q:'Laguna Niguel',zip:'92677',lat:33.5225,lng:-117.7075,z:13},
+ {q:'Aliso Viejo',zip:'92656',lat:33.5767,lng:-117.7256,z:13},
  // Eastern Sierra
  {q:'Mammoth Lakes',zip:'93546',lat:37.6485,lng:-118.9721,z:12},{q:'June Lake',zip:'93529',lat:37.7800,lng:-119.0790,z:13},
  {q:'Bishop',zip:'93514',lat:37.3614,lng:-118.3951,z:12},{q:'Big Pine',zip:'93513',lat:37.1652,lng:-118.2903,z:13},
@@ -546,9 +595,21 @@ function filtered(){
     (!state.maxDist || dist(p)<=state.maxDist)
   ).sort((a,b)=>dist(a)-dist(b));
 }
-const friendlyBadge = p => p.friendly==='full'
-  ? `<span class="fb full"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg>Inside + outside</span>`
-  : `<span class="fb patio"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v3M12 6a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8zM12 14v7"/></svg>Patio only</span>`;
+/* "Inside + outside" makes no sense for a park or a shop, so the wording follows
+   the place type. The two colour treatments stay: green = dogs anywhere on site,
+   amber = outdoors only. */
+const CHECK = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg>`;
+function friendlyInfo(p){
+  if(p.type==='park') return {cls:'full', icon:ICONS.offleash, label:'Off-leash park',
+    title:'Off-leash park', body:'Dogs can run off-leash here.'};
+  if(p.type==='store') return {cls:'full', icon:CHECK, label:'Dogs welcome inside',
+    title:'Dogs welcome inside', body:'Leashed dogs can come in and shop with you.'};
+  if(p.friendly==='full') return {cls:'full', icon:CHECK, label:'Inside + outside',
+    title:'Fully dog-friendly', body:'Dogs are welcome inside and outside.'};
+  return {cls:'patio', icon:ICONS.shade, label:'Patio only',
+    title:'Patio only', body:'Dogs are welcome on the outdoor patio, but not inside.'};
+}
+const friendlyBadge = p => { const f = friendlyInfo(p); return `<span class="fb ${f.cls}">${f.icon}${f.label}</span>`; };
 
 /* ============ cards / list ============ */
 function cardHtml(p){
@@ -559,7 +620,7 @@ function cardHtml(p){
       <div class="meta">${p.rating != null
         ? `<span class="rate" aria-label="Rated ${p.rating} out of 5">${STAR(1,12)}${p.rating}</span><span class="gdot" role="img" aria-label="${p.reviews.toLocaleString()} Google reviews">(${p.reviews.toLocaleString()}) ${G}</span>`
         : `<span class="unrated">Not rated yet</span>`}<span aria-hidden="true">·</span><span class="rate" style="font-weight:500;color:var(--ink-2)">${TICON(p.type,'currentColor',12)}${TYPES[p.type]}</span><span aria-hidden="true">·</span><span>${fmtDist(dist(p))}</span></div>
-      <div class="badges">${friendlyBadge(p)}<span class="amset">${p.amen.map(a=>`<span class="am" title="${AMEN[a]}" role="img" aria-label="${AMEN[a]}">${ICONS[a]}</span>`).join('')}</span></div>
+      <div class="badges">${friendlyBadge(p)}<span class="amset">${p.amen.map(a=>`<span class="am am-${a}" title="${AMEN[a]}" role="img" aria-label="${AMEN[a]}">${ICONS[a]}</span>`).join('')}</span></div>
     </div>
   </button>`;
 }
@@ -636,17 +697,13 @@ function detailHtml(p){
       <div class="d-meta">${p.rating != null
         ? `<span class="rate" aria-label="Rated ${p.rating} out of 5">${STAR(1,14)}<b>${p.rating}</b></span><span class="gdot">${p.reviews.toLocaleString()} Google reviews</span>`
         : `<span class="unrated">Not rated yet</span>`}<span aria-hidden="true">·</span><span class="rate" style="font-weight:500;color:var(--ink-2)">${TICON(p.type,'currentColor',14)}${TYPES[p.type]}</span><span aria-hidden="true">·</span><span>${esc(p.city)} — ${fmtDist(dist(p))}</span></div>
-      <div class="d-banner ${p.friendly}">
-        <span class="ic">${p.friendly==='full'
-          ?'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.1 150)" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg>'
-          :'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.55 0.12 70)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v3M12 6a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8zM12 14v7"/></svg>'}</span>
-        <div>${p.friendly==='full'
-          ?'<b>Fully dog-friendly</b>Dogs are welcome inside and outside.'
-          :'<b>Patio only</b>Dogs are welcome on the outdoor patio, but not inside.'}</div>
+      <div class="d-banner ${friendlyInfo(p).cls}">
+        <span class="ic" style="color:${friendlyInfo(p).cls==='full'?'oklch(0.45 0.1 150)':'oklch(0.55 0.12 70)'}">${friendlyInfo(p).icon}</span>
+        <div><b>${friendlyInfo(p).title}</b>${friendlyInfo(p).body}</div>
       </div>
       <p style="margin:0;color:var(--ink-2)">${esc(p.blurb)}</p>
-      ${p.fee ? `<div class="d-sec"><h3>Pet fee &amp; limits</h3><div class="amitem" style="display:inline-flex">${ICONS.beds}${esc(p.fee)}</div></div>` : ''}
-      <div class="d-sec"><h3>Dog amenities</h3><div class="amgrid">${p.amen.map(a=>`<div class="amitem"><span class="am">${ICONS[a]}</span>${AMEN[a]}</div>`).join('')}</div></div>
+      ${p.fee ? `<div class="d-sec"><h3>Pet fee &amp; limits</h3><div class="amitem" style="display:inline-flex"><span class="am am-beds">${ICONS.beds}</span>${esc(p.fee)}</div></div>` : ''}
+      ${p.amen.length ? `<div class="d-sec"><h3>Dog amenities</h3><div class="amgrid">${p.amen.map(a=>`<div class="amitem"><span class="am am-${a}">${ICONS[a]}</span>${AMEN[a]}</div>`).join('')}</div></div>` : ''}
       <div class="d-sec"><h3>Photos</h3>
         <div class="photos"><div class="ph">user photo</div><div class="ph">user photo</div><div class="ph">google photo</div><div class="ph">google photo</div></div>
         <div class="srcnote">User uploads + photos via Google Maps</div>

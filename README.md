@@ -20,26 +20,38 @@ If the Leaflet CDN is unreachable, the map pane says so and the list view keeps 
 
 ## What's in it
 
-- **Map** — pannable Leaflet map of California. Pins are colour- and icon-coded: green fill for fully dog-friendly, white with a green outline for patio-only, and a larger amber paw for featured places. Each business type has its own glyph (fork & knife, beer mug, coffee cup, hotel bed, storefront) on pins, filter chips, list cards and the detail view.
+- **Map** — pannable Leaflet map of California. Pins are colour- and icon-coded: green fill for fully dog-friendly, white with a green outline for patio-only, and a larger amber paw for featured places. Each type has its own glyph (fork & knife, beer mug, coffee cup, hotel bed, storefront, fire hydrant for dog parks) on pins, filter chips, list cards and the detail view.
 - **Search** — autosuggest over 30 California cities and ZIP codes. Selecting an area flies the map there and recalculates every distance. Keyboard-navigable (arrow keys, Enter, Escape).
 - **Filters** — business type chips plus a panel for friendliness level, amenities, minimum rating and distance. The options are derived from the data, so a type or amenity nothing has is not offered, and the rating group stays hidden while nothing is rated. The active-filter count shows on the Filters button.
 - **Most dog-friendly** — the amber-paw list of featured places, pinned above the main results. It shows the five nearest, with a "Show all" toggle for the rest; the map always shows every featured pin.
-- **Detail view** — amenities grid, photo gallery, pet fee and limits for hotels, and a banner spelling out the dog policy.
+- **Amenity icons** — each amenity has its own colour and icon: water bowls blue, dog menu green, shade red, treats orange, off-leash teal, dog beds violet, fencing indigo, small-dog area pink, self-serve wash cyan, raw food amber. Each `.am-*` class sets three custom properties (`--am-fg`, `--am-bg`, `--am-br`) and every surface reads them, so a new amenity needs one CSS rule and one icon.
+- **Detail view** — amenities grid, photo gallery, pet fee and limits for hotels, and a banner spelling out the dog policy. The wording follows the place type: patio-only for restaurants, off-leash for parks, dogs-welcome-inside for shops.
 - **Accessibility** — labelled map pins, ARIA states on every control, focus trapping in modals, Escape-to-dismiss, and `prefers-reduced-motion` support.
 
 ## Data
 
-All 56 places are real businesses, imported from `data/dogfriendly-california.csv` — restaurants, bars and hotels across Southern California and the Eastern Sierra (Mammoth, Bishop, Lone Pine). They live at the top of the script in `index.html`, alongside `AREAS`, the cities and ZIP codes the search resolves against.
+All 79 places are real, imported from two CSVs in `data/`:
 
-The design prototype's 14 invented places were removed once real data arrived, along with their mocked reviews. Lazy Dog was kept — it is a real business and appears in the CSV — but its invented rating and reviews are gone.
+- `dogfriendly-california.csv` — 32 restaurants and bars, 23 hotels
+- `petstores-dogparks.csv` — 16 dog parks, 8 pet stores
 
-Three things to know before trusting this data:
+77 of the 79 carry a real Google rating and review count; the two exceptions (Mammoth Lakes Community Dog Park, Woofpak Pet Kitchen) are not yet rated on Google and show "Not rated yet".
 
-- **Nothing has a rating or reviews.** The CSV has none, and attaching invented numbers to real businesses would be fabricating records. Places display "Not rated yet", the detail view says reviews appear once a source is connected, and the minimum-rating filter hides itself until something is actually rated.
-- **Coordinates are approximate.** No geocoder was available during the import, so well-known venues sit close to their real position and the rest sit at the centre of the town named in the CSV. Run a geocoding pass before anyone navigates by this. No street addresses were invented — `addr` is the CSV's Location text verbatim.
-- **Friendliness was inferred.** California restricts dogs to outdoor areas in food-service venues, so restaurants and bars are marked patio-only unless the CSV says otherwise (Distant Brewing in Mammoth allows dogs indoors). Hotels are marked fully dog-friendly, since dogs are allowed in the rooms. A place is featured — the amber paw list — when it has a real dog menu.
+### Rebuilding the data
 
-The CSV has no coffee shops or stores, so those two type chips do not currently appear. They come back on their own when matching data is added.
+`index.html` holds the places inline, between the `PLACES:START` and `PLACES:END` markers. Don't hand-edit that block — edit the CSVs and re-run:
+
+```
+python3 tools/import-places.py
+```
+
+The importer holds every mapping decision from CSV column to app field, so the reasoning is reviewable rather than buried in the data. Worth knowing:
+
+- **Coordinates come from `tools/coordinates.json`, and they are approximate.** No geocoder was reachable from the build environment, so they were derived from the CSV street addresses by hand — close for well-known venues and identifiable streets, town-centre for the rest. Replace that file wholesale with real geocoder output before anyone navigates by this; the importer reads nothing else for position.
+- **Friendliness is inferred.** California restricts dogs to outdoor areas in food-service venues, so restaurants and bars are patio-only unless the row says dogs go inside (Distant Brewing). Hotels, parks and shops are marked dogs-allowed-throughout.
+- **"Partial" is not "Yes".** A partially shaded patio doesn't earn the shade badge — only an explicit Yes does.
+- **Featured** — the amber paw list — means a real dog menu, or a dog park with the full kit: fenced, separate small-dog area, shade and water.
+- **Notes are filtered.** Fragments where the spreadsheet talks about itself ("Rating shown is the Irvine location", "Listed on Google as…") are dropped; caveats a visitor would want ("verify before visiting", "seasonal") are kept.
 
 Photos are striped placeholders. Photos and reviews are **not** wired to the Google Places API — that needs an API key and a server-side proxy, since a key can't be safely embedded in a static page. The data structures are shaped so a real source can drop in behind them.
 

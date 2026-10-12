@@ -1,0 +1,117 @@
+{
+  "slug": "montana-de-oro-state-park",
+  "name": "Montaña de Oro State Park",
+  "shortName": "Montaña de Oro",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Central Coast",
+  "nearestTowns": ["Los Osos", "Morro Bay", "San Luis Obispo"],
+  "tagline": "One beach, the campground and the roads. No trails at all.",
+  "summary": "Montaña de Oro has 8,000 acres of bluffs, coves and peaks, and your dog can see almost none of it. The park allows dogs only in Islay Creek Campground, on park roads and on Spooner's Cove Beach. Not the Bluff Trail, not Valencia Peak, not the other beaches. The upside is that Spooner's Cove is a lovely sheltered beach with tide pools, and the campground sits right across the road from it.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Good for a cheap, quiet camping weekend with a beach across the road. If hiking is the point, leave the dog at home or take turns.",
+  "photo": {
+    "id": "zzkuixeL7GA",
+    "raw": "https://images.unsplash.com/photo-1751400042061-14e936868083?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Mnx8TW9udGFuYSUyMGRlJTIwT3JvJTIwU3RhdGUlMjBQYXJrfGVufDB8MHx8fDE3OTE3NjgwMzl8Mg&ixlib=rb-4.1.0",
+    "alt": "A crescent beach and turquoise water at Spooner's Cove, ringed by cliffs in Montaña de Oro State Park",
+    "author": "Rodrigo Kammer",
+    "authorUrl": "https://unsplash.com/@rodkammer",
+    "link": "https://unsplash.com/photos/a-picturesque-cove-in-a-scenic-landscape-zzkuixeL7GA"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No dogs on any trail, including the Bluff Trail"},
+    {"key": "camping", "status": "yes",  "note": "Islay Creek Campground; not the hike-in environmental sites"},
+    {"key": "lodging", "status": "some", "note": "None in the park; pet rooms in Los Osos and Morro Bay, 10 to 20 min away"},
+    {"key": "water",   "status": "yes",  "note": "Spooner's Cove Beach, on leash. No other park beach"},
+    {"key": "leash",   "status": "rule", "note": "6 ft max, held by an adult"},
+    {"key": "fee",     "status": "info", "note": "No day-use fee. Camping roughly $25 to $50 a night; sources vary"}
+  ],
+  "allowed": [
+    {"name": "Spooner's Cove Beach", "detail": "The one dog beach in the park, on leash. A sheltered cove with sand, a creek mouth and tide pools at the north end at low tide."},
+    {"name": "Islay Creek Campground", "detail": "Leashed dogs at your site and on the campground road. The beach is a 2-minute walk across Pecho Valley Road."},
+    {"name": "Park roads", "detail": "Pecho Valley Road and the campground road, on leash. Walk the shoulder; cars are slow but constant on weekends."},
+    {"name": "Parking areas", "detail": "The day-use lot at Spooner's Ranch House and the bluff-top lots above the cove, which have the best views you can reach with a dog."},
+    {"name": "El Moro Elfin Forest (nearby)", "detail": "A 1-mile boardwalk loop through pygmy oaks in Los Osos, 10 minutes away. Leashed dogs welcome, 6-foot leash, bag dispensers at every entrance."},
+    {"name": "Toro Creek Dog Beach (nearby)", "detail": "Morro Bay's off-leash city beach at the north end of town, about 20 minutes away. Free, about a mile of sand."}
+  ],
+  "notAllowed": [
+    {"name": "The Bluff Trail", "detail": "The park's signature walk is closed to dogs, even on leash and even carried. Rangers patrol it."},
+    {"name": "Every other trail", "detail": "Valencia Peak, Hazard Peak, Oats Peak, Islay Creek Road, Hazard Canyon and the Rattlesnake Flats trails are all off limits."},
+    {"name": "Other beaches and coves", "detail": "The official rule names Spooner's Cove only. One guide lists Corallina Cove too, but its access path has been closed by erosion. Treat every other beach as closed to dogs."},
+    {"name": "Environmental (hike-in) campsites", "detail": "No dogs at the environmental camps or on the trails that reach them. Hazard Canyon Horse Camp is for groups with horses only."},
+    {"name": "Morro Strand State Beach (nearby)", "detail": "Dogs are banned from the sand there to protect nesting snowy plovers. They are allowed in its campground and on its roads."}
+  ],
+  "hikes": [
+    {"name": "Spooner's Cove Beach", "distance": "About 0.5 mi of sand, out and back", "difficulty": "Easy", "surface": "Sand", "why": "Sheltered from the wind, with a creek to splash in and tide pools at low tide. Park at Spooner's Ranch House and walk down.", "maps": "Spooner's Cove, Montaña de Oro State Park"},
+    {"name": "El Moro Elfin Forest boardwalk (nearby, Los Osos)", "distance": "About 1 mi loop", "difficulty": "Easy", "surface": "Boardwalk", "why": "The closest real walk for a leashed dog: a raised loop through dwarf oaks with views over Morro Bay estuary. Sources list it at 0.8 to 1 mile. Coyotes sometimes use the boardwalk too.", "maps": "El Moro Elfin Forest, Los Osos"},
+    {"name": "Toro Creek Dog Beach (nearby, Morro Bay)", "distance": "About 1 mi of sand", "difficulty": "Easy", "surface": "Sand", "why": "Off-leash under voice control, no fee, no lifeguards. The only off-leash sand in the area, bought by the city in 2021 for exactly this.", "maps": "Toro Creek Dog Beach, Morro Bay"}
+  ],
+  "hangouts": [
+    {"name": "Spooner's Cove picnic tables", "why": "Tables by the day-use lot above the beach. Shade is scarce, so bring your own."},
+    {"name": "Bluff-top parking lots above the cove", "why": "Sunset over the cove and the coast south toward Point Buchon, without setting a paw on the Bluff Trail."},
+    {"name": "Islay Creek Campground", "why": "Sites sit in a sheltered canyon out of the wind, a short walk from the beach. Quiet midweek."},
+    {"name": "Jody Giannini Family Dog Park (Morro Bay)", "why": "Fenced off-leash areas for small and large dogs with ocean views, a short drive north."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, held by an adult, at all times.",
+    "Dogs may only be in the campground, on park roads and on Spooner's Cove Beach.",
+    "No dogs on any trail, even on leash or carried.",
+    "Never leave a dog alone at a campsite.",
+    "Dogs must be inside a tent or vehicle at night.",
+    "Pick up after your dog. Bring your own bags; bins are at the day-use lot, not on the beach.",
+    "No dogs at the environmental campsites or on the paths to them.",
+    "Service animals are the only exception to the trail and beach rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Islay Creek Campground", "note": "47 basic sites with pit toilets and water spigots, no showers. Book on ReserveCalifornia; walk-in space is rare. Dogs OK at the site and on the campground road."},
+      {"name": "Environmental sites, Montaña de Oro", "note": "Hike-in sites. No dogs."},
+      {"name": "Morro Strand State Beach campground", "note": "15 minutes north. Dogs on leash in the campground and on roads, never on the sand."},
+      {"name": "Morro Bay State Park campground", "note": "Showers and a marina nearby. Dogs in the campground and on paved roads under the usual state park rule; not on trails."}
+    ],
+    "lodging": [
+      {"name": "Sea Pines Golf Resort, Los Osos", "note": "The closest hotel, with a limited number of dog rooms for about $25 a night."},
+      {"name": "Inn at Morro Bay", "note": "Two dogs up to 50 lb at $25 per pet per night, treats at the desk and waste stations."},
+      {"name": "456 Embarcadero Inn and Suites, Morro Bay", "note": "One dog up to 60 lb for about $35 a night, with a grassy relief area."},
+      {"name": "Rockview Inn and Suites, Morro Bay", "note": "Two dogs of any size, about $25 per pet per night."},
+      {"name": "Vacation rentals in Los Osos and Baywood", "note": "Many allow dogs; check each listing for fees and yard fencing."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Fog and wind", "level": "info", "detail": "Cool all year. Mornings are foggy and the bluffs get windy by afternoon, but the campground canyon and Spooner's Cove are sheltered."},
+    {"title": "Winter storms", "level": "warn", "detail": "Big surf, slippery rocks and closed cove paths. The Corallina Cove access has been closed indefinitely by erosion. Keep dogs off the rocks and well back from the water."},
+    {"title": "Spring wildflowers", "level": "info", "detail": "The mountain of gold earns its name in April and May. You will see it from the road and the bluff lots, not the trails."},
+    {"title": "Summer weekends", "level": "warn", "detail": "The campground books out and the Spooner's Cove lot fills by late morning. Come midweek or arrive early."}
+  ],
+  "wildlife": [
+    "Western snowy plovers nest on the sand. This is why most beaches here and at Morro Strand are closed to dogs.",
+    "Harbor seals and sea otters haul out in the coves. Keep the leash short and give them space, especially in pupping season.",
+    "Rattlesnakes are common on the campground edges in warm months. Stay on the road and check under picnic tables.",
+    "Coyotes walk through the campground at night and use the Elfin Forest boardwalk. Keep small dogs close.",
+    "Ticks and poison oak line the canyon. Check your dog after every walk."
+  ],
+  "checklist": [
+    "Water for two and a bowl; there is no water at the beach",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags for the beach, where there are no bins",
+    "A towel for sand and creek mud",
+    "A windbreaker and a warm layer, even in August",
+    "A tick comb",
+    "Reservation confirmation printed; cell signal is weak in the park"
+  ],
+  "vets": [
+    {"name": "Los Osos Pet Hospital", "town": "Los Osos"},
+    {"name": "Bear Valley Animal Clinic", "town": "Los Osos"},
+    {"name": "Morro Bay Veterinary Clinic", "town": "Morro Bay"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Montaña de Oro State Park", "url": "https://www.parks.ca.gov/?page_id=592"},
+    {"label": "California State Parks: Islay Creek Campground information sheet", "url": "https://www.parks.ca.gov/pages/592/files/MontanaDeOroSP_IslayCreekCampground2018.pdf"},
+    {"label": "El Moro Elfin Forest: Dogs in the forest", "url": "http://www.elfin-forest.org/visiting/Dogs%20in%20Elfin%20Forest.htm"},
+    {"label": "California State Parks: Morro Strand State Beach", "url": "https://www.parks.ca.gov/morrostrand"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=592",
+  "verified": "October 2026"
+}

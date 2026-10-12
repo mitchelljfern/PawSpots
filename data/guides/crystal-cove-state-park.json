@@ -1,0 +1,117 @@
+{
+  "slug": "crystal-cove-state-park",
+  "name": "Crystal Cove State Park",
+  "shortName": "Crystal Cove",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Southern California",
+  "nearestTowns": ["Laguna Beach", "Newport Beach", "Irvine"],
+  "tagline": "A 3-mile paved bluff path with ocean views. Not the sand.",
+  "summary": "Crystal Cove keeps dogs on pavement: the 3-mile multi-use trail along the bluffs above the beach, the parking lots and Moro Campground. No beach, no Historic District cottages and none of the backcountry canyons across the highway. It still makes a fine ocean-view walk with a dog, and real dog beaches sit 20 to 30 minutes away in each direction.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Good for a leashed ocean walk or a campground night with a dog. For sand, go to Huntington Dog Beach or Laguna Beach outside summer hours.",
+  "photo": {
+    "id": "38dZN1HfUX0",
+    "raw": "https://images.unsplash.com/photo-1715398942117-a2a46039608c?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8Q3J5c3RhbCUyMENvdmUlMjBTdGF0ZSUyMFBhcmt8ZW58MHwwfHx8MTc5MTc2ODA4MHwy&ixlib=rb-4.1.0",
+    "alt": "Yellow wildflowers on a bluff above the sandy beach and blue water at Crystal Cove State Park",
+    "author": "Vincent Y @USA",
+    "authorUrl": "https://unsplash.com/@vincentyuan87",
+    "link": "https://unsplash.com/photos/a-view-of-a-sandy-beach-with-yellow-flowers-in-the-foreground-38dZN1HfUX0"
+  },
+  "glance": [
+    {"key": "trails",  "status": "some", "note": "Paved 3-mile bluff trail only; no dirt trails"},
+    {"key": "camping", "status": "yes",  "note": "Moro Campground (drive-in); not the backcountry camps"},
+    {"key": "lodging", "status": "no",   "note": "No pets in the Crystal Cove cottages; pet hotels in Laguna and Newport"},
+    {"key": "water",   "status": "no",   "note": "No dogs on any beach in the park"},
+    {"key": "leash",   "status": "rule", "note": "6 ft max, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. About $15 per car day use; check for peak pricing"}
+  ],
+  "allowed": [
+    {"name": "The paved bluff trail", "detail": "About 3 miles of paved multi-use path on the ocean side of Pacific Coast Highway, from Pelican Point to Reef Point. The best dog walk in the park, with benches and whale views in winter."},
+    {"name": "Parking lots", "detail": "Pelican Point, Los Trancos, Reef Point and the Moro lots. Keep to the pavement between them."},
+    {"name": "Moro Campground", "detail": "Leashed dogs at your site and on the campground's paved roads. Many sites look straight out at the ocean."},
+    {"name": "Paved roads", "detail": "Any paved road or walkway in the park, on leash."},
+    {"name": "Huntington Dog Beach (nearby)", "detail": "About 30 minutes north: 1.5 miles of off-leash sand between Seapoint Street and 21st Street, 5 am to 10 pm. Leash required in the lots and on the bluff."},
+    {"name": "Laguna Beach beaches (nearby)", "detail": "Leashed dogs on the sand all day from September 11 to June 14. In summer only before 9 am and after 6 pm. Thousand Steps Beach never."},
+    {"name": "Laguna Beach Dog Park (nearby)", "detail": "A 2-acre off-leash park on Laguna Canyon Road. Closed Wednesdays for maintenance; check the city's hours."}
+  ],
+  "notAllowed": [
+    {"name": "Every beach in the park", "detail": "All 3.2 miles of sand, from Pelican Point to El Moro. Service animals only."},
+    {"name": "The Historic District", "detail": "The 1930s cottages, the Beachcomber restaurant and the beach in front of them. The pedestrian tunnel from the Los Trancos lot leads straight into it, so turn back at the tunnel."},
+    {"name": "Every unpaved trail", "detail": "The whole inland backcountry: Moro Canyon, El Moro Ridge, No Name Ridge and the rest. One camping blog claims Moro Canyon allows dogs; the park's own rules say no."},
+    {"name": "Backcountry campgrounds", "detail": "Lower Moro, Upper Moro and Deer Canyon are hike-in camps and do not allow pets."},
+    {"name": "Crystal Cove Beach Cottages", "detail": "The overnight cottages in the Historic District do not take pets."},
+    {"name": "Left in the car", "detail": "Dogs cannot be left unattended anywhere, and a parked car at Crystal Cove is an oven by 10 am most of the year."}
+  ],
+  "hikes": [
+    {"name": "Crystal Cove Bluff Trail (paved)", "distance": "Up to 3 mi one way, 6 mi round trip", "difficulty": "Easy", "surface": "Paved", "why": "Runs the full length of the park above the beach. Flat, with benches and overlooks, and gray whales pass close to shore from December to April. Almost no shade, so start early.", "maps": "Pelican Point Parking Lot, Crystal Cove State Park"},
+    {"name": "Reef Point to Moro Campground section", "distance": "About 1.5 mi out and back", "difficulty": "Easy", "surface": "Paved", "why": "The quieter south end of the same path, with the best sunset views and a campground store at the Moro end.", "maps": "Reef Point Parking Lot, Crystal Cove State Park"},
+    {"name": "Huntington Dog Beach (nearby)", "distance": "About 1.5 mi of sand", "difficulty": "Easy", "surface": "Sand", "why": "The region's famous off-leash beach, 30 minutes up PCH. Not fenced, so your dog needs solid recall. Metered parking along PCH at about $2 to $2.50 an hour.", "maps": "Huntington Dog Beach"},
+    {"name": "Laguna Beach Main Beach and Heisler Park (nearby)", "distance": "Any length", "difficulty": "Easy", "surface": "Sand and paved", "why": "Ten minutes south. Leashed dogs on the sand all day in the off season and early or late in summer; the paved Heisler Park bluff path is open to leashed dogs year-round.", "maps": "Main Beach, Laguna Beach"}
+  ],
+  "hangouts": [
+    {"name": "Reef Point overlook", "why": "A paved lot on the bluff with benches, sunset views and the best whale-spotting angle in the park."},
+    {"name": "Pelican Point", "why": "The north end of the paved path, with tide-pool views from above. Good for a short, flat stroll with an older dog."},
+    {"name": "Moro Campground bluff sites", "why": "Ocean-view campsites where a leashed dog can lie in the shade of your awning and watch the surf."},
+    {"name": "Laguna Beach Dog Park", "why": "The closest fenced off-leash run, with separate small-dog and large-dog areas."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Pavement only: the bluff trail, parking lots, campground and paved roads. No beach, no dirt trail, no Historic District, carried or not.",
+    "Never leave a dog unattended, including inside a parked car or tied at a campsite.",
+    "Dogs must be inside a tent or vehicle at night in Moro Campground.",
+    "Pick up waste and carry it to a bin; there are bins at the lots and campground, not along the path.",
+    "Service animals are allowed on the beach and trails; emotional support animals follow the pet rules.",
+    "Rangers patrol the beach stairs and can cite you for a dog on the sand.",
+    "Off site, Laguna Beach bans dogs from the sand 9 am to 6 pm from June 15 to September 10 and fines offenders."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Moro Campground", "note": "58 sites open year-round, many with ocean views. Book on ReserveCalifornia; weekends go months ahead. Leashed dogs in the campground and on paved roads only."},
+      {"name": "Lower Moro, Upper Moro and Deer Canyon", "note": "Backcountry hike-in sites. No dogs."}
+    ],
+    "lodging": [
+      {"name": "The Resort at Pelican Hill, Newport Coast", "note": "Right next to the park. One dog up to 50 lb or two up to 75 lb combined, with a large per-stay fee."},
+      {"name": "Laguna Surf Lodge by SCP Hotels, Laguna Beach", "note": "Two dogs of any size for about $45 per pet per stay."},
+      {"name": "Pacific Edge Hotel, Laguna Beach", "note": "Two dogs up to 85 lb for about $100 per pet per stay, steps from the sand."},
+      {"name": "Hyatt Regency Newport Beach", "note": "Up to two dogs, 50 lb each or 75 lb combined, for a flat non-refundable fee."}
+    ],
+    "boarding": [
+      {"name": "Newport Center Animal Hospital Pet Hotel Suites, Newport Beach", "note": "Day boarding and overnight suites at a veterinary hospital, 15 minutes away. Lets you walk the beach or the canyons dog-free."}
+    ]
+  },
+  "seasons": [
+    {"title": "Summer heat on pavement", "level": "warn", "detail": "The bluff path has no shade and the asphalt burns paws by late morning from June to October. Walk before 9 am or after 5 pm and test the ground with your hand."},
+    {"title": "Laguna's summer beach ban", "level": "warn", "detail": "From June 15 to September 10 dogs are off Laguna's sand between 9 am and 6 pm. Huntington Dog Beach is the all-day option."},
+    {"title": "Whale season", "level": "info", "detail": "Gray whales pass from December to April, often close enough to see from Reef Point. Cool, clear days are the best time for the bluff path."},
+    {"title": "Weekend parking", "level": "warn", "detail": "Lots fill by mid-morning on sunny weekends and holidays. Arrive early; there is nowhere legal to park a dog-filled car on PCH."}
+  ],
+  "wildlife": [
+    "Coyotes come out of Moro Canyon at dusk and walk through the campground. Keep small dogs leashed and close.",
+    "Rattlesnakes use the path edges and the campground brush in warm months. Keep dogs on the pavement.",
+    "Foxtails and ticks fill the grass along the path from spring to summer; check ears and paws after a walk."
+  ],
+  "checklist": [
+    "Water for two and a collapsible bowl",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags and a way to carry them to a bin",
+    "Paw balm or booties for hot pavement",
+    "A shade shelter or umbrella for the campsite",
+    "Coins or a card for the Huntington Beach meters",
+    "A note of Laguna's summer beach hours"
+  ],
+  "vets": [
+    {"name": "Laguna Beach Animal Hospital", "town": "Laguna Beach"},
+    {"name": "Laguna Beach Veterinary Medical Center (urgent care)", "town": "Laguna Beach"},
+    {"name": "Newport Center Animal Hospital", "town": "Newport Beach"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Crystal Cove State Park", "url": "https://www.parks.ca.gov/?page_id=644"},
+    {"label": "Crystal Cove Conservancy: Park rules", "url": "https://www.crystalcovestatepark.org/rules/"},
+    {"label": "Crystal Cove Conservancy: Dogs in the park (PDF)", "url": "https://www.crystalcovestatepark.org/wp-content/uploads/2020/08/Dogs-in-the-Park.pdf"},
+    {"label": "Visit Huntington Beach: Dog Beach", "url": "https://www.surfcityusa.com/things-to-do/beaches/dog-beach/"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=644",
+  "verified": "October 2026"
+}

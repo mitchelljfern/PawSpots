@@ -61,7 +61,8 @@ svg{flex:none}
 .score.s2 .paws svg,.score.s2,.score.s3 .paws svg,.score.s3{color:var(--amber-text)}
 .score.s4 .paws svg,.score.s4,.score.s5 .paws svg,.score.s5{color:var(--green-dark)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 20px;border-radius:999px;font-weight:700;font-size:1em;text-decoration:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);transition:all .15s;text-wrap:balance}
-.btn.small{white-space:nowrap}
+.vets .btn.small{white-space:nowrap}
+.verify .btn{white-space:normal;text-align:left;justify-self:stretch}
 .btn:hover{border-color:var(--green);color:var(--ink);text-decoration:none}
 .btn.primary{background:var(--green);border-color:var(--green);color:#fff}
 .btn.primary:hover{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
@@ -212,7 +213,6 @@ svg{flex:none}
 .sources{list-style:none;display:grid;gap:6px;margin-top:12px;font-size:.95em}
 .verify{margin:28px 0 0;padding:16px;border-radius:14px;background:var(--amber-soft);border:1.5px solid var(--amber-line);display:grid;gap:8px}
 .verify b{color:var(--amber-text)}
-.verify .btn{justify-self:start}
 .pagefoot{margin:26px 0 50px;display:flex;flex-wrap:wrap;gap:10px}
 .sitefoot{border-top:1px solid var(--line);padding:22px var(--gutter) calc(22px + env(safe-area-inset-bottom));text-align:center;color:var(--ink-3);font-size:.85em}
 .sitefoot a{color:var(--ink-2)}

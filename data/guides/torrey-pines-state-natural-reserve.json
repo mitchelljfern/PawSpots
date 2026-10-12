@@ -1,0 +1,114 @@
+{
+  "slug": "torrey-pines-state-natural-reserve",
+  "name": "Torrey Pines State Natural Reserve",
+  "shortName": "Torrey Pines",
+  "type": "state",
+  "designation": "State Natural Reserve",
+  "region": "Southern California",
+  "nearestTowns": ["Del Mar", "La Jolla", "San Diego"],
+  "tagline": "No dogs at all, not even in the car. Go to Del Mar instead.",
+  "summary": "Torrey Pines bans dogs completely: not on the trails, not on the beach below the cliffs, not inside a parked car in the lot. It is one of only 14 state park units with natural reserve status and the rule is enforced at the entrance kiosk. This guide is mostly about what to do instead, because the coast on either side is full of dog beaches and leashed canyon trails. One more thing: the reserve itself is closed for construction from September 22, 2026 until about March 2027. Only the beach and its lots are open.",
+  "score": 1,
+  "scoreLabel": "Very limited",
+  "verdict": "Do not bring your dog here. See the pines on your own for 2 hours while your dog stays with a friend or a nearby daycare, then meet up at Del Mar Dog Beach.",
+  "photo": {
+    "id": "xmJ10I3VwxM",
+    "raw": "https://images.unsplash.com/photo-1586712404631-87f79ec52658?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Mnx8VG9ycmV5JTIwUGluZXN8ZW58MHwwfHx8MTc5MTc2ODA4MHwy&ixlib=rb-4.1.0",
+    "alt": "Sandstone cliffs above the Pacific at sunset, seen from Yucca Point in Torrey Pines State Natural Reserve",
+    "author": "James McCullough",
+    "authorUrl": "https://unsplash.com/@framehop",
+    "link": "https://unsplash.com/photos/brown-rocky-mountain-beside-blue-sea-under-blue-sky-during-daytime-xmJ10I3VwxM"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No dogs anywhere in the reserve"},
+    {"key": "camping", "status": "no",   "note": "No camping at Torrey Pines"},
+    {"key": "lodging", "status": "no",   "note": "None in the reserve; pet hotels in Del Mar and La Jolla"},
+    {"key": "water",   "status": "no",   "note": "No dogs on Torrey Pines State Beach. Del Mar North Beach is 5 min north"},
+    {"key": "leash",   "status": "rule", "note": "Not applicable here. 6 ft at Del Mar, 8 ft at Los Peñasquitos"},
+    {"key": "fee",     "status": "info", "note": "Parking $10 to $25 per car, demand priced. No fee for dogs because there are none"}
+  ],
+  "allowed": [
+    {"name": "Del Mar Dog Beach, North Beach (nearby)", "detail": "From 29th Street north to the Solana Beach line, 5 minutes up the coast. Off-leash under voice control from the day after Labor Day to June 15. In summer dogs must be leashed except dawn to 8 am."},
+    {"name": "Los Peñasquitos Canyon Preserve (nearby)", "detail": "A 7-mile canyon with a waterfall, 15 minutes inland. Leashed dogs welcome on an 8-foot leash or shorter."},
+    {"name": "Crest Canyon, Carmel Mountain and Gonzales Canyon (nearby)", "detail": "The trails State Parks itself points dog owners to. All within 15 minutes of the reserve; leash rules are set by the City of San Diego and Del Mar, so read the signs."},
+    {"name": "Fiesta Island, Mission Bay (nearby)", "detail": "Off-leash across most of the island, 4 am to 10 pm, except the fenced tern nesting areas. About 20 minutes south."},
+    {"name": "Ocean Beach Dog Beach (nearby)", "detail": "Off-leash 24 hours a day at the mouth of the San Diego River, 30 minutes south. The oldest legal off-leash beach in the country."},
+    {"name": "Coronado Dog Beach (nearby)", "detail": "Off-leash on the sand at the north end of Coronado Beach, 200 Ocean Boulevard. Leash required until you reach the sand."},
+    {"name": "Seagrove and Powerhouse parks, Del Mar (nearby)", "detail": "Grass on the bluff above Del Mar's main beach, leashed dogs welcome. A good place to wait while someone else walks the reserve."}
+  ],
+  "notAllowed": [
+    {"name": "Every reserve trail", "detail": "Guy Fleming, Razor Point, Yucca Point, Beach Trail, Broken Hill and Parry Grove. No dogs, on leash or carried."},
+    {"name": "Torrey Pines State Beach", "detail": "The entire beach within the park boundary, including the sand below the cliffs. An unofficial site claims dogs are fine below the tide line; State Parks says no, and rangers patrol."},
+    {"name": "Parking lots and the park road", "detail": "State Parks bans dogs even inside a vehicle in the reserve lots. You cannot leave the dog in the car while you hike."},
+    {"name": "Torrey Pines Extension", "detail": "The quieter trails across the lagoon in Del Mar Heights are part of the reserve and follow the same no-dog rule."},
+    {"name": "Del Mar Main Beach in summer (nearby)", "detail": "Between Powerhouse Park and 29th Street, no dogs at all from June 16 to Labor Day. The rest of the year, leashed except dawn to 8 am."}
+  ],
+  "hikes": [
+    {"name": "Del Mar North Beach (nearby)", "distance": "About 0.5 mi of sand, 29th St to the Solana Beach line", "difficulty": "Easy", "surface": "Sand", "why": "The closest sand to Torrey Pines where a dog can run free, with the reserve's cliffs in view to the south. Off-leash with voice control outside summer. Fines start at $285, so know the dates.", "maps": "Del Mar Dog Beach, 29th Street, Del Mar"},
+    {"name": "Los Peñasquitos Canyon Trail (nearby)", "distance": "About 6 mi round trip to the waterfall, or shorter out and back", "difficulty": "Moderate", "surface": "Dirt", "why": "Wide, mostly flat canyon trail with sycamore shade and a small waterfall in the middle. Leash limit is 8 feet. Shared with bikes and horses; rattlesnakes in warm months.", "maps": "Los Peñasquitos Canyon Preserve west trailhead, Sorrento Valley Boulevard"},
+    {"name": "Crest Canyon Loop, Del Mar (nearby)", "distance": "1 mi loop", "difficulty": "Easy", "surface": "Dirt", "why": "A small sandstone canyon with its own stand of Torrey pines, so you get a taste of the reserve's scenery with the dog along. On State Parks' own list of dog alternatives.", "maps": "Crest Canyon Open Space Park, Del Mar"},
+    {"name": "Fiesta Island loop (nearby)", "distance": "Up to 4 mi around the island", "difficulty": "Easy", "surface": "Sand, dirt and paved", "why": "Flat, open and off-leash almost everywhere, with calm bay water for swimming. No shade; go early in summer.", "maps": "Fiesta Island Off-Leash Dog Park, San Diego"}
+  ],
+  "hangouts": [
+    {"name": "Ocean Beach Dog Beach", "why": "Off-leash 24 hours, lively and social. Rinse stations and a big parking lot at the end of Voltaire Street."},
+    {"name": "Coronado Dog Beach", "why": "Wide, calm sand near the naval base with the Hotel del Coronado down the beach. Free street parking at the north end of Ocean Boulevard."},
+    {"name": "Seagrove Park, Del Mar", "why": "A grass bluff above the surf at 15th Street with benches and shade. Leashed dogs welcome."},
+    {"name": "Torrey Pines State Beach from the North Beach lot (no dog)", "why": "If you must see the cliffs together, you can view them from the public sidewalk on Coast Highway 101 at the Del Mar end, outside the park boundary. Do not walk the dog into the lot."}
+  ],
+  "rules": [
+    "There is no leash rule here because dogs are banned entirely: not on trails, the beach, the road, the lots or inside a parked car.",
+    "Service dogs are the only exception. State Parks asks that they wear a vest or tag.",
+    "Rangers at the entrance kiosk turn away cars with dogs, and the beach is patrolled.",
+    "Never leave a dog in a car nearby while you hike. Lot temperatures top 100 F inside a car most of the year.",
+    "At Del Mar, leashes are 6 feet max, dogs must wear a license tag, and leash fines start at $285.",
+    "At Del Mar North Beach, off-leash under voice control only from the day after Labor Day to June 15. Summer means leashed, except dawn to 8 am.",
+    "At Los Peñasquitos Canyon the leash limit is 8 feet; at Fiesta Island, stay out of the fenced tern nesting areas.",
+    "At Coronado and Ocean Beach, keep the leash on until you are standing on the sand."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "No camping at Torrey Pines", "note": "The reserve and the beach are day use only."},
+      {"name": "San Elijo State Beach campground, Cardiff", "note": "20 minutes north. Dogs on leash in the campground and on paved roads under the state park rule; not on the beach. Check current pet rules when you book."}
+    ],
+    "lodging": [
+      {"name": "Hotel Indigo San Diego Del Mar", "note": "Two pets of any size for about $95 per stay, 5 minutes from the reserve. Pets cannot be left alone in rooms."},
+      {"name": "Estancia La Jolla Hotel and Spa", "note": "Two dogs for a one-time fee, with pet beds, bowls and outdoor dining where dogs can join you."},
+      {"name": "La Valencia Hotel, La Jolla", "note": "Two dogs up to 75 lb at about $50 per pet per night. Not in the pool area."},
+      {"name": "Vacation rentals in Del Mar and Solana Beach", "note": "Many allow dogs and put you walking distance from North Beach. Check each listing."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Construction closure", "level": "danger", "detail": "From September 22, 2026 until about March 2027 every reserve trail, the park road, the Lodge, the Beach Trail stairs and both upper lots are closed to everyone. Torrey Pines State Beach and its North and South Beach lots stay open. If seeing the pines is the goal, wait for the reopening date on the State Parks page."},
+    {"title": "Summer heat", "level": "warn", "detail": "The dog alternatives inland, like Los Peñasquitos and Crest Canyon, have little shade and bake by 10 am. Walk early, carry water and never leave a dog in a car."},
+    {"title": "Del Mar's summer switch", "level": "info", "detail": "June 16 to Labor Day brings leash rules to North Beach and a full ban on Main Beach. The off-leash months run from the day after Labor Day to June 15."},
+    {"title": "Winter", "level": "info", "detail": "The best weather for the canyon trails. Rain can close Los Peñasquitos for a day or two and king tides shrink the dog beaches."}
+  ],
+  "wildlife": [
+    "Rattlesnakes are common on the inland canyon trails from spring to fall. Keep dogs on the path and out of the brush.",
+    "Coyotes live in every canyon on this list and hunt at dawn and dusk. Leash small dogs even where off-leash is allowed.",
+    "Seals and sea lions haul out on La Jolla's beaches. Keep dogs well away, especially December to May when pups are born.",
+    "Stingrays rest in the shallows at Del Mar in summer. Shuffle your feet, and keep your dog from bounding through the shorebreak."
+  ],
+  "checklist": [
+    "A plan for the dog while you walk the reserve: a sitter, a daycare or a second adult",
+    "Water for two and a collapsible bowl for the canyon trails",
+    "A 6-foot leash for Del Mar and the beaches",
+    "The dog's license tag on the collar, which Del Mar requires",
+    "Waste bags",
+    "A towel and a rinse bottle for sand and salt",
+    "A note of the Del Mar beach dates and the Fiesta Island tern closures"
+  ],
+  "vets": [
+    {"name": "Del Mar Heights Veterinary Hospital", "town": "Del Mar"},
+    {"name": "La Jolla Veterinary Hospital", "town": "La Jolla"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Torrey Pines State Beach (no dogs)", "url": "https://www.parks.ca.gov/?page_id=658"},
+    {"label": "California State Parks: Torrey Pines State Natural Reserve", "url": "https://www.parks.ca.gov/?page_id=657"},
+    {"label": "Torrey Pines Conservancy: closure notice for improvement projects", "url": "https://www.torreypines.org/closure-notice-improvement-projects-at-torrey-pines-state-natural-reserve/"},
+    {"label": "City of Del Mar: Dog friendly beaches", "url": "https://www.delmar.ca.us/206/Dog-Friendly-Beaches"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=658",
+  "verified": "October 2026"
+}

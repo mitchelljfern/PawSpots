@@ -396,7 +396,7 @@ def hub_page(guides):
     og = img(hp["raw"], 1200, 630) if hp else f"{SITE}/og.png"
     og_alt = hp["alt"] if hp else "PawSpots park guides"
     h = [head(title, desc, url, og, og_alt, rel), topbar(rel, "guides")]
-    h.append(f"""<main id="main">
+    h.append(f"""<main id="main" class="hub">
 <section class="hub-hero">
   <div class="wrap">
     <h1>Park guides for dog owners</h1>

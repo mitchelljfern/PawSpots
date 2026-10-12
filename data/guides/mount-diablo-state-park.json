@@ -1,0 +1,273 @@
+{
+  "slug": "mount-diablo-state-park",
+  "name": "Mount Diablo State Park",
+  "shortName": "Mount Diablo",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Bay Area",
+  "nearestTowns": [
+    "Walnut Creek",
+    "Danville",
+    "Clayton",
+    "Concord"
+  ],
+  "tagline": "Drive to the summit with the dog. Then hike somewhere else.",
+  "summary": "Mount Diablo follows the strict version of the state park rule: dogs are welcome in the campgrounds, the picnic areas and on the paved roads, and on nothing else. Not one trail or fire road is open to them. The payoff is a summit you can drive to with the dog in the car, three campgrounds that take pets and a huge view. For real walking, the regional parks pressed against the west side of the mountain allow dogs on every trail.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for a camping trip and the summit drive, and do your hikes at Diablo Foothills or Shell Ridge next door. Leave them home if you came to climb the mountain on foot.",
+  "photo": {
+    "id": "UXrnQExTbIc",
+    "raw": "https://images.unsplash.com/photo-1595303514143-64d4a66a9400?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8OHx8TW91bnQlMjBEaWFibG98ZW58MHwwfHx8MTc5MTc2ODA0Nnwy&ixlib=rb-4.1.0",
+    "alt": "Green spring hills rolling up to Mount Diablo under a big blue sky",
+    "author": "Cristina Anne Costello",
+    "authorUrl": "https://unsplash.com/@lightupphotos",
+    "link": "https://unsplash.com/photos/green-grass-field-and-mountains-under-blue-sky-during-daytime-UXrnQExTbIc"
+  },
+  "glance": [
+    {
+      "key": "trails",
+      "status": "no",
+      "note": "No trails or fire roads at all; paved roads only"
+    },
+    {
+      "key": "camping",
+      "status": "yes",
+      "note": "Juniper, Live Oak and Junction campgrounds"
+    },
+    {
+      "key": "lodging",
+      "status": "no",
+      "note": "None in the park; pet rooms in Walnut Creek and Danville"
+    },
+    {
+      "key": "water",
+      "status": "no",
+      "note": "No lakes or swimming; carry all your dog's water"
+    },
+    {
+      "key": "leash",
+      "status": "rule",
+      "note": "6 ft max, at all times"
+    },
+    {
+      "key": "fee",
+      "status": "info",
+      "note": "No pet fee; $10 per car at the main gates, $6 at Mitchell Canyon"
+    }
+  ],
+  "allowed": [
+    {
+      "name": "Paved roads",
+      "detail": "North Gate Road, South Gate Road and Summit Road, all the way to the summit parking lot. Traffic is steady and shoulders are thin, so these are for short leg-stretches, not walks."
+    },
+    {
+      "name": "Campgrounds",
+      "detail": "Juniper, Live Oak and Junction all take leashed dogs at standard sites. Reports conflict on Junction, so confirm when you book."
+    },
+    {
+      "name": "Picnic areas",
+      "detail": "Rock City, Juniper, Live Oak, the Summit lower lot and the Mitchell Canyon staging area all have tables where a leashed dog is fine."
+    },
+    {
+      "name": "Summit parking lots",
+      "detail": "The views from the pavement at the top are the same ones the hikers get. Dogs stay on the lot and the paved road, not on the Mary Bowerman Trail or inside the Summit Building."
+    },
+    {
+      "name": "Developed areas",
+      "detail": "Parking lots, restroom areas and the staging areas at the gates."
+    },
+    {
+      "name": "Nearby: Diablo Foothills Regional Park",
+      "detail": "Not state park land, but it touches the west boundary near Castle Rock. The East Bay Regional Park District allows dogs on its trails, leashed in developed areas and under voice control on the open trails."
+    },
+    {
+      "name": "Nearby: Shell Ridge Open Space",
+      "detail": "Walnut Creek city open space with more than 20 dog-friendly trails and views straight up at the mountain. Plan on a leash; sources differ on off-leash rules."
+    }
+  ],
+  "notAllowed": [
+    {
+      "name": "Every trail and fire road",
+      "detail": "Mitchell Canyon, Back Creek, Eagle Peak, Donner Canyon, the Falls Trail, Mary Bowerman Trail and the Summit Trail are all closed to dogs."
+    },
+    {
+      "name": "Park buildings",
+      "detail": "The Summit Visitor Center, the Mitchell Canyon Visitor Center and the restrooms."
+    },
+    {
+      "name": "Rock City sandstone formations",
+      "detail": "You can picnic at Rock City with a dog, but the trails and the rock scrambles to Sentinel Rock are off limits."
+    },
+    {
+      "name": "Castle Rock Regional Recreation Area core",
+      "detail": "The reservable Castle Rock picnic grounds next door are listed as no-dogs by the regional park district, while the surrounding Diablo Foothills trails allow them. Check the sign at the gate."
+    },
+    {
+      "name": "Any trail, even carried",
+      "detail": "Rangers patrol the summit trails and ticket dog owners. There is no small-dog exception."
+    }
+  ],
+  "hikes": [
+    {
+      "name": "Castle Rock loop via Stage Road (outside the park)",
+      "distance": "About 3.5 mi loop",
+      "difficulty": "Easy to moderate",
+      "surface": "Dirt road and trail",
+      "why": "Starts at the Diablo Foothills staging area off Castle Rock Road in Walnut Creek, just outside the state park gate. Creekside road under oaks with the Castle Rock cliffs above. Dogs allowed on leash or under voice control away from the picnic areas.",
+      "maps": "Diablo Foothills Regional Park, Walnut Creek"
+    },
+    {
+      "name": "Shell Ridge from Borges Ranch (outside the park)",
+      "distance": "2 to 5 mi, pick a loop",
+      "difficulty": "Moderate",
+      "surface": "Dirt road",
+      "why": "Open grassland ridges with the whole east face of Mount Diablo in front of you. Little shade and no water, so go early. Dogs on leash.",
+      "maps": "Borges Ranch, Walnut Creek"
+    }
+  ],
+  "hangouts": [
+    {
+      "name": "Summit lower parking lot",
+      "why": "On a clear winter day you can see the Sierra, the Farallones and Lassen from the pavement. Dogs welcome on the lot and the road; not in the building."
+    },
+    {
+      "name": "Rock City picnic area",
+      "why": "Shaded tables among the sandstone near the South Gate. The best picnic spot with a dog in the park."
+    },
+    {
+      "name": "Juniper Campground overlook",
+      "why": "The campground sits at 3,000 feet with sunset views west over the Bay. Day-use picnic tables too."
+    },
+    {
+      "name": "Mitchell Canyon staging area",
+      "why": "Oak-shaded tables and a $6 gate on the Clayton side. A good lunch stop before a dog-free walk for the rest of the family."
+    }
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet at all times, or inside an enclosed vehicle, tent or pen.",
+    "Dogs stay on paved roads, in campgrounds, picnic areas and parking lots. No trails or fire roads, carried or not.",
+    "No dogs inside the Summit Building, visitor centers or restrooms.",
+    "At night your dog must be inside your tent, camper or vehicle.",
+    "Never leave a dog in a parked car. Summer temperatures on the mountain top 100 degrees and the lots have no shade.",
+    "Pick up waste and carry it to a bin.",
+    "The park gates close at sunset and the roads are locked; campers get a gate code.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {
+        "name": "Juniper Campground",
+        "note": "36 sites at 3,000 feet, a short drive below the summit. Leashed dogs OK. Reserve on ReserveCalifornia up to 6 months ahead. RVs under 20 feet only."
+      },
+      {
+        "name": "Live Oak Campground",
+        "note": "22 sites under oaks near Rock City on the South Gate side. Leashed dogs OK; the shadiest option."
+      },
+      {
+        "name": "Junction Campground",
+        "note": "Small tent campground at the ranger station where the two gate roads meet. Park documents say leashed dogs OK; one booking site says no pets, so confirm."
+      },
+      {
+        "name": "Group campgrounds",
+        "note": "Pet rules vary by site; ask when you reserve."
+      }
+    ],
+    "lodging": [
+      {
+        "name": "Diablo Mountain Inn, Walnut Creek",
+        "note": "Takes 2 dogs of any size for a fee and has a grassy relief area. 20 minutes from the North Gate."
+      },
+      {
+        "name": "Embassy Suites by Hilton, Walnut Creek",
+        "note": "Allows 2 pets for a per-stay fee."
+      },
+      {
+        "name": "Holiday Inn Express, Walnut Creek",
+        "note": "One small dog in designated rooms; listings disagree on the fee, so ask."
+      },
+      {
+        "name": "Best Western Danville Sycamore Inn, Danville",
+        "note": "Near the South Gate. Pet-friendly rooms."
+      }
+    ],
+    "boarding": [
+      {
+        "name": "Camp Four Paws, Clayton",
+        "note": "Daycare and boarding on Curry Canyon Road near the Clayton side of the mountain. Lets you hike Mitchell Canyon dog-free."
+      }
+    ]
+  },
+  "seasons": [
+    {
+      "title": "Summer heat",
+      "level": "danger",
+      "detail": "The mountain regularly hits 95 to 105 degrees from June to September with little shade and no water on the roads. Walk your dog early, keep them in the shade at camp and never in the car."
+    },
+    {
+      "title": "Fire closures",
+      "level": "warn",
+      "detail": "On Red Flag days the park may close its roads and campgrounds. Check the park page before you drive up."
+    },
+    {
+      "title": "Winter and spring",
+      "level": "info",
+      "detail": "The best time for dogs. Green hills, cool air and the clearest summit views of the year, with occasional snow at the top."
+    },
+    {
+      "title": "Tarantula season",
+      "level": "info",
+      "detail": "In September and October male tarantulas cross the roads at dusk. Keep dogs from sniffing them; the bite is mild but the hairs irritate."
+    }
+  ],
+  "wildlife": [
+    "Rattlesnakes are common on sunny roadsides and around Rock City from spring through fall.",
+    "Ticks are thick in the grass from winter to early summer. Check your dog after any time off the pavement.",
+    "Coyotes and mountain lions live on the mountain. Keep dogs leashed and close at dawn and dusk, especially in Juniper Campground.",
+    "Foxtails cover the dry grass from May onward and lodge in paws, ears and noses."
+  ],
+  "checklist": [
+    "At least 2 liters of water for the dog and a bowl; there is no water on the roads",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags",
+    "Booties or paw balm; summit pavement burns paws by late morning in summer",
+    "A shade shelter or tarp for the campsite",
+    "A tick comb and tweezers",
+    "Cash or card for the $10 gate fee",
+    "A plan for a dog-friendly hike next door at Diablo Foothills or Shell Ridge"
+  ],
+  "vets": [
+    {
+      "name": "VCA Encina Veterinary Medical Center",
+      "town": "Walnut Creek"
+    },
+    {
+      "name": "Clayton Valley Pet Hospital",
+      "town": "Concord"
+    },
+    {
+      "name": "Diablo Valley Animal Hospital",
+      "town": "Danville"
+    }
+  ],
+  "sources": [
+    {
+      "label": "California State Parks: Mount Diablo State Park",
+      "url": "https://www.parks.ca.gov/?page_id=517"
+    },
+    {
+      "label": "California State Parks: Mount Diablo safety information",
+      "url": "https://www.parks.ca.gov/?page_id=31294"
+    },
+    {
+      "label": "California State Parks: Mount Diablo park brochure",
+      "url": "https://www.parks.ca.gov/pages/517/files/MountDiabloFinalWebLayout2018.pdf"
+    },
+    {
+      "label": "Save Mount Diablo: 5 dog-friendly trails in the East Bay",
+      "url": "https://savemountdiablo.org/blog/5-dog-friendly-trails-in-the-east-bay/"
+    }
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=517",
+  "verified": "October 2026"
+}

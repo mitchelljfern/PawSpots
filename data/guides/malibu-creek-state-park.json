@@ -1,0 +1,112 @@
+{
+  "slug": "malibu-creek-state-park",
+  "name": "Malibu Creek State Park",
+  "shortName": "Malibu Creek",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Southern California",
+  "nearestTowns": ["Calabasas", "Agoura Hills", "Malibu"],
+  "tagline": "Camp and picnic, yes. Rock Pool, MASH site and every trail, no.",
+  "summary": "Malibu Creek is the park where dog owners most often get turned around. Dogs are allowed in the campground, the day-use picnic areas, the parking lots and on paved roads, and that is all. Crags Road, the Rock Pool, Century Lake and the MASH site are all reached by dirt road or trail, so none of them is open to dogs. The good news is that the National Park Service land a few minutes away allows leashed dogs on almost every trail.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog if you are camping here and plan to hike next door at Paramount Ranch or Solstice Canyon. Do not bring your dog for a day hike in this park; there is nowhere legal to walk them beyond the picnic area.",
+  "photo": {
+    "id": "wrkEkdZfkz0",
+    "raw": "https://images.unsplash.com/photo-1634135000548-c822330a8b0d?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8M3x8TWFsaWJ1JTIwQ3JlZWslMjBTdGF0ZSUyMFBhcmt8ZW58MHwwfHx8MTc5MTc2ODAyMHwy&ixlib=rb-4.1.0",
+    "alt": "Grassy hills with oak trees under a blue sky in Malibu Creek State Park",
+    "author": "Mark Pecar",
+    "authorUrl": "https://unsplash.com/@mgpecar",
+    "link": "https://unsplash.com/photos/a-grassy-hill-with-trees-on-top-of-it-wrkEkdZfkz0"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No trails or dirt roads, including Crags Road to the Rock Pool"},
+    {"key": "camping", "status": "yes",  "note": "Malibu Creek Campground; dogs in tent or vehicle at night"},
+    {"key": "lodging", "status": "some", "note": "Pet rooms in Calabasas and Agoura Hills; none inside the park"},
+    {"key": "water",   "status": "no",   "note": "Rock Pool and the creek are reached by trail, so off-limits"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. About $12 per car for day use; check current rate"}
+  ],
+  "allowed": [
+    {"name": "Malibu Creek Campground", "detail": "The 62-site campground near the park entrance on Las Virgenes Road. Dogs on leash at your site, and in your tent or car overnight."},
+    {"name": "Day-use picnic area", "detail": "The lawn and picnic tables near the main day-use parking lot. The one place in the park to sit outside with your dog."},
+    {"name": "Parking lots", "detail": "Both the day-use lot and the campground lots."},
+    {"name": "Paved park roads", "detail": "The paved entrance road from Las Virgenes Road to the campground and day-use lot. It is short, and that is the whole walking network."},
+    {"name": "Paramount Ranch (NPS), 4 miles away", "detail": "Leashed dogs are welcome on the trails and in the Western Town area. The closest real dog hike to the campground."},
+    {"name": "Solstice Canyon (NPS), 20 minutes away", "detail": "Dogs on leash along the shaded canyon trail, but not at the waterfall at the end."}
+  ],
+  "notAllowed": [
+    {"name": "Crags Road", "detail": "The wide dirt road from the day-use lot toward Century Lake and the MASH site looks like a dog road. It is not. Rangers do enforce this at the start of the road."},
+    {"name": "Rock Pool and Malibu Creek", "detail": "Reached only by trail, so no dogs, and no dogs in the water anywhere in the park."},
+    {"name": "Century Lake and the MASH site", "detail": "Both are 1.5 to 2.5 miles up Crags Road. No dogs."},
+    {"name": "Every other trail", "detail": "Grasslands Trail, Chaparral Trail, Lookout Trail, Cistern Trail, Backbone Trail and the Reagan Ranch side. Carrying the dog does not change the rule."},
+    {"name": "Tapia Park section", "detail": "The picnic area down Las Virgenes Road is part of the state park and follows the same picnic-area-only rule. Its trails are off-limits."},
+    {"name": "Malibu Lagoon State Beach, downstream", "detail": "No dogs at all. For a beach, drive to the north end of Leo Carrillo instead."}
+  ],
+  "hikes": [],
+  "hangouts": [
+    {"name": "Day-use picnic lawn", "why": "Shade, tables and views of the Goat Buttes. The only spot in the park to spend an hour with your dog."},
+    {"name": "Malibu Creek Campground loop", "why": "Walking the paved campground loop at dusk is the longest legal dog walk in the park, and deer often graze at the edges."},
+    {"name": "Paramount Ranch Western Town (NPS)", "why": "Old film-set streets, picnic tables under oaks and leashed dogs on every trail. Partly rebuilt after the 2018 Woolsey Fire."},
+    {"name": "Leo Carrillo North Beach", "why": "Leashed dogs are allowed on the beach north of Lifeguard Tower 3, about 25 minutes away down Malibu Canyon and up Pacific Coast Highway."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Dogs may use the campground, the day-use picnic area, parking lots and paved roads only.",
+    "No dogs on any dirt road or trail, including Crags Road, even if it is wide and flat.",
+    "No dogs in Malibu Creek, the Rock Pool or Century Lake.",
+    "At night your dog must be inside your tent or vehicle.",
+    "Never leave a dog unattended at a campsite or in a parked car.",
+    "Pick up after your dog and put the bag in a trash can.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Malibu Creek Campground", "note": "62 sites in open grassland near the entrance, with flush toilets and coin showers. Reserve on ReserveCalifornia; new reservation rules started in 2026, so read the booking page carefully."},
+      {"name": "Leo Carrillo State Park Campground", "note": "On the coast 25 minutes away, under sycamores. Dogs OK in the campground and on North Beach."},
+      {"name": "Point Mugu: Sycamore Canyon Campground", "note": "40 minutes west on Pacific Coast Highway. Dogs allowed in the campground and on the beach across the road."}
+    ],
+    "lodging": [
+      {"name": "Cambria Hotel Calabasas", "note": "10 minutes from the park on Highway 101. Listed as taking 2 dogs up to 50 lb with a nightly fee."},
+      {"name": "Hampton Inn and Suites Agoura Hills", "note": "Pet-friendly with a per-stay fee. Close to Paramount Ranch."},
+      {"name": "Homewood Suites by Hilton Agoura Hills", "note": "Suites with kitchens; pets accepted with a per-stay fee."},
+      {"name": "Malibu Country Inn", "note": "Small inn on the coast near Zuma Beach. Listed as taking 2 pets with a per-stay fee."},
+      {"name": "Calamigos Ranch, Malibu", "note": "Resort in the canyon off Mulholland Highway. Pet-friendly, but reviews mention mixed experiences with the pet policy, so confirm when booking."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Summer and early fall heat", "level": "warn", "detail": "The campground has little shade and inland temperatures reach the 90s and 100s. Walk early and keep water in the tent."},
+    {"title": "Fire season (September to December)", "level": "warn", "detail": "The park burned in the 2018 Woolsey Fire. Red-flag days can close the campground or the whole park at short notice. Check the park page before you drive up."},
+    {"title": "Spring (March to May)", "level": "info", "detail": "Green hills, wildflowers and the best picnic weather. Weekend parking fills by 10 a.m."},
+    {"title": "Winter rain", "level": "info", "detail": "Cool and quiet. Las Virgenes Road and Malibu Canyon Road can close after heavy rain or rockfall."}
+  ],
+  "wildlife": [
+    "Rattlesnakes are common on sunny road edges and in the campground grass from spring to fall.",
+    "Coyotes are bold here and walk through the campground at night. Keep small dogs close.",
+    "Mountain lions live in the Santa Monica Mountains. Sightings in the park are rare, but keep dogs leashed at dawn and dusk.",
+    "Ticks are active year-round in the grass; check your dog after any walk."
+  ],
+  "checklist": [
+    "Water and a bowl; the day-use area has fountains but the campground loop does not",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags",
+    "A plan for the hike: dogs can wait at the campsite with a second person, or you drive to Paramount Ranch instead",
+    "Tick comb or tweezers",
+    "A shade shelter for the campsite in summer",
+    "Current vaccination records in case you need a vet or kennel"
+  ],
+  "vets": [
+    {"name": "Western Veterinary Center", "town": "Agoura Hills"},
+    {"name": "Agoura Animal Clinic", "town": "Agoura Hills"},
+    {"name": "Veterinary Specialty and Emergency Center", "town": "Thousand Oaks"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Malibu Creek State Park", "url": "https://www.parks.ca.gov/?page_id=614"},
+    {"label": "Malibu Creek State Park: Plan Your Visit", "url": "https://malibucreekstatepark.org/visit/"},
+    {"label": "NPS: Santa Monica Mountains FAQ (pets)", "url": "https://www.nps.gov/samo/faqs.htm"},
+    {"label": "California State Parks: Leo Carrillo State Park", "url": "https://www.parks.ca.gov/leocarrillo"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=614",
+  "verified": "October 2026"
+}

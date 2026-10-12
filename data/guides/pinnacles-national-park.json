@@ -1,0 +1,109 @@
+{
+  "slug": "pinnacles-national-park",
+  "name": "Pinnacles National Park",
+  "shortName": "Pinnacles",
+  "type": "national",
+  "designation": "National Park",
+  "region": "Central Coast",
+  "nearestTowns": ["Hollister", "Soledad", "King City", "Salinas"],
+  "tagline": "A dog-friendly campground with a pool, and nothing past it.",
+  "summary": "Pinnacles is one of the strictest national parks for dogs. They are welcome in the campground, on paved roads and in parking lots and picnic areas, and that is the whole list. No trails, no caves, no shuttle, no visitor center. The upside is that the Pinnacles Campground on the east side is a genuinely nice place to camp with a dog: big oak-shaded sites, a seasonal swimming pool and a store, with condors sometimes circling overhead. Think of it as a campsite with a view, not a hiking trip.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring the dog only if you are camping and someone is happy to stay at the site while the others hike. Otherwise this is a day trip to do without them.",
+  "photo": {
+    "id": "J95HGP-xG0I",
+    "raw": "https://images.unsplash.com/photo-1679424974515-ddd7fbfb6492?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8OHx8UGlubmFjbGVzJTIwTmF0aW9uYWwlMjBQYXJrfGVufDB8MHx8fDE3OTE3NjgwMjF8Mg&ixlib=rb-4.1.0",
+    "alt": "Rust-colored rock spires of Pinnacles National Park rising above green spring hillsides",
+    "author": "Moriah Bender",
+    "authorUrl": "https://unsplash.com/@moriiah",
+    "link": "https://unsplash.com/photos/a-large-rock-formation-with-trees-growing-on-it-J95HGP-xG0I"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No trails at all, including the Bench Trail from the campground"},
+    {"key": "camping", "status": "yes",  "note": "Pinnacles Campground, east side, with a seasonal pool"},
+    {"key": "lodging", "status": "no",   "note": "Nothing in the park; pet motels in Hollister and Soledad"},
+    {"key": "water",   "status": "no",   "note": "No dog swimming. Creeks run dry most of the year"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. $30 per car, good for 7 days, cards only"}
+  ],
+  "allowed": [
+    {"name": "Pinnacles Campground", "detail": "Dogs can be in your site, on the campground roads and around the camp store. This is the one place in the park where a dog can actually spend the day."},
+    {"name": "Paved roads", "detail": "The east side road from the entrance to Bear Gulch and the west side road to the Chaparral lot. Short walks on the shoulder only; both are narrow with blind bends."},
+    {"name": "Parking lots", "detail": "Bear Gulch, Old Pinnacles, Peaks View and the visitor center lots on the east side; the Chaparral lot on the west. One person can wait with the dog while the others hike."},
+    {"name": "Picnic areas", "detail": "Tables at Bear Gulch, Peaks View and the campground on the east side, and at Chaparral on the west side."},
+    {"name": "Viewpoints from the road", "detail": "Peaks View on the east side gives the classic look at the High Peaks from a paved pullout, no trail needed."}
+  ],
+  "notAllowed": [
+    {"name": "Every trail", "detail": "Bear Gulch, the High Peaks, Balconies, Condor Gulch, Moses Spring, the Old Pinnacles Trail and the Bench Trail that links the campground to the park. Even though the Bench Trail starts at the campground, dogs cannot use it."},
+    {"name": "The talus caves", "detail": "Bear Gulch Cave and Balconies Cave are closed to pets, like all trails."},
+    {"name": "The park shuttle", "detail": "The weekend shuttle from the visitor center to Bear Gulch does not take dogs, so park at Bear Gulch early or skip it."},
+    {"name": "Buildings", "detail": "The East Pinnacles Visitor Center, Bear Gulch Nature Center and West Pinnacles contact station are closed to pets."},
+    {"name": "Tied up or left alone anywhere", "detail": "The park is clear on this: no pets left unattended, in or out of a vehicle, and never tied to a tree or picnic table."}
+  ],
+  "hikes": [],
+  "hangouts": [
+    {"name": "Pinnacles Campground pool and store", "why": "The pool (people only) usually runs from spring to early fall and the store sells ice and snacks. Shaded sites make a long afternoon with the dog bearable."},
+    {"name": "Peaks View picnic area", "why": "Tables and a paved lot with a straight-on view of the High Peaks. Good place to wait while the rest of the car does the Condor Gulch loop."},
+    {"name": "Bear Gulch picnic area", "why": "Oaks, tables and a creek bed at the heart of the east side. Busy on weekends; arrive before 9 a.m. to get a parking spot."},
+    {"name": "Chaparral picnic area (west side)", "why": "The quiet entrance near Soledad. Fewer people, and the best roadside view of the Balconies cliffs."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Dogs are allowed only in the campground, on paved roads and in parking lots and picnic areas. Never on a trail, even for a few steps.",
+    "Never leave a dog unattended, in a tent, in a car or tied to anything. Rangers enforce this.",
+    "Pick up waste and put it in the campground trash, not a fire ring.",
+    "Store dog food in the metal food locker at your site. Raccoons here open coolers.",
+    "Dogs cannot ride the park shuttle or enter any building.",
+    "Keep quiet hours (10 p.m. to 6 a.m.) in the campground, which includes barking.",
+    "Service dogs are allowed on trails and in buildings; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Pinnacles Campground", "note": "East side only, 134 sites: tent, RV with electric hookups, group sites and tent cabins. Reserve at least 48 hours ahead on Recreation.gov. Confirm whether pets are allowed in the tent cabins before booking one."},
+      {"name": "No camping on the west side", "note": "The Soledad entrance is day use only. If you are camping with a dog, you are entering from Hollister on Highway 25."},
+      {"name": "Nearby alternatives", "note": "Hollister and Soledad have private RV parks and a few pet-friendly farm stays. Check each listing for dog rules."}
+    ],
+    "lodging": [
+      {"name": "Ridgemark Golf Club and Resort, Hollister", "note": "Pet rooms with no extra fee. About 45 minutes from the east entrance."},
+      {"name": "Motel 6, Soledad", "note": "The closest pet-friendly motel to the west entrance, roughly 9 miles away. Pets stay free."},
+      {"name": "Courtyard by Marriott, Salinas", "note": "Dogs and cats, 2 per room, with a $100 fee per stay. About an hour from either entrance."},
+      {"name": "Vacation rentals in Paicines and Hollister", "note": "Several ranch and farm rentals near Highway 25 welcome dogs. The closest ones are 20 to 30 minutes from the east gate."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Summer heat", "level": "danger", "detail": "Days above 100 degrees are normal from June to September and there is almost no shade on the roads. Pavement burns paws by 10 a.m. If you must come in summer, camp, use the pool, and walk the dog at dawn."},
+    {"title": "Spring (March to May)", "level": "info", "detail": "The best time. Wildflowers, green hills, mild days, and the pool is open. Weekends fill the Bear Gulch lot by mid-morning."},
+    {"title": "Winter", "level": "info", "detail": "Cool and quiet. Rain closes the caves now and then, but the campground stays open all year."},
+    {"title": "Weekend parking", "level": "warn", "detail": "When the east side lots fill, rangers hold cars at the gate. Since the dog cannot ride the shuttle, arrive early so you can park at Bear Gulch or Peaks View."}
+  ],
+  "wildlife": [
+    "California condors nest in the park. They are no danger to dogs, but a barking dog near a roosting bird is a problem for the bird. Keep quiet near the cliffs.",
+    "Rattlesnakes are common from March to October, including around the campground. Keep the leash short in the grass and check under picnic tables.",
+    "Raccoons raid campsites every night. Lock food, bowls and treats in the metal locker.",
+    "Ticks and foxtails fill the dry grass in late spring and summer. Check paws and ears after every walk.",
+    "Coyotes and bobcats pass through the campground at dusk. Keep small dogs on the leash and inside the tent at night."
+  ],
+  "checklist": [
+    "Far more water than you expect, and a shade tarp for the campsite",
+    "A 6-foot leash, not a retractable one",
+    "Cooling mat or wet towel for the dog on hot afternoons",
+    "Paw balm or booties for hot pavement",
+    "A credit card: the entrance station does not take cash",
+    "Campground reservation booked at least 48 hours ahead",
+    "A plan for who stays with the dog while others hike",
+    "Current vaccination records and a photo of your dog"
+  ],
+  "vets": [
+    {"name": "Animal Hospital of Hollister", "town": "Hollister"},
+    {"name": "San Benito Veterinary Center", "town": "Hollister"}
+  ],
+  "sources": [
+    {"label": "NPS: Pets at Pinnacles", "url": "https://www.nps.gov/pinn/planyourvisit/pets.htm"},
+    {"label": "NPS: Pinnacles campground rules", "url": "https://www.nps.gov/pinn/planyourvisit/cgrules.htm"},
+    {"label": "Recreation.gov: Pinnacles Campground", "url": "https://www.recreation.gov/camping/campgrounds/234015"}
+  ],
+  "official": "https://www.nps.gov/pinn/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}

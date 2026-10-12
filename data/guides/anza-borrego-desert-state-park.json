@@ -1,0 +1,120 @@
+{
+  "slug": "anza-borrego-desert-state-park",
+  "name": "Anza-Borrego Desert State Park",
+  "shortName": "Anza-Borrego",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Desert",
+  "nearestTowns": ["Borrego Springs", "Julian", "Ramona"],
+  "tagline": "No trails, but 500 miles of dirt road and wide-open camping.",
+  "summary": "Anza-Borrego follows the California State Parks rule: dogs on leash in campgrounds, picnic areas and on roads, never on trails. The twist here is that about 500 miles of the park's roads are dirt jeep roads through washes and badlands, and dogs are welcome on all of them. Add free dispersed car camping almost anywhere and this is one of the better state parks for a dog, as long as you come between November and March and respect the cactus, snakes and heat.",
+  "score": 3,
+  "scoreLabel": "Moderate",
+  "verdict": "Bring your dog for winter camping and long walks on dirt roads. Skip it from May to September, and skip it if you want to hike Palm Canyon or the slot canyons.",
+  "photo": {
+    "id": "g8KfLtNuqpo",
+    "raw": "https://images.unsplash.com/photo-1639778742290-4fad22f996ba?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8NHx8QW56YS1Cb3JyZWdvJTIwRGVzZXJ0JTIwU3RhdGUlMjBQYXJrfGVufDB8MHx8fDE3OTE3NjgwMjB8Mg&ixlib=rb-4.1.0",
+    "alt": "Sunrise over the Borrego Badlands from Fonts Point, with the Salton Sea in the distance",
+    "author": "john ko",
+    "authorUrl": "https://unsplash.com/@jko001",
+    "link": "https://unsplash.com/photos/the-sun-shines-brightly-over-a-desert-landscape-g8KfLtNuqpo"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "Only the 1.2-mile Visitor Center to campground path. Dirt roads are the real option"},
+    {"key": "camping", "status": "yes",  "note": "All developed campgrounds plus free dispersed camping along most dirt roads"},
+    {"key": "lodging", "status": "some", "note": "Several pet-friendly hotels in Borrego Springs; none inside the park"},
+    {"key": "water",   "status": "no",   "note": "Desert. No lakes or swimming; carry all water for your dog"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times, including at your campsite"},
+    {"key": "fee",     "status": "info", "note": "No fee to enter most of the park; day-use fee at Borrego Palm Canyon. No pet fee"}
+  ],
+  "allowed": [
+    {"name": "Dirt roads open to vehicles", "detail": "This is the big one. Roughly 500 miles of unpaved jeep roads cross the park, through washes, badlands and palm-lined canyons, and a leashed dog can walk any of them with you. Pick a quiet one and you have the desert to yourselves."},
+    {"name": "Paved roads and road shoulders", "detail": "Highway S-22, S-3, Highway 78 and the paved park roads. Fine for a walk, but watch for fast traffic and hot asphalt."},
+    {"name": "Visitor Center to Campground Trail", "detail": "The one official dog trail in the park: a 1.2-mile round trip on a wide, mostly level path between the Visitor Center and Borrego Palm Canyon Campground. The short native plant garden paths around the Visitor Center are also fine."},
+    {"name": "All developed campgrounds", "detail": "Borrego Palm Canyon, Tamarisk Grove, Bow Willow, Fish Creek, Vern Whitaker Horse Camp, Arroyo Salado, Yaqui Well and Culp Valley. Dogs must sleep in your tent or vehicle."},
+    {"name": "Dispersed camping", "detail": "Anza-Borrego lets you camp for free almost anywhere you can legally drive, as long as you stay next to the road. The same rule applies to dogs: they can go where the car can go."},
+    {"name": "Picnic areas and parking lots", "detail": "Including the Visitor Center, Tamarisk Grove and the paved overlooks along S-22."},
+    {"name": "Borrego Springs town", "detail": "Christmas Circle park, the Galleta Meadows metal sculptures (on private land, dog-friendly) and most outdoor patios welcome leashed dogs."}
+  ],
+  "notAllowed": [
+    {"name": "Every hiking trail", "detail": "Borrego Palm Canyon Trail, Hellhole Canyon, Slot Canyon, Wind Caves, Pictograph Trail, Mountain Palm Springs and every other foot trail. Carrying the dog does not make it legal."},
+    {"name": "Backcountry and wilderness", "detail": "Anything off the road. More than half the park is designated wilderness, and dogs may not leave the roadway there."},
+    {"name": "Wildflower fields", "detail": "In a bloom year, rangers enforce this. Dogs stay on the road while you look at the flowers."},
+    {"name": "Visitor Center building", "detail": "Shaded benches and the garden paths outside are fine. Service dogs only inside."},
+    {"name": "Outside your tent or car at night", "detail": "The park is strict about this. Coyotes patrol campgrounds after dark and have taken small dogs."},
+    {"name": "Unattended at a campsite", "detail": "Rangers will cite you, and in summer a dog left in a car can die within minutes."}
+  ],
+  "hikes": [
+    {"name": "Visitor Center to Campground Trail", "distance": "1.2 mi out and back", "difficulty": "Easy", "surface": "Dirt path", "why": "The only official trail dogs may use. Flat, well marked, with a free dog-water bowl often set out at the Visitor Center. Good first walk to let your dog see what cholla looks like.", "maps": "Anza-Borrego Desert State Park Visitor Center"},
+    {"name": "Fonts Point Road", "distance": "Up to 8 mi out and back", "difficulty": "Moderate", "surface": "Sandy jeep road", "why": "A 4-mile sand road off S-22 that ends at the best view in the park: the Borrego Badlands at sunrise or sunset. Walk as far as you like; most people drive it, so start early. Deep sand is tiring for short-legged dogs.", "maps": "Fonts Point, Anza-Borrego"},
+    {"name": "Split Mountain Road into Fish Creek Wash", "distance": "Pick your distance", "difficulty": "Moderate", "surface": "Gravel and sand jeep road", "why": "The road squeezes between 600-foot canyon walls at Split Mountain. Dogs can walk the road the whole way; the Wind Caves side trail is off-limits. Fish Creek campground is at the mouth.", "maps": "Split Mountain, Anza-Borrego"},
+    {"name": "Coyote Canyon Road", "distance": "Pick your distance", "difficulty": "Moderate", "surface": "Dirt jeep road with creek crossings", "why": "Rare running water in the desert and winter cottonwoods. Stay on the road. The road is closed from June 1 to September 30 to protect bighorn sheep, so check before you go.", "maps": "Coyote Canyon Road, Borrego Springs"}
+  ],
+  "hangouts": [
+    {"name": "Fonts Point", "why": "Sunrise over the badlands from the end of the sand road. Park, leash up and walk to the rim edge together."},
+    {"name": "Borrego Palm Canyon Campground", "why": "The main campground, with shade ramadas, flush toilets and showers. The campground loops make an easy evening dog walk."},
+    {"name": "Galleta Meadows sculptures, Borrego Springs", "why": "130 metal sculptures of dinosaurs, camels and a 350-foot serpent scattered over open desert just outside the park. Leashed dogs welcome."},
+    {"name": "Culp Valley", "why": "A free primitive campground at 3,400 feet off Montezuma Grade. Around 10 degrees cooler than the valley floor, which matters in the shoulder seasons."},
+    {"name": "Tamarisk Grove", "why": "Small shaded campground under tamarisk trees at the Highway 78 and S-3 junction. Quieter than Palm Canyon and a good base for the Split Mountain road."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times, everywhere in the park.",
+    "Dogs may use campgrounds, picnic areas, paved roads and dirt roads open to vehicles. They may not use any trail, except the Visitor Center to Campground Trail.",
+    "Dogs stay out of the backcountry, the wilderness and the wildflower fields, even if you carry them.",
+    "At night your dog must be inside your tent or vehicle, never tied up outside.",
+    "Never leave a dog unattended, in a car or at a campsite. Desert cars reach deadly temperatures in minutes.",
+    "Pick up waste and pack it out. There are no trash cans on the dirt roads.",
+    "Rangers can ask for proof of vaccination and licence, and can turn away noisy or aggressive dogs.",
+    "Call the park at (760) 767-5311 before a summer trip. The Visitor Center is only open weekends from June through September.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Borrego Palm Canyon Campground", "note": "The main campground, 2 miles from Borrego Springs. About 120 sites with showers and hookups. Reserve on ReserveCalifornia; it fills on winter weekends and during wildflower season."},
+      {"name": "Tamarisk Grove Campground", "note": "27 shaded sites near Highway 78. Reserve on ReserveCalifornia. Pets must be in a tent or vehicle at night."},
+      {"name": "Primitive campgrounds", "note": "Culp Valley, Arroyo Salado, Fish Creek, Yaqui Well, Bow Willow and others. Free or low cost, first come first served, no water. Dogs welcome on the same rules."},
+      {"name": "Dispersed roadside camping", "note": "Free. Park next to any open dirt road away from a water source and camp. The best way to give a dog room without breaking a rule."}
+    ],
+    "lodging": [
+      {"name": "La Casa del Zorro Resort and Spa, Borrego Springs", "note": "The classic desert resort. Third-party listings show up to 2 dogs under 80 lb with a nightly fee. Confirm with the hotel before booking."},
+      {"name": "Borrego Springs Resort and Spa", "note": "Listed as taking 2 pets of any size with a nightly pet fee."},
+      {"name": "Stanlunds Inn and Suites, Borrego Springs", "note": "Simple motel with designated pet rooms and a small nightly fee."},
+      {"name": "Palm Canyon Hotel and RV Resort, Borrego Springs", "note": "Western-themed hotel and RV park next to the park entrance. Pet-friendly, with a dirt relief area."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Summer heat (May to September)", "level": "danger", "detail": "Daytime highs run 105 to 120 degrees and the ground burns paws by mid-morning. Dogs have died here from heat. If you must come, walk before 8 a.m. and stay in air conditioning the rest of the day."},
+    {"title": "Winter and spring (November to April)", "level": "info", "detail": "The season to visit. Days in the 60s and 70s, cold nights. Wildflower bloom, usually late February to March, brings big crowds and full campgrounds in a good year."},
+    {"title": "Cholla cactus", "level": "warn", "detail": "Jumping cholla segments stick to paws, noses and tails along every road edge. Carry pliers or a comb to pull them out, and keep the leash short through cactus patches."},
+    {"title": "Flash floods", "level": "warn", "detail": "Washes like Fish Creek and Coyote Canyon can flood after rain even when the sky above you is clear. Do not camp in a wash bottom."}
+  ],
+  "wildlife": [
+    "Rattlesnakes are active from March to October, often on warm road surfaces at dusk. Pet dogs have died from bites in this park.",
+    "Coyotes come into campgrounds every night and will take a small dog. Keep dogs inside the tent or car after dark.",
+    "Peninsular bighorn sheep are endangered. Coyote Canyon closes in summer so they can reach water; keep your dog well back if you see them.",
+    "Scorpions and tarantulas hide under rocks and shoes. Shake out bedding and bowls each morning."
+  ],
+  "checklist": [
+    "At least 1 gallon of water per dog per day, plus a bowl",
+    "Pliers or a wide-tooth comb for cholla spines",
+    "Paw booties for hot ground and sharp rock",
+    "A 6-foot leash, not a retractable one",
+    "A shade tarp and a cooling mat for camp",
+    "Tweezers and a basic first aid kit; the nearest vet is over an hour away",
+    "A paper map; phone signal drops out on most dirt roads",
+    "Waste bags, and a container to pack them out"
+  ],
+  "vets": [
+    {"name": "VCA Adobe Animal Hospital", "town": "Ramona"},
+    {"name": "Julian Animal Hospital", "town": "Julian"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Dogs at Anza-Borrego", "url": "https://www.parks.ca.gov/?page_id=29292"},
+    {"label": "California State Parks: Anza-Borrego Desert State Park", "url": "https://www.parks.ca.gov/?page_id=638"},
+    {"label": "Anza-Borrego park brochure (PDF)", "url": "https://www.parks.ca.gov/pages/638/files/ABDSP2017Park_Brochure_09182017_6pp_crop.pdf"},
+    {"label": "Tamarisk Grove campground handout (PDF)", "url": "https://www.desertusa.com/anza_borrego/TamariskGrove_CampMap010815.pdf"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=29292",
+  "verified": "October 2026"
+}

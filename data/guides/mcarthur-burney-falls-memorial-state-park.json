@@ -1,0 +1,243 @@
+{
+  "slug": "mcarthur-burney-falls-memorial-state-park",
+  "name": "McArthur-Burney Falls Memorial State Park",
+  "shortName": "Burney Falls",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Far North",
+  "nearestTowns": [
+    "Burney",
+    "Fall River Mills",
+    "Redding"
+  ],
+  "tagline": "Spring-fed falls, but the park asks you to leave the dog at home.",
+  "summary": "Burney Falls is one of the strictest state parks in California for dogs. The park's own page says dogs are allowed only in the parking lot, on the paved road and in the campground, not on trails or in day-use areas, and it recommends leaving pets at home. That rules out the Falls Loop, the rim trails, the Pacific Crest Trail inside the park and the Lake Britton beach. Several guides say the short Pioneer Cemetery Trail from the campground is the one trail where leashed dogs are tolerated, but the official page does not list it, so ask at the entrance station.",
+  "score": 1,
+  "scoreLabel": "Very limited",
+  "verdict": "Come with your dog only if you are camping and happy with campground walks. To actually see the falls up close, one person stays with the dog while the other walks down.",
+  "photo": {
+    "id": "KvOBG7EzjuM",
+    "raw": "https://images.unsplash.com/photo-1608073738437-0ac622fc8c6e?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8M3x8QnVybmV5JTIwRmFsbHN8ZW58MHwwfHx8MTc5MTc2ODAyMnwy&ixlib=rb-4.1.0",
+    "alt": "Burney Falls pouring over a mossy cliff into a blue pool surrounded by forest",
+    "author": "joel protasio",
+    "authorUrl": "https://unsplash.com/@jmp_travel",
+    "link": "https://unsplash.com/photos/waterfalls-in-the-forest-during-daytime-KvOBG7EzjuM"
+  },
+  "glance": [
+    {
+      "key": "trails",
+      "status": "no",
+      "note": "No trails. Pioneer Cemetery Trail is a maybe; ask at the gate"
+    },
+    {
+      "key": "camping",
+      "status": "yes",
+      "note": "Main campground OK; not inside the camping cabins"
+    },
+    {
+      "key": "lodging",
+      "status": "some",
+      "note": "Pet motels in Burney, 11 miles away"
+    },
+    {
+      "key": "water",
+      "status": "no",
+      "note": "No dogs on the Lake Britton beach or at the falls pool"
+    },
+    {
+      "key": "leash",
+      "status": "rule",
+      "note": "6 ft or shorter, at all times"
+    },
+    {
+      "key": "fee",
+      "status": "info",
+      "note": "No pet fee. $10 per car day use; summer day-use reservations"
+    }
+  ],
+  "allowed": [
+    {
+      "name": "Campground",
+      "detail": "Leashed dogs are welcome at your campsite and on the campground roads. They must be inside a tent or vehicle at night."
+    },
+    {
+      "name": "Paved park roads",
+      "detail": "You can walk the road between the campground, the entrance and the main parking lot."
+    },
+    {
+      "name": "Parking lots",
+      "detail": "The main lot next to the visitor center and store. Big trees give some shade, but it is a parking lot."
+    },
+    {
+      "name": "Camping cabin sites, outside only",
+      "detail": "Dogs may stay at a cabin site on leash but are not allowed inside the cabins."
+    },
+    {
+      "name": "Pioneer Cemetery Trail (unconfirmed)",
+      "detail": "A short trail from the far end of the campground to the pioneer cemetery and on toward Lake Britton. Most guides call it the park's only dog-legal trail; the official page does not mention it. Confirm with a ranger before you go."
+    }
+  ],
+  "notAllowed": [
+    {
+      "name": "Falls Loop Trail",
+      "detail": "The 1.3-mile loop down to the base of the falls and back along Burney Creek. No dogs, carried or walked."
+    },
+    {
+      "name": "The falls overlook",
+      "detail": "The paved viewpoint at the top of the falls is a day-use area a few steps from the parking lot. Sources disagree on whether a leashed dog can stand there. The park's rule is no day-use areas, so assume no and ask."
+    },
+    {
+      "name": "All other trails",
+      "detail": "Burney Creek Trail, Rim Trail, Headwaters Trail and the Pacific Crest Trail where it passes through the park."
+    },
+    {
+      "name": "Lake Britton beach and swim area",
+      "detail": "No dogs on the beach. The park's page says this plainly."
+    },
+    {
+      "name": "Picnic areas and day-use areas",
+      "detail": "The official page excludes day-use areas, which is stricter than most state parks."
+    },
+    {
+      "name": "Inside the camping cabins, the store and the visitor center",
+      "detail": "Dogs wait outside with someone."
+    }
+  ],
+  "hikes": [
+    {
+      "name": "Pioneer Cemetery Trail",
+      "distance": "1 mi out and back",
+      "difficulty": "Easy",
+      "surface": "Dirt",
+      "why": "Starts past campsite 75 at the end of the campground and leads to the small pioneer cemetery, with a spur toward Lake Britton. Widely described as the only trail in the park that allows leashed dogs, but not listed on the park's official page. Ask at the entrance station first.",
+      "maps": "Pioneer Cemetery Trail, McArthur-Burney Falls Memorial State Park"
+    },
+    {
+      "name": "Nearby: Pacific Crest Trail from Baum Lake",
+      "distance": "Up to 10 mi one way",
+      "difficulty": "Moderate",
+      "surface": "Dirt",
+      "why": "Outside the park, the PCT runs through Lassen National Forest where leashed dogs are allowed. The section between Baum Lake near Cassel and the park boundary is open, hot and exposed, so go early and carry water.",
+      "maps": "Baum Lake Pacific Crest Trail access, Cassel CA"
+    }
+  ],
+  "hangouts": [
+    {
+      "name": "Campground loops",
+      "why": "Big pines, soft ground and quiet evenings. This is where your dog will spend the trip."
+    },
+    {
+      "name": "Main parking lot shade",
+      "why": "Not glamorous, but it is where the dog waits while the rest of the family walks the Falls Loop. Never leave a dog in the car here; the park bans it."
+    },
+    {
+      "name": "Pioneer cemetery clearing",
+      "why": "If the ranger confirms the trail is open to dogs, the cemetery meadow is a calm spot to sit before heading back."
+    },
+    {
+      "name": "Nearby: Baum Lake, Cassel",
+      "why": "A PG&E reservoir 15 minutes away with flat shoreline paths, fishing and room for a leashed dog to sniff around."
+    }
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Dogs are allowed only in the parking lot, on the paved road and in the campground. Not on trails, the beach or day-use areas.",
+    "Never leave a dog unattended, including in your vehicle. The park names this rule specifically.",
+    "At night, dogs must be inside a tent or vehicle.",
+    "Dogs are not allowed inside the camping cabins.",
+    "Pick up waste and put it in a trash can.",
+    "Store dog food in your vehicle or a bear-resistant locker.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {
+        "name": "Burney Falls Campground",
+        "note": "Over 100 sites in the pines near the falls. Reserve on ReserveCalifornia well ahead for summer weekends. Dogs OK on leash."
+      },
+      {
+        "name": "Camping cabins",
+        "note": "Dogs can stay at the site on leash but cannot go inside the cabin. Only useful if you are also bringing a tent or sleeping in the car with the dog."
+      },
+      {
+        "name": "Nearby: Lassen National Forest campgrounds on Hat Creek",
+        "note": "Forest Service campgrounds along Highway 89 south of the park, such as Cave and Bridge, take dogs and sit next to dog-legal creekside trails."
+      }
+    ],
+    "lodging": [
+      {
+        "name": "Green Gables Motel and Suites, Burney",
+        "note": "Up to 2 pets of any size for a per-night fee."
+      },
+      {
+        "name": "Charm Motel and Suites, Burney",
+        "note": "One dog per room for a nightly fee. No cats."
+      },
+      {
+        "name": "Shasta Pines Motel and Suites, Burney",
+        "note": "Lists itself as pet-friendly. Confirm the fee when you book."
+      }
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {
+      "title": "Summer day-use reservations",
+      "level": "warn",
+      "detail": "The park required day-use reservations from mid-May to late September in 2026 and the lot still fills early. Book before you drive, and remember the dog cannot wait in the car."
+    },
+    {
+      "title": "Summer heat",
+      "level": "warn",
+      "detail": "Burney sits at 3,000 feet and July afternoons reach the 90s. The campground is shaded, the parking lot and roads are not."
+    },
+    {
+      "title": "Fall",
+      "level": "info",
+      "detail": "The best season for a dog trip: cooler, quieter, no day-use reservations and the falls run year-round because they are spring-fed."
+    },
+    {
+      "title": "Winter and spring",
+      "level": "info",
+      "detail": "Snow and freezing nights are normal from December to March. Part of the campground stays open. Trails can be icy, which does not matter for the dog since they cannot use them anyway."
+    }
+  ],
+  "wildlife": [
+    "Black bears visit the campground. Keep dog food and bowls locked in the car or bear box.",
+    "Rattlesnakes are common on the sunny volcanic rock around Lake Britton and along the roads in warm months.",
+    "Mountain lions range through the area. Keep dogs leashed and close at dawn and dusk.",
+    "Ticks and foxtails are thick in the dry grass from late spring through summer.",
+    "Mosquitoes near Burney Creek and the lake can be bad in June."
+  ],
+  "checklist": [
+    "A 6-foot leash, not a retractable one",
+    "Water for two and a collapsible bowl",
+    "Waste bags",
+    "A shade tarp or cooling mat for the campsite",
+    "A second adult, so someone can stay with the dog while the other walks to the falls",
+    "Day-use reservation confirmation in summer",
+    "A tick comb"
+  ],
+  "vets": [
+    {
+      "name": "Burney Veterinary Hospital",
+      "town": "Burney"
+    }
+  ],
+  "sources": [
+    {
+      "label": "California State Parks: McArthur-Burney Falls Memorial State Park",
+      "url": "https://www.parks.ca.gov/?page_id=455"
+    },
+    {
+      "label": "DogTrekker: McArthur-Burney Falls",
+      "url": "https://dogtrekker.com/directories/mcarthur-burney-falls-memorial-state-park/"
+    },
+    {
+      "label": "Explore With Alec: visiting McArthur-Burney Falls",
+      "url": "https://explorewithalec.com/visiting-mcarthur-burney-falls/"
+    }
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=455",
+  "verified": "October 2026"
+}

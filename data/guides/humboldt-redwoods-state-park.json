@@ -1,0 +1,118 @@
+{
+  "slug": "humboldt-redwoods-state-park",
+  "name": "Humboldt Redwoods State Park",
+  "shortName": "Humboldt Redwoods",
+  "type": "state",
+  "designation": "State Park",
+  "region": "North Coast",
+  "nearestTowns": ["Weott", "Myers Flat", "Garberville", "Fortuna"],
+  "tagline": "Drive the Avenue of the Giants with your dog. Hike without them.",
+  "summary": "Humboldt Redwoods follows the standard California State Parks rule: dogs are welcome in campgrounds, picnic areas, parking lots and on park roads, but not on any trail. The good news is that the park's main attraction, the 32-mile Avenue of the Giants, is a road, so you can stop at pullouts and walk the shoulder under the biggest trees in the world. The Eel River day-use areas give you shade, picnic tables and river access too. What you cannot do is walk Founders Grove, Rockefeller Loop or any other grove trail with your dog.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for a scenic drive, a river day and a campground under the redwoods. If you want to walk the famous groves, plan on taking turns or leaving the dog at a kennel.",
+  "photo": {
+    "id": "yOCaT3T_PO0",
+    "raw": "https://images.unsplash.com/photo-1657471876221-dcfc9eec9d50?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8SHVtYm9sZHQlMjBSZWR3b29kcyUyMFN0YXRlJTIwUGFya3xlbnwwfDB8fHwxNzkxNzY4MDIxfDI&ixlib=rb-4.1.0",
+    "alt": "A paved road winding between giant redwood trunks in Humboldt Redwoods State Park",
+    "author": "Chris Cagle",
+    "authorUrl": "https://unsplash.com/@parksandtrips",
+    "link": "https://unsplash.com/photos/a-road-in-the-woods-yOCaT3T_PO0"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No dogs on any trail, including Founders Grove and Rockefeller Loop"},
+    {"key": "camping", "status": "yes",  "note": "Burlington, Hidden Springs and Albee Creek; not the environmental camps"},
+    {"key": "lodging", "status": "some", "note": "No lodging in the park; pet rooms in Garberville, Myers Flat and Fortuna"},
+    {"key": "water",   "status": "some", "note": "Eel River bars at Williams Grove and other day-use areas; watch for toxic algae in late summer"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "No entry fee. $8 per car at Williams Grove day-use"}
+  ],
+  "allowed": [
+    {"name": "Avenue of the Giants (State Route 254)", "detail": "The 32-mile scenic road through the park is open to dogs on leash. Park at any pullout and walk the paved shoulder among the trees. Watch for traffic; it is a real road."},
+    {"name": "Campgrounds", "detail": "Burlington (year-round, next to the visitor center), Hidden Springs (summer, near Myers Flat) and Albee Creek (May to early September, on Mattole Road). Dogs must stay in your tent or vehicle at night."},
+    {"name": "Day-use and picnic areas", "detail": "Williams Grove, the California Federation of Women's Clubs Grove, Dyerville Flats and the other developed day-use areas with picnic tables and restrooms."},
+    {"name": "Eel River gravel bars next to day-use areas", "detail": "Williams Grove and the Women's Clubs Grove have river access from the picnic area. Keep the leash on and stay near the developed area; the park's rule is developed areas only."},
+    {"name": "Parking lots and pullouts", "detail": "Including the Founders Grove and Rockefeller Loop parking areas. You can see big trees from the lot, but the trail itself starts a few steps away and is off limits."},
+    {"name": "Mattole Road and other park roads", "detail": "The paved road west through Bull Creek Flats toward Honeydew is open to leashed dogs on the shoulder."}
+  ],
+  "notAllowed": [
+    {"name": "Every trail in the park", "detail": "Founders Grove, Rockefeller Loop, Bull Creek Flats, Drury-Chaney, Grieg-French-Bell, River Trail and all the rest. Carrying a small dog does not make a trail legal."},
+    {"name": "Environmental campsites", "detail": "No pets at the Hamilton Barn or Baxter environmental camps."},
+    {"name": "Visitor center", "detail": "Dogs wait outside. There is shade and a lawn next to the building."},
+    {"name": "Undeveloped forest", "detail": "Dogs cannot leave the road, parking lot or picnic area to explore among the trees."},
+    {"name": "Unattended anywhere", "detail": "Not at a campsite, not tied to a picnic table and not in a parked car."}
+  ],
+  "hikes": [
+    {"name": "Avenue of the Giants roadside stroll", "distance": "Any length, out and back", "difficulty": "Easy", "surface": "Paved road shoulder", "why": "The only way to walk among the giants with your dog. The stretch near the Founders Grove turnoff and the stretch through Weott have wide shoulders and little traffic early in the morning.", "maps": "Founders Grove Parking, Avenue of the Giants"},
+    {"name": "Williams Grove to the Eel River", "distance": "0.3 mi out and back", "difficulty": "Easy", "surface": "Dirt and gravel", "why": "A short walk from the picnic tables to a wide gravel bar on the South Fork Eel. Shade, water and a swimming hole in summer. $8 day-use fee.", "maps": "Williams Grove Day Use Area, Humboldt Redwoods State Park"},
+    {"name": "Nearby: Rohner Park, Fortuna", "distance": "1 to 2 mi of loops", "difficulty": "Easy", "surface": "Dirt", "why": "A city park 25 miles north with real trails through second-growth redwoods where leashed dogs are allowed. The closest proper redwood hike for dog owners. Check current rules when you arrive.", "maps": "Rohner Park, Fortuna CA"},
+    {"name": "Nearby: Arcata Community Forest", "distance": "Up to 10 mi of trails", "difficulty": "Easy to moderate", "surface": "Dirt", "why": "Redwood forest owned by the city of Arcata, about an hour north, with a trail network open to leashed dogs. Worth the drive if your trip is about hiking.", "maps": "Arcata Community Forest Redwood Park trailhead"}
+  ],
+  "hangouts": [
+    {"name": "Williams Grove", "why": "The park's biggest day-use area: sunny and shaded picnic tables, grills, restrooms and a path to the river. 3 miles south of the visitor center."},
+    {"name": "California Federation of Women's Clubs Grove", "why": "Picnic grove with the Julia Morgan-designed Hearthstone fireplace and a swimming hole. Storm erosion has closed part of the lot; vehicles over 16 feet cannot enter."},
+    {"name": "Dyerville Flats", "why": "Where the South Fork meets the main Eel River. Restrooms, picnic tables, an overlook and lots of parking."},
+    {"name": "Founders Grove parking area", "why": "You cannot take the dog on the loop, but the lot sits right among old-growth giants, and the visitor center lawn is a few minutes away."},
+    {"name": "Burlington Campground lawn and visitor center area", "why": "Flat, shaded and next to the Avenue. A good place for an evening walk from your campsite."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Dogs stay in developed areas only: campgrounds, picnic areas, parking lots and roads. No trails.",
+    "Never leave a dog unattended, including at your campsite or in a parked car.",
+    "At night, dogs must be inside a tent or vehicle.",
+    "Pick up waste and put it in a trash can.",
+    "Keep dogs out of the visitor center and other buildings.",
+    "Store dog food in your vehicle or a bear-resistant locker, never in the tent.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Burlington Campground", "note": "57 sites next to the visitor center, open year-round. Reserve on ReserveCalifornia. The best base for dog owners."},
+      {"name": "Hidden Springs Campground", "note": "154 sites near Myers Flat, open roughly Memorial Day to Labor Day. Pets OK in standard sites."},
+      {"name": "Albee Creek Campground", "note": "40 sites on Mattole Road, 5 miles west of the Avenue, open early May to Labor Day. Quieter, with meadow views."},
+      {"name": "Not allowed", "note": "Hamilton Barn and Baxter environmental camps."}
+    ],
+    "lodging": [
+      {"name": "Best Western Plus Humboldt House Inn, Garberville", "note": "20 miles south of the park. Pets allowed for a fee."},
+      {"name": "Motel Garberville", "note": "Simple pet-friendly motel, about 10 miles from Miranda."},
+      {"name": "Giant Redwoods RV and Cabin Destination, Myers Flat", "note": "Dog-friendly RV park and cabins inside the Avenue of the Giants."},
+      {"name": "Redcrest Resort, Redcrest", "note": "Pet-friendly cabins at the north end of the Avenue."},
+      {"name": "Redwood Riverwalk Hotel, Fortuna", "note": "Pet rooms with a fee and a fenced dog relief area. Handy for Rohner Park."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Late summer algae in the Eel River", "level": "danger", "detail": "Toxic blue-green algae blooms have killed dogs in the Eel River in late summer and early fall. If the water is warm, slow and has green scum or mats, keep your dog out of it entirely."},
+    {"title": "Summer heat inland", "level": "warn", "detail": "The river flats can hit the 90s in July and August. Under the redwoods it stays cool. Walk early and bring more water than you expect to need."},
+    {"title": "Spring and fall", "level": "info", "detail": "The best time. Fewer cars on the Avenue, cool shade, and the river is clean and running. Hidden Springs and Albee Creek may be closed, so book Burlington."},
+    {"title": "Winter rain and flooding", "level": "warn", "detail": "The Eel River floods in big storms and parts of the Avenue and Mattole Road can close. Burlington stays open year-round, but check road conditions before you drive."}
+  ],
+  "wildlife": [
+    "Black bears live throughout the park. Keep dog food in the car or the campsite locker.",
+    "Mountain lions are present. Keep dogs leashed and close at dawn and dusk.",
+    "Ticks are common on grass and road edges; Lyme disease occurs in Humboldt County. Check your dog after every walk.",
+    "Poison oak grows along roadsides and river bars. The oil gets on fur and then on you.",
+    "Toxic algae in the Eel River in late summer (see Seasons)."
+  ],
+  "checklist": [
+    "A 6-foot leash, not a retractable one",
+    "Water for two and a collapsible bowl",
+    "Waste bags and a way to carry them to a bin",
+    "A tick comb or tweezers",
+    "A towel for river mud and wet fur",
+    "A kennel booking in Fortuna or Eureka if you want to hike the groves",
+    "An ID tag with your mobile number; cell coverage is spotty along the Avenue"
+  ],
+  "vets": [
+    {"name": "Garberville Redway Veterinary Group", "town": "Garberville"},
+    {"name": "Fortuna Veterinary Clinic", "town": "Fortuna"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Humboldt Redwoods State Park", "url": "https://www.parks.ca.gov/?page_id=425"},
+    {"label": "Humboldt Redwoods Interpretive Association: rules and regulations", "url": "https://humboldtredwoods.org/rules-and-regulations"},
+    {"label": "Humboldt Redwoods Interpretive Association: day use areas", "url": "https://humboldtredwoods.org/node/21"},
+    {"label": "DogTrekker: Humboldt Redwoods State Park", "url": "https://dogtrekker.com/directories/humboldt-redwoods-state-park/"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=425",
+  "verified": "October 2026"
+}

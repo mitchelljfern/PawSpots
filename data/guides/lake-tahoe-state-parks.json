@@ -1,0 +1,308 @@
+{
+  "slug": "lake-tahoe-state-parks",
+  "name": "Lake Tahoe State Parks",
+  "shortName": "Lake Tahoe",
+  "type": "state",
+  "designation": "State Parks",
+  "region": "Lake Tahoe",
+  "nearestTowns": [
+    "South Lake Tahoe",
+    "Tahoe City",
+    "Tahoma",
+    "Kings Beach"
+  ],
+  "tagline": "Camp in the parks, then hike and swim on Forest Service land.",
+  "summary": "The four California state parks on Lake Tahoe (Emerald Bay, D.L. Bliss, Ed Z'berg Sugar Pine Point and Kings Beach) keep dogs to campgrounds, paved areas and picnic spots. No state park beach allows dogs, and the famous Rubicon Trail and the walk down to Vikingsholm are closed to them. The one real exception is the General Creek Fire Road at Sugar Pine Point in summer. The reason to come anyway is everything around the parks: the Tahoe Rim Trail, Forest Service beaches like Kiva Beach, and the Coon Street dog beach in Kings Beach all welcome dogs.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Use the state parks as a campground and a viewpoint, and do your real dog hiking and swimming on the Forest Service trails and dog beaches a few minutes away.",
+  "photo": {
+    "id": "OZ2zHvJ1xI0",
+    "raw": "https://images.unsplash.com/photo-1597796608813-002d2de5123d?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8RW1lcmFsZCUyMEJheSUyMExha2UlMjBUYWhvZXxlbnwwfDB8fHwxNzkxNzY4MDIyfDI&ixlib=rb-4.1.0",
+    "alt": "Emerald Bay at Lake Tahoe, a blue lake surrounded by green pine trees under a clear sky",
+    "author": "Philippe Gauthier",
+    "authorUrl": "https://unsplash.com/@phil_gauthier",
+    "link": "https://unsplash.com/photos/blue-lake-surrounded-by-green-trees-under-blue-sky-during-daytime-OZ2zHvJ1xI0"
+  },
+  "glance": [
+    {
+      "key": "trails",
+      "status": "no",
+      "note": "Only the General Creek Fire Road in summer; no Rubicon, no Vikingsholm"
+    },
+    {
+      "key": "camping",
+      "status": "yes",
+      "note": "Eagle Point, D.L. Bliss and General Creek campgrounds"
+    },
+    {
+      "key": "lodging",
+      "status": "some",
+      "note": "No lodging in the parks; many pet rooms in South Lake Tahoe and Tahoe City"
+    },
+    {
+      "key": "water",
+      "status": "no",
+      "note": "No state park beaches. Dog beaches nearby: Kiva, Coon Street, Zephyr Cove north end"
+    },
+    {
+      "key": "leash",
+      "status": "rule",
+      "note": "6 ft or shorter, at all times"
+    },
+    {
+      "key": "fee",
+      "status": "info",
+      "note": "No pet fee. About $10 per car day use at Emerald Bay, Bliss and Sugar Pine Point"
+    }
+  ],
+  "allowed": [
+    {
+      "name": "Campgrounds",
+      "detail": "Eagle Point at Emerald Bay, the D.L. Bliss campground and General Creek at Sugar Pine Point. Dogs must be in a tent or vehicle at night."
+    },
+    {
+      "name": "Emerald Bay vista overlook",
+      "detail": "The park's own page lists the overlook at the Vikingsholm trail parking lot as open to dogs. It is the classic Emerald Bay view, and the lot fills by mid-morning in summer."
+    },
+    {
+      "name": "Sugar Pine Point paved paths and historic zone",
+      "detail": "Leashed dogs can walk the paved roads and paths around the Hellman-Ehrman Mansion grounds in the day-use area. Not the beach below it."
+    },
+    {
+      "name": "General Creek Fire Road (summer)",
+      "detail": "The dirt fire road at Sugar Pine Point is open to leashed dogs when it is not being groomed as a ski trail. The one real trail-like walk in these parks."
+    },
+    {
+      "name": "Kings Beach sidewalks and picnic areas",
+      "detail": "Leashed dogs are welcome on the paths and picnic lawns at Kings Beach State Recreation Area, just not on the sand."
+    },
+    {
+      "name": "Boats",
+      "detail": "Emerald Bay State Park allows dogs on boats, including at the Boat-In Camp, where they must stay in the camp area."
+    },
+    {
+      "name": "Parking lots and picnic areas at D.L. Bliss",
+      "detail": "Dogs can be in the campground, picnic areas and on paved roads. The beach and all trails are off limits."
+    }
+  ],
+  "notAllowed": [
+    {
+      "name": "Every state park beach",
+      "detail": "Emerald Bay beach, Lester Beach and Calawee Cove at D.L. Bliss, the Sugar Pine Point beach and the sand at Kings Beach. Year-round, no exceptions."
+    },
+    {
+      "name": "Rubicon Trail",
+      "detail": "The cliffside trail between D.L. Bliss and Emerald Bay is closed to dogs along its whole length."
+    },
+    {
+      "name": "Vikingsholm trail",
+      "detail": "The 1-mile walk down to the castle and Emerald Bay beach does not allow dogs. The overlook at the top does."
+    },
+    {
+      "name": "All dirt trails in the parks",
+      "detail": "Including Balancing Rock, Lighthouse Trail, Eagle Point trails, Dolder Nature Trail and the General Creek Trail (the single-track, as opposed to the fire road)."
+    },
+    {
+      "name": "Groomed ski trails in winter",
+      "detail": "Sugar Pine Point grooms Nordic trails when there is snow and dogs are barred from them, including the fire road."
+    },
+    {
+      "name": "Vikingsholm and the Ehrman Mansion",
+      "detail": "No dogs inside the historic buildings or on their tours."
+    }
+  ],
+  "hikes": [
+    {
+      "name": "General Creek Fire Road",
+      "distance": "Up to 6 mi out and back",
+      "difficulty": "Easy",
+      "surface": "Dirt road",
+      "why": "Flat forest road along General Creek from the campground at Sugar Pine Point. Shade, creek sounds and the only dog-legal dirt in any Tahoe state park. Summer and fall only.",
+      "maps": "General Creek Campground, Ed Z'berg Sugar Pine Point State Park"
+    },
+    {
+      "name": "Sugar Pine Point historic zone loop",
+      "distance": "1 mi loop",
+      "difficulty": "Easy",
+      "surface": "Paved",
+      "why": "Paved paths around the Ehrman Mansion lawns and the pier area, with lake views the whole way. Stay off the sand.",
+      "maps": "Hellman-Ehrman Mansion, Sugar Pine Point State Park"
+    },
+    {
+      "name": "Nearby: Tahoe Rim Trail",
+      "distance": "Pick any section",
+      "difficulty": "Moderate to hard",
+      "surface": "Dirt",
+      "why": "Dogs are allowed on every section of the 165-mile loop. Leash in busy areas and at trailheads. Good starts near the parks: Tahoe City and Echo Summit.",
+      "maps": "Tahoe Rim Trail Tahoe City Trailhead"
+    },
+    {
+      "name": "Nearby: Kiva Beach and Tallac Historic Site paths",
+      "distance": "1 to 3 mi",
+      "difficulty": "Easy",
+      "surface": "Dirt and paved",
+      "why": "Forest Service land in South Lake Tahoe. Flat paths link Kiva Beach, Taylor Creek and the Tallac estates, and the beach itself allows leashed dogs. Next door, Baldwin Beach does not.",
+      "maps": "Kiva Beach, South Lake Tahoe"
+    }
+  ],
+  "hangouts": [
+    {
+      "name": "Emerald Bay overlook at the Vikingsholm parking lot",
+      "why": "The postcard view of Fannette Island and the bay, a few steps from the car. Arrive before 9 am in summer or you will not find parking."
+    },
+    {
+      "name": "Kiva Beach (US Forest Service)",
+      "why": "The best dog beach on the south shore: sand, shallow water and a view of Mount Tallac. Leash required on the beach. Gate closes in winter, so walk in from the highway."
+    },
+    {
+      "name": "Coon Street Dog Beach, Kings Beach",
+      "why": "The rocky stretch east of the Kings Beach boat ramp, run by the local utility district. Rocky underfoot in high-water years. Sources disagree on leash rules; read the sign."
+    },
+    {
+      "name": "Zephyr Cove, north end (Nevada)",
+      "why": "Dogs are welcome on the rocky shore north of the marina dock, not on the resort's sandy beach."
+    },
+    {
+      "name": "General Creek Campground",
+      "why": "Open year-round at Sugar Pine Point, so you can walk the campground roads in snow when everything else is closed."
+    }
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Dogs stay in campgrounds, picnic areas and on paved roads. No beaches and no dirt trails, except the General Creek Fire Road in summer.",
+    "Never leave a dog unattended, including in a parked car; Tahoe bears open cars.",
+    "At night, dogs must be inside a tent or vehicle.",
+    "Store all dog food and bowls in the campsite bear box. This is enforced.",
+    "Pick up waste and put it in a bear-proof trash can.",
+    "Dog rules are enforced year-round, including on groomed ski trails in winter.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {
+        "name": "General Creek Campground, Sugar Pine Point",
+        "note": "The only Tahoe state park campground open year-round, and the one with the dog-legal fire road. Reserve on ReserveCalifornia."
+      },
+      {
+        "name": "D.L. Bliss Campground",
+        "note": "Late May to mid-September. Walk to the trailheads without the dog; the campground loops are pleasant for leashed walks."
+      },
+      {
+        "name": "Eagle Point Campground, Emerald Bay",
+        "note": "Summer only, on the point above the bay. Dogs in the campground only, not on the trails that drop to the water."
+      },
+      {
+        "name": "Emerald Bay Boat-In Camp",
+        "note": "Reach it by boat; dogs allowed but must stay in the camp area."
+      },
+      {
+        "name": "Nearby: Forest Service campgrounds",
+        "note": "Fallen Leaf, Meeks Bay and William Kent campgrounds take dogs and sit next to dog-legal trails."
+      }
+    ],
+    "lodging": [
+      {
+        "name": "Basecamp Tahoe City",
+        "note": "Dog rooms for a $45 cleaning fee. Call the hotel directly to book a pet room."
+      },
+      {
+        "name": "Station House Inn, South Lake Tahoe",
+        "note": "Dogs only, $50 per pet per night, 2 per room. Heated patio seating welcomes dogs in season."
+      },
+      {
+        "name": "The Landing Resort and Spa, South Lake Tahoe",
+        "note": "One dog up to 70 lb or two up to 35 lb, $75 per night. On the lake near Lakeview Commons."
+      },
+      {
+        "name": "Fireside Lodge, South Lake Tahoe",
+        "note": "One pet of any size for $35 per night, $15 for each extra pet. Near Camp Richardson and Kiva Beach."
+      },
+      {
+        "name": "Desolation Hotel, South Lake Tahoe",
+        "note": "Two pets of any size, $75 per pet per night. Cats OK too."
+      }
+    ],
+    "boarding": [
+      {
+        "name": "Tahoe Best Friends, South Lake Tahoe",
+        "note": "Cage-free daycare and overnight boarding. Lets you do Rubicon and Vikingsholm."
+      },
+      {
+        "name": "Agate Bay Animal Hospital and Dog Gone Crazy, Tahoe Vista",
+        "note": "Vet clinic with a daycare and boarding side on the north shore. Call ahead for availability."
+      }
+    ]
+  },
+  "seasons": [
+    {
+      "title": "Summer parking",
+      "level": "warn",
+      "detail": "The Emerald Bay overlook lot and D.L. Bliss fill by mid-morning from June to September. Roadside parking on Highway 89 is ticketed and towed. Go early or late."
+    },
+    {
+      "title": "Altitude and cold water",
+      "level": "warn",
+      "detail": "The lake sits at 6,225 feet and the water is cold all year. Dogs tire faster up here; shorten the first day's walks."
+    },
+    {
+      "title": "Wildfire smoke",
+      "level": "warn",
+      "detail": "August and September can bring heavy smoke from regional fires. Check air quality before a long walk; dogs breathe it too."
+    },
+    {
+      "title": "Winter",
+      "level": "info",
+      "detail": "Highway 89 at Emerald Bay closes during storms. Eagle Point and Bliss campgrounds close for the season. Sugar Pine Point stays open with groomed ski trails that are off limits to dogs."
+    }
+  ],
+  "wildlife": [
+    "Black bears are everywhere around Tahoe and break into cars for food. Use the bear box for dog food, bowls and treats.",
+    "Coyotes patrol the campgrounds and beaches at dusk. Keep small dogs leashed and close.",
+    "Mountain lions live in the basin. Do not let a dog run ahead on trails.",
+    "Chipmunks and ground squirrels carry fleas; keep your dog from chasing or digging at them."
+  ],
+  "checklist": [
+    "A 6-foot leash and a long line for Forest Service beaches where it is allowed",
+    "Water and a bowl; the lake water is cold and fine for dogs to drink, but carry your own on trails",
+    "Waste bags, and use the bear-proof bins",
+    "A towel and a dry layer; evenings drop into the 40s even in July",
+    "Booties or paw balm for hot sand and rough granite",
+    "A day-boarding booking if you want to hike Rubicon or walk down to Vikingsholm",
+    "Printed campground confirmation; cell service is poor on the west shore"
+  ],
+  "vets": [
+    {
+      "name": "Blue Lake Animal Care Center",
+      "town": "South Lake Tahoe"
+    },
+    {
+      "name": "Burton Creek Veterinary Clinic",
+      "town": "Tahoe City"
+    },
+    {
+      "name": "Agate Bay Animal Hospital",
+      "town": "Tahoe Vista"
+    }
+  ],
+  "sources": [
+    {
+      "label": "California State Parks: Emerald Bay State Park",
+      "url": "https://www.parks.ca.gov/?page_id=506"
+    },
+    {
+      "label": "California State Parks: D.L. Bliss State Park",
+      "url": "https://www.parks.ca.gov/?page_id=505"
+    },
+    {
+      "label": "California State Parks: Kings Beach State Recreation Area",
+      "url": "https://www.parks.ca.gov/?page_id=511"
+    },
+    {
+      "label": "Sierra State Parks Foundation: summer quick facts for the Tahoe parks",
+      "url": "https://www.sierrastateparks.org/blog/quick-facts-summer-in-the-lake-tahoe-donner-state-parks"
+    }
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=506",
+  "verified": "October 2026"
+}

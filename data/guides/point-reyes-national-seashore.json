@@ -1,0 +1,296 @@
+{
+  "slug": "point-reyes-national-seashore",
+  "name": "Point Reyes National Seashore",
+  "shortName": "Point Reyes",
+  "type": "national",
+  "designation": "National Seashore",
+  "region": "Bay Area",
+  "nearestTowns": [
+    "Point Reyes Station",
+    "Inverness",
+    "Olema",
+    "Bolinas"
+  ],
+  "tagline": "Four big beaches and a handful of trails, if you read the fine print.",
+  "summary": "Point Reyes is better for dogs than most national parks, but only in the exact spots the park lists. Leashed dogs can walk long stretches of Kehoe Beach, Limantour Beach and the Great Beach from North Beach to South Beach, plus the short Kehoe Beach Trail and a cluster of ridge and bay trails on the park's eastern edge. Everything else, which is most of the headline hiking, is off limits. Snowy plover closures shift the beach boundaries from March to September, so check the current conditions page the morning you go.",
+  "score": 3,
+  "scoreLabel": "Moderate",
+  "verdict": "Bring the dog for a beach weekend with a ridge walk thrown in. Leave them home if your list is Tomales Point, Alamere Falls or the lighthouse.",
+  "photo": {
+    "id": "K01I7bOjCCA",
+    "raw": "https://images.unsplash.com/photo-1638596372965-e64d83b7b7e8?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8UG9pbnQlMjBSZXllcyUyME5hdGlvbmFsJTIwU2Vhc2hvcmV8ZW58MHwwfHx8MTc5MTc2ODAyMXwy&ixlib=rb-4.1.0",
+    "alt": "Aerial view of the Point Reyes Lighthouse on its rocky headland above the Pacific",
+    "author": "Leo_Visions",
+    "authorUrl": "https://unsplash.com/@leo_visions_",
+    "link": "https://unsplash.com/photos/an-aerial-view-of-a-lighthouse-on-a-rocky-shore-K01I7bOjCCA"
+  },
+  "glance": [
+    {
+      "key": "trails",
+      "status": "some",
+      "note": "Kehoe Beach Trail plus Bolinas Ridge, Cross Marin and Tomales Bay trails on the east edge"
+    },
+    {
+      "key": "camping",
+      "status": "no",
+      "note": "All park campgrounds are hike-in and closed to pets. Samuel P. Taylor nearby takes dogs"
+    },
+    {
+      "key": "lodging",
+      "status": "info",
+      "note": "Nothing in the park; dog-friendly inns in Point Reyes Station, Inverness and Olema"
+    },
+    {
+      "key": "water",
+      "status": "yes",
+      "note": "Kehoe, Limantour, North and South beaches, with seasonal plover closures"
+    },
+    {
+      "key": "leash",
+      "status": "rule",
+      "note": "6 ft or shorter, at all times; no retractables"
+    },
+    {
+      "key": "fee",
+      "status": "info",
+      "note": "No entry fee and no pet fee"
+    }
+  ],
+  "allowed": [
+    {
+      "name": "Kehoe Beach, north of the trail",
+      "detail": "Year-round, on leash. The stretch south of the Kehoe Beach Trail is closed to dogs from March 1 to September 30 for nesting snowy plovers."
+    },
+    {
+      "name": "Kehoe Beach Trail",
+      "detail": "The 0.6-mile path from Pierce Point Road to the sand. The one trail in the main part of the seashore that dogs can use."
+    },
+    {
+      "name": "Limantour Beach, southeast section",
+      "detail": "From the parking lot southeast toward Coast Camp. The northwest spit is closed to protect harbor seals and birds."
+    },
+    {
+      "name": "Great Beach: North Beach to South Beach",
+      "detail": "From the North Beach parking lot south past the South Beach lot to the old lifeboat station. North of the North Beach lot is closed March 1 to September 30."
+    },
+    {
+      "name": "Bolinas Ridge, Cross Marin, Tomales Bay and Jewell trails",
+      "detail": "These are in the Golden Gate National Recreation Area land along the park's east side, and they take leashed dogs. Also McCurdy and Randall trails and the Giacomini Wetlands paths at Point Reyes Station."
+    },
+    {
+      "name": "Commonweal and Niman Ranch area near Bolinas",
+      "detail": "Trails and ranch roads south of the Commonweal entrance road and west of Mesa Road are open to leashed dogs."
+    },
+    {
+      "name": "Roads, parking lots and the Bear Valley picnic area",
+      "detail": "Your dog can join you at the Bear Valley Visitor Center picnic tables and lawn, but not inside."
+    }
+  ],
+  "notAllowed": [
+    {
+      "name": "Most trails",
+      "detail": "Bear Valley Trail, Tomales Point, Chimney Rock, Abbotts Lagoon, Estero, Sky Trail, Coast Trail and the route to Alamere Falls are all closed to dogs. So are the lighthouse stairs."
+    },
+    {
+      "name": "Drakes Beach",
+      "detail": "No dogs, year-round. Elephant seals use it in winter and the cafe area is busy."
+    },
+    {
+      "name": "Beach sections during plover season",
+      "detail": "March 1 to September 30: no dogs south of the Kehoe Beach Trail, or north of the North Beach parking lot. The exact lines are posted on the sand."
+    },
+    {
+      "name": "All park campgrounds",
+      "detail": "Sky, Coast, Glen and Wildcat camps and the Tomales Bay boat-in beaches are hike-in or boat-in and closed to pets."
+    },
+    {
+      "name": "Tomales Bay State Park beaches",
+      "detail": "Hearts Desire and the other state park beaches on the bay do not allow dogs."
+    },
+    {
+      "name": "Visitor centers and the lighthouse",
+      "detail": "Bear Valley, Kenneth C. Patrick and the Lighthouse visitor centers are people only. Service dogs excepted."
+    }
+  ],
+  "hikes": [
+    {
+      "name": "Kehoe Beach Trail and beach",
+      "distance": "1.2 mi out and back, plus the sand",
+      "difficulty": "Easy",
+      "surface": "Dirt, then sand",
+      "why": "A short walk beside a marsh to a wide, wild beach with layered cliffs. Turn north on the sand and you can walk for miles. Roadside parking on Pierce Point Road.",
+      "maps": "Kehoe Beach Trailhead, Point Reyes"
+    },
+    {
+      "name": "Tomales Bay Trail",
+      "distance": "About 2.5 mi out and back",
+      "difficulty": "Easy",
+      "surface": "Dirt and old ranch road",
+      "why": "Rolling pasture down to the edge of Tomales Bay, with egrets and the occasional elk across the water. Not the same as the Tomales Point Trail, which bans dogs. Trailhead on Highway 1 north of Point Reyes Station.",
+      "maps": "Tomales Bay Trailhead, Highway 1, Point Reyes Station"
+    },
+    {
+      "name": "Cross Marin Trail",
+      "distance": "Up to 5 mi one way",
+      "difficulty": "Easy",
+      "surface": "Paved",
+      "why": "An old railroad grade along Lagunitas Creek under redwoods, running through Samuel P. Taylor State Park. Flat, shaded and good for older dogs. Start at the Platform Bridge end to avoid the day-use fee.",
+      "maps": "Cross Marin Trail, Platform Bridge Road, Lagunitas"
+    },
+    {
+      "name": "Bolinas Ridge Trail",
+      "distance": "Up to 11 mi one way; most people do 3 to 5",
+      "difficulty": "Moderate",
+      "surface": "Dirt fire road",
+      "why": "Big views over Tomales Bay from the north end on Sir Francis Drake Boulevard, then rolling grassland. Cattle graze here, so keep the leash short.",
+      "maps": "Bolinas Ridge Trailhead, Sir Francis Drake Boulevard, Olema"
+    },
+    {
+      "name": "Great Beach, North to South Beach",
+      "distance": "About 3 mi one way",
+      "difficulty": "Easy",
+      "surface": "Sand",
+      "why": "Wide open Pacific beach with huge surf and almost nobody on it. Dogs stay on leash and well back from the water; the waves here are dangerous.",
+      "maps": "North Beach Parking Lot, Point Reyes"
+    },
+    {
+      "name": "Giacomini Wetlands",
+      "distance": "1 to 2 mi",
+      "difficulty": "Easy",
+      "surface": "Gravel and dirt",
+      "why": "Flat levee paths through restored marsh on the edge of Point Reyes Station. Birds everywhere and a 5-minute drive from the bakeries.",
+      "maps": "Giacomini Wetlands Trail, Point Reyes Station"
+    }
+  ],
+  "hangouts": [
+    {
+      "name": "Limantour Beach",
+      "why": "The most sheltered of the dog beaches, with the Inverness Ridge behind you and Drakes Bay in front. Walk southeast from the lot."
+    },
+    {
+      "name": "Bear Valley Visitor Center lawn",
+      "why": "Picnic tables, shade and a creek beside the main visitor center. Good staging spot while someone pops inside for a map."
+    },
+    {
+      "name": "Point Reyes Station",
+      "why": "A one-street town where dogs are welcome on most patios and in several shops. Cowgirl Creamery and the bakery both have outdoor seating."
+    },
+    {
+      "name": "South Beach parking lot",
+      "why": "A paved lot right on the Great Beach with restrooms and an easy ramp onto the sand. Less wind than North Beach on many days."
+    }
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times. The park discourages variable-length leashes.",
+    "Stay inside the exact beach sections the park lists. The boundaries are posted on signs at the trail and on the sand.",
+    "From March 1 to September 30, keep dogs off the beach south of the Kehoe Beach Trail and north of the North Beach parking lot. Snowy plovers nest there.",
+    "No dogs on any trail except the ones the park names, and no dogs in any park campground.",
+    "Pick up waste and carry it out. There are bins at the main parking lots only.",
+    "Keep well away from elephant seals, harbor seals and tule elk. Rangers close beach sections when seals pup.",
+    "Never leave a dog in a car at the lighthouse or Chimney Rock lots. On a sunny day the wind makes it feel safe; it is not.",
+    "Service dogs may go anywhere their handler goes. Emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {
+        "name": "Park campgrounds",
+        "note": "Sky, Coast, Glen, Wildcat and the Tomales Bay boat-in sites are all closed to pets."
+      },
+      {
+        "name": "Samuel P. Taylor State Park, Lagunitas",
+        "note": "The best option, 20 minutes from Bear Valley under redwoods. Dogs in the campground, picnic area and on the Cross Marin Trail; not on other trails, in the creek or in the cabins."
+      },
+      {
+        "name": "Olema Campground",
+        "note": "Private campground at the Olema crossroads, closest to the park. Call to confirm current pet rules before you book."
+      },
+      {
+        "name": "Lawson's Landing, Dillon Beach",
+        "note": "Beach camping at the mouth of Tomales Bay, 40 minutes north. Check their dog policy when reserving."
+      }
+    ],
+    "lodging": [
+      {
+        "name": "Point Reyes Station Inn",
+        "note": "Dog-friendly bed and breakfast in the village, walking distance to cafes."
+      },
+      {
+        "name": "Tomales Bay Resort & Marina, Inverness",
+        "note": "Dogs in designated rooms, $50 per pet per night. Right on the bay."
+      },
+      {
+        "name": "Olema House",
+        "note": "Dog-friendly hotel at the Olema crossroads, 2 minutes from the Bear Valley entrance."
+      },
+      {
+        "name": "Nick's Cove Cottages, Marshall",
+        "note": "Dog-friendly cottages over Tomales Bay, 25 minutes north of Point Reyes Station."
+      }
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {
+      "title": "Plover season (March 1 to September 30)",
+      "level": "warn",
+      "detail": "Beach boundaries shrink. Kehoe Beach south of the trail and the Great Beach north of the North Beach lot are closed to dogs. Signs mark the lines; fines are real."
+    },
+    {
+      "title": "Summer fog and wind",
+      "level": "info",
+      "detail": "Expect 55 degrees and a stiff wind on the outer beaches in July. Limantour and the east-side trails are usually warmer and calmer."
+    },
+    {
+      "title": "Elephant seal season (December to March)",
+      "level": "warn",
+      "detail": "Seals haul out on Drakes Beach and around Chimney Rock, and the park sometimes closes extra beach sections. Check current conditions before you drive out."
+    },
+    {
+      "title": "Fall (September to November)",
+      "level": "info",
+      "detail": "The warmest, clearest weeks of the year, and the plover closures lift on October 1. The best time to bring a dog."
+    }
+  ],
+  "wildlife": [
+    "Tule elk roam Tomales Point and the Limantour area. Bulls are aggressive in the fall rut and will charge a dog.",
+    "Elephant seals and harbor seals rest on beaches from winter through spring. Stay 100 yards back; a dog can panic a whole colony.",
+    "Ticks carry Lyme disease here and are heavy in the coastal scrub. Check your dog every night.",
+    "Sneaker waves and rip currents make the Great Beach and Kehoe unsafe for swimming, for people and dogs. Keep the leash on near the water.",
+    "Poison oak lines most trails. Wipe the dog down before they climb into the car or onto the bed."
+  ],
+  "checklist": [
+    "A 6-foot fixed leash; retractables are discouraged by the park",
+    "Windproof jacket for you and a towel for a sandy, wet dog",
+    "Water and a bowl: there is no fresh water at the beach lots",
+    "Waste bags, plus a bag to carry full ones back to the car",
+    "Tick remover and a quick nightly check",
+    "A screenshot of the park's current conditions page for beach closures",
+    "Booties if your dog has soft paws; the Great Beach sand gets hot in fall"
+  ],
+  "vets": [
+    {
+      "name": "Point Reyes Animal Hospital",
+      "town": "Point Reyes Station"
+    }
+  ],
+  "sources": [
+    {
+      "label": "NPS: Pets at Point Reyes",
+      "url": "https://www.nps.gov/pore/planyourvisit/pets.htm"
+    },
+    {
+      "label": "NPS: Dogs and pets site bulletin (PDF)",
+      "url": "https://www.nps.gov/pore/learn/upload/sitebulletin_dogs_and_pets.pdf"
+    },
+    {
+      "label": "California State Parks: Samuel P. Taylor",
+      "url": "https://www.parks.ca.gov/?page_id=469"
+    },
+    {
+      "label": "Point Reyes Insider: dog-friendly lodging",
+      "url": "https://pointreyesinsider.com/dog-friendly-lodging-in-point-reyes/"
+    }
+  ],
+  "official": "https://www.nps.gov/pore/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}

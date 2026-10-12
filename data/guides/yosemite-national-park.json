@@ -1,0 +1,122 @@
+{
+  "slug": "yosemite-national-park",
+  "name": "Yosemite National Park",
+  "shortName": "Yosemite",
+  "type": "national",
+  "designation": "National Park",
+  "region": "Sierra Nevada",
+  "nearestTowns": ["Mariposa", "Oakhurst", "Groveland", "El Portal"],
+  "tagline": "Big granite views from paved paths. Almost no trails.",
+  "summary": "Yosemite follows the standard national park rule: dogs stay on pavement and in campgrounds. That still gets you Yosemite Falls, El Capitan Meadow, Glacier Point and a lot of riverbank. What it does not get you is any real hiking, and no lodge or tent cabin in the park takes pets.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for a camping trip with easy valley strolls. Leave them home if hiking is the point of the trip.",
+  "photo": {
+    "id": "ndN00KmbJ1c",
+    "raw": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8NHx8WW9zZW1pdGUlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHwwfHx8MTc5MTc2NzY5OHwy&ixlib=rb-4.1.0",
+    "alt": "El Capitan rising above a grassy meadow and tall pine trees in Yosemite Valley",
+    "author": "Adam Kool",
+    "authorUrl": "https://unsplash.com/@adamkool",
+    "link": "https://unsplash.com/photos/el-capitan-in-yosemite-national-park-ndN00KmbJ1c"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "Paved paths and one meadow loop only"},
+    {"key": "camping", "status": "yes",  "note": "Most drive-in campgrounds; not Camp 4 or group sites"},
+    {"key": "lodging", "status": "no",   "note": "No pets in any lodge, cabin or tent cabin inside the park"},
+    {"key": "water",   "status": "some", "note": "Merced River banks next to paved paths and campgrounds"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. $35 per car entry, good for 7 days"}
+  ],
+  "allowed": [
+    {"name": "Paved roads, sidewalks and bike paths", "detail": "This is the big one. Yosemite Valley has about 12 miles of paved multi-use path, and dogs are welcome on all of it unless a sign says otherwise."},
+    {"name": "Lower Yosemite Fall loop", "detail": "A flat, paved 1-mile loop to the base of the falls. The best short walk in the park with a dog, and loudest in May and June."},
+    {"name": "Bridalveil Fall path", "detail": "Short paved walk from the parking area to the viewing spot at the bottom of the fall. Expect spray in spring."},
+    {"name": "Glacier Point", "detail": "The paved 0.3-mile path from the parking lot to the famous overlook is open to dogs. Road usually open late May to October."},
+    {"name": "Wawona Meadow Loop", "detail": "The one real trail dogs may use: a 3.5-mile dirt loop road around Wawona Meadow, near the Wawona Hotel."},
+    {"name": "Campgrounds", "detail": "Every drive-in campground, except walk-in campgrounds like Camp 4 and all group sites."},
+    {"name": "Picnic areas and parking lots", "detail": "Including Cathedral Beach, Swinging Bridge, El Capitan and Church Bowl picnic areas."}
+  ],
+  "notAllowed": [
+    {"name": "Every unpaved trail", "detail": "That includes the Mist Trail, Four Mile Trail, Mirror Lake trail, Vernal Fall and Nevada Fall. The paved road to Mirror Lake is fine; the dirt loop around it is not."},
+    {"name": "Mariposa Grove of Giant Sequoias", "detail": "No dogs anywhere in the grove, carried or not. Try the paved path at Tuolumne Grove instead, and stay on the pavement there."},
+    {"name": "Shuttle buses", "detail": "Dogs cannot ride the free Valley or Mariposa Grove shuttles, so plan to park near what you want to see."},
+    {"name": "Lodging and tent cabins", "detail": "The Ahwahnee, Yosemite Valley Lodge, Curry Village, Housekeeping Camp, Wawona Hotel and White Wolf do not take pets."},
+    {"name": "Buildings", "detail": "Visitor centers, stores and restaurants. Patios are at the manager's discretion."},
+    {"name": "Wilderness and backcountry", "detail": "No dogs on any backpacking route or in the High Sierra Camps."}
+  ],
+  "hikes": [
+    {"name": "Lower Yosemite Fall Loop", "distance": "1 mi loop", "difficulty": "Easy", "surface": "Paved", "why": "Flat, shaded and ends at the base of a 320-foot waterfall. Benches along the way for rests.", "maps": "Lower Yosemite Fall Trailhead"},
+    {"name": "Yosemite Valley Loop (bike path)", "distance": "Up to 12 mi, pick any section", "difficulty": "Easy", "surface": "Paved", "why": "Walk as little or as much as you like under El Capitan and Half Dome. The Cook's Meadow and Sentinel Bridge section is the most scenic mile.", "maps": "Cook's Meadow Loop, Yosemite Valley"},
+    {"name": "Wawona Meadow Loop", "distance": "3.5 mi loop", "difficulty": "Easy", "surface": "Dirt road", "why": "The only unpaved route open to dogs. Flat, quiet, wildflowers in June and far fewer people than the Valley.", "maps": "Wawona Meadow Loop Trailhead"},
+    {"name": "Bridalveil Fall", "distance": "0.5 mi out and back", "difficulty": "Easy", "surface": "Paved", "why": "Ten minutes to a 620-foot waterfall. Good first stop coming in from the south entrance.", "maps": "Bridalveil Fall Parking"},
+    {"name": "Glacier Point Overlook", "distance": "0.6 mi out and back", "difficulty": "Easy", "surface": "Paved", "why": "The best view in the park for the least effort. Half Dome straight ahead, the Valley 3,200 feet below.", "maps": "Glacier Point"}
+  ],
+  "hangouts": [
+    {"name": "Cook's Meadow and Sentinel Bridge", "why": "Classic Half Dome reflection spot at sunset, right off the paved path."},
+    {"name": "Cathedral Beach picnic area", "why": "Sandy river bar on the Merced with El Capitan straight across. Dogs on leash can wade at the edge."},
+    {"name": "El Capitan Meadow", "why": "Lie back and watch climbers on the wall. Stay on the roadside edge, as the meadow interior is closed for restoration."},
+    {"name": "Tunnel View", "why": "The postcard view, from a paved parking lot. No walking required."},
+    {"name": "Tuolumne Meadows (summer)", "why": "Paved road shoulders and the campground at 8,600 feet, cool when the Valley is hot. Tioga Road opens around late May."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times, everywhere.",
+    "Stay on pavement, in campgrounds or in picnic areas. Carrying a dog does not make a trail legal.",
+    "Never leave a dog unattended, including tied up at a campsite or in a parked car.",
+    "Pick up waste and put it in a trash can, not a bear box.",
+    "Store dog food in the bear locker at your campsite, never in your car or tent.",
+    "Dogs cannot ride any park shuttle bus.",
+    "Rangers can fine you for violations. Fines start at $100 and go up for repeat offences.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Upper Pines, Lower Pines and North Pines", "note": "In Yosemite Valley. Reserve on Recreation.gov up to 5 months ahead; they sell out in minutes."},
+      {"name": "Wawona Campground", "note": "South end of the park, next to the Wawona Meadow Loop. Best base for dog owners."},
+      {"name": "Hodgdon Meadow Campground", "note": "Near the Big Oak Flat entrance, open year-round. Pets in standard sites only."},
+      {"name": "Bridalveil Creek and Tuolumne Meadows", "note": "Summer-only high country campgrounds. Pets OK in standard sites, not group sites."},
+      {"name": "Not allowed", "note": "Camp 4 (walk-in) and all group campsites."}
+    ],
+    "lodging": [
+      {"name": "Tenaya at Yosemite, Fish Camp", "note": "2 miles from the south entrance. Pet rooms with a fee, dog beds and a welcome kit."},
+      {"name": "Yosemite View Lodge, El Portal", "note": "On the Merced River at the Arch Rock entrance. Pet-friendly rooms."},
+      {"name": "Vacation rentals in Yosemite West and Wawona", "note": "Inside the park boundary; many allow dogs. Check the listing."},
+      {"name": "Rush Creek Lodge and Evergreen Lodge, Groveland", "note": "Pet-friendly rooms near the Big Oak Flat entrance."}
+    ],
+    "boarding": [
+      {"name": "Tenaya at Yosemite kennel and dog-sitting", "note": "Day kennel and sitters for guests, advance notice required. Lets you hike the Mist Trail or Mariposa Grove."},
+      {"name": "Yosemite Valley Stable kennel", "note": "Reports conflict on whether the seasonal in-park kennel still runs. Call the park at (209) 372-0200 before relying on it."}
+    ]
+  },
+  "seasons": [
+    {"title": "Spring (April to June)", "level": "info", "detail": "Waterfalls at full roar and the paved paths are at their best. Expect spray at Lower Yosemite Fall and Bridalveil."},
+    {"title": "Summer heat and crowds", "level": "warn", "detail": "Valley pavement reaches paw-burning temperatures by midday in July and August. Walk early, and bring more water than you think."},
+    {"title": "Reservations", "level": "warn", "detail": "Peak-season entry reservations have been required in recent summers. Check the park website before you drive up."},
+    {"title": "Winter", "level": "info", "detail": "Glacier Point Road and Tioga Road close with snow. The Valley stays open and quiet, and dogs are fine on plowed paths."}
+  ],
+  "wildlife": [
+    "Black bears live throughout the park. Keep dog food, bowls and treats in the bear locker.",
+    "Coyotes hunt in the Valley meadows and will approach small dogs. Keep the leash short at dawn and dusk.",
+    "Rattlesnakes are common below 7,000 feet on sunny rock and roadsides from spring to fall.",
+    "Foxtails (barbed grass seeds) fill the meadows in summer and can lodge in paws, ears and noses."
+  ],
+  "checklist": [
+    "Water for two, and a collapsible bowl",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags and a way to carry them back to a bin",
+    "Paw balm or booties for hot pavement",
+    "Current vaccination records if you plan to use a kennel",
+    "A photo of your dog and an ID tag with your mobile number",
+    "A cooling mat for the campsite in summer"
+  ],
+  "vets": [
+    {"name": "Oakhurst Veterinary Hospital", "town": "Oakhurst"},
+    {"name": "Mariposa Veterinary Hospital", "town": "Mariposa"}
+  ],
+  "sources": [
+    {"label": "NPS: Pets in Yosemite", "url": "https://www.nps.gov/yose/planyourvisit/pets.htm"},
+    {"label": "NPS: Yosemite campgrounds", "url": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm"},
+    {"label": "Tenaya at Yosemite pet policy", "url": "https://www.tenayalodge.com/"}
+  ],
+  "official": "https://www.nps.gov/yose/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}

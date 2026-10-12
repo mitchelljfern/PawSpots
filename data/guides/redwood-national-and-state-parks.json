@@ -1,0 +1,120 @@
+{
+  "slug": "redwood-national-and-state-parks",
+  "name": "Redwood National and State Parks",
+  "shortName": "Redwoods",
+  "type": "national",
+  "designation": "National & State Parks",
+  "region": "North Coast",
+  "nearestTowns": ["Crescent City", "Klamath", "Orick", "Trinidad"],
+  "tagline": "Big beaches and two gravel roads through old growth. No trails.",
+  "summary": "Redwood is really four parks run together, and the dog rule is the same in all of them: leashed dogs can use campgrounds, picnic areas, roads, parking lots and the drive-up beaches, but no trail at all. The saving grace is Cal-Barrel Road and Walker Road, two quiet gravel roads that take you and your dog right into old-growth redwoods. Add miles of empty sand at Gold Bluffs and Crescent Beach and you have a decent weekend, as long as nobody in the car is set on Fern Canyon or Tall Trees.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring the dog for beach walks, camping and the two gravel roads. Leave them with a sitter if the famous groves and Fern Canyon are the whole point.",
+  "photo": {
+    "id": "tShk_bW2PtU",
+    "raw": "https://images.unsplash.com/photo-1758438919146-f3f59a6d2544?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Nnx8UmVkd29vZCUyME5hdGlvbmFsJTIwUGFya3xlbnwwfDB8fHwxNzkxNzY4MDIxfDI&ixlib=rb-4.1.0",
+    "alt": "Sunbeams cutting through fog between giant redwood trunks, with a lone walker on a forest road",
+    "author": "Zetong Li",
+    "authorUrl": "https://unsplash.com/@zetong",
+    "link": "https://unsplash.com/photos/person-walking-through-a-misty-forest-with-sunbeams-tShk_bW2PtU"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No trails. Two gravel roads through old growth are the workaround"},
+    {"key": "camping", "status": "yes",  "note": "All 4 developed campgrounds; not the backcountry camps"},
+    {"key": "lodging", "status": "info", "note": "No lodges in the park; pet motels in Crescent City and Trinidad"},
+    {"key": "water",   "status": "yes",  "note": "Crescent Beach, Gold Bluffs Beach and Freshwater Spit"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "National park is free. State park day-use fees at Gold Bluffs Beach and campground gates"}
+  ],
+  "allowed": [
+    {"name": "Cal-Barrel Road", "detail": "A 3-mile gravel road off Newton B. Drury Parkway in Prairie Creek Redwoods State Park. The park itself points dog owners here. It is the closest thing to an old-growth redwood hike you can do with a dog."},
+    {"name": "Walker Road", "detail": "A gravel road in Jedediah Smith Redwoods State Park, off Highway 199. Quiet, flat, big trees, and it ends near the Smith River."},
+    {"name": "Drive-up beaches", "detail": "Crescent Beach near Crescent City, Gold Bluffs Beach near Orick and Freshwater Spit south of Orick. All on leash. Miles of sand with hardly anyone on it."},
+    {"name": "Campgrounds", "detail": "Jedediah Smith, Mill Creek, Elk Prairie and Gold Bluffs Beach. Dogs in your site and on the campground roads."},
+    {"name": "Picnic areas and overlooks", "detail": "Crescent Beach picnic area, Elk Meadow day use area, Klamath River Overlook and Redwood Creek Overlook. Stay on the pavement at the overlooks."},
+    {"name": "Parking lots", "detail": "Including the lots at Stout Grove, Lady Bird Johnson Grove, Tall Trees and Fern Canyon. Your dog can wait with one person while the others walk the trail."},
+    {"name": "Public roads", "detail": "Howland Hill Road and Newton B. Drury Parkway pass through huge trees. Dogs can ride along or walk the shoulder on leash, but both roads carry traffic, so keep it short."}
+  ],
+  "notAllowed": [
+    {"name": "Every trail", "detail": "That includes the headline walks: Fern Canyon, Lady Bird Johnson Grove, Stout Grove, Tall Trees Grove, Boy Scout Tree Trail and Trillium Falls. Carrying a small dog does not make a trail legal."},
+    {"name": "Backcountry campsites", "detail": "The hike-in and bike-in camps are closed to pets."},
+    {"name": "Ranger-led programs", "detail": "Campfire talks and guided walks are people only."},
+    {"name": "Buildings", "detail": "Visitor centers at Crescent City, Hiouchi, Prairie Creek and Kuchel are closed to pets. Service dogs excepted."},
+    {"name": "Elk herds", "detail": "Not a written rule, but a real one. Roosevelt elk at Elk Meadow and Elk Prairie will charge a dog. Watch from the car or keep well back."}
+  ],
+  "hikes": [
+    {"name": "Cal-Barrel Road", "distance": "3 mi one way, turn around anywhere", "difficulty": "Moderate", "surface": "Gravel road", "why": "Old-growth redwoods on both sides, very little traffic, and a steady uphill grade that works the dog. The road is often closed to cars in winter, which makes it even better for walking.", "maps": "Cal-Barrel Road, Prairie Creek Redwoods State Park"},
+    {"name": "Walker Road", "distance": "About 2 mi one way", "difficulty": "Easy", "surface": "Gravel road", "why": "Flat and shaded, through the Jedediah Smith redwoods, ending near the Smith River. Quieter than anything on the Howland Hill side.", "maps": "Walker Road, Jedediah Smith Redwoods State Park"},
+    {"name": "Gold Bluffs Beach", "distance": "Up to 10 mi of sand, pick any stretch", "difficulty": "Easy", "surface": "Sand", "why": "Wide, wild beach backed by cliffs. Start from the campground or the Fern Canyon lot. Driftwood, elk in the dunes and nobody around in the off-season.", "maps": "Gold Bluffs Beach Campground"},
+    {"name": "Crescent Beach", "distance": "Up to 2 mi each way", "difficulty": "Easy", "surface": "Sand", "why": "Easiest beach to reach, 5 minutes from Crescent City on Enderts Beach Road. Picnic tables and a sheltered feel on calm days.", "maps": "Crescent Beach Picnic Area, Crescent City"},
+    {"name": "Freshwater Spit", "distance": "1 to 3 mi", "difficulty": "Easy", "surface": "Sand", "why": "The long sand bar between Freshwater Lagoon and the ocean, right off Highway 101 south of Orick. Park at the pullouts and walk.", "maps": "Freshwater Lagoon, Orick"}
+  ],
+  "hangouts": [
+    {"name": "Klamath River Overlook", "why": "Paved viewpoint 600 feet above the river mouth. Whales in spring and fall, sea lions all year. Stay on the paved area, not the trail down."},
+    {"name": "Crescent Beach picnic area", "why": "Tables on the grass above the beach. Good lunch stop before or after a Crescent City motel night."},
+    {"name": "Elk Meadow day use area", "why": "Big lot and lawn on Davison Road where elk graze. Picnic with the dog on leash and keep your distance from the herd."},
+    {"name": "Jedediah Smith campground riverbank", "why": "The Smith River runs clear and green past the campground. Leashed dogs can cool their paws from the campground side in summer."},
+    {"name": "Stout Grove parking lot", "why": "Take turns: one person walks the 0.5-mile grove loop while the other sits with the dog among the big trees at the lot."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times, everywhere in the parks.",
+    "No dogs on any trail, in either the national park or the three state parks. Roads, campgrounds, picnic areas, parking lots and drive-up beaches only.",
+    "Never leave a dog unattended, including tied up at a campsite or in a parked car.",
+    "Pick up waste and carry it to a trash can. Bags are not always provided.",
+    "Store dog food in the bear locker at your campsite, not in your tent or car.",
+    "Dogs cannot join ranger programs or enter visitor centers.",
+    "Keep well away from Roosevelt elk. They are wild, they are big, and they go after dogs.",
+    "Service dogs are allowed on trails and in buildings. Emotional support animals follow the pet rules.",
+    "Ask at any visitor center about the BARK Ranger program. Your dog can earn a tag for following the rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Jedediah Smith Campground", "note": "On the Smith River near Hiouchi, open year-round. Walker Road and Howland Hill Road are minutes away. Book on ReserveCalifornia."},
+      {"name": "Elk Prairie Campground", "note": "In Prairie Creek Redwoods, open year-round. Closest camp to Cal-Barrel Road. Elk wander through, so keep the leash short."},
+      {"name": "Gold Bluffs Beach Campground", "note": "Right on the sand at the end of Davison Road. The best spot in the parks for a dog. Unpaved road, no trailers over 24 feet."},
+      {"name": "Mill Creek Campground", "note": "In Del Norte Coast Redwoods south of Crescent City. Summer only, usually May to September."},
+      {"name": "Not allowed", "note": "All backcountry and bike-in campsites. The 4 developed campgrounds cost about $35 a night and must be booked at least 48 hours ahead."}
+    ],
+    "lodging": [
+      {"name": "Crescent City motels", "note": "Several take dogs, including Motel 6, Anchor Beach Inn and North Coast Inn. Fees and size limits vary, so check the listing."},
+      {"name": "Trinidad and McKinleyville vacation rentals", "note": "About 40 minutes south of Orick. Many cottages welcome dogs with no fee; some have fenced yards."},
+      {"name": "Best Western Arcata Inn", "note": "An hour south of the park but a reliable pet-friendly hotel on the way in from the south."},
+      {"name": "Klamath", "note": "Closest town to the middle of the parks, but we could not confirm a pet-friendly motel there. Call ahead."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Fog and drizzle all year", "level": "info", "detail": "Expect 50s and 60s even in August, and fog most mornings on the coast. Great for dogs, bad for drying towels. Rain is heavy from November to April."},
+    {"title": "Summer permits at Fern Canyon and Gold Bluffs", "level": "warn", "detail": "In recent summers a free day-use permit has been required to drive Davison Road to Gold Bluffs Beach, plus a $12 state park fee. Book ahead on the park website, dog or no dog."},
+    {"title": "Elk rut (September and October)", "level": "danger", "detail": "Bull elk are aggressive in the fall and will charge a dog. Stay in the car near Elk Meadow and Elk Prairie during the rut."},
+    {"title": "Off-season closures", "level": "info", "detail": "Mill Creek Campground and some visitor centers close from October to May. Cal-Barrel Road usually closes to cars in winter but stays open to walkers."}
+  ],
+  "wildlife": [
+    "Roosevelt elk live along Highway 101, Davison Road and in the campgrounds. Keep 25 yards back and never let your dog bark at them.",
+    "Black bears and mountain lions are in all four parks. Use the bear lockers and keep small dogs close at dusk.",
+    "Ticks are thick in the coastal brush from spring to fall. Check ears and armpits every night.",
+    "Banana slugs are everywhere after rain. They are harmless, but do not let your dog eat them.",
+    "Sneaker waves and rip currents hit every beach here. Keep the leash on near the water and never let a dog swim."
+  ],
+  "checklist": [
+    "Rain jacket for you and a towel or two for the dog",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags and a container to carry them back to a bin",
+    "Tick remover and a tick check routine",
+    "Gold Bluffs Beach and Fern Canyon permit printed or saved, if you plan to drive Davison Road",
+    "Current vaccination records in case you need a vet",
+    "Headlamp for campground walks under the trees, where it gets dark early"
+  ],
+  "vets": [
+    {"name": "All Creatures Animal Hospital & Bird Clinic", "town": "Crescent City"},
+    {"name": "Crescent Animal Medical Center", "town": "Crescent City"}
+  ],
+  "sources": [
+    {"label": "NPS: Pets in Redwood National and State Parks", "url": "https://www.nps.gov/redw/planyourvisit/pets.htm"},
+    {"label": "NPS: Redwood 2026 visitor guide", "url": "https://home.nps.gov/redw/learn/news/upload/REDW-Visitor-Guide-2026.pdf"},
+    {"label": "Stay in the Redwoods: dog-friendly trails near the park", "url": "https://www.stayintheredwoods.com/dog-friendly-trails-near-redwood-national-park/"}
+  ],
+  "official": "https://www.nps.gov/redw/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}

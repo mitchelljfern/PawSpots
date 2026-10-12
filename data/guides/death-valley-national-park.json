@@ -1,0 +1,118 @@
+{
+  "slug": "death-valley-national-park",
+  "name": "Death Valley National Park",
+  "shortName": "Death Valley",
+  "type": "national",
+  "designation": "National Park",
+  "region": "Desert",
+  "nearestTowns": ["Furnace Creek", "Stovepipe Wells", "Pahrump", "Beatty"],
+  "tagline": "Hundreds of miles of road for dogs. Zero trails, and brutal heat.",
+  "summary": "Death Valley lets leashed dogs go on every road, paved or dirt, and in every campground and picnic area. That is more roadside desert than most parks offer, and dirt roads like Twenty Mule Team Canyon make decent walks. But no trail is open to dogs, not even the paved paths at Zabriskie Point and Badwater, and from late spring to early fall the park itself says not to bring pets at all.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for a winter camping trip built around scenic drives and dirt-road walks. Never bring one between May and September.",
+  "photo": {
+    "id": "8UfXsRPubkM",
+    "raw": "https://images.unsplash.com/photo-1495291718851-f86136152036?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Mnx8RGVhdGglMjBWYWxsZXklMjBOYXRpb25hbCUyMFBhcmt8ZW58MHwwfHx8MTc5MTc2ODA2OXwy&ixlib=rb-4.1.0",
+    "alt": "Folded golden badlands and distant mountains under a blue sky in Death Valley",
+    "author": "Johannes Plenio",
+    "authorUrl": "https://unsplash.com/@jplenio",
+    "link": "https://unsplash.com/photos/brown-and-blue-mountain-under-white-clouds-and-blue-sky-at-daytime-8UfXsRPubkM"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No trails at all, including paved Zabriskie Point and the Badwater boardwalk"},
+    {"key": "camping", "status": "yes",  "note": "All park campgrounds, up to 4 pets per site"},
+    {"key": "lodging", "status": "some", "note": "Stovepipe Wells and Panamint Springs take dogs; The Inn and The Ranch do not"},
+    {"key": "water",   "status": "no",   "note": "Salt Creek and Badwater boardwalks are closed to dogs; no swimming water anywhere"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. $30 per car entry, good for 7 days"}
+  ],
+  "allowed": [
+    {"name": "Every road, paved or dirt", "detail": "The big one. Artists Drive, Twenty Mule Team Canyon, Mustard Canyon, Titus Canyon, Dantes View Road and hundreds of miles of backcountry road. Walk the road on leash and stay close to it."},
+    {"name": "Campgrounds", "detail": "Furnace Creek, Sunset, Texas Springs, Stovepipe Wells, Mesquite Spring, Emigrant and Wildrose, with a limit of 4 pets per site."},
+    {"name": "Picnic areas and parking lots", "detail": "Including the lots at Zabriskie Point, Badwater, Dantes View and Mesquite Flat Dunes. One person can watch the dog while the other walks out."},
+    {"name": "Harmony Borax Works bike path", "detail": "The park's pets page says the paved bike path that runs beside Highway 190 to Harmony Borax Works is the one path open to pets. The interpretive loop around the ruins is not. Confirm at the visitor center; the page is old."},
+    {"name": "Developed areas at Furnace Creek and Stovepipe Wells", "detail": "Walkways, the general stores' patios and the campground loops. Not inside buildings."},
+    {"name": "Pet rooms at Stovepipe Wells Village and Panamint Springs Resort", "detail": "Both take dogs with a fee. Stovepipe Wells also has a dog run area."}
+  ],
+  "notAllowed": [
+    {"name": "Every trail", "detail": "Including the paved path to Zabriskie Point, the Badwater and Salt Creek boardwalks, Golden Canyon, Mosaic Canyon, Natural Bridge, Darwin Falls and the sand dunes beyond the parking lot. Carrying a dog does not count."},
+    {"name": "Wilderness and anywhere off the road", "detail": "Federal rules keep pets within 50 feet of roads and developed areas here. Do not wander across the salt flats or up a wash."},
+    {"name": "Buildings", "detail": "Visitor center, museum, stores and restaurants."},
+    {"name": "The Inn at Death Valley and The Ranch at Death Valley", "detail": "Only service animals are allowed in guest rooms at The Oasis properties. The Ranch allows pets in the RV and camping area only."},
+    {"name": "Left in a vehicle in the heat", "detail": "Specifically prohibited. A car at Furnace Creek reaches lethal temperatures in minutes, even in spring."},
+    {"name": "Scotty's Castle grounds", "detail": "Closed to all visitors for flood repairs; check the park site for reopening."}
+  ],
+  "hikes": [
+    {"name": "Twenty Mule Team Canyon Road", "distance": "2.7 mi one-way dirt loop road", "difficulty": "Easy", "surface": "Dirt road", "why": "Walk any stretch of this one-way road through yellow badlands near Zabriskie Point. Light traffic, no shade, best at sunrise. Park at the entrance off Highway 190.", "maps": "Twenty Mule Team Canyon, Death Valley"},
+    {"name": "Mustard Canyon Road", "distance": "1.5 mi dirt loop", "difficulty": "Easy", "surface": "Dirt road", "why": "Short, pale yellow canyon beside Harmony Borax Works, 2 miles from Furnace Creek. Quiet enough that you can walk the whole loop with a dog.", "maps": "Mustard Canyon Road, Furnace Creek"},
+    {"name": "Harmony Borax Works bike path", "distance": "About 1 mi one-way", "difficulty": "Easy", "surface": "Paved", "why": "The one paved path the park lists as open to pets, running from Furnace Creek toward the borax ruins beside the highway. Stay on the path; the loop around the ruins is closed to dogs.", "maps": "Harmony Borax Works, Death Valley"},
+    {"name": "Titus Canyon narrows (from the mouth)", "distance": "Up to 2 mi out and back", "difficulty": "Easy to moderate", "surface": "Gravel road", "why": "Drive the two-way section in from the Scotty's Castle Road side and walk up the gravel road into the narrows, with 500-foot walls on both sides. Watch for vehicles coming down the one-way route.", "maps": "Titus Canyon Mouth parking, Death Valley"}
+  ],
+  "hangouts": [
+    {"name": "Artists Drive and Artists Palette", "why": "A 9-mile paved one-way road through pink and green hills. Pull over at the Palette and walk the roadside with the dog; the short trail up to the overlook is closed to pets."},
+    {"name": "Dantes View parking lot", "why": "A 5,500-foot view over Badwater, often 25 degrees cooler than the valley floor. Dogs can take in the view from the lot and the road edge."},
+    {"name": "Furnace Creek Campground and the Ranch lawns", "why": "Date palms, grass and the only real shade for 50 miles. The reservation-only campground is the best winter base with a dog."},
+    {"name": "Badwater Basin parking", "why": "The lowest point in North America is a few steps from the lot. The boardwalk and salt flat are closed to pets, so take turns."},
+    {"name": "Mesquite Spring Campground", "why": "Quiet northern campground at 1,800 feet with water and flush toilets, cooler than Furnace Creek and close to the Titus Canyon mouth."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Dogs may go on roads, in campgrounds, picnic areas and parking lots only. No trails, boardwalks, dunes or wilderness, even if carried.",
+    "Never leave a dog in a vehicle in warm weather. It is prohibited and rangers will act on it.",
+    "Never leave a dog unattended at a campsite; coyotes have taken dogs from outside RVs.",
+    "No more than 4 pets per campsite.",
+    "Pick up waste and put it in a trash can. There are few bins outside developed areas.",
+    "The park advises not bringing pets at all from late spring to early fall because of the heat.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Furnace Creek Campground", "note": "The only campground you can reserve, on Recreation.gov from mid-October to mid-April. Shade trees, water and flush toilets."},
+      {"name": "Sunset and Texas Springs Campgrounds", "note": "First come, first served across the road from Furnace Creek, open fall to spring. Pets are allowed per the park; one booking site wrongly lists Texas Springs as no pets."},
+      {"name": "Stovepipe Wells Campground", "note": "Open, gravel sites near the dunes and the pet-friendly village hotel. Open fall to spring."},
+      {"name": "Mesquite Spring Campground", "note": "40 sites at the north end, open year-round, cooler and quieter."},
+      {"name": "Wildrose and Emigrant", "note": "Free, high-elevation sites in the Panamints. Cold in winter, the only sensible summer camps with a dog."}
+    ],
+    "lodging": [
+      {"name": "Stovepipe Wells Village Hotel", "note": "Inside the park. Up to 2 dogs of any size with a per-stay fee; reports put it at $20 to $30. Dogs cannot be left alone in rooms."},
+      {"name": "Panamint Springs Resort", "note": "West side of the park on Highway 190. Dogs on leash with a small nightly fee."},
+      {"name": "Amargosa Opera House & Hotel, Death Valley Junction", "note": "30 minutes east of Furnace Creek. Up to 2 pets with a per-pet fee."},
+      {"name": "Longstreet Inn & Casino, Amargosa Valley", "note": "Dogs on request with a refundable deposit, about 40 minutes from Furnace Creek."},
+      {"name": "Not allowed", "note": "The Inn at Death Valley and The Ranch at Death Valley guest rooms (service animals only)."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Summer (May to September)", "level": "danger", "detail": "Highs of 115 to 125 F. The ground can top 180 F and will burn paws in seconds. The park says do not bring pets. Most campgrounds close."},
+    {"title": "Winter (November to March)", "level": "info", "detail": "The season for dogs. Days in the 60s and 70s, cold nights, and every campground open. Furnace Creek fills on holiday weekends."},
+    {"title": "Spring (March and April)", "level": "warn", "detail": "Wildflowers and crowds, and highs already in the 90s by April. Walk at dawn and be back at camp by 10 am."},
+    {"title": "Flash floods and road closures", "level": "warn", "detail": "Storms have closed Titus Canyon, Artists Drive and Scotty's Castle Road for months at a time. Check current conditions before you plan a drive."}
+  ],
+  "wildlife": [
+    "Coyotes patrol Furnace Creek and Stovepipe Wells campgrounds and have grabbed small dogs left outside. Keep dogs inside the tent or RV at night.",
+    "Rattlesnakes and sidewinders are active in spring and fall, especially at dusk near roads and washes.",
+    "Scorpions hide under rocks and gear. Shake out dog beds before packing them.",
+    "Ravens will take food and small items from an unattended campsite."
+  ],
+  "checklist": [
+    "At least 1 gallon of water per dog per day, plus extra in the car",
+    "Booties for hot ground and sharp salt crust along road edges",
+    "A shade canopy for the campsite; trees are rare",
+    "A 6-foot leash and a short traffic lead for parking lots",
+    "A cooling mat or wet towel for the car and tent",
+    "Waste bags and a sealed container; bins are far apart",
+    "A paper map; there is little phone signal in the park"
+  ],
+  "vets": [
+    {"name": "Nye County Veterinary Hospital", "town": "Pahrump"},
+    {"name": "Animal Care Center of Pahrump", "town": "Pahrump"}
+  ],
+  "sources": [
+    {"label": "NPS: Pets in Death Valley", "url": "https://www.nps.gov/deva/planyourvisit/pets.htm"},
+    {"label": "NPS: Hiking and visiting with pets", "url": "https://www.nps.gov/thingstodo/hiking-visiting-with-pets.htm"},
+    {"label": "NPS: Death Valley rules and regulations", "url": "https://www.nps.gov/deva/learn/management/rules-and-regulations.htm"}
+  ],
+  "official": "https://www.nps.gov/deva/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}

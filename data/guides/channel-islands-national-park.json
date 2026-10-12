@@ -1,0 +1,246 @@
+{
+  "slug": "channel-islands-national-park",
+  "name": "Channel Islands National Park",
+  "shortName": "Channel Islands",
+  "type": "national",
+  "designation": "National Park",
+  "region": "Southern California",
+  "nearestTowns": [
+    "Ventura",
+    "Oxnard",
+    "Santa Barbara"
+  ],
+  "tagline": "No dogs on the islands or boats. Give the dog a Ventura day instead.",
+  "summary": "Channel Islands is a no-dog park, full stop. Pets cannot ride the park boats, land on any of the five islands, or enter the visitor center in Ventura Harbor. The reason is the island fox and the seabirds, which have no defence against dog diseases. So this guide is really about the mainland: the dog beach and harbor walks a few minutes from the boat dock, the pet hotels that sit right next to the visitor center, and the boarding places that will take your dog for the 8 to 10 hours you are out on the water.",
+  "score": 1,
+  "scoreLabel": "Very limited",
+  "verdict": "Do not plan to bring the dog to the park. Book a Ventura day care or kennel for island day, and give the dog Harbor Cove and the promenade the day before.",
+  "photo": {
+    "id": "FnzXxYHMNRY",
+    "raw": "https://images.unsplash.com/photo-1717940246105-87d9ff511f3e?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Nnx8Q2hhbm5lbCUyMElzbGFuZHMlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHwwfHx8MTc5MTc2ODAyMXwy&ixlib=rb-4.1.0",
+    "alt": "Sunset over low fog rolling across the ridges of Santa Cruz Island in Channel Islands National Park",
+    "author": "Dylan Taylor",
+    "authorUrl": "https://unsplash.com/@dyltayl",
+    "link": "https://unsplash.com/photos/the-sun-is-setting-over-the-clouds-on-top-of-a-mountain-FnzXxYHMNRY"
+  },
+  "glance": [
+    {
+      "key": "trails",
+      "status": "no",
+      "note": "No dogs on any island, trail or beach in the park"
+    },
+    {
+      "key": "camping",
+      "status": "no",
+      "note": "All island campgrounds are closed to pets"
+    },
+    {
+      "key": "lodging",
+      "status": "info",
+      "note": "None in the park; pet hotels sit beside the harbor visitor center"
+    },
+    {
+      "key": "water",
+      "status": "some",
+      "note": "Not in the park. Ventura's Harbor Cove and Surfers Knoll are 5 minutes away"
+    },
+    {
+      "key": "leash",
+      "status": "rule",
+      "note": "Pets not allowed in the park. 6 ft leash on Ventura beaches"
+    },
+    {
+      "key": "fee",
+      "status": "info",
+      "note": "No park entry fee. The boat ticket is the cost. Boarding runs about $75 a night"
+    }
+  ],
+  "allowed": [
+    {
+      "name": "Ventura Harbor walkways (outside the park)",
+      "detail": "The public harbor promenade and Harbor Village shops around the visitor center are city harbor land, and leashed dogs are a normal sight there. The visitor center building itself is off limits."
+    },
+    {
+      "name": "Harbor Cove Beach, Ventura",
+      "detail": "The calm, sheltered beach at the end of Spinnaker Drive, a short walk from the boat dock. Dogs on leash. Some guides describe off-leash hours before 9 a.m. and after 5 p.m. in the section near the Surfers Knoll lot; others say leash only. Check the posted signs."
+    },
+    {
+      "name": "Surfers Knoll Beach, Ventura",
+      "detail": "Next to Harbor Cove, open ocean side. Leashed dogs welcome, with a dog area at the north end by the parking lot. No lifeguards."
+    },
+    {
+      "name": "Ventura beach promenade and bike path",
+      "detail": "The paved path along San Buenaventura State Beach to the pier is open to leashed dogs, even though the sand of the state beach is not."
+    },
+    {
+      "name": "Your car at the harbor lots",
+      "detail": "Only as a drop-off point. Island trips last 8 to 10 hours and the lots are in full sun, so never leave a dog in the car while you sail."
+    }
+  ],
+  "notAllowed": [
+    {
+      "name": "Every island",
+      "detail": "Santa Cruz, Anacapa, Santa Rosa, San Miguel and Santa Barbara islands are all closed to pets, on a leash or not, even on a private boat. Only trained service dogs may land."
+    },
+    {
+      "name": "Park boats",
+      "detail": "Island Packers, the park's boat concession out of Ventura and Oxnard, does not carry pets."
+    },
+    {
+      "name": "Island campgrounds",
+      "detail": "Scorpion Canyon, Santa Rosa, San Miguel, Santa Barbara and Anacapa campgrounds, and all backcountry sites."
+    },
+    {
+      "name": "The visitor center building",
+      "detail": "The Robert J. Lagomarsino Visitor Center in Ventura Harbor is closed to pets. Service animals welcome."
+    },
+    {
+      "name": "San Buenaventura State Beach sand",
+      "detail": "The state beach next to the pier does not allow dogs on the sand, only on the paved path."
+    }
+  ],
+  "hikes": [],
+  "hangouts": [
+    {
+      "name": "Harbor Cove Beach",
+      "why": "Flat, protected water inside the breakwater, 5 minutes from the park visitor center. The easiest beach day for an older dog or a nervous swimmer."
+    },
+    {
+      "name": "Surfers Knoll and the Santa Clara River mouth",
+      "why": "Longer sand walk south from the harbor toward the river mouth, with birds and sea lions offshore. Keep the leash on near the water."
+    },
+    {
+      "name": "Ventura Pier and promenade",
+      "why": "Sunset walk along the paved path with the islands on the horizon. Several patios along the way allow dogs."
+    },
+    {
+      "name": "Arroyo Verde Park",
+      "why": "A city park in the Ventura foothills with dirt loop trails for leashed dogs and shade under the oaks. Check the park sign for current dog rules."
+    }
+  ],
+  "rules": [
+    "On Ventura beaches and paths, keep your dog on a leash no longer than 6 feet unless a sign says otherwise.",
+    "Pets are not allowed anywhere in Channel Islands National Park: no islands, no park boats, no visitor center.",
+    "Do not try a private boat workaround. Pets may not come ashore on any island, and the park patrols the landings.",
+    "Never leave a dog in a car at the harbor. Island trips run 8 to 10 hours and the lots are in full sun.",
+    "Pick up waste on the beaches and the harbor paths. Bag stations are not always stocked.",
+    "Keep dogs away from sea lions and seals that haul out on the harbor beaches and jetties.",
+    "Book day care or boarding ahead for island day; the good places fill on weekends.",
+    "Service dogs are allowed in the visitor center. For island trips, call the park first, because landings on some islands are restricted even for service animals."
+  ],
+  "stay": {
+    "camping": [
+      {
+        "name": "Island campgrounds",
+        "note": "Scorpion, Santa Rosa, San Miguel, Santa Barbara and Anacapa: no pets. Service animals only."
+      },
+      {
+        "name": "Emma Wood State Beach, Ventura",
+        "note": "A state beach campground north of town. California State Parks normally allow leashed dogs in campgrounds; check the current pet rules before booking."
+      },
+      {
+        "name": "Ventura Beach RV Resort",
+        "note": "Private RV and tent park a few minutes from the harbor that takes dogs. Confirm fees and size limits when you reserve."
+      }
+    ],
+    "lodging": [
+      {
+        "name": "Four Points by Sheraton Ventura Harbor Resort",
+        "note": "Next door to the park visitor center. 2 dogs of any size in ground-floor rooms, $75 per stay."
+      },
+      {
+        "name": "Holiday Inn Express & Suites Ventura Harbor",
+        "note": "Also at the harbor. Dogs only, 2 per room, with a non-refundable pet fee."
+      },
+      {
+        "name": "The Pierpont Inn, Ventura",
+        "note": "Historic inn near the pier. Up to 2 dogs; sources differ on the weight limit and fee, so ask when booking."
+      },
+      {
+        "name": "Motel 6 Ventura Beach",
+        "note": "2 pets of any size, no fee, close to the promenade."
+      }
+    ],
+    "boarding": [
+      {
+        "name": "Lucky Doggy Hotel, Ventura",
+        "note": "Day care from about $25 and overnight boarding from about $75. Book ahead for island day."
+      },
+      {
+        "name": "Ventura Dog Ranch, Ventura",
+        "note": "Indoor and outdoor dog hotel with 10 play yards, day care and boarding."
+      },
+      {
+        "name": "Dog House, Camarillo",
+        "note": "Day care and boarding about 10 minutes from the Ventura Harbor boat dock."
+      }
+    ]
+  },
+  "seasons": [
+    {
+      "title": "Early boats",
+      "level": "warn",
+      "detail": "Island boats leave Ventura Harbor around 8 or 9 a.m. and return late afternoon. Drop the dog at day care when it opens, or board the night before."
+    },
+    {
+      "title": "Summer crowds",
+      "level": "info",
+      "detail": "Harbor lots and dog beaches are busiest on summer weekends. Dog hours on Ventura beaches are often sunrise to 9 a.m. and 5 p.m. to sunset in peak season; read the signs."
+    },
+    {
+      "title": "Winter and spring",
+      "level": "info",
+      "detail": "Cooler sand, whale season on the boats, and quiet beaches for the dog. Rain closes the river mouth path now and then."
+    },
+    {
+      "title": "Santa Ana winds and heat",
+      "level": "warn",
+      "detail": "Hot, dry days in fall push the harbor lots past 100 degrees. Never leave a dog in a car at the harbor at any time of year."
+    }
+  ],
+  "wildlife": [
+    "The island fox is the reason for the no-pet rule. It has no immunity to common dog diseases, and a single outbreak could wipe out an island population.",
+    "Sea lions and harbor seals haul out on Ventura's jetties and harbor beaches. Stay 50 yards back and keep the leash on.",
+    "Snowy plovers nest on Ventura County beaches from March to September. Keep dogs out of roped-off dune areas.",
+    "Stingrays settle in the warm shallows at Harbor Cove in late summer. Shuffle your feet, and keep a swimming dog close to shore."
+  ],
+  "checklist": [
+    "Day care or boarding reservation for island day, booked ahead",
+    "Current vaccination records, which every kennel will ask for",
+    "A 6-foot leash and a long towel for the beach",
+    "Water and a bowl for the harbor walk; there are few fountains",
+    "Waste bags for the beaches and promenade",
+    "A written note of your dog's feeding times for the kennel",
+    "Your boat ticket time, so you know when to drop the dog off"
+  ],
+  "vets": [
+    {
+      "name": "Veterinary Medical and Surgical Group (VMSG), 24-hour emergency",
+      "town": "Ventura"
+    },
+    {
+      "name": "Horizon Veterinary Specialists, 24-hour emergency",
+      "town": "Ventura"
+    }
+  ],
+  "sources": [
+    {
+      "label": "NPS: Pets at Channel Islands",
+      "url": "https://www.nps.gov/chis/planyourvisit/pets.htm"
+    },
+    {
+      "label": "NPS: Service animals at Channel Islands",
+      "url": "https://www.nps.gov/chis/planyourvisit/service-animals.htm"
+    },
+    {
+      "label": "Ventura County Animal Services: 24-hour emergency pet care",
+      "url": "https://animalservices.venturacounty.gov/emergency-24-hour-pet-care/"
+    },
+    {
+      "label": "Hepper: dog-friendly beaches in Ventura",
+      "url": "https://articles.hepper.com/dog-friendly-beaches-in-ventura-ca/"
+    }
+  ],
+  "official": "https://www.nps.gov/chis/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}

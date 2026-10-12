@@ -1,0 +1,121 @@
+{
+  "slug": "point-mugu-state-park",
+  "name": "Point Mugu State Park",
+  "shortName": "Point Mugu",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Southern California",
+  "nearestTowns": ["Oxnard", "Camarillo", "Malibu"],
+  "tagline": "Dog-friendly beaches and beach camping. Canyon trails are off-limits.",
+  "summary": "Point Mugu is one of the few Southern California state parks where a dog can be on the sand. Leashed dogs are welcome on the park's beaches, at Sycamore Cove day-use area and in both campgrounds, one of which sits right on the beach. What they cannot do is go up Big Sycamore Canyon, La Jolla Canyon or any of the 70 miles of backcountry trail behind the beach. For hiking with a dog, the National Park Service's Rancho Sierra Vista and Satwiwa trails at the top of the canyon fill the gap.",
+  "score": 3,
+  "scoreLabel": "Moderate",
+  "verdict": "Bring your dog for a beach camping weekend with sand walks and sunsets. If a canyon hike is the goal, drive around to Satwiwa and hike there instead.",
+  "photo": {
+    "id": "heoLeJSuk0U",
+    "raw": "https://images.unsplash.com/photo-1707160369725-4bf1b677e75e?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8UG9pbnQlMjBNdWd1fGVufDB8MHx8fDE3OTE3NjgwNDF8Mg&ixlib=rb-4.1.0",
+    "alt": "Pacific Coast Highway winding along the cliffs and ocean at Point Mugu, seen from a hilltop",
+    "author": "Rodrigo Kammer",
+    "authorUrl": "https://unsplash.com/@rodkammer",
+    "link": "https://unsplash.com/photos/a-view-of-the-ocean-from-the-top-of-a-hill-heoLeJSuk0U"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No backcountry trails or dirt roads. Beach walks instead"},
+    {"key": "camping", "status": "yes",  "note": "Sycamore Canyon and Thornhill Broome campgrounds"},
+    {"key": "lodging", "status": "some", "note": "Pet rooms in Camarillo, Oxnard and Malibu; none in the park"},
+    {"key": "water",   "status": "yes",  "note": "Leashed dogs on park beaches, including Thornhill Broome and Sycamore Cove"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times, on the beach too"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. About $12 per car at Sycamore Cove; check current rate"}
+  ],
+  "allowed": [
+    {"name": "Park beaches", "detail": "The state park page says leashed dogs are allowed in day-use areas, campgrounds and beaches. That covers Thornhill Broome Beach, Sycamore Cove and the strip of sand along Pacific Coast Highway. One third-party guide says otherwise, so check the sign at your access point."},
+    {"name": "Thornhill Broome Beach", "detail": "A mile of sand with campsites right on it. The best dog beach walk in the park, and dogs can wade on leash."},
+    {"name": "Sycamore Cove day-use area", "detail": "Picnic tables, grills, restrooms and a sheltered beach on the ocean side of the highway, across from Sycamore Canyon Campground."},
+    {"name": "Sycamore Canyon Campground", "detail": "58 sites under sycamores at the mouth of Big Sycamore Canyon. Dogs on leash at your site, in your tent or vehicle at night."},
+    {"name": "Thornhill Broome Campground", "detail": "About 60 beachfront sites with vault toilets and no shade. Dogs welcome on the same rules."},
+    {"name": "Paved roads and parking lots", "detail": "Campground roads, the day-use lots and the paved stretch at the bottom of Sycamore Canyon Road."},
+    {"name": "Rancho Sierra Vista and Satwiwa (NPS), top of the canyon", "detail": "Leashed dogs are allowed on the National Park Service trails here, including the Satwiwa Loop. The Point Mugu State Park section begins where the signs say no dogs."},
+    {"name": "Mugu Rock overlook", "detail": "Just west of the park on Pacific Coast Highway. A paved pull-out and a famous rock; leashed dogs can enjoy the view with you."}
+  ],
+  "notAllowed": [
+    {"name": "Big Sycamore Canyon Trail", "detail": "The wide dirt road up the canyon from the campground is the park's main trail, and dogs are not allowed on it past the paved section. Sources disagree on exactly where the pavement ends, so ask at the kiosk."},
+    {"name": "La Jolla Canyon, Mugu Peak and Ray Miller Trail", "detail": "No dogs on any of the trails leaving the Ray Miller trailhead."},
+    {"name": "Boney Mountain State Wilderness", "detail": "The whole upper park, including the Old Boney Trail and the Danielson Monument. No dogs, even coming from the NPS side."},
+    {"name": "Old Cabin Trail from Rancho Sierra Vista", "detail": "The park warns that dogs cannot continue on this trail once it crosses from NPS land into the state wilderness."},
+    {"name": "Every other backcountry trail or dirt road", "detail": "Overlook Trail, Scenic Trail, Wood Canyon, Fireline, Guadalasca and the rest."},
+    {"name": "Unattended at a campsite or in a car", "detail": "Thornhill Broome has no shade, and a car on the sand heats fast."}
+  ],
+  "hikes": [
+    {"name": "Thornhill Broome Beach walk", "distance": "Up to 2 mi out and back", "difficulty": "Easy", "surface": "Sand", "why": "A long, straight beach with the Santa Monica Mountains behind you and few people midweek. Low tide gives firm sand that is easier on paws.", "maps": "Thornhill Broome Beach, Point Mugu State Park"},
+    {"name": "Sycamore Cove Beach", "distance": "0.5 mi", "difficulty": "Easy", "surface": "Sand and rock", "why": "A small cove sheltered by headlands, with picnic tables and grills steps from the sand. Good for a dog that wants to paddle rather than run.", "maps": "Sycamore Cove, Point Mugu State Park"},
+    {"name": "Satwiwa Loop Trail (NPS)", "distance": "1.5 mi loop", "difficulty": "Easy", "surface": "Dirt", "why": "The dog-legal trail next door, on National Park Service land at the top of Big Sycamore Canyon. Open grassland, a Chumash village site and Boney Mountain views. Turn back at the state park signs.", "maps": "Satwiwa Loop Trailhead, Newbury Park"},
+    {"name": "Sycamore Canyon Campground loop", "distance": "0.5 mi loop", "difficulty": "Easy", "surface": "Paved", "why": "The shaded campground road under big sycamores. Deer and quail at dusk, and the only shade for miles.", "maps": "Sycamore Canyon Campground, Point Mugu State Park"}
+  ],
+  "hangouts": [
+    {"name": "Thornhill Broome Campground", "why": "Campsites on the sand with nothing between you and the surf. The best spot in the state park system to camp with a dog on the beach."},
+    {"name": "Sycamore Cove", "why": "Shaded picnic tables, grills and a sandy cove with restrooms. The easy day-trip option."},
+    {"name": "Mugu Rock", "why": "The big rock at the west end of the park, with a paved viewpoint. Sunset photos with the dog."},
+    {"name": "Rancho Sierra Vista (NPS)", "why": "Open fields, a culture center and picnic tables at the Satwiwa trailhead. Leashed dogs welcome on the NPS trails."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times, including on the beach.",
+    "Dogs may use day-use areas, campgrounds, beaches, parking lots and paved roads.",
+    "No dogs on backcountry trails or dirt roads, and none in the Boney Mountain State Wilderness.",
+    "At night your dog must be inside your tent or vehicle.",
+    "Never leave a dog unattended at a campsite or in a parked car.",
+    "Pick up after your dog on the beach and in camp, and put the bag in a trash can.",
+    "Rangers can turn away noisy or aggressive dogs and may ask for proof of vaccination.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Sycamore Canyon Campground", "note": "58 sites under trees with flush toilets, showers and a dump station. Reserve on ReserveCalifornia up to 6 months ahead; summer weekends sell out fast."},
+      {"name": "Thornhill Broome Campground", "note": "Beachfront dry camping with vault toilets and no showers. The park posted a closure starting October 8, 2026 for high tides, so check the park page before booking."},
+      {"name": "Leo Carrillo State Park Campground", "note": "15 minutes east on Pacific Coast Highway. Dogs OK in the campground and on North Beach."}
+    ],
+    "lodging": [
+      {"name": "Malibu Country Inn", "note": "Small inn near Zuma Beach, 20 minutes east. Listed as taking 2 pets with a per-stay fee."},
+      {"name": "Sonesta Select Camarillo", "note": "About 25 minutes inland. Listed as taking 2 dogs of any size with a per-stay fee."},
+      {"name": "Residence Inn by Marriott Camarillo", "note": "Suites with kitchens. Pets accepted with a fee and a combined weight limit; confirm when booking."},
+      {"name": "Hilton Garden Inn Oxnard Camarillo", "note": "Listed as taking 2 pets up to 75 lb with a per-stay fee."},
+      {"name": "Motel 6 Camarillo", "note": "Budget option about 10 miles from the park. Pets stay free at most Motel 6 locations."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Thornhill Broome closure", "level": "warn", "detail": "The park announced a closure of Thornhill Broome Campground from October 8, 2026 because of high tides. It may be reopened by the time you read this; check the park page or ReserveCalifornia."},
+    {"title": "Summer (June to September)", "level": "info", "detail": "Cool ocean air keeps the beach in the 70s while inland valleys bake. Morning fog burns off by midday. Campgrounds are full every weekend."},
+    {"title": "Fire season (September to December)", "level": "warn", "detail": "The park burned in the 2018 Woolsey Fire. Red-flag days and Santa Ana winds can close campgrounds at short notice."},
+    {"title": "Winter storms", "level": "warn", "detail": "High surf can wash over Thornhill Broome sites, and Pacific Coast Highway sometimes closes for rockslides. Beach walks are empty and beautiful between storms."}
+  ],
+  "wildlife": [
+    "Coyotes walk through both campgrounds at night. Keep small dogs inside the tent after dark.",
+    "Rattlesnakes are common on the paved canyon road and sunny trail edges from spring to fall.",
+    "Harbor seals and sea lions haul out on the rocks near Mugu Rock. Keep your dog well back; it is the law and they bite.",
+    "Western snowy plovers nest on the sand in spring and summer. Keep to the wet sand and respect any roped-off areas.",
+    "Ticks are active year-round in the grass at Satwiwa."
+  ],
+  "checklist": [
+    "Fresh water and a bowl; dogs drink seawater and get sick",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags",
+    "A towel and a brush for sand and salt",
+    "Shade for the campsite; Thornhill Broome has no trees",
+    "A long tie-out line for the campsite (dog must still be attended)",
+    "Paw check after the beach for tar and sharp shells",
+    "A printed reservation; phone signal is patchy along the highway"
+  ],
+  "vets": [
+    {"name": "Pleasant Valley Animal Hospital", "town": "Camarillo"},
+    {"name": "Mission Oaks Veterinary Clinic", "town": "Camarillo"},
+    {"name": "Veterinary Specialty and Emergency Center", "town": "Thousand Oaks"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Point Mugu State Park", "url": "https://www.parks.ca.gov/pointmugu/"},
+    {"label": "NPS: Rancho Sierra Vista / Satwiwa", "url": "https://www.nps.gov/samo/planyourvisit/rsvsatwiwa.htm"},
+    {"label": "NPS: Rancho Sierra Vista trail map 2024 (PDF)", "url": "https://www.nps.gov/samo/planyourvisit/upload/RanchoSierraVista_Satwiwa_2024_Reduced.pdf"},
+    {"label": "Conejo Valley Guide: Point Mugu State Park", "url": "https://www.conejovalleyguide.com/dosomethingblog/point-mugu-state-park.html"}
+  ],
+  "official": "https://www.parks.ca.gov/pointmugu/",
+  "verified": "October 2026"
+}

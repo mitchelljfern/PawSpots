@@ -1,0 +1,120 @@
+{
+  "slug": "joshua-tree-national-park",
+  "name": "Joshua Tree National Park",
+  "shortName": "Joshua Tree",
+  "type": "national",
+  "designation": "National Park",
+  "region": "Desert",
+  "nearestTowns": ["Twentynine Palms", "Joshua Tree", "Yucca Valley"],
+  "tagline": "Boulders and Joshua trees from the road. Trails are off limits.",
+  "summary": "Joshua Tree lets dogs go wherever a car can go: paved roads, dirt roads, picnic areas and all 8 campgrounds, as long as you stay within 100 feet of the road. Two short paved loops, Oasis of Mara and Keys View, are the only trails that allow dogs. Everything else, from Hidden Valley to Barker Dam to Ryan Mountain, is closed to pets. The upside is that the famous boulder piles sit right beside the road, and camping with a dog here is easy from October to April.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for a cool-season camping trip and roadside boulder views. Skip it from May to September, and leave the dog home if you came to hike.",
+  "photo": {
+    "id": "pgtllopM2ps",
+    "raw": "https://images.unsplash.com/photo-1604033968265-7b3e8f4a39cf?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8OXx8Sm9zaHVhJTIwVHJlZSUyME5hdGlvbmFsJTIwUGFya3xlbnwwfDB8fHwxNzkxNzY4MDE4fDI&ixlib=rb-4.1.0",
+    "alt": "A Joshua tree in early morning light with desert scrub and rocks in Joshua Tree National Park",
+    "author": "William Foley",
+    "authorUrl": "https://unsplash.com/@canonman_5d",
+    "link": "https://unsplash.com/photos/green-tree-on-brown-grass-field-during-sunset-pgtllopM2ps"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "Only the paved Oasis of Mara and Keys View loops; all other trails closed to dogs"},
+    {"key": "camping", "status": "yes",  "note": "All 8 campgrounds take leashed dogs"},
+    {"key": "lodging", "status": "no",   "note": "No lodging inside the park; pet rooms in Twentynine Palms, Joshua Tree and Yucca Valley"},
+    {"key": "water",   "status": "no",   "note": "Desert park with no lakes or rivers; bring all your water"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times, and within 100 ft of a road"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. $30 per car entry, good for 7 days"}
+  ],
+  "allowed": [
+    {"name": "Within 100 feet of any road", "detail": "This is the main rule. Park Boulevard, Pinto Basin Road and every dirt road count. You can stop at almost any pullout and wander 100 feet toward the rocks with the dog."},
+    {"name": "Oasis of Mara loop", "detail": "A flat, paved 0.5-mile loop behind the Oasis Visitor Center in Twentynine Palms, with shade from fan palms. The best short walk in the park with a dog."},
+    {"name": "Keys View", "detail": "The paved 0.2-mile loop at the overlook is open to dogs. On a clear day you see the Salton Sea and Mount San Jacinto from 5,185 feet."},
+    {"name": "Dirt backcountry roads", "detail": "Geology Tour Road, Queen Valley roads and the Covington Flats and Black Rock roads. Dogs can walk the road itself and up to 100 feet off it, on leash."},
+    {"name": "Picnic areas", "detail": "Hidden Valley, Quail Springs, Cap Rock, Live Oak, Split Rock and Cottonwood picnic areas all welcome leashed dogs."},
+    {"name": "All 8 campgrounds", "detail": "Jumbo Rocks, Black Rock, Indian Cove, Cottonwood, Hidden Valley, Ryan, Belle and White Tank. Dogs stay on leash and never alone at the site."}
+  ],
+  "notAllowed": [
+    {"name": "Every hiking trail except the two paved loops", "detail": "Hidden Valley loop, Barker Dam, Arch Rock, Skull Rock, Cholla Cactus Garden, Ryan Mountain, Lost Palms Oasis, Fortynine Palms, Cottonwood Spring and the 3 trails at Black Rock. Carrying a dog does not make it legal."},
+    {"name": "More than 100 feet from a road", "detail": "Even on open desert with no trail, pets must stay within 100 feet of the road, parking area or campground."},
+    {"name": "Backcountry and wilderness", "detail": "No dogs on backpacking routes or at backcountry campsites."},
+    {"name": "Buildings", "detail": "Visitor centers at Oasis, Joshua Tree, Cottonwood and Black Rock."},
+    {"name": "Left alone, anywhere", "detail": "Not at the campsite, not tied to a post, and not in the car. Rangers treat a dog in a hot car as an emergency and can fine you."}
+  ],
+  "hikes": [
+    {"name": "Oasis of Mara Loop", "distance": "0.5 mi loop", "difficulty": "Easy", "surface": "Paved", "why": "Flat, partly shaded and right by the Twentynine Palms visitor center. Good first or last stop, and the only shade walk in the park.", "maps": "Oasis of Mara Trail, Twentynine Palms"},
+    {"name": "Keys View Loop", "distance": "0.2 mi loop", "difficulty": "Easy", "surface": "Paved", "why": "Big-sky view over the Coachella Valley for almost no effort. Cooler up here than in the valleys, and the lot has plenty of room.", "maps": "Keys View, Joshua Tree National Park"},
+    {"name": "Queen Valley dirt roads", "distance": "1 to 4 mi, your choice", "difficulty": "Easy", "surface": "Dirt road", "why": "A web of quiet, flat dirt roads between Hidden Valley and Jumbo Rocks, through one of the thickest Joshua tree stands in the park. Walk from any pullout and turn around when you like.", "maps": "Queen Valley Road, Joshua Tree National Park"},
+    {"name": "Geology Tour Road (walk a section)", "distance": "Up to 18 mi dirt road, walk any part", "difficulty": "Easy to moderate", "surface": "Dirt road", "why": "Park near the start off Park Boulevard and walk the first mile or two among boulder piles and Joshua trees. Soft sand later on; most people only need the start.", "maps": "Geology Tour Road, Joshua Tree National Park"}
+  ],
+  "hangouts": [
+    {"name": "Hidden Valley picnic area", "why": "Shaded tables among the boulders, with the Hidden Valley rocks right beside you. The loop trail itself is closed to dogs, but the picnic area is not."},
+    {"name": "Skull Rock pullout", "why": "The famous rock is a few steps from Park Boulevard, well within the 100-foot rule. Go at sunrise before the crowds."},
+    {"name": "Cap Rock picnic area", "why": "Flat paved parking with tables and boulders to sit on. Sunset here is the classic Joshua Tree view."},
+    {"name": "Cholla Cactus Garden pullout", "why": "The loop trail is off limits, but the roadside view of the cholla at golden hour is the same. Keep the dog well back; cholla spines hook into paws."},
+    {"name": "Cottonwood Spring picnic area", "why": "South entrance stop with tables and fan palms. The trails beyond are closed to dogs, but the picnic area and campground are fine."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times, everywhere in the park.",
+    "Stay within 100 feet of a road, parking area, picnic area or campground. The only trails open to dogs are the paved Oasis of Mara and Keys View loops.",
+    "Never leave a dog unattended, including tied up at a campsite or left in a parked car.",
+    "Pick up waste and carry it to a trash can. Campground bins fill fast; bring extra bags.",
+    "Keep dogs away from cactus and cholla. Spines go through paw pads and are painful to remove.",
+    "Do not let dogs dig, chase lizards or disturb desert tortoises.",
+    "Rangers can issue fines for off-trail dogs and for dogs left in cars. Pet rules are enforced.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Jumbo Rocks Campground", "note": "124 sites among boulders, the most popular in the park. Reserve on Recreation.gov; no water, so bring it."},
+      {"name": "Black Rock Campground", "note": "North edge near Yucca Valley, with drinking water, flush toilets and a short drive to vets and stores. Best base for dog owners."},
+      {"name": "Indian Cove Campground", "note": "Off its own entrance near Twentynine Palms, below big rock walls. Reserve ahead; no water."},
+      {"name": "Cottonwood Campground", "note": "South entrance, with water and flush toilets. Warmer and quieter; good in winter."},
+      {"name": "Hidden Valley, Ryan, Belle and White Tank", "note": "First-come, first-served, no water. Belle and White Tank close in summer."}
+    ],
+    "lodging": [
+      {"name": "Field Station Joshua Tree, Joshua Tree", "note": "About 5 miles from the West Entrance. Pet-friendly with a per-stay fee; dogs cannot be left alone in the room."},
+      {"name": "Spark by Hilton Yucca Valley Joshua Tree", "note": "Pet fee per day with a weight limit. Close to Black Rock Campground."},
+      {"name": "Fairfield Inn & Suites Twentynine Palms", "note": "Dog rooms with a per-stay fee, near the North Entrance and Oasis of Mara."},
+      {"name": "28 Palms Ranch, Twentynine Palms", "note": "Dogs of any size for a small per-pet fee. Check the listing."},
+      {"name": "Best Western Joshua Tree Hotel & Suites, Yucca Valley", "note": "Up to 2 dogs with a fee and weight limit."}
+    ],
+    "boarding": [
+      {"name": "Joshua Tree Pet Resort, Joshua Tree", "note": "Day and overnight boarding a few minutes from the West Entrance. Reserve ahead and bring vaccine records."},
+      {"name": "Gln-Be's Pet Motel, Twentynine Palms", "note": "Boarding near the North Entrance. Lets you hike Ryan Mountain or Barker Dam dog-free."}
+    ]
+  },
+  "seasons": [
+    {"title": "Summer heat (May to September)", "level": "danger", "detail": "Daytime highs top 100 F and pavement burns paws by mid-morning. The park advises against bringing pets in summer. If you must, walk at dawn only."},
+    {"title": "Fall and spring (October to April)", "level": "info", "detail": "The sweet spot. Mild days, cold nights, and the campgrounds fill every weekend. Reserve Jumbo Rocks and Black Rock months ahead."},
+    {"title": "Spring wildflowers and crowds", "level": "warn", "detail": "March and April bring blooms and the biggest crowds of the year. Expect lines at the West Entrance by 9 am."},
+    {"title": "Flash floods and road damage", "level": "warn", "detail": "Summer storms can close dirt roads and wash out Pinto Basin Road. Check current conditions on the park website before you go."}
+  ],
+  "wildlife": [
+    "Coyotes are bold around campgrounds and will take a small dog. Keep the leash short at dusk and never leave food out.",
+    "Rattlesnakes are active from spring to fall, often on warm roads at night. Walk dogs on the pavement with a light after dark.",
+    "Cholla and other cactus spines hook into paws and noses. Carry a comb or pliers to remove them.",
+    "Desert tortoises are protected. Keep dogs well away and never let them dig at burrows."
+  ],
+  "checklist": [
+    "At least 1 gallon of water per day for the dog, plus a bowl",
+    "A 6-foot leash, not a retractable one",
+    "Booties or paw balm for hot pavement and sharp rock",
+    "A comb or pliers for cactus spines",
+    "Shade: a canopy or umbrella for the campsite",
+    "Waste bags and a sealed container for the drive out",
+    "Vaccine records if you plan to use a boarding kennel"
+  ],
+  "vets": [
+    {"name": "VCA Yucca Valley Animal Hospital", "town": "Yucca Valley"},
+    {"name": "VCA 29 Palms Animal Hospital", "town": "Twentynine Palms"}
+  ],
+  "sources": [
+    {"label": "NPS: Pets in Joshua Tree", "url": "https://www.nps.gov/jotr/planyourvisit/pets.htm"},
+    {"label": "NPS: Joshua Tree backcountry roads", "url": "https://www.nps.gov/jotr/planyourvisit/backcountry-roads.htm"},
+    {"label": "Recreation.gov: Jumbo Rocks Campground", "url": "https://www.recreation.gov/camping/campgrounds/272300"}
+  ],
+  "official": "https://www.nps.gov/jotr/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}

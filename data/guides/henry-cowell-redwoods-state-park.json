@@ -1,0 +1,115 @@
+{
+  "slug": "henry-cowell-redwoods-state-park",
+  "name": "Henry Cowell Redwoods State Park",
+  "shortName": "Henry Cowell",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Bay Area",
+  "nearestTowns": ["Felton", "Scotts Valley", "Santa Cruz", "Ben Lomond"],
+  "tagline": "Four real trails for dogs under the redwoods. Rare for a state park.",
+  "summary": "Henry Cowell is the exception to the no-dogs-on-trails rule. Leashed dogs can walk the paved Pipeline Road, the Meadow Trail, the Graham Hill Trail and the Powder Mill Fire Road, plus the picnic areas and the campground. That adds up to a full morning in the redwoods with your dog. You still cannot take them on the famous Redwood Grove Loop or into the Fall Creek unit, and the river is off limits.",
+  "score": 3,
+  "scoreLabel": "Moderate",
+  "verdict": "Bring your dog. It is the best state park in the Santa Cruz Mountains for a dog, with a campground and several legal trails, as long as you skip the old-growth loop.",
+  "photo": {
+    "id": "Lra4kwh54qQ",
+    "raw": "https://images.unsplash.com/photo-1673757317673-9750a3255e13?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8SGVucnklMjBDb3dlbGwlMjBSZWR3b29kc3xlbnwwfDB8fHwxNzkxNzY4MDQ2fDI&ixlib=rb-4.1.0",
+    "alt": "A wooden fence along a path through tall redwoods at Henry Cowell Redwoods State Park in Felton",
+    "author": "Dave Drury",
+    "authorUrl": "https://unsplash.com/@niufan86",
+    "link": "https://unsplash.com/photos/a-wooden-fence-surrounded-by-tall-trees-in-a-forest-Lra4kwh54qQ"
+  },
+  "glance": [
+    {"key": "trails",  "status": "some", "note": "Pipeline Road, Meadow Trail, Graham Hill Trail, Powder Mill Fire Road"},
+    {"key": "camping", "status": "yes",  "note": "Graham Hill campground, standard sites"},
+    {"key": "lodging", "status": "no",   "note": "None in the park; pet rooms in Scotts Valley and Ben Lomond"},
+    {"key": "water",   "status": "no",   "note": "San Lorenzo River beaches are reached by closed trails"},
+    {"key": "leash",   "status": "rule", "note": "6 ft max, at all times"},
+    {"key": "fee",     "status": "info", "note": "$10 per car day use; no standard pet fee, but check your campsite booking"}
+  ],
+  "allowed": [
+    {"name": "Pipeline Road", "detail": "A paved service road that runs the length of the park from the day-use area south toward Santa Cruz. Shaded, wide and shared with bikes. The main dog route."},
+    {"name": "Meadow Trail", "detail": "A short, flat loop through the open meadow next to the day-use area, with the redwoods on one side and views of the hills. Hot at midday in summer."},
+    {"name": "Graham Hill Trail", "detail": "Connects the campground on Graham Hill Road down to the day-use area and Pipeline Road. A sandy, moderately steep path through pines and oaks."},
+    {"name": "Powder Mill Fire Road", "detail": "A dirt road out of the campground area through the sandhills. Quiet and lightly used."},
+    {"name": "Campground", "detail": "Standard sites in the campground off Graham Hill Road take leashed dogs."},
+    {"name": "Picnic areas", "detail": "The big picnic area by the day-use parking lot and the nature center lawn, both under redwoods and next to the Meadow Trail."},
+    {"name": "Paved roads and parking lots", "detail": "Including the day-use lot, the campground road and the Graham Hill Road pullout."}
+  ],
+  "notAllowed": [
+    {"name": "Redwood Grove Loop Trail", "detail": "The flat 0.8-mile loop through the old-growth grove is the park's showpiece and is closed to dogs. One person can walk it while the other waits with the dog on the Meadow Trail."},
+    {"name": "Fall Creek Unit", "detail": "The whole northern section of the park above Felton is no-dogs, including the lime kilns and the creek trails."},
+    {"name": "All other trails", "detail": "River Trail, Eagle Creek, Ridge Fire Road, Rincon Fire Road and the path to the Garden of Eden swimming hole. Dogs on Rincon Fire Road are not confirmed; treat it as closed unless a sign says otherwise."},
+    {"name": "San Lorenzo River", "detail": "The sandy beaches at Garden of Eden and along the River Trail are reached only by trails that are closed to dogs."},
+    {"name": "Buildings", "detail": "The nature center and the visitor center. Roaring Camp Railroads next door sets its own pet rules; ask before buying a ticket."}
+  ],
+  "hikes": [
+    {"name": "Pipeline Road from the day-use area", "distance": "Up to 4 mi one way", "difficulty": "Easy", "surface": "Paved", "why": "Shade the whole way, a steady gentle grade and plenty of places to turn around. Start at the day-use lot and head south.", "maps": "Henry Cowell Redwoods State Park Day Use Area, Felton"},
+    {"name": "Meadow Trail loop", "distance": "About 1 mi loop", "difficulty": "Easy", "surface": "Dirt", "why": "Flat loop around the meadow beside the picnic area. The easiest walk in the park for an older dog, and the place to wait while the rest of the family does the grove loop.", "maps": "Henry Cowell Meadow Trail, Felton"},
+    {"name": "Graham Hill Trail, campground to day-use area", "distance": "About 1.5 mi one way", "difficulty": "Moderate", "surface": "Sandy dirt", "why": "Walk from your campsite to the picnic area and the start of Pipeline Road without driving. The sandy soil is easy on paws; the climb back up is the workout.", "maps": "Henry Cowell Redwoods State Park Campground, Graham Hill Road"},
+    {"name": "Powder Mill Fire Road", "distance": "About 1 mi one way", "difficulty": "Easy", "surface": "Dirt road", "why": "Quiet road through the ponderosa pines and sandhills near the campground. Few people and good morning light.", "maps": "Powder Mill Fire Road, Henry Cowell Redwoods State Park"}
+  ],
+  "hangouts": [
+    {"name": "Day-use picnic area", "why": "Tables under big second-growth redwoods, restrooms, water and the nature center lawn. Dogs on leash."},
+    {"name": "The meadow", "why": "A sunny clearing with a bench or two and a view of Ben Lomond Mountain. Dry grass means foxtails in summer."},
+    {"name": "Campground amphitheater area", "why": "Open space among the pines for a sit at the end of the day."},
+    {"name": "Downtown Felton", "why": "Five minutes away. Dog-friendly patios and a grocery for forgotten supplies."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet at all times.",
+    "Dogs may use only Pipeline Road, the Meadow Trail, the Graham Hill Trail, the Powder Mill Fire Road, picnic areas, campsites and paved areas.",
+    "No dogs on the Redwood Grove Loop or anywhere in the Fall Creek Unit.",
+    "At night your dog must be inside your tent or vehicle.",
+    "Never leave a dog unattended, at a campsite or in a car.",
+    "Pick up waste and put it in a bin.",
+    "Stay out of the river with your dog; the beaches are on closed trails.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Henry Cowell campground, Graham Hill Road", "note": "About 100 sites in pines and oaks on the ridge above the river. Reserve on ReserveCalifornia up to 6 months ahead. Leashed dogs OK at standard sites. One listing mentions a per-pet nightly fee, which is unusual for a state park, so check at booking."},
+      {"name": "Campground upgrades", "note": "Reports say the campground reopened in spring 2026 after an upgrade project. Confirm it is open for your dates."},
+      {"name": "Fall Creek Unit", "note": "No camping and no dogs."}
+    ],
+    "lodging": [
+      {"name": "Best Western Plus Inn Scotts Valley", "note": "10 minutes from the park. Takes 2 dogs up to 80 pounds for a nightly fee; dogs cannot be left alone in rooms."},
+      {"name": "Four Points by Sheraton, Scotts Valley", "note": "Takes 2 dogs of any size for a per-pet fee per stay."},
+      {"name": "Quality Inn and Suites Santa Cruz Mountains, Ben Lomond", "note": "On Highway 9, 10 minutes north. Pet-friendly rooms."},
+      {"name": "Vacation rentals in Felton and Ben Lomond", "note": "Many cabins allow dogs; check each listing."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Summer", "level": "info", "detail": "Cool under the trees, hot on the Meadow Trail and the sandhills. The campground and day-use lot fill on weekends; arrive before 10 am."},
+    {"title": "Winter and spring", "level": "info", "detail": "The river runs high and Pipeline Road is at its greenest. Expect mud on the dirt trails and some storm closures."},
+    {"title": "Fall", "level": "info", "detail": "Warm, dry and quiet. Foxtails are at their worst in the meadow until the first rains."},
+    {"title": "Fire season", "level": "warn", "detail": "The Santa Cruz Mountains close trails and campgrounds on Red Flag days. Check the park page before you go."}
+  ],
+  "wildlife": [
+    "Banana slugs are everywhere on the shaded trails and are harmless, but stop your dog eating them.",
+    "Ticks live in the meadow grass and along the sandhills. Check your dog after every walk.",
+    "Poison oak lines the edges of Pipeline Road and the Graham Hill Trail.",
+    "Raccoons and jays raid campsites. Keep dog food in the car or locker.",
+    "Mountain lions live in the Santa Cruz Mountains. Keep dogs leashed and close at dusk."
+  ],
+  "checklist": [
+    "A 6-foot leash, not a retractable one",
+    "Water and a bowl for Pipeline Road; taps are only at the day-use area and campground",
+    "Waste bags",
+    "A tick comb",
+    "A towel for sandy paws from the Graham Hill Trail",
+    "A map marking which trails are dog-legal; signs are small",
+    "Cash or card for the $10 day-use fee"
+  ],
+  "vets": [
+    {"name": "Felton Veterinary Hospital", "town": "Felton"},
+    {"name": "Scotts Valley Veterinary Clinic", "town": "Scotts Valley"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Henry Cowell Redwoods State Park", "url": "https://www.parks.ca.gov/?page_id=546"},
+    {"label": "California State Parks: Henry Cowell camping", "url": "https://www.parks.ca.gov/?page_id=29725"},
+    {"label": "Mountain Parks Foundation: Henry Cowell FAQs", "url": "https://www.mountainparks.org/our-parks/henry-cowell-redwoods/faqs"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=546",
+  "verified": "October 2026"
+}

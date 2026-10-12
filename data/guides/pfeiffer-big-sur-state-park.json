@@ -1,0 +1,120 @@
+{
+  "slug": "pfeiffer-big-sur-state-park",
+  "name": "Pfeiffer Big Sur State Park",
+  "shortName": "Pfeiffer Big Sur",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Central Coast",
+  "nearestTowns": ["Big Sur", "Carmel-by-the-Sea", "Monterey"],
+  "tagline": "Redwoods and river by the campground. Trails are off limits.",
+  "summary": "Pfeiffer Big Sur is the classic Big Sur campground under the redwoods, and dogs are welcome in it, in the day-use areas and on one short loop along the Big Sur River. They cannot go on any other trail, so Pfeiffer Falls, Valley View and Buzzards Roost are out. The saving grace is Pfeiffer Beach, 15 minutes away on Forest Service land, where leashed dogs are allowed on the sand.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for a camping base with river wading and a beach day at Pfeiffer Beach. Skip it if you want to hike the park's own trails.",
+  "photo": {
+    "id": "SHYPOYQL6q8",
+    "raw": "https://images.unsplash.com/photo-1626882823218-3519777a23be?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Mnx8QmlnJTIwU3VyJTIwcmVkd29vZHN8ZW58MHwwfHx8MTc5MTc2ODAzOXwy&ixlib=rb-4.1.0",
+    "alt": "Sunset light over a dense redwood forest in Big Sur, seen from above",
+    "author": "Waldo Broodryk",
+    "authorUrl": "https://unsplash.com/@waldo",
+    "link": "https://unsplash.com/photos/green-trees-under-white-sky-during-daytime-SHYPOYQL6q8"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "Only the 0.6-mile River Path and Warden's Path loop"},
+    {"key": "camping", "status": "yes",  "note": "Pfeiffer Big Sur Campground, on leash"},
+    {"key": "lodging", "status": "yes",  "note": "Big Sur Lodge has pet rooms for up to 2 dogs, with a fee"},
+    {"key": "water",   "status": "some", "note": "Big Sur River at the day-use areas; Pfeiffer Beach 15 min away"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. $10 per car day use; camping extra"}
+  ],
+  "allowed": [
+    {"name": "Pfeiffer Big Sur Campground", "detail": "Leashed dogs are fine at your campsite and on the campground roads. The river runs right past the lower loops."},
+    {"name": "Day-use areas and picnic spots", "detail": "Day Use Lot 1 and Lot 2 by the river, the picnic tables and the paved roads between them."},
+    {"name": "River Path and Warden's Path loop", "detail": "The one dog-legal trail in the park: a flat 0.6-mile loop along both banks of the Big Sur River, with footbridges at each end. Start at Day Use Lot 2."},
+    {"name": "Paved park roads", "detail": "Walk the campground and day-use roads on leash. Stay off every dirt trail that leaves them."},
+    {"name": "Big Sur Lodge pet rooms", "detail": "The lodge inside the park takes up to 2 dogs in designated rooms. Tell them before you arrive."},
+    {"name": "Pfeiffer Beach (nearby)", "detail": "Not part of the state park. It is Los Padres National Forest land, so leashed dogs are allowed on the sand. Fee at the gate."},
+    {"name": "Garrapata Beach (nearby)", "detail": "Leashed dogs are allowed on the beach at Garrapata State Park, 25 minutes north. Not on its bluff trails."}
+  ],
+  "notAllowed": [
+    {"name": "Every other trail", "detail": "Pfeiffer Falls, Valley View, Buzzards Roost, Oak Grove and Mount Manuel are all closed to dogs, carried or not."},
+    {"name": "Andrew Molera State Park beyond the parking lot", "detail": "Leashed dogs may use the lot and developed areas only. The beach trail and the beach itself are off limits."},
+    {"name": "Julia Pfeiffer Burns State Park", "detail": "No dogs on the McWay Falls overlook trail or anywhere beyond the parking area."},
+    {"name": "Buildings", "detail": "The lodge restaurant, store, visitor centre and restrooms."},
+    {"name": "Left alone", "detail": "Dogs cannot be left unattended at a campsite, in a lodge room or in a vehicle. The lodge charges $150 if you bring a dog without telling them first."}
+  ],
+  "hikes": [
+    {"name": "River Path and Warden's Path Loop", "distance": "0.6 mi loop", "difficulty": "Easy", "surface": "Dirt and paved", "why": "Flat, shaded by redwoods and right beside the river, with a bridge at each end so you never double back. Wheelchair and stroller friendly, so fine for old dogs too.", "maps": "Pfeiffer Big Sur State Park Day Use Lot 2"},
+    {"name": "Pfeiffer Beach (nearby, Los Padres National Forest)", "distance": "About 1 mi of sand, out and back", "difficulty": "Easy", "surface": "Sand", "why": "Purple-streaked sand, the Keyhole Arch and leashed dogs on the beach. Sycamore Canyon Road is narrow and the lot fills by mid-morning. Sources list the gate fee at $10 to $15 per car; bring cash.", "maps": "Pfeiffer Beach, Big Sur"},
+    {"name": "Garrapata Beach (nearby, Garrapata State Park)", "distance": "Up to 2 mi out and back", "difficulty": "Easy", "surface": "Sand", "why": "A long wild beach where leashed dogs are allowed on the sand only. Park in the roadside turnouts near Gate 19. Free. The surf is dangerous, so keep dogs out of the water.", "maps": "Garrapata Beach Gate 19, Big Sur"},
+    {"name": "Salmon Creek Falls Trail (nearby, Los Padres National Forest)", "distance": "Under 1 mi out and back to the falls", "difficulty": "Moderate", "surface": "Dirt", "why": "Forest Service land, so a leashed dog can actually hike here. A short scramble to a big waterfall, about an hour south of the park near Ragged Point. Check Highway 1 conditions first.", "maps": "Salmon Creek Trailhead, Big Sur"}
+  ],
+  "hangouts": [
+    {"name": "Big Sur River at the day-use areas", "why": "Shallow, clear pools by Day Use Lot 2 in summer. Leashed dogs can wade and cool off."},
+    {"name": "Riverfront campsites", "why": "The lower campground loops sit on the river. Ask for a riverfront site when you book; they cost a little more."},
+    {"name": "Pfeiffer Beach at sunset", "why": "Light through the Keyhole Arch in winter, wind most afternoons. Leash on, and watch the rogue waves."},
+    {"name": "Bixby Creek Bridge and Hurricane Point turnouts", "why": "The famous Highway 1 views from paved pullouts. No walking needed, so no trail rules to worry about."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Stay in the campground, day-use areas, paved roads and the River Path and Warden's Path loop. Every other trail is closed to dogs, carried or not.",
+    "Never leave a dog unattended, including tied at a campsite or inside a vehicle.",
+    "Dogs must sleep inside a tent or vehicle at night.",
+    "Pick up waste and use the bins at the day-use lots and campground.",
+    "Keep dog food sealed and inside your car. Raccoons raid campsites every night and bears live in the area.",
+    "Staying at Big Sur Lodge: tell them about your dog before arrival, sign the pet waiver at check-in and keep the dog off the furniture.",
+    "Pfeiffer Beach is Forest Service land with its own rules: leash required, fee at the gate, no dogs left in cars.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Pfeiffer Big Sur Campground", "note": "Inside the park under the redwoods. Reserve on ReserveCalifornia up to 6 months ahead; summer weekends sell out fast. Sources list sites at $35 to $60 a night."},
+      {"name": "Riverside Campground and Cabins", "note": "Private campground on the river in Big Sur village. $5 per dog per night at campsites, 2 dogs max."},
+      {"name": "Fernwood Resort", "note": "Dogs allowed in the campground, RV sites and tent cabins only, not the motel or cabins."},
+      {"name": "Big Sur Campground and Cabins", "note": "Dogs welcome at campsites for about $5 a night. Not allowed in the cabins."},
+      {"name": "Kirk Creek and Plaskett Creek (Forest Service)", "note": "Leashed dogs allowed. Both are about an hour south; the Plaskett Fire burned nearby in 2026, so check they are open."}
+    ],
+    "lodging": [
+      {"name": "Big Sur Lodge, inside the park", "note": "Up to 2 dogs in pet-friendly rooms. The lodge FAQ lists $40 per day; older policies say $50 per stay, so confirm when booking."},
+      {"name": "Riverside Campground and Cabins", "note": "The only Big Sur property that allows dogs in cabins and rooms, at about $30 per dog per night."},
+      {"name": "Ragged Point Inn", "note": "Pet rooms with a fee at the far south end of Big Sur, near Salmon Creek."},
+      {"name": "Alila Ventana Big Sur", "note": "Adults-only resort with select dog-friendly rooms. Pet fees apply."},
+      {"name": "Carmel-by-the-Sea", "note": "45 minutes north and one of the most dog-friendly towns in California, with many pet hotels and a leash-free city beach."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Fire recovery", "level": "danger", "detail": "The Timber Fire burned about 517 acres of the park in September 2026. State Parks announced a reopening of the day-use areas, campground, River Path and Buzzards Roost on October 16, 2026, with some trails staying closed. Check the park page before you drive down."},
+    {"title": "Highway 1 closures", "level": "warn", "detail": "The road reopened end to end on January 14, 2026 after the Regent's Slide closure, but slides and overnight work closures still happen. Check Caltrans QuickMap the day you travel."},
+    {"title": "Summer and holiday weekends", "level": "warn", "detail": "The campground books out months ahead and the Pfeiffer Beach lot fills by 10 am. Mornings are foggy, afternoons inland can be hot."},
+    {"title": "Winter", "level": "info", "detail": "Quiet and green, but the river runs high and cold after storms and burned slopes can close in heavy rain."}
+  ],
+  "wildlife": [
+    "Black bears and raccoons work the campground at night. Keep all dog food in your car.",
+    "Poison oak lines the riverbanks. Rinse your dog after wading and before they sleep in your tent.",
+    "Ticks are common in the grass and brush from winter to early summer. Check your dog after every walk.",
+    "Mountain lions live in these hills. Keep the leash short at dawn and dusk and never let a dog roam a campsite."
+  ],
+  "checklist": [
+    "Water for two and a collapsible bowl",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags and a way to carry them to a bin",
+    "A towel for river mud and beach sand",
+    "A tick comb and a post-walk check routine",
+    "Cash for the Pfeiffer Beach gate",
+    "Downloaded maps; there is almost no cell signal in Big Sur"
+  ],
+  "vets": [
+    {"name": "Carmel Valley Veterinary Hospital", "town": "Carmel Valley"},
+    {"name": "Animal Hospital of Mid Valley", "town": "Carmel"},
+    {"name": "BluePearl Pet Hospital (24-hour emergency)", "town": "Del Rey Oaks"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Dogs in Big Sur", "url": "https://www.parks.ca.gov/pages/570/files/DOGS%20in%20Big%20Sur_single.pdf"},
+    {"label": "California State Parks: Pfeiffer Big Sur to reopen Oct. 16 following Timber Fire", "url": "https://www.parks.ca.gov/NewsRelease/1594"},
+    {"label": "Big Sur Lodge FAQ (pet policy)", "url": "https://bigsurlodge.com/faqs/"},
+    {"label": "US Forest Service: Pfeiffer Beach day use", "url": "https://www.fs.usda.gov/r05/lospadres/recreation/pfeiffer-beach-day-use"}
+  ],
+  "official": "https://www.parks.ca.gov/pages/570/files/DOGS%20in%20Big%20Sur_single.pdf",
+  "verified": "October 2026"
+}

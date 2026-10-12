@@ -1,0 +1,124 @@
+{
+  "slug": "golden-gate-national-recreation-area",
+  "name": "Golden Gate National Recreation Area",
+  "shortName": "Golden Gate",
+  "type": "national",
+  "designation": "National Recreation Area",
+  "region": "Bay Area",
+  "nearestTowns": ["San Francisco", "Sausalito", "Mill Valley", "Pacifica"],
+  "tagline": "The only national park with off-leash beaches. Learn the zones.",
+  "summary": "Golden Gate is the most dog-friendly unit in the whole national park system, and the only one with official off-leash areas. Fort Funston, the central stretch of Crissy Field, Ocean Beach north of Stairwell 21, Rodeo Beach and Muir Beach all allow dogs under voice control, and dozens of miles of Marin Headlands, Presidio and Lands End trails take dogs on leash. The catch is that the rules change from one beach section to the next, and the famous side trips, Muir Woods and Alcatraz, take no dogs at all.",
+  "score": 5,
+  "scoreLabel": "Excellent",
+  "verdict": "Bring the dog. This is the park to build a whole trip around, with a kennel day only if Muir Woods or Alcatraz is on your list.",
+  "photo": {
+    "id": "uVxKGbpGbm8",
+    "raw": "https://images.unsplash.com/photo-1580077329504-209813125462?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8R29sZGVuJTIwR2F0ZSUyMEJyaWRnZSUyME1hcmluJTIwSGVhZGxhbmRzfGVufDB8MHx8fDE3OTE3NjgwMjF8Mg&ixlib=rb-4.1.0",
+    "alt": "The Golden Gate Bridge seen from a hilltop in the Marin Headlands, with San Francisco behind it",
+    "author": "Kellen Riggin",
+    "authorUrl": "https://unsplash.com/@kalaniparker",
+    "link": "https://unsplash.com/photos/a-view-of-the-golden-gate-bridge-from-the-top-of-a-hill-uVxKGbpGbm8"
+  },
+  "glance": [
+    {"key": "trails",  "status": "yes",  "note": "Most Headlands, Presidio and Lands End trails on leash; some off-leash zones"},
+    {"key": "camping", "status": "no",   "note": "No pets at Kirby Cove or the other park campgrounds"},
+    {"key": "lodging", "status": "yes",  "note": "Cavallo Point at Fort Baker takes dogs; plenty of pet hotels in the city"},
+    {"key": "water",   "status": "yes",  "note": "Off-leash at Fort Funston, Crissy Field, Ocean Beach north end, Rodeo and Muir beaches"},
+    {"key": "leash",   "status": "rule", "note": "6 ft where leashes are required; voice and sight control in off-leash areas"},
+    {"key": "fee",     "status": "info", "note": "No entry fee or pet fee. A few lots charge for parking"}
+  ],
+  "allowed": [
+    {"name": "Fort Funston (off leash)", "detail": "The classic San Francisco dog spot: bluff-top trails and a wide beach under voice and sight control. A few fenced habitat areas near the bluffs are closed; signs mark them."},
+    {"name": "Crissy Field (off leash in the middle)", "detail": "The central beach and the grassy airfield allow off-leash dogs under voice control. The Wildlife Protection Area at the west end near the lagoon and the east beach are leash-only. Watch the signs as you walk."},
+    {"name": "Ocean Beach, north of Stairwell 21 (off leash)", "detail": "From Stairwell 1 near the Cliff House south to Stairwell 21, dogs can be off leash under voice control. South of Stairwell 21 to Sloat Boulevard is leash only for snowy plovers."},
+    {"name": "Rodeo Beach and Muir Beach (off leash)", "detail": "Both Marin beaches allow dogs under voice control. The trails leading away from them are on leash."},
+    {"name": "Marin Headlands trails (on leash)", "detail": "The Coastal Trail from Rodeo Beach, the Rodeo Lagoon loop, Tennessee Valley Trail and parts of Oakwood Valley take dogs. Oakwood Valley has an off-leash section; others are 6-foot leash."},
+    {"name": "Lands End Coastal Trail (on leash)", "detail": "Cliffs, cypress and the best bridge views in the city. Leash required the whole way, and the stairs at Mile Rock are steep."},
+    {"name": "Presidio trails (on leash, some off-leash)", "detail": "Miles of paths through the old post, with a few posted off-leash areas. Coyotes live here, so the leash rule is enforced."},
+    {"name": "Baker Beach, north end", "detail": "Off-leash under voice control at the north end toward the bridge under the long-standing 1979 policy; the south end near the lots is on leash. Sources vary on the exact line, so read the signs."}
+  ],
+  "notAllowed": [
+    {"name": "Muir Woods National Monument", "detail": "No dogs on any trail, boardwalk or in the lots, service dogs excepted. Muir Beach is 10 minutes away and does take dogs."},
+    {"name": "Alcatraz Island", "detail": "No pets on the ferry or the island."},
+    {"name": "Stinson Beach (park section)", "detail": "The National Park Service beach at Stinson is closed to dogs. Only the county-run Upton Beach section to the north allows them, on leash."},
+    {"name": "Ocean Beach south of Stairwell 21, off leash", "detail": "Leash only from Stairwell 21 to Sloat Boulevard to protect snowy plovers. The plover area at Crissy Field is also leash-only."},
+    {"name": "Park campgrounds", "detail": "Kirby Cove, Bicentennial, Hawk Hill and Haypress camps do not allow pets."},
+    {"name": "Buildings and ferries", "detail": "Visitor centers, the Marine Mammal Center and the Alcatraz and Sausalito ferries are people only. Service dogs excepted."},
+    {"name": "Fenced habitat areas", "detail": "Dune restoration plots at Fort Funston, Crissy Field and Ocean Beach are fenced and closed, on or off leash."}
+  ],
+  "hikes": [
+    {"name": "Fort Funston loop", "distance": "2 mi loop", "difficulty": "Easy", "surface": "Sand and dirt", "why": "Down the sand ladder to the beach, along the water and back up the Sunset Trail on the bluff. Off leash the whole way, with hang gliders overhead.", "maps": "Fort Funston Parking Lot, San Francisco"},
+    {"name": "Crissy Field promenade", "distance": "3 mi out and back", "difficulty": "Easy", "surface": "Packed gravel and sand", "why": "Flat walk from the Marina Green to Fort Point under the bridge. Let the dog run on the central beach, then leash up for the west end near the lagoon.", "maps": "Crissy Field East Beach, San Francisco"},
+    {"name": "Lands End Coastal Trail", "distance": "3.4 mi out and back", "difficulty": "Moderate", "surface": "Dirt and stairs", "why": "Cliff-edge views of the Golden Gate and shipwreck remains at low tide. On leash, with a few long staircases.", "maps": "Lands End Lookout, San Francisco"},
+    {"name": "Ocean Beach, Stairwell 1 to 21", "distance": "Up to 3 mi one way", "difficulty": "Easy", "surface": "Sand", "why": "The longest off-leash sand in the city. Park near the Cliff House and walk south, watching the stairwell numbers so you know where the leash zone starts.", "maps": "Ocean Beach Stairwell 21, San Francisco"},
+    {"name": "Rodeo Beach and Lagoon loop", "distance": "1.5 to 4 mi", "difficulty": "Easy to moderate", "surface": "Sand and dirt", "why": "Off-leash beach, then an on-leash climb on the Coastal Trail to Hill 88 for views of the whole Marin coast. Free parking at the beach.", "maps": "Rodeo Beach, Marin Headlands"},
+    {"name": "Tennessee Valley Trail", "distance": "3.4 mi out and back", "difficulty": "Easy", "surface": "Dirt road", "why": "A gentle valley walk to a hidden cove, on leash. Shaded start, open finish, and a beach at the end where dogs must stay leashed.", "maps": "Tennessee Valley Trailhead, Mill Valley"}
+  ],
+  "hangouts": [
+    {"name": "Crissy Field central beach", "why": "Bridge straight ahead, bay water calm enough for a swim, and a dog-friendly cafe at the Warming Hut."},
+    {"name": "Fort Funston beach", "why": "Wide, wild and nearly always full of dogs. Bring a ball and a towel."},
+    {"name": "Muir Beach", "why": "A small, sheltered cove 10 minutes from Muir Woods. Off-leash sand, a lagoon and a pub up the road with a dog-friendly patio."},
+    {"name": "Fort Baker and Cavallo Point lawn", "why": "Leashed dogs on the parade ground under the north end of the bridge. Calm water at Horseshoe Cove for wading."},
+    {"name": "Fort Mason Great Meadow", "why": "Big lawn with bay views on the city side, on leash. Easy stop between Crissy Field and the Ferry Building."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet everywhere except the posted off-leash areas.",
+    "In an off-leash area, voice and sight control means the dog is always in view, comes immediately when called, and you carry a leash. Leash up if the dog ignores a command or bothers anyone.",
+    "Know your zone before you go. The leash line on Ocean Beach is Stairwell 21; at Crissy Field it is the Wildlife Protection Area at the west end. Both are signed.",
+    "Walking 4 to 6 dogs at once requires a commercial dog-walking permit from the park, and 6 is the limit for anyone. Walk 3 or fewer without a permit.",
+    "Pick up waste everywhere, including the beaches. Bins are at most lots.",
+    "No dogs at Muir Woods, Alcatraz, the Stinson Beach park section or any park campground.",
+    "Stay out of fenced dune and plover areas, and keep dogs away from seals and sea lions hauled out on the beaches.",
+    "Rangers issue citations and fines for off-leash dogs outside the posted zones and for dogs in closed areas.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Kirby Cove Campground", "note": "The famous campground under the bridge. No pets, service animals only."},
+      {"name": "Bicentennial, Hawk Hill and Haypress camps", "note": "Small walk-in tent camps in the Marin Headlands. No pets."},
+      {"name": "Samuel P. Taylor State Park, Lagunitas", "note": "The closest campground that takes dogs, about 45 minutes north of the bridge. Dogs in the campground and on the Cross Marin Trail only."}
+    ],
+    "lodging": [
+      {"name": "Cavallo Point Lodge, Fort Baker", "note": "Inside the park at the north end of the bridge. Up to 2 dogs per room for a $150 fee per stay; dogs on leash on the grounds."},
+      {"name": "Inn at the Presidio and Lodge at the Presidio", "note": "Two small hotels inside the Presidio, steps from the trails. Both have taken dogs with a fee; confirm current policy when booking."},
+      {"name": "Kimpton hotels, San Francisco", "note": "Several in the city. The brand has long welcomed pets of any size with no fee; check the specific property."},
+      {"name": "Motels along Lombard Street", "note": "The budget strip closest to Crissy Field and the Presidio. Several take dogs; read the listing."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Snowy plover season (July to May)", "level": "warn", "detail": "Leash rules tighten south of Stairwell 21 on Ocean Beach and at the Crissy Field lagoon end for most of the year. Only June is fully open."},
+    {"title": "Summer fog and wind", "level": "info", "detail": "July and August are cold and grey on the beaches, which dogs love. Bring a jacket for yourself. The Headlands often sit above the fog."},
+    {"title": "Fall (September and October)", "level": "info", "detail": "The warmest, clearest weeks. Fleet Week in early October brings crowds and jet noise to Crissy Field; skip it with a nervous dog."},
+    {"title": "Coyote pupping season (April to August)", "level": "warn", "detail": "Coyotes in the Presidio and the Headlands defend dens and will follow dogs. Keep the leash on in the Presidio and stay on marked trails."}
+  ],
+  "wildlife": [
+    "Coyotes live in the Presidio, Fort Funston, Lands End and the Marin Headlands. They have gone after off-leash dogs; keep small dogs close, especially at dawn and dusk.",
+    "Snowy plovers winter on Ocean Beach and Crissy Field. Stay out of the fenced and signed areas.",
+    "Harbor seals and sea lions haul out at Rodeo Beach, Baker Beach and Lands End. Keep 50 yards back and leash up.",
+    "Rip currents and sneaker waves at Ocean Beach kill swimmers most years. Do not let a dog swim there; Crissy Field's bay water is far safer.",
+    "Ticks and poison oak line the Headlands and Tennessee Valley trails. Check the dog and wipe them down after."
+  ],
+  "checklist": [
+    "A 6-foot leash, carried even in off-leash areas",
+    "A towel and a crate liner; every beach here is wet sand and fog",
+    "Water and a bowl for the Headlands trails, which have no fountains",
+    "Waste bags, plus a spare roll",
+    "A solid recall before you unclip anywhere, especially near cliffs at Fort Funston and Lands End",
+    "A photo of the Ocean Beach stairwell map so you know where the leash zone starts",
+    "Vaccination records if you plan a kennel day for Muir Woods or Alcatraz"
+  ],
+  "vets": [
+    {"name": "SAGE Veterinary Centers, 24-hour emergency", "town": "San Francisco"},
+    {"name": "Ocean Avenue Veterinary Hospital, 24-hour", "town": "San Francisco"},
+    {"name": "SF Animal Medical Center", "town": "San Francisco"}
+  ],
+  "sources": [
+    {"label": "NPS: A dog-friendly national park (Golden Gate)", "url": "https://www.nps.gov/goga/planyourvisit/dog-friendly-areas.htm"},
+    {"label": "NPS: Commercial dog walking permits", "url": "https://www.nps.gov/goga/planyourvisit/cdswup.htm"},
+    {"label": "Parks Conservancy: dog-friendly sites in the GGNRA", "url": "https://www.parksconservancy.org/parks/dog-friendly-park-sites-golden-gate-national-recreation-area"},
+    {"label": "Cavallo Point: dog-friendly stays", "url": "https://www.cavallopoint.com/about-us/dog-friendly-fun/"}
+  ],
+  "official": "https://www.nps.gov/goga/planyourvisit/dog-friendly-areas.htm",
+  "verified": "October 2026"
+}

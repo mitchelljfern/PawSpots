@@ -1,0 +1,114 @@
+{
+  "slug": "samuel-p-taylor-state-park",
+  "name": "Samuel P. Taylor State Park",
+  "shortName": "Samuel P. Taylor",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Bay Area",
+  "nearestTowns": ["Lagunitas", "Point Reyes Station", "Olema", "Fairfax"],
+  "tagline": "One flat, shaded creekside path. Nothing else, but it is a good one.",
+  "summary": "Samuel P. Taylor is a redwood canyon in West Marin with one route for dogs: the paved Cross Marin Trail, which runs about 3 miles along Lagunitas Creek through the whole park. Add a campground under the redwoods and a shady picnic grove and you have a relaxed weekend. You do not get the Pioneer Tree loop, Barnabe Peak or any other trail, and your dog can never go in the creek.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for camping and an easy creekside walk, and use it as a base for the dog beaches around Point Reyes Station. Leave them home if you want to climb Barnabe Peak.",
+  "photo": {
+    "id": "k5VJ2u6X9iY",
+    "raw": "https://images.unsplash.com/photo-1681368177584-9c8bc305795e?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8TWFyaW4lMjBDb3VudHklMjByZWR3b29kJTIwZm9yZXN0fGVufDB8MHx8fDE3OTE3NjgwODN8Mg&ixlib=rb-4.1.0",
+    "alt": "Tall redwood trunks in a shaded Marin County forest",
+    "author": "Zetong Li",
+    "authorUrl": "https://unsplash.com/@zetong",
+    "link": "https://unsplash.com/photos/a-forest-filled-with-lots-of-tall-trees-k5VJ2u6X9iY"
+  },
+  "glance": [
+    {"key": "trails",  "status": "some", "note": "Cross Marin Trail only; no dirt trails"},
+    {"key": "camping", "status": "yes",  "note": "Main campground; not the cabins or the hike-and-bike site"},
+    {"key": "lodging", "status": "no",   "note": "No pets in the park cabins; pet rooms in Olema and Point Reyes Station"},
+    {"key": "water",   "status": "no",   "note": "Dogs may never enter Lagunitas Creek"},
+    {"key": "leash",   "status": "rule", "note": "6 ft max, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee; day-use fee per car at the entrance"}
+  ],
+  "allowed": [
+    {"name": "Cross Marin Trail", "detail": "A paved former railroad bed that follows Lagunitas Creek the length of the park, about 3 miles, almost level and shaded by redwoods. Shared with bikes and strollers."},
+    {"name": "Main campground", "detail": "Leashed dogs are welcome at the standard family campsites in the creekside redwoods."},
+    {"name": "Day-use picnic grove", "detail": "Tables, barbecues and lawn under the redwoods beside the creek, just inside the entrance. Dogs on leash."},
+    {"name": "Paved roads and parking lots", "detail": "Sir Francis Drake Boulevard runs through the park, but it is busy and has no shoulder. Stick to the Cross Marin Trail."},
+    {"name": "Nearby: Point Reyes National Seashore beaches", "detail": "Limantour, Kehoe and the north end of Point Reyes Beach allow leashed dogs, 20 to 30 minutes away. Rules change seasonally for nesting birds, so check the seashore site."}
+  ],
+  "notAllowed": [
+    {"name": "All dirt trails", "detail": "Pioneer Tree Trail, Barnabe Peak, Ridge Trail, North Creek Trail, Bill's Trail and the Devil's Gulch area are closed to dogs."},
+    {"name": "Lagunitas Creek", "detail": "Dogs may not enter the water at any time. The creek has coho salmon and steelhead, and people are kept out from December 1 to June 15 as well."},
+    {"name": "Madrone cabins", "detail": "The six park cabins do not take pets."},
+    {"name": "Hike-and-bike campsite", "detail": "The shared site for cyclists and walkers is no-dogs."},
+    {"name": "Park buildings", "detail": "Restrooms and the entrance station."}
+  ],
+  "hikes": [
+    {"name": "Cross Marin Trail, picnic area to the north boundary", "distance": "About 3 mi one way", "difficulty": "Easy", "surface": "Paved", "why": "Flat, shaded and next to the creek the whole way. Turn around whenever you like. Winter and spring are loudest, when the creek is full.", "maps": "Cross Marin Trail, Samuel P. Taylor State Park"},
+    {"name": "Cross Marin Trail, south from the campground", "distance": "Up to 2 mi one way", "difficulty": "Easy", "surface": "Paved", "why": "Quieter than the picnic-area end. Starts right from the campground, so no need to drive.", "maps": "Samuel P. Taylor State Park Campground"}
+  ],
+  "hangouts": [
+    {"name": "Redwood picnic grove", "why": "Deep shade, picnic tables and a lawn by the creek. The nicest place in the park to sit with a dog on a hot day."},
+    {"name": "Cross Marin Trail bridges", "why": "Several footbridges over the creek where you can watch the water. Stay on the bridge; no paws in the creek."},
+    {"name": "Point Reyes Station", "why": "15 minutes west. Dog-friendly patios and shops, and the start of the road out to Limantour Beach."},
+    {"name": "Upton Beach, Stinson Beach", "why": "About 35 minutes south. The county end of Stinson Beach, where leashed dogs are allowed on the sand."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet at all times.",
+    "Dogs may use the Cross Marin Trail, the campground, the picnic area and paved areas only. No other trails.",
+    "Dogs may never go in Lagunitas Creek, even on a leash.",
+    "At night your dog must sleep inside your tent or vehicle.",
+    "Never leave a dog unattended at a campsite or in a car.",
+    "Pick up waste and put it in a bin; do not leave bags on the trail.",
+    "Quiet hours in the campground are 10 pm to 6 am, and that includes barking.",
+    "No pets in the cabins or at the hike-and-bike site; this is enforced at booking."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Samuel P. Taylor main campground", "note": "About 60 sites under the redwoods beside Lagunitas Creek. Reserve on ReserveCalifornia up to 6 months ahead. Leashed dogs OK at standard sites."},
+      {"name": "Creekside loop sites", "note": "Closest to the water. Some reports say these sites close for flooding in winter; check when booking."},
+      {"name": "Madrone cabins", "note": "No pets."},
+      {"name": "Hike-and-bike site", "note": "No pets."}
+    ],
+    "lodging": [
+      {"name": "Olema House at Point Reyes, Olema", "note": "10 minutes west. Takes 2 dogs in designated rooms for a per-dog fee; dogs cannot be left alone in rooms."},
+      {"name": "Olema Cottages, Olema", "note": "Listed as pet-friendly. Confirm the policy when you book."},
+      {"name": "Dancing Coyote Beach Cottages, Inverness", "note": "On Tomales Bay, 25 minutes away. Pet-friendly cottages."},
+      {"name": "Vacation rentals in Point Reyes Station and Inverness", "note": "Many allow dogs for a nightly fee. Check each listing."}
+    ],
+    "boarding": [
+      {"name": "Point Reyes Animal Hospital", "note": "Offers pet boarding in Point Reyes Station; reserve ahead if you want a dog-free day on the Point Reyes trails."}
+    ]
+  },
+  "seasons": [
+    {"title": "Winter and spring", "level": "info", "detail": "The creek runs high and the redwoods drip. Best time for the Cross Marin Trail, but expect mud on the shoulders and some campsite closures after big storms."},
+    {"title": "Summer", "level": "info", "detail": "Cool under the trees even when inland Marin is hot. The campground fills every weekend; book early."},
+    {"title": "Fall", "level": "info", "detail": "Quietest season. Dry trail, warm afternoons, cold nights in camp."},
+    {"title": "Creek closure", "level": "warn", "detail": "Creek access is closed to everyone from December 1 to June 15 for spawning salmon. Dogs are banned from the water all year."}
+  ],
+  "wildlife": [
+    "Coho salmon and steelhead spawn in Lagunitas Creek. Keeping dogs out of the water is the law, not a suggestion.",
+    "Raccoons raid campsites at night. Put dog food in the car or the food locker.",
+    "Ticks live in the tall grass along the trail edges. Check your dog after each walk.",
+    "Poison oak grows along the Cross Marin Trail margins."
+  ],
+  "checklist": [
+    "A 6-foot leash, not a retractable one; the trail is shared with bikes",
+    "Water and a bowl for the walk; the creek is off limits",
+    "Waste bags",
+    "A towel and a tick comb",
+    "A rain shell for your dog in winter; the canyon is wet for months",
+    "Food locker space or a car for dog food at night",
+    "Your ReserveCalifornia confirmation showing a pet on the booking"
+  ],
+  "vets": [
+    {"name": "San Geronimo Valley Veterinary Clinic", "town": "Lagunitas"},
+    {"name": "Point Reyes Animal Hospital", "town": "Point Reyes Station"},
+    {"name": "Fairfax Veterinary Clinic", "town": "Fairfax"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Samuel P. Taylor State Park", "url": "https://www.parks.ca.gov/?page_id=469"},
+    {"label": "California State Parks: Samuel P. Taylor park brochure", "url": "https://www.parks.ca.gov/pages/469/files/SamuelPTaylorFinalWebLayout072715.pdf"},
+    {"label": "Access Northern California: Samuel P. Taylor State Park", "url": "https://accessnca.org/access-northern-california/explore/explore-detail-view/?site_id=231"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=469",
+  "verified": "October 2026"
+}

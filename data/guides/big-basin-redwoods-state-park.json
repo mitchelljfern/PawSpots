@@ -1,0 +1,235 @@
+{
+  "slug": "big-basin-redwoods-state-park",
+  "name": "Big Basin Redwoods State Park",
+  "shortName": "Big Basin",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Bay Area",
+  "nearestTowns": [
+    "Boulder Creek",
+    "Ben Lomond",
+    "Scotts Valley",
+    "Santa Cruz"
+  ],
+  "tagline": "Rebuilding after the 2020 fire. One paved road for dogs, no camping.",
+  "summary": "California's oldest state park burned almost end to end in the 2020 CZU fire and is being rebuilt from scratch. As of October 2026 it is open for limited day use only. Dogs are allowed in the parking lot area and for about 2 miles along North Escape Road, a paved park road closed to cars. Every trail, every campground and the whole Rancho del Oso coast section are closed to dogs. The park says dog access will grow as more paved roads are repaired, so check its page before each visit.",
+  "score": 1,
+  "scoreLabel": "Very limited",
+  "verdict": "Only come with your dog for the North Escape Road walk on a day you are already in the valley. For a real dog outing, drive 20 minutes to Henry Cowell instead.",
+  "photo": {
+    "id": "W5v_zW9Oog4",
+    "raw": "https://images.unsplash.com/photo-1541643262103-6e1277ede04f?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8QmlnJTIwQmFzaW4lMjBSZWR3b29kc3xlbnwwfDB8fHwxNzkxNzY4MDQ2fDI&ixlib=rb-4.1.0",
+    "alt": "Looking straight up the trunks of tall redwoods at Big Basin",
+    "author": "Megan Leong",
+    "authorUrl": "https://unsplash.com/@wolfwords",
+    "link": "https://unsplash.com/photos/low-angle-photo-of-trees-under-night-sky-W5v_zW9Oog4"
+  },
+  "glance": [
+    {
+      "key": "trails",
+      "status": "no",
+      "note": "No trails; about 2 miles of paved North Escape Road only"
+    },
+    {
+      "key": "camping",
+      "status": "no",
+      "note": "All campgrounds closed since the 2020 fire"
+    },
+    {
+      "key": "lodging",
+      "status": "no",
+      "note": "Nothing in the park; pet rooms in Boulder Creek and Scotts Valley"
+    },
+    {
+      "key": "water",
+      "status": "no",
+      "note": "No creek access; Waddell State Beach is no-dogs"
+    },
+    {
+      "key": "leash",
+      "status": "rule",
+      "note": "6 ft max, at all times"
+    },
+    {
+      "key": "fee",
+      "status": "info",
+      "note": "No pet fee; $8 reserved or $10 drive-up parking per car"
+    }
+  ],
+  "allowed": [
+    {
+      "name": "North Escape Road",
+      "detail": "A paved park road closed to cars that leaves the day-use area and follows Opal Creek north through the burned redwoods. Dogs on leash for about 2 miles, as far as the signs allow."
+    },
+    {
+      "name": "Day-use parking lot area",
+      "detail": "The temporary visitor area on the site of the old headquarters, with portable restrooms and a few tables. Dogs on leash."
+    },
+    {
+      "name": "Paved roads as they are repaired",
+      "detail": "The park says leashed dogs will be allowed on more paved roads as repairs finish. Watch the official page for updates."
+    },
+    {
+      "name": "Highway 236 pullouts and Saddle Mountain lot",
+      "detail": "The overflow lot on Highway 236 and the roadside pullouts are fine for a leashed leg-stretch, but the shuttle from Saddle Mountain into the park does not take dogs."
+    }
+  ],
+  "notAllowed": [
+    {
+      "name": "Every trail and fire road",
+      "detail": "Redwood Loop, Skyline to the Sea, Sunset, Dool and all 18 miles of reopened fire roads are closed to dogs."
+    },
+    {
+      "name": "All campgrounds",
+      "detail": "Blooms Creek, Huckleberry, Sempervirens, Wastahi, the tent cabins and every backcountry camp burned and remain closed. The only interim camp is a walk-in site at Rancho del Oso, and dogs are not allowed there."
+    },
+    {
+      "name": "Rancho del Oso and Waddell State Beach",
+      "detail": "The coastal section on Highway 1 is entirely closed to dogs, beach included."
+    },
+    {
+      "name": "Park buildings and the shuttle",
+      "detail": "The temporary visitor center and the summer weekend shuttle from the Saddle Mountain lot. Plan to park at the main lot if you have a dog."
+    },
+    {
+      "name": "Closed areas",
+      "detail": "Most of the park is still fenced off for hazard-tree removal and rebuilding. Fines apply for crossing closure signs, with or without a dog."
+    }
+  ],
+  "hikes": [
+    {
+      "name": "North Escape Road",
+      "distance": "About 2 mi one way",
+      "difficulty": "Easy",
+      "surface": "Paved",
+      "why": "Flat, car-free pavement along Opal Creek through recovering old growth. The burned trunks are sprouting green and the canopy is coming back. Turn around at the closure sign.",
+      "maps": "North Escape Road, Big Basin Redwoods State Park"
+    }
+  ],
+  "hangouts": [
+    {
+      "name": "Day-use area tables",
+      "why": "A few picnic tables near the parking lot, the one place to sit with a dog inside the park. Bring your own water; the park has none."
+    },
+    {
+      "name": "Boulder Creek village",
+      "why": "20 minutes down Highway 236. Dog-friendly patios, a grocery and the nearest cell signal."
+    },
+    {
+      "name": "Henry Cowell Redwoods State Park",
+      "why": "25 minutes away in Felton. Four dog-legal trails, a campground and the redwood experience Big Basin cannot offer dogs yet."
+    }
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet at all times.",
+    "Dogs may use only the parking lot area and the open stretch of North Escape Road.",
+    "No dogs on any trail, fire road or closed area, carried or not.",
+    "Never leave a dog unattended or in a parked car; there is no shade in the temporary lot.",
+    "Pick up waste and carry it out; bins are limited.",
+    "The park is open 8 am to sunset for day use only. No overnight stays of any kind in the main park.",
+    "Reserve parking online for summer and holiday weekends, or pay the higher drive-up rate if space is left.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {
+        "name": "Big Basin campgrounds",
+        "note": "All closed since the 2020 fire. No reopening date has been announced."
+      },
+      {
+        "name": "Rancho del Oso walk-in camp",
+        "note": "The park's interim walk-in and bike-in campground on the coast. No dogs."
+      },
+      {
+        "name": "Henry Cowell Redwoods campground, Felton",
+        "note": "The nearest state park campground that takes dogs, about 25 minutes away."
+      }
+    ],
+    "lodging": [
+      {
+        "name": "Masood's Lodge, Boulder Creek",
+        "note": "A street off the village main drag. Dogs of any size with no extra fee, per listings; confirm when booking."
+      },
+      {
+        "name": "Quality Inn and Suites Santa Cruz Mountains, Ben Lomond",
+        "note": "Pet-friendly rooms on Highway 9, about 30 minutes from the park."
+      },
+      {
+        "name": "Best Western Plus Inn Scotts Valley",
+        "note": "Takes 2 dogs up to 80 pounds for a nightly fee."
+      },
+      {
+        "name": "Cabins and rentals in Boulder Creek",
+        "note": "Many allow dogs. Check each listing and ask about fire-season rules."
+      }
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {
+      "title": "Rebuilding, all year",
+      "level": "warn",
+      "detail": "Access changes month to month as crews remove hazard trees and repair roads. What is open today may be fenced next week. Check the official park page the morning you go."
+    },
+    {
+      "title": "Summer weekends",
+      "level": "info",
+      "detail": "Parking reservations are recommended from Memorial Day to Labor Day. The free shuttle from the Saddle Mountain lot does not take dogs, so reserve a main-lot spot."
+    },
+    {
+      "title": "Winter storms",
+      "level": "warn",
+      "detail": "The park closes in high wind and heavy rain because burned trees fall without warning. Highway 236 can close too."
+    },
+    {
+      "title": "Fire season",
+      "level": "warn",
+      "detail": "Red Flag days close the park. There is no cell service inside, so check before you leave Boulder Creek."
+    }
+  ],
+  "wildlife": [
+    "Burned snags drop limbs without warning. Keep your dog beside you on the road and do not linger under dead trees.",
+    "Ticks and poison oak thrive in the brush regrowing along the road edges.",
+    "Banana slugs and newts cross the pavement after rain; keep dogs from eating them.",
+    "Mountain lions and coyotes have returned to the burn area. Keep the leash short at dawn and dusk."
+  ],
+  "checklist": [
+    "All the water you and your dog will need; the park has no drinking water",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags to carry out",
+    "A parking reservation printout; there is no cell service to pull it up",
+    "A tick comb",
+    "A sun hat and shade for the dog in the treeless temporary lot",
+    "A backup plan at Henry Cowell if the park is closed when you arrive"
+  ],
+  "vets": [
+    {
+      "name": "Boulder Creek Veterinary Clinic",
+      "town": "Boulder Creek"
+    },
+    {
+      "name": "Scotts Valley Veterinary Clinic",
+      "town": "Scotts Valley"
+    }
+  ],
+  "sources": [
+    {
+      "label": "California State Parks: Big Basin Redwoods State Park",
+      "url": "https://www.parks.ca.gov/bigbasin"
+    },
+    {
+      "label": "California State Parks: Big Basin visitor information sheet (March 2026)",
+      "url": "https://www.parks.ca.gov/pages/540/files/BigBasinRedwoodsSP_Infosheet_8.5x14_032226_FINAL.pdf"
+    },
+    {
+      "label": "Mountain Parks Foundation: Big Basin FAQs",
+      "url": "https://www.mountainparks.org/our-parks/big-basin-redwoods/faqs"
+    },
+    {
+      "label": "Reimagining Big Basin: post-fire park access",
+      "url": "https://reimaginingbigbasin.org/visit/"
+    }
+  ],
+  "official": "https://www.parks.ca.gov/bigbasin",
+  "verified": "October 2026"
+}

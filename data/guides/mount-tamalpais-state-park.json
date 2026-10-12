@@ -1,0 +1,291 @@
+{
+  "slug": "mount-tamalpais-state-park",
+  "name": "Mount Tamalpais State Park",
+  "shortName": "Mount Tam",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Bay Area",
+  "nearestTowns": [
+    "Mill Valley",
+    "Stinson Beach",
+    "Sausalito",
+    "San Anselmo"
+  ],
+  "tagline": "Two dog-legal routes in the park, a whole mountain of them next door.",
+  "summary": "Mount Tam is a patchwork. The state park itself keeps dogs to paved roads, Old Stage Road, the Verna Dunshee loop at East Peak, the campgrounds and the picnic areas. But the Marin Water watershed lands that wrap around the park allow leashed dogs on more than 150 miles of trails and fire roads, and Muir Beach at the bottom of the hill is off-leash. Know which land you are on and the mountain is one of the best dog trips near San Francisco.",
+  "score": 3,
+  "scoreLabel": "Moderate",
+  "verdict": "Bring your dog. Camp at Pantoll or Bootjack, walk the East Peak loop and Old Stage Road, then do your real hiking on the Marin Water fire roads.",
+  "photo": {
+    "id": "o0aRmm57u6s",
+    "raw": "https://images.unsplash.com/photo-1634284481556-490fc8bb29a7?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8TW91bnQlMjBUYW1hbHBhaXN8ZW58MHwwfHx8MTc5MTc2ODAxOHwy&ixlib=rb-4.1.0",
+    "alt": "Summer fog pouring over the ridges of Mount Tamalpais at sunset",
+    "author": "Zetong Li",
+    "authorUrl": "https://unsplash.com/@zetong",
+    "link": "https://unsplash.com/photos/a-view-of-a-mountain-covered-in-clouds-o0aRmm57u6s"
+  },
+  "glance": [
+    {
+      "key": "trails",
+      "status": "some",
+      "note": "Old Stage Road and Verna Dunshee Trail only; far more on adjacent Marin Water land"
+    },
+    {
+      "key": "camping",
+      "status": "yes",
+      "note": "Pantoll and Bootjack walk-in campgrounds; not Steep Ravine"
+    },
+    {
+      "key": "lodging",
+      "status": "no",
+      "note": "No pets in the Steep Ravine cabins; pet rooms in Mill Valley"
+    },
+    {
+      "key": "water",
+      "status": "some",
+      "note": "Muir Beach is off-leash; north end of Stinson Beach on leash"
+    },
+    {
+      "key": "leash",
+      "status": "rule",
+      "note": "6 ft max, at all times"
+    },
+    {
+      "key": "fee",
+      "status": "info",
+      "note": "No pet fee; $8 per car at Pantoll and East Peak lots"
+    }
+  ],
+  "allowed": [
+    {
+      "name": "Paved roads",
+      "detail": "Panoramic Highway, Pantoll Road, Ridgecrest Boulevard and East Ridgecrest to the summit. Shoulders are narrow, so this is for short stretches, not long walks."
+    },
+    {
+      "name": "Old Stage Road",
+      "detail": "The one dirt road in the park open to dogs. It climbs gently from Pantoll toward the Mountain Theater and West Point Inn, with wide views south."
+    },
+    {
+      "name": "Verna Dunshee Trail",
+      "detail": "A paved, mostly level 0.7-mile loop around East Peak with views of the whole Bay. The best short dog walk on the mountain."
+    },
+    {
+      "name": "Pantoll and Bootjack campgrounds",
+      "detail": "Both walk-in tent campgrounds take leashed dogs. Sites are a short carry from the parking lot."
+    },
+    {
+      "name": "Picnic areas and parking lots",
+      "detail": "Bootjack, Pantoll, Rock Spring and the East Peak picnic tables are all fine with a leashed dog."
+    },
+    {
+      "name": "Marin Water watershed next door",
+      "detail": "Not state park land, but it surrounds it. Leashed dogs are allowed on the Marin Water fire roads and trails, including Old Railroad Grade, Eldridge Grade and the lakes district around Lake Lagunitas and Bon Tempe."
+    },
+    {
+      "name": "Muir Beach",
+      "detail": "Managed by the national recreation area at the foot of the mountain. Dogs can be off leash under voice control on the sand. Leash up on the approach paths."
+    }
+  ],
+  "notAllowed": [
+    {
+      "name": "Every other state park trail",
+      "detail": "Steep Ravine, Matt Davis, Dipsea, Cataract, Bootjack and the Coast View Trail are all closed to dogs, carried or not."
+    },
+    {
+      "name": "Steep Ravine cabins and campsites",
+      "detail": "The environmental campground and the cliff-top cabins at Rocky Point do not take pets."
+    },
+    {
+      "name": "Muir Woods National Monument",
+      "detail": "No dogs anywhere in the monument, including the parking lots and the shuttle."
+    },
+    {
+      "name": "West Point Inn",
+      "detail": "You can walk a dog to the inn on Old Stage Road, but not inside the building or onto the deck."
+    },
+    {
+      "name": "The southern half of Stinson Beach",
+      "detail": "The National Park Service section has no dogs. The county section at the north end, including Upton Beach, allows them on leash."
+    },
+    {
+      "name": "Upper mountain on Red Flag days",
+      "detail": "When Marin County Fire closes the upper mountain for fire danger, the state park closes too. Check before driving up on hot, windy days."
+    }
+  ],
+  "hikes": [
+    {
+      "name": "Verna Dunshee Trail",
+      "distance": "0.7 mi loop",
+      "difficulty": "Easy",
+      "surface": "Paved",
+      "why": "Flat loop around the summit with 360-degree views of San Francisco, the ocean and the Bay. Benches all the way round. Starts at the East Peak lot.",
+      "maps": "Verna Dunshee Trail, Mount Tamalpais"
+    },
+    {
+      "name": "Old Stage Road to West Point Inn",
+      "distance": "About 2 mi one way",
+      "difficulty": "Easy to moderate",
+      "surface": "Dirt road",
+      "why": "The only unpaved route in the park where dogs are legal. Steady, gentle climb from Pantoll with big views south. Water and a shaded porch area outside the inn; dogs stay off the deck.",
+      "maps": "Pantoll Ranger Station, Mount Tamalpais"
+    },
+    {
+      "name": "Old Railroad Grade from Mountain Home Inn",
+      "distance": "Up to 4 mi one way",
+      "difficulty": "Moderate",
+      "surface": "Dirt road",
+      "why": "The old rail line climbs at a steady, dog-friendly grade through Marin Water land to West Point Inn and on to East Peak. Most of this route is outside the state park, where leashed dogs are allowed. Park at Mountain Home Inn.",
+      "maps": "Mountain Home Inn, Mill Valley"
+    },
+    {
+      "name": "Lake Lagunitas loop",
+      "distance": "1.6 mi loop",
+      "difficulty": "Easy",
+      "surface": "Dirt road",
+      "why": "On Marin Water land on the north side of the mountain, reached from Fairfax. Flat loop around a small reservoir with shade and no climbing. Leashed dogs welcome.",
+      "maps": "Lake Lagunitas, Fairfax"
+    }
+  ],
+  "hangouts": [
+    {
+      "name": "East Peak picnic area",
+      "why": "Tables and a snack bar at 2,500 feet, right at the start of the Verna Dunshee loop."
+    },
+    {
+      "name": "Bootjack picnic area",
+      "why": "Shaded tables under redwoods and Douglas fir on Panoramic Highway, with a restroom and water."
+    },
+    {
+      "name": "Rock Spring",
+      "why": "A grassy meadow and picnic tables at the Pantoll Road and Ridgecrest junction. Good for a sit with the dog while others take the Cataract Trail."
+    },
+    {
+      "name": "Muir Beach",
+      "why": "Off-leash under voice control on the sand. Small lot fills early on weekends."
+    },
+    {
+      "name": "Upton Beach, Stinson",
+      "why": "The county-run north end of Stinson Beach, where leashed dogs are allowed. Park in the village and walk north."
+    }
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet at all times, including in camp.",
+    "In the state park, dogs may only use paved roads, Old Stage Road, Verna Dunshee Trail, campgrounds, picnic areas and parking lots.",
+    "Carrying a dog does not make a closed trail legal.",
+    "At night your dog must sleep inside a tent or vehicle, not tied up outside.",
+    "Never leave a dog alone at a campsite or in a parked car.",
+    "Pick up waste and carry it to a trash can. Bins are at Pantoll, Bootjack and East Peak.",
+    "On Marin Water land the leash rule still applies, and the watershed closes to cars on Red Flag days.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {
+        "name": "Pantoll Campground",
+        "note": "16 walk-in tent sites a short carry from the lot. Leashed dogs OK. First come, first served; arrive early on weekends."
+      },
+      {
+        "name": "Bootjack Campground",
+        "note": "15 walk-in tent sites in the trees on Panoramic Highway. Leashed dogs OK. First come, first served."
+      },
+      {
+        "name": "Steep Ravine Environmental Campground",
+        "note": "No pets in the cabins or the campsites."
+      },
+      {
+        "name": "Alice Eastwood Group Camp",
+        "note": "Group sites near Muir Woods. Pet policy varies by booking; ask when you reserve."
+      }
+    ],
+    "lodging": [
+      {
+        "name": "Mill Valley Inn, Mill Valley",
+        "note": "At the foot of the mountain in downtown Mill Valley. Pet-friendly rooms; confirm the fee when booking."
+      },
+      {
+        "name": "Acqua Hotel, Mill Valley",
+        "note": "On Richardson Bay, 15 minutes from Pantoll. Pets allowed."
+      },
+      {
+        "name": "Mountain Home Inn, Mill Valley",
+        "note": "Ten-room inn on Panoramic Highway at the start of Old Railroad Grade. Some pet-friendly rooms; ask ahead."
+      },
+      {
+        "name": "Vacation rentals in Stinson Beach",
+        "note": "Many allow dogs and put you 5 minutes from the county dog beach. Check each listing."
+      }
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {
+      "title": "Summer fog and heat",
+      "level": "info",
+      "detail": "Mornings are often foggy and cool below 1,500 feet while the summit sits in sun. Carry water either way; there is none on Old Stage Road."
+    },
+    {
+      "title": "Fire season closures",
+      "level": "warn",
+      "detail": "From roughly June to November, a Red Flag Warning closes the upper mountain and the Marin Water lands. Check the park and Marin Water pages the morning you go."
+    },
+    {
+      "title": "Winter rain",
+      "level": "info",
+      "detail": "Old Stage Road and the fire roads turn to mud and small creeks after storms. Pantoll and Bootjack stay open year-round."
+    },
+    {
+      "title": "Spring wildflowers",
+      "level": "info",
+      "detail": "April and May are the best months on the open grassland around Rock Spring and along Old Stage Road."
+    }
+  ],
+  "wildlife": [
+    "Ticks are everywhere in the grass from winter through early summer. Check your dog after every walk.",
+    "Rattlesnakes sun themselves on fire roads and rock outcrops on warm days.",
+    "Coyotes and bobcats live on the mountain and will size up a small dog. Keep the leash short at dusk.",
+    "Poison oak lines most trails and fire roads. It does not bother dogs, but it rubs off their coat onto you."
+  ],
+  "checklist": [
+    "Water for two and a bowl; no taps on Old Stage Road or the fire roads",
+    "A 6-foot leash, not a retractable one",
+    "Waste bags and a way to carry them to a bin",
+    "A tick comb and a towel for fog-damp or muddy dogs",
+    "A paper or downloaded map that shows the state park and Marin Water boundaries",
+    "A warm layer for your dog at the campground; summit nights are cold and windy",
+    "Cash or card for the $8 parking fee at Pantoll and East Peak"
+  ],
+  "vets": [
+    {
+      "name": "VCA Tamalpais Animal Hospital",
+      "town": "Mill Valley"
+    },
+    {
+      "name": "Alto Tiburon Veterinary Hospital",
+      "town": "Mill Valley"
+    },
+    {
+      "name": "Pet Emergency and Specialty Center of Marin",
+      "town": "San Rafael"
+    }
+  ],
+  "sources": [
+    {
+      "label": "California State Parks: Mount Tamalpais State Park",
+      "url": "https://www.parks.ca.gov/?page_id=471"
+    },
+    {
+      "label": "Marin Water: Mt. Tam Watershed visitor information",
+      "url": "https://marinwater.org/mt-tam-watershed/visitor-information/"
+    },
+    {
+      "label": "Friends of Mt. Tam: Planning your visit",
+      "url": "https://www.friendsofmttam.org/activities/planning-your-visit.html"
+    },
+    {
+      "label": "Marin CVB: Parks and open space for your pooch",
+      "url": "https://www.visitmarin.org/things-to-do/pet-guide/parks-and-open-space-for-your-pooch/"
+    }
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=471",
+  "verified": "October 2026"
+}

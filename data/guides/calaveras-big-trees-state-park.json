@@ -1,0 +1,115 @@
+{
+  "slug": "calaveras-big-trees-state-park",
+  "name": "Calaveras Big Trees State Park",
+  "shortName": "Calaveras Big Trees",
+  "type": "state",
+  "designation": "State Park",
+  "region": "Sierra Nevada",
+  "nearestTowns": ["Arnold", "Murphys", "Angels Camp"],
+  "tagline": "Camp under the pines, but the giant sequoias are off limits to dogs.",
+  "summary": "Calaveras Big Trees is here for two groves of giant sequoias, and dogs cannot walk either one. The park allows leashed dogs in the campgrounds, picnic areas, on paved roads and on its dirt fire roads, and nowhere else. The fire roads give you a real walk in the forest, but you will not see a sequoia from them. The good news is that Arnold, 4 miles away, is the start of the Arnold Rim Trail in Stanislaus National Forest, where dogs are welcome on miles of trail.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog if you are camping and will hike the Arnold Rim Trail. Leave them with a sitter for the hour or two it takes to walk the North Grove.",
+  "photo": {
+    "id": "d0l7tLJoEAA",
+    "raw": "https://images.unsplash.com/photo-1768846316943-317568747aac?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Nnx8Q2FsYXZlcmFzJTIwQmlnJTIwVHJlZXMlMjBTdGF0ZSUyMFBhcmt8ZW58MHwwfHx8MTc5MTc2ODAyMnwy&ixlib=rb-4.1.0",
+    "alt": "Giant sequoia trees reaching toward a clear blue sky in Calaveras Big Trees State Park",
+    "author": "Fabio Sasso",
+    "authorUrl": "https://unsplash.com/@abduzeedo",
+    "link": "https://unsplash.com/photos/giant-redwood-trees-reaching-towards-a-clear-blue-sky-d0l7tLJoEAA"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "Dirt fire roads only; no North Grove, South Grove or any hiking trail"},
+    {"key": "camping", "status": "yes",  "note": "North Grove and Oak Hollow campgrounds"},
+    {"key": "lodging", "status": "some", "note": "No lodging in the park; pet rooms and cabins in Arnold and Murphys"},
+    {"key": "water",   "status": "some", "note": "Beaver Creek and the Stanislaus River at picnic areas off the parkway, summer only"},
+    {"key": "leash",   "status": "rule", "note": "6 ft or shorter, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. $10 per car day use"}
+  ],
+  "allowed": [
+    {"name": "Campgrounds", "detail": "North Grove Campground near the entrance and Oak Hollow Campground 4 miles in along the parkway. Dogs must be in a tent or vehicle at night."},
+    {"name": "Dirt fire roads", "detail": "The park's own page lists fire roads as the one place beyond the campgrounds where dogs can go. Several miles exist, but they are not signed for visitors. Ask at the visitor center for a map."},
+    {"name": "Paved roads", "detail": "The entrance road and the Walter W. Smith Memorial Parkway toward the South Grove, when it is open. Walk the shoulder with care; the parkway has blind curves."},
+    {"name": "Picnic areas", "detail": "Most sources, including the park concession and visitor guides, say leashed dogs are fine at the picnic sites. The official page lists only campgrounds and fire roads, so expect rangers to be strict if you wander off the tables."},
+    {"name": "Parking lots", "detail": "Including the North Grove and South Grove lots. The groves themselves start at the trail sign and are closed to dogs."},
+    {"name": "Beaver Creek and Stanislaus River picnic areas", "detail": "Summer swimming spots along the parkway. Keep the dog on leash and within the developed area."}
+  ],
+  "notAllowed": [
+    {"name": "North Grove Trail", "detail": "The 1.5-mile loop past the Discovery Stump and the Big Stump, and the shorter accessible Three Senses Trail. No dogs, carried or walked."},
+    {"name": "South Grove Trail", "detail": "The 5-mile round trip to the Agassiz Tree and the Palace Hotel Tree. No dogs."},
+    {"name": "Every other hiking trail", "detail": "Lava Bluffs, River Trail, Bradley Grove and the trails between the campgrounds. Dogs may not go into the woods off a road."},
+    {"name": "Visitor center and buildings", "detail": "Dogs wait outside with someone."},
+    {"name": "Groomed ski and snowshoe trails in winter", "detail": "The North Grove area becomes a Nordic area when there is snow and trails stay closed to dogs."},
+    {"name": "Group campground, maybe", "detail": "Listings disagree on whether pets are allowed at the group camp. Ask when you book."}
+  ],
+  "hikes": [
+    {"name": "Park fire roads", "distance": "1 to 5 mi, your choice", "difficulty": "Easy to moderate", "surface": "Dirt road", "why": "Quiet forest roads of pine, fir and cedar, officially open to leashed dogs. You will not see a sequoia from them, but your dog will not care. Pick up a map at the visitor center; the roads are not signed.", "maps": "Calaveras Big Trees State Park Visitor Center"},
+    {"name": "Nearby: Arnold Rim Trail to San Antonio Falls", "distance": "6 mi out and back", "difficulty": "Moderate", "surface": "Dirt", "why": "Stanislaus National Forest trail from the White Pines Lake area in Arnold, open to dogs on leash. A canyon, a waterfall in spring and far fewer people than the groves.", "maps": "Arnold Rim Trail San Antonio Falls Trailhead, Arnold CA"},
+    {"name": "Nearby: Arnold Rim Trail, White Pines Lake to Avery", "distance": "Up to 10 mi one way", "difficulty": "Moderate", "surface": "Dirt", "why": "The main stretch of the rim trail, with the Top of the World viewpoint over the Stanislaus canyon. Dogs allowed on leash. Hot and exposed in summer afternoons.", "maps": "White Pines Lake, Arnold CA"}
+  ],
+  "hangouts": [
+    {"name": "North Grove picnic area", "why": "Shaded tables next to the campground and visitor center. The closest you can sit to the big trees with a dog."},
+    {"name": "Beaver Creek picnic area", "why": "Summer swimming holes on the parkway. Mosquitoes in June; bring repellent for yourself."},
+    {"name": "Stanislaus River bridge area", "why": "At the bottom of the parkway, with a picnic area and cool water in July and August. Road closed in winter."},
+    {"name": "Oak Hollow Campground loops", "why": "Quieter than North Grove and set in open forest, good for an evening leash walk."}
+  ],
+  "rules": [
+    "Keep your dog on a leash no longer than 6 feet, at all times.",
+    "Dogs are allowed in campgrounds and on fire roads and paved roads. Not on any hiking trail or in the groves.",
+    "Never leave a dog unattended, including at your campsite or in a parked car.",
+    "At night, dogs must be inside a tent or vehicle.",
+    "Store all dog food in the campsite bear locker, never in the tent.",
+    "Pick up waste and put it in a trash can.",
+    "Keep dogs out of the visitor center and off groomed winter trails.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "North Grove Campground", "note": "Near the entrance at 4,700 feet, open year-round. Reserve on ReserveCalifornia; summer weekends sell out months ahead."},
+      {"name": "Oak Hollow Campground", "note": "4 miles in on the parkway, roughly May to October. Quieter, with sites spread under big pines."},
+      {"name": "Not allowed", "note": "The environmental campsites. The group camp is unclear; ask when booking."},
+      {"name": "Nearby: Stanislaus National Forest", "note": "Forest Service campgrounds along Highway 4 above Arnold take dogs and connect to dog-legal trails."}
+    ],
+    "lodging": [
+      {"name": "Arnold Meadowmont Lodge, Arnold", "note": "Pet-friendly motel with a fenced dog run, 4 miles from the park."},
+      {"name": "The Cozy Cub cabin, Arnold", "note": "Up to 2 dogs under 35 lb, $150 pet fee per stay."},
+      {"name": "Hibernation Station cabin, Arnold", "note": "Allows up to 2 dogs. Check the listing for fees."},
+      {"name": "Vacation rentals in Arnold and Murphys", "note": "Many cabins allow dogs. Filter for pet-friendly and read each listing's rules."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Winter snow", "level": "warn", "detail": "The park sits at 4,700 feet and gets real snow from December to March. Carry chains. The parkway to the South Grove closes from about mid-November to late April, so Beaver Creek and the river are out of reach."},
+    {"title": "Summer weekends", "level": "warn", "detail": "The North Grove lot fills by late morning on summer weekends. Afternoons reach the 80s and 90s; walk fire roads early."},
+    {"title": "Prescribed burns", "level": "warn", "detail": "The park burns sections of forest in fall. A planned burn was set to close some trails and roads from late September 2026. Check the park page before you drive up."},
+    {"title": "Spring and fall", "level": "info", "detail": "Dogwoods bloom in May and turn red in October. Cooler, quieter and the best time for the Arnold Rim Trail."}
+  ],
+  "wildlife": [
+    "Black bears live in the park and raid campsites. Use the bear locker for dog food, bowls and treats.",
+    "Rattlesnakes are common on sunny rock and road edges, especially down near the river.",
+    "Mountain lions are present. Keep dogs leashed and close at dawn and dusk.",
+    "Ticks and foxtails fill the dry grass from May to September. Check paws and ears after every walk."
+  ],
+  "checklist": [
+    "A 6-foot leash, not a retractable one",
+    "Water for two and a collapsible bowl",
+    "Waste bags",
+    "Tire chains from November to April",
+    "A sitter or a plan to take turns for the North Grove loop",
+    "Tick comb and paw check after fire road walks",
+    "A cooling mat for the campsite in July and August"
+  ],
+  "vets": [
+    {"name": "Arnold Pet Clinic", "town": "Arnold"},
+    {"name": "Angels Camp Veterinary Hospital", "town": "Angels Camp"}
+  ],
+  "sources": [
+    {"label": "California State Parks: Calaveras Big Trees State Park", "url": "https://www.parks.ca.gov/?page_id=551"},
+    {"label": "California State Parks: Calaveras Big Trees brochure (PDF)", "url": "https://www.parks.ca.gov/pages/551/files/CalaverasBigTreesSP_FINALWebLayoutADA_20230303.pdf"},
+    {"label": "DogTrekker: Calaveras Big Trees State Park", "url": "https://dogtrekker.com/calaveras-big-trees-state-park-visiting/"},
+    {"label": "Go Calaveras: Arnold Rim Trail", "url": "https://www.gocalaveras.com/business/hiking/arnold-rim-trail/"}
+  ],
+  "official": "https://www.parks.ca.gov/?page_id=551",
+  "verified": "October 2026"
+}

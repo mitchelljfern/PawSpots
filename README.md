@@ -28,7 +28,32 @@ If the Leaflet CDN is unreachable, the map pane says so and the list view keeps 
 - **Detail view** — amenities grid, photo gallery, pet fee and limits for hotels, and a banner spelling out the dog policy. The wording follows the place type: patio-only for restaurants, off-leash for parks, dogs-welcome-inside for shops.
 - **Photos** — 10 places have a real photo, shown as the card thumbnail and the detail hero. Every photo carries its author and licence in the page, because most are CC BY or CC BY-SA and may only be published with the author credited. The striped placeholders remain everywhere else.
 - **Link previews** — favicon, Apple touch icon and a 1200x630 social card, so links unfurl properly in iMessage, Slack, Facebook and X.
+- **Park guides** — a Guides tab in the top bar leads to per-park dog guides for California's national and state parks. See [Park guides](#park-guides).
 - **Accessibility** — labelled map pins, ARIA states on every control, focus trapping in modals, Escape-to-dismiss, and `prefers-reduced-motion` support.
+
+## Park guides
+
+`guides/` is a second surface: one page per national or state park saying where dogs can and cannot go, dog-legal walks, places to hang out, the rules in plain words, camping and lodging, seasons, wildlife, a packing checklist, nearby vets and the official source. The hub at `guides/index.html` has search, a national/state filter and a dog-friendliness sort. Both the map and the guides carry a Map | Guides tab in the top bar.
+
+The pages are built for phones first: 17px base text with an "Aa" button that steps it up two sizes (remembered per device), 44px tap targets, a sticky jump bar between sections, status words next to every colour so nothing relies on colour alone, a packing checklist that remembers ticks, native share sheet, print styles, and `prefers-reduced-motion` support.
+
+### Editing or adding a guide
+
+Each guide is one JSON file in `data/guides/`; the format is documented in `data/guides/SCHEMA.md` and `yosemite-national-park.json` is the model. The HTML under `guides/<slug>/` and `sitemap.xml` are generated. Don't hand-edit them; edit the JSON and re-run:
+
+```
+python3 tools/build-guides.py
+```
+
+The builder validates every file (required fields, the six at-a-glance keys in order, a photo with credit) and fails loudly on a bad one. `guides/guides.css` and `guides/guides.js` are hand-written and shared by every page.
+
+### Guide photos
+
+Hero images, card thumbnails and the social-sharing card for each guide are hotlinked from [Unsplash](https://unsplash.com) at the sizes the page needs, which is what Unsplash asks for; nothing is downloaded. Each JSON `photo` block holds the `urls.raw` link plus the photographer's name and profile, and the page credits them under the hero. The guides hub uses `data/guides/hub-photo.json` for its own share image. Pick a photo of the park itself, landscape, at least 3000px wide.
+
+### Accuracy
+
+Rules were researched in October 2026 from the official NPS and California State Parks pages and recent third-party guides, by web search. Where sources disagree the text says so. Every page ends with the official pet-rules link and a "check before you go" box, because superintendents can close areas to dogs at any time. Fees and hotel pet policies are the least stable facts; treat them as "about" and confirm when booking.
 
 ## Data
 

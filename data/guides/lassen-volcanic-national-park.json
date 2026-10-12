@@ -1,0 +1,116 @@
+{
+  "slug": "lassen-volcanic-national-park",
+  "name": "Lassen Volcanic National Park",
+  "shortName": "Lassen",
+  "type": "national",
+  "designation": "National Park",
+  "region": "Far North",
+  "nearestTowns": ["Mineral", "Chester", "Old Station", "Red Bluff"],
+  "tagline": "Wherever a car can go, a dog can go. Trails and lakes are out.",
+  "summary": "Lassen uses the simplest version of the national park rule: a dog can go anywhere a car can go. That means the 30-mile park highway and its pullouts, every campground, every picnic area and every parking lot. It also means no trails, no lake swimming, no hydrothermal areas and no cabins. The Lassen National Forest next door fills the gap with leashed-dog trails like the Spattercone loop near Old Station.",
+  "score": 2,
+  "scoreLabel": "Limited",
+  "verdict": "Bring your dog for a summer camping trip at Manzanita Lake with scenic drives and forest hikes outside the park. Leave them home if Bumpass Hell and Lassen Peak are the goal.",
+  "photo": {
+    "id": "qTDnttODrRI",
+    "raw": "https://images.unsplash.com/photo-1504197590641-0612da7bcabd?ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8NHx8TGFzc2VuJTIwVm9sY2FuaWMlMjBOYXRpb25hbCUyMFBhcmt8ZW58MHwwfHx8MTc5MTc2ODA2OXwy&ixlib=rb-4.1.0",
+    "alt": "Lassen Peak reflected in the calm water of Manzanita Lake with pine trees along the shore",
+    "author": "Anna French",
+    "authorUrl": "https://unsplash.com/@spintheglobeproject",
+    "link": "https://unsplash.com/photos/white-concrete-building-near-body-of-water-and-mountains-qTDnttODrRI"
+  },
+  "glance": [
+    {"key": "trails",  "status": "no",   "note": "No trails in the park; forest trails nearby allow leashed dogs"},
+    {"key": "camping", "status": "yes",  "note": "All developed campgrounds; not the Manzanita Lake cabins"},
+    {"key": "lodging", "status": "no",   "note": "No pets in the camping cabins or Drakesbad; pet rooms in Chester, Red Bluff and Redding"},
+    {"key": "water",   "status": "no",   "note": "Dogs are not allowed in any lake, creek or hydrothermal area"},
+    {"key": "leash",   "status": "rule", "note": "Shorter than 6 ft, at all times"},
+    {"key": "fee",     "status": "info", "note": "No pet fee. $30 per car in summer, good for 7 days; lower in winter"}
+  ],
+  "allowed": [
+    {"name": "The park highway and every pullout", "detail": "Highway 89 climbs from Manzanita Lake to 8,512 feet at the Lassen Peak trailhead and back down past Sulphur Works. Dogs can walk the pullouts and road shoulders at every viewpoint."},
+    {"name": "Campgrounds", "detail": "Manzanita Lake, Summit Lake North and South, Butte Lake, Warner Valley and the Southwest Walk-in campground. Leashed and never left alone."},
+    {"name": "Picnic areas and parking lots", "detail": "Including the lots at Lassen Peak, Bumpass Hell, Kings Creek, Devastated Area and Lake Helen. You can see a lot from the asphalt here."},
+    {"name": "Manzanita Lake campground roads", "detail": "The campground loops, the camper store and the boat launch area. The lake loop trail itself is closed to dogs."},
+    {"name": "Sulphur Works roadside", "detail": "The park's easiest hydrothermal area sits right beside the highway. Watch bubbling mud pots from the paved walkway along the road with the dog on a short leash."},
+    {"name": "Plowed roads in winter", "detail": "Dogs can walk plowed roads and the Southwest parking area in winter, but not snow-covered roads or trails."}
+  ],
+  "notAllowed": [
+    {"name": "Every trail", "detail": "Bumpass Hell, Lassen Peak, Kings Creek Falls, Manzanita Lake loop, Cinder Cone, Mill Creek Falls and all the rest. Hydrothermal ground can burn through paws, so the rule is strict."},
+    {"name": "In any water", "detail": "No swimming or wading in Manzanita Lake, Summit Lake, Butte Lake or any creek, even in the campground."},
+    {"name": "Backcountry and snow-covered roads", "detail": "No dogs on backpacking routes, or on the park highway when it is closed and under snow."},
+    {"name": "Manzanita Lake Camping Cabins and Drakesbad Guest Ranch", "detail": "Neither takes pets. Some booking sites list the cabins as pet-friendly; Recreation.gov says no."},
+    {"name": "Visitor centers and buildings", "detail": "The Kohm Yah-mah-nee Visitor Center, Loomis Museum and the camper store."},
+    {"name": "Juniper Lake area", "detail": "The access road has been closed for damage repairs; check the park site before planning on it."}
+  ],
+  "hikes": [
+    {"name": "Spattercone Nature Trail (Lassen National Forest)", "distance": "1.5 mi loop", "difficulty": "Easy", "surface": "Dirt and lava rock", "why": "Fifteen minutes north of Manzanita Lake at Old Station, outside the park. Volcanic cones and lava views on a short loop; no shade and sharp rock, so bring water and go early. Dogs stay out of nearby Subway Cave.", "maps": "Spattercone Nature Trail, Old Station"},
+    {"name": "Lake Almanor Recreation Trail (Lassen National Forest)", "distance": "Up to 10 mi one-way, walk any part", "difficulty": "Easy", "surface": "Paved", "why": "Flat paved trail along the west shore of Lake Almanor near Chester, 30 minutes from the south entrance. Lake views and shade, with leashed dogs welcome.", "maps": "Lake Almanor Recreation Trail, Chester"},
+    {"name": "Bizz Johnson Trail (Lassen National Forest)", "distance": "Up to 25 mi one-way, walk any part", "difficulty": "Easy", "surface": "Gravel rail trail", "why": "Old railroad grade along the Susan River from Susanville, with tunnels and bridges. Easy grade for older dogs; start at the Susanville depot and turn around when you like. About an hour east of the park.", "maps": "Bizz Johnson Trail, Susanville Depot"}
+  ],
+  "hangouts": [
+    {"name": "Manzanita Lake Campground", "why": "The classic Lassen Peak reflection is a short walk from your site along the campground road. Camper store, showers and the most dog-friendly base in the park."},
+    {"name": "Lake Helen pullout", "why": "A blue alpine lake at 8,200 feet with snow into July, right beside the highway. Enjoy it from the roadside; no wading."},
+    {"name": "Kings Creek picnic area", "why": "Meadow and creek views off the highway with shaded tables. The falls trail is closed to dogs, but the picnic area is not."},
+    {"name": "Devastated Area", "why": "A flat paved loop through the 1915 eruption zone. Check the signs: the short interpretive loop is treated as a trail, so stay in the parking area with the dog."},
+    {"name": "Sulphur Works", "why": "Mud pots and steam vents a few feet from the road. The one hydrothermal area you can show a dog, from the paved roadside only."}
+  ],
+  "rules": [
+    "Keep your dog on a leash shorter than 6 feet, at all times.",
+    "A dog may go anywhere a car may go: roads, pullouts, parking lots, campgrounds and picnic areas. Nowhere else.",
+    "No dogs on any trail, in any lake or creek, or in a hydrothermal area. Hot ground here can burn paws.",
+    "Never leave a dog unattended at a campsite. Leaving one in a car is allowed only when it is safe and the dog has water; rangers can cite you in hot weather.",
+    "Store dog food in the bear locker at your site, never in the tent.",
+    "Pick up waste and carry it to a trash can.",
+    "Ask at a visitor center about the BARK Ranger program; it is a fun way for kids to learn the rules.",
+    "Service dogs are allowed everywhere; emotional support animals follow the pet rules."
+  ],
+  "stay": {
+    "camping": [
+      {"name": "Manzanita Lake Campground", "note": "179 sites near the northwest entrance with showers and a store. Reserve on Recreation.gov; opens late May. Pets OK in campsites, not in the cabins."},
+      {"name": "Summit Lake North and South", "note": "Mid-park at 6,700 feet, central for the highway drive. Reserve ahead; short summer season."},
+      {"name": "Butte Lake Campground", "note": "Remote northeast corner down a 6-mile gravel road, near Cinder Cone. Quiet, with lake views from the campground."},
+      {"name": "Southwest Walk-in Campground", "note": "Tent sites a short walk from the Kohm Yah-mah-nee Visitor Center lot. Open year-round; the only winter camping with a dog."}
+    ],
+    "lodging": [
+      {"name": "Antlers Inn, Chester", "note": "Pet-friendly motel in Chester, 30 minutes from the south entrance and close to Lake Almanor."},
+      {"name": "Vacation cabins in Mineral and Chester", "note": "Several listings near the south entrance allow dogs. Check each listing for fees."},
+      {"name": "Hampton Inn & Suites Red Bluff", "note": "Dog-friendly chain hotel about an hour west on Highway 36."},
+      {"name": "Oxford Suites Redding", "note": "Pet-friendly rooms in Redding, about 1 hour from the Manzanita Lake entrance."},
+      {"name": "Not allowed", "note": "Manzanita Lake Camping Cabins and Drakesbad Guest Ranch do not take pets."}
+    ],
+    "boarding": []
+  },
+  "seasons": [
+    {"title": "Road opening (late May to early July)", "level": "warn", "detail": "The park highway closes with snow each winter and fully reopens anywhere from late May to early July. It opened in late May in 2026 after a light winter but not until June 27 in 2025. Check before you go."},
+    {"title": "Summer (July to September)", "level": "info", "detail": "The whole park is open and the campgrounds fill on weekends. Days are warm, nights cold at 6,000 to 8,000 feet; bring a dog blanket."},
+    {"title": "Wildfire smoke", "level": "warn", "detail": "The 2021 Dixie Fire burned most of the park's east side. Summer smoke from new fires can close roads and make the air hard on dogs. Check park alerts."},
+    {"title": "Winter (November to May)", "level": "info", "detail": "Only the Manzanita Lake and Southwest entrances stay open, and dogs are limited to plowed roads and parking areas. No snow trails or snow-covered roads."}
+  ],
+  "wildlife": [
+    "Black bears are active in all campgrounds. Use the bear locker for dog food and bowls.",
+    "Mountain lions range across the park. Keep dogs close at dawn and dusk.",
+    "Mosquitoes are thick around lakes and meadows in June and July. Ask your vet about heartworm prevention before the trip.",
+    "Hydrothermal areas are a hazard of their own: boiling water and acidic mud just below a thin crust. Keep dogs on the pavement."
+  ],
+  "checklist": [
+    "Water and a bowl for the drive; it is 30 miles across the park with few taps",
+    "A 6-foot leash, not a retractable one",
+    "A warm blanket or coat for cold nights at altitude",
+    "Tick remover and flea and tick protection",
+    "Waste bags and a way to carry them to a bin",
+    "Booties if you walk gravel pullouts or lava rock on the forest trails",
+    "Vaccine records in case you need the vet in Chester"
+  ],
+  "vets": [
+    {"name": "Chester Veterinary Clinic", "town": "Chester"}
+  ],
+  "sources": [
+    {"label": "NPS: Pets in Lassen Volcanic", "url": "https://www.nps.gov/lavo/planyourvisit/pets.htm"},
+    {"label": "NPS: Lassen camping regulations", "url": "https://www.nps.gov/lavo/learn/management/camping_regulations.htm"},
+    {"label": "NPS: Lassen spring snow clearing and road opening", "url": "https://www.nps.gov/lavo/planyourvisit/winter-road-closures-and-spring-clearing-update.htm"},
+    {"label": "Recreation.gov: Manzanita Lake Campground", "url": "https://www.recreation.gov/camping/campgrounds/234039"}
+  ],
+  "official": "https://www.nps.gov/lavo/planyourvisit/pets.htm",
+  "verified": "October 2026"
+}
